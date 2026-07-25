@@ -133,6 +133,107 @@ function Add-Announcement {
     Write-Output "Live activity recorded for $Assistant."
 }
 
+function Get-ReviewPath {
+    param([string]$Id)
+
+    Require-Value -Value $Id -Name "ReviewId"
+    return Join-Path $ReviewsPath ("$Id.json")
+}
+
+function Read-Review {
+    param([string]$Id)
+
+    $reviewPath = Get-ReviewPath -Id $Id
+    if (-not (Test-Path -LiteralPath $reviewPath)) {
+        throw "Review not found: $Id"
+    }
+
+    return Get-Content -LiteralPath $reviewPath -Raw -Encoding UTF8 | ConvertFrom-Json
+}
+
+function Write-Review {
+    param(
+        [string]$Id,
+        [object]$Review
+    )
+
+    Write-JsonAtomically -Path (Get-ReviewPath -Id $Id) -Value $Review
+}
+
+function Require-ReviewOwner {
+    param(
+        [object]$Review,
+        [string]$Owner
+    )
+
+    Require-Value -Value $Owner -Name "Assistant"
+    if ($Review.to -ne $Owner) {
+        throw "Only the addressed assistant can update this review."
+    }
+}
+
+function Request-Review {
+    Require-Value -Value $Assistant -Name "Assistant"
+    Require-Value -Value $Target -Name "Target"
+    Require-Value -Value $Question -Name "Question"
+    if (@($Paths).Count -eq 0) {
+        throw "Missing required value: Paths"
+    }
+    if ($Assistant -eq $Target) {
+        throw "A review must target the other assistant."
+    }
+
+    Ensure-Runtime
+    $timestamp = (Get-Date).ToString("o")
+    $id = [guid]::NewGuid().ToString()
+    $review = [ordered]@{
+        id = $id
+        from = $Assistant
+        to = $Target
+        status = "open"
+        question = $Question
+        paths = @($Paths)
+        createdAt = $timestamp
+        updatedAt = $timestamp
+    }
+
+    Write-Review -Id $id -Review $review
+    Add-Event -Type "review-request" -From $Assistant -To $Target -Message $Question -EventPaths $Paths -EventReviewId $id
+    Write-Output "Review requested: $id"
+}
+
+function Acknowledge-Review {
+    Require-Value -Value $Assistant -Name "Assistant"
+    $review = Read-Review -Id $ReviewId
+    Require-ReviewOwner -Review $review -Owner $Assistant
+    if ($review.status -eq "completed") {
+        throw "Completed reviews cannot be acknowledged."
+    }
+
+    $review.status = "acknowledged"
+    $review.updatedAt = (Get-Date).ToString("o")
+    Write-Review -Id $review.id -Review $review
+    Add-Event -Type "review-acknowledged" -From $Assistant -To $review.from -Message $review.question -EventPaths $review.paths -EventReviewId $review.id
+    Write-Output "Review acknowledged: $($review.id)"
+}
+
+function Complete-Review {
+    Require-Value -Value $Assistant -Name "Assistant"
+    Require-Value -Value $Outcome -Name "Outcome"
+    $review = Read-Review -Id $ReviewId
+    Require-ReviewOwner -Review $review -Owner $Assistant
+    if ($review.status -eq "completed") {
+        throw "Review is already completed: $($review.id)"
+    }
+
+    $review.status = "completed"
+    $review | Add-Member -MemberType NoteProperty -Name "outcome" -Value $Outcome -Force
+    $review.updatedAt = (Get-Date).ToString("o")
+    Write-Review -Id $review.id -Review $review
+    Add-Event -Type "review-completed" -From $Assistant -To $review.from -Message $Outcome -EventPaths $review.paths -EventReviewId $review.id
+    Write-Output "Review completed: $($review.id)"
+}
+
 function Show-Status {
     Write-Output "Current activity"
     $state = Read-State
@@ -188,5 +289,8 @@ function Show-Status {
 switch ($Command) {
     "announce" { Add-Announcement }
     "status" { Show-Status }
+    "request-review" { Request-Review }
+    "acknowledge-review" { Acknowledge-Review }
+    "complete-review" { Complete-Review }
     default { throw "Command not implemented yet: $Command" }
 }

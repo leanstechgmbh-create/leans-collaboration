@@ -36,6 +36,32 @@ try {
     if ($events.Count -ne 1) {
         throw "announce should append exactly one event."
     }
+
+    $reviewOutput = & $Script request-review -WorkspacePath $TempRoot -Assistant chatgpt -Target claude -Question "Please check the live script." -Paths "scripts/leans-live.ps1" | Out-String
+    if ($reviewOutput -notmatch "Review requested: ([a-f0-9-]+)") {
+        throw "request-review should return a review id."
+    }
+    $reviewId = $Matches[1]
+
+    try {
+        & $Script acknowledge-review -WorkspacePath $TempRoot -Assistant chatgpt -ReviewId $reviewId | Out-Null
+        throw "The requester must not be allowed to acknowledge its own review."
+    }
+    catch {
+        Assert-Contains $_.Exception.Message "Only the addressed assistant" "review ownership should be enforced."
+    }
+
+    & $Script acknowledge-review -WorkspacePath $TempRoot -Assistant claude -ReviewId $reviewId | Out-Null
+    & $Script complete-review -WorkspacePath $TempRoot -Assistant claude -ReviewId $reviewId -Outcome "Approved" | Out-Null
+
+    $completedPath = Join-Path $TempRoot ".leans-live\reviews\$reviewId.json"
+    $completed = Get-Content -LiteralPath $completedPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($completed.status -ne "completed") {
+        throw "complete-review should preserve a completed review record."
+    }
+    if ($completed.outcome -ne "Approved") {
+        throw "complete-review should save the outcome."
+    }
 }
 finally {
     if (Test-Path -LiteralPath $TempRoot) {
