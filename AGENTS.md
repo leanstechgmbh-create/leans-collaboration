@@ -9,5 +9,7 @@ Diese Regeln gelten fuer ChatGPT/Codex und Claude, wenn sie in diesem Projekt ar
 5. Nach erledigter eigener Eingangsaufgabe nur den eigenen passenden Eintrag von `OFFEN` auf `ERLEDIGT` setzen.
 6. Uebergaben an den anderen Assistenten ganz oben in dessen Board-Bereich eintragen.
 7. Wissen, Entscheidungen und wiederverwendbare Prompts in `knowledge/` dokumentieren.
+8. Vor jeder Aenderung an gemeinsamen Projektdateien `scripts/leans-live.ps1 status` ausfuehren.
+9. Vor jeder Aenderung die eigene Arbeit mit `scripts/leans-live.ps1 announce` und den betroffenen Dateipfaden ankundigen.
 
 Die detaillierte Board-Syntax steht in `LEANS-Uebergabe-ANLEITUNG.md`.

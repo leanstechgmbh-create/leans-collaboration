@@ -50,3 +50,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\leans-board.ps1 ma
 ## Regel
 
 Nur eigene erledigte Eingangsaufgaben auf `ERLEDIGT` setzen. Fremde Eintraege bleiben unangetastet.
+
+## Live Zusammenarbeit
+
+Die Live-Koordination ergaenzt das dauerhafte Board um aktuellen Status, Review-Anfragen und Dateibeobachtung im gemeinsamen Windows-Ordner. Die vollstandige Anleitung steht in `docs/LEANS-Live.md`.
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-leans-live.ps1
+```
