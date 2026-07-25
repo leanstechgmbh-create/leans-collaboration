@@ -24,6 +24,18 @@ try {
     $status = & $Script status -WorkspacePath $TempRoot | Out-String
     Assert-Contains $status "chatgpt" "status should show the announcing assistant."
     Assert-Contains $status "Writing tests" "status should show the current activity."
+
+    $statePath = Join-Path $TempRoot ".leans-live\state.json"
+    $state = Get-Content -LiteralPath $statePath -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($state.assistants.chatgpt.paths[0] -ne "tests/leans-live.tests.ps1") {
+        throw "announce should persist the affected path."
+    }
+
+    $eventsPath = Join-Path $TempRoot ".leans-live\events.jsonl"
+    $events = Get-Content -LiteralPath $eventsPath -Encoding UTF8
+    if ($events.Count -ne 1) {
+        throw "announce should append exactly one event."
+    }
 }
 finally {
     if (Test-Path -LiteralPath $TempRoot) {
