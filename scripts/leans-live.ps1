@@ -104,6 +104,19 @@ function Add-Event {
     Add-Content -LiteralPath $EventsPath -Value $line -Encoding UTF8
 }
 
+function Send-LocalNotification {
+    param([string]$Message)
+
+    if (-not $Notify) {
+        return
+    }
+
+    $msg = Get-Command "msg.exe" -ErrorAction SilentlyContinue
+    if ($null -ne $msg) {
+        & $msg.Source $env:USERNAME /TIME:30 "LEANS Live: $Message" 2>$null | Out-Null
+    }
+}
+
 function Add-Announcement {
     Require-Value -Value $Assistant -Name "Assistant"
     Require-Value -Value $Activity -Name "Activity"
@@ -199,6 +212,7 @@ function Request-Review {
 
     Write-Review -Id $id -Review $review
     Add-Event -Type "review-request" -From $Assistant -To $Target -Message $Question -EventPaths $Paths -EventReviewId $id
+    Send-LocalNotification -Message "Review requested for $Target."
     Write-Output "Review requested: $id"
 }
 
@@ -232,6 +246,94 @@ function Complete-Review {
     Write-Review -Id $review.id -Review $review
     Add-Event -Type "review-completed" -From $Assistant -To $review.from -Message $Outcome -EventPaths $review.paths -EventReviewId $review.id
     Write-Output "Review completed: $($review.id)"
+}
+
+function Acquire-WatcherLock {
+    Ensure-Runtime
+    if (Test-Path -LiteralPath $WatcherLockPath) {
+        $existing = Get-Content -LiteralPath $WatcherLockPath -Raw -Encoding UTF8 | ConvertFrom-Json
+        $existingProcess = Get-Process -Id ([int]$existing.pid) -ErrorAction SilentlyContinue
+        if ($null -ne $existingProcess) {
+            throw "A LEANS live watcher is already running."
+        }
+
+        Remove-Item -LiteralPath $WatcherLockPath -Force
+    }
+
+    $lock = [ordered]@{
+        pid = $PID
+        startedAt = (Get-Date).ToString("o")
+    }
+    $stream = $null
+    $writer = $null
+    try {
+        $stream = [System.IO.File]::Open($WatcherLockPath, [System.IO.FileMode]::CreateNew, [System.IO.FileAccess]::Write, [System.IO.FileShare]::None)
+        $writer = New-Object System.IO.StreamWriter($stream, (New-Object System.Text.UTF8Encoding($false)))
+        $writer.Write(($lock | ConvertTo-Json))
+    }
+    catch [System.IO.IOException] {
+        throw "A LEANS live watcher is already running."
+    }
+    finally {
+        if ($null -ne $writer) { $writer.Dispose() }
+        elseif ($null -ne $stream) { $stream.Dispose() }
+    }
+}
+
+function Release-WatcherLock {
+    if (-not (Test-Path -LiteralPath $WatcherLockPath)) {
+        return
+    }
+
+    try {
+        $lock = Get-Content -LiteralPath $WatcherLockPath -Raw -Encoding UTF8 | ConvertFrom-Json
+        if ([int]$lock.pid -eq $PID) {
+            Remove-Item -LiteralPath $WatcherLockPath -Force
+        }
+    }
+    catch {
+        Remove-Item -LiteralPath $WatcherLockPath -Force
+    }
+}
+
+function Start-LiveWatcher {
+    Acquire-WatcherLock
+    $watcher = $null
+    try {
+        $watcher = New-Object System.IO.FileSystemWatcher $ResolvedWorkspacePath, "*"
+        $watcher.IncludeSubdirectories = $true
+        $watcher.NotifyFilter = [System.IO.NotifyFilters]::FileName -bor [System.IO.NotifyFilters]::DirectoryName -bor [System.IO.NotifyFilters]::LastWrite
+        $watcher.EnableRaisingEvents = $true
+        $changeTypes = [System.IO.WatcherChangeTypes]::Changed -bor [System.IO.WatcherChangeTypes]::Created -bor [System.IO.WatcherChangeTypes]::Deleted -bor [System.IO.WatcherChangeTypes]::Renamed
+        $startedAt = Get-Date
+
+        Write-Output "LEANS live watcher started."
+        while ($true) {
+            if ($DurationSeconds -gt 0 -and ((Get-Date) - $startedAt).TotalSeconds -ge $DurationSeconds) {
+                break
+            }
+
+            $change = $watcher.WaitForChanged($changeTypes, 500)
+            if ($change.TimedOut) {
+                continue
+            }
+
+            $relativePath = $change.Name
+            if ($relativePath -match "(^|[\\/])(\.git|\.leans-live|\.obsidian)([\\/]|$)") {
+                continue
+            }
+
+            $message = "$($change.ChangeType): $relativePath"
+            Add-Event -Type "file-change" -From "watcher" -To $null -Message $message -EventPaths @($relativePath) -EventReviewId $null
+            Send-LocalNotification -Message $message
+        }
+    }
+    finally {
+        if ($null -ne $watcher) {
+            $watcher.Dispose()
+        }
+        Release-WatcherLock
+    }
 }
 
 function Show-Status {
@@ -292,5 +394,6 @@ switch ($Command) {
     "request-review" { Request-Review }
     "acknowledge-review" { Acknowledge-Review }
     "complete-review" { Complete-Review }
+    "start" { Start-LiveWatcher }
     default { throw "Command not implemented yet: $Command" }
 }

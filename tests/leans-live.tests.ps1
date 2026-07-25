@@ -62,6 +62,21 @@ try {
     if ($completed.outcome -ne "Approved") {
         throw "complete-review should save the outcome."
     }
+
+    $lockPath = Join-Path $TempRoot ".leans-live\watcher.lock"
+    @{ pid = $PID; startedAt = "2026-07-25T15:00:00+02:00" } |
+        ConvertTo-Json |
+        Set-Content -LiteralPath $lockPath -Encoding UTF8
+
+    try {
+        & $Script start -WorkspacePath $TempRoot -DurationSeconds 1 | Out-Null
+        throw "start should reject an existing watcher lock."
+    }
+    catch {
+        Assert-Contains $_.Exception.Message "A LEANS live watcher is already running" "watcher lock should prevent two watchers."
+    }
+
+    Write-Host "PASS leans-live workflow"
 }
 finally {
     if (Test-Path -LiteralPath $TempRoot) {
