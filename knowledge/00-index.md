@@ -7,6 +7,10 @@
 - [[decisions]]
 - [[prompts]]
 
+## Projekte
+
+- [[projects/online-geschaeftskonto-fiktionsbescheinigung]] - Rangliste Online-Geschäftskonten mit bosnischem Pass und Fiktionsbescheinigung (Stand 2026-09-25)
+
 ## Aktueller Workflow
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
