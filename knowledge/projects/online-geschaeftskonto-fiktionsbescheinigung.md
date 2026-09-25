@@ -49,12 +49,23 @@ Die "Chance" ist meine Einschätzung aus den Quellen unten. Keine Bank garantier
 | 5 | **Kontist (by Shine)** | niedrig | DE | kostenpflichtig | Nimmt inzwischen auch GmbHs an. | Die Identifizierung läuft über IDnow nach BaFin 2017, bei vielen Nicht-EU-Pässen braucht das zusätzlich die eAT-Karte. Die Steuerfunktionen sind für EÜR gebaut, für eine GmbH mit Bilanz passen sie nicht. |
 | 6 | **Holvi** | niedrig | DE | kostenpflichtig | Nimmt GmbHs an. | Gleiche IDnow-Hürde wie bei Kontist. |
 
+### Revolut Business im Detail (geprüft 2026-09-25)
+
+| Prüfpunkt | Revolut sagt | Bei uns |
+|---|---|---|
+| Ausweis | Reisepass oder nationaler Personalausweis, **≥ 1 Monat gültig**. Aufnahme in der App plus Video-Selfie. | Bosnischer Pass: **ok**, wenn noch gültig. |
+| Aufenthaltsnachweis (Nicht-EU/EWR/CH) | Visum oder Aufenthaltstitel, **≥ 3 Monate gültig**. Kurzzeit-, Touristen-, Saison- und Studentenvisa können abgelehnt werden. Ohne gültigen Aufenthaltstitel keine Business-Eröffnung. | **Unsicher.** Die Fiktionsbescheinigung steht nicht ausdrücklich in der Liste. 2019 hat Revolut sie öffentlich als akzeptiert genannt, damals fürs Privatkonto. |
+| Sitz der Firma | GmbH mit Sitz im EWR, Antragsteller wohnt in einem unterstützten Land. | GmbH in DE: **ok**. |
+| Ablehnung | Revolut setzt eine Frist, um ein neues Dokument einzureichen. | Bei Ablehnung die Fiktionsbescheinigung und, falls vorhanden, die alte eAT-Karte nachreichen. |
+
+**Vorgehen bei Revolut:** Erst die Restlaufzeit der Fiktionsbescheinigung prüfen (mindestens 3 Monate, besser mehr). Dann in der App fragen, ob sie als Aufenthaltsnachweis akzeptiert wird, und die Antwort per Screenshot sichern. Beim Hochladen alle Seiten einreichen. Steht dort § 81 **Abs. 4**, die alte eAT-Karte dazulegen.
+
 ### Nicht geeignet
 
 | Anbieter | Grund |
 |---|---|
 | **bunq Business** | Nur Pässe von einer festen Länderliste reichen allein aus. **Bosnien-Herzegowina steht nicht darauf**, deshalb braucht es einen Aufenthaltstitel als Plastikkarte. |
-| **Vivid Business** | Die Vivid-Hilfe nennt für die Identifizierung EWR- und Schweizer Pässe. |
+| **Vivid Business** | Laut Vivid-Hilfe (März 2026) zählen nur ein **EWR- oder Schweizer Pass** oder ein **EWR-Aufenthaltstitel** als Ausweis. Der bosnische Pass ist keines von beiden, die Fiktionsbescheinigung ist kein Aufenthaltstitel. Das Vivid Founder Account verlangt ebenfalls ein EU/EWR/CH-Dokument. **Wird erst mit eAT-Karte interessant.** |
 | **N26 Business** | Nur für Freiberufler und Selbstständige, **nicht für GmbHs**. "N26 Small Business" ist noch Early Access und setzt ein bestehendes privates N26-Konto voraus. |
 
 ### Bereits versucht
@@ -105,6 +116,9 @@ Die "Chance" ist meine Einschätzung aus den Quellen unten. Keine Bank garantier
 - Qonto, Geschäftskonto als Ausländer: https://qonto.com/de/blog/business/geschaeftskonto/geschaeftskonto-fuer-auslaendische-firmen
 - Revolut Business, Identity verification requirements (DE): https://help.revolut.com/en-DE/business/help/setting-up-an-account/onboarding/identity-verification/
 - Revolut auf X (2019) zur Fiktionsbescheinigung: https://x.com/RevolutApp/status/1083724637756932096
+- Revolut Business, Failed identity verification (DE): https://help.revolut.com/en-DE/help/setting-up-an-account/identity-verification-proof-of-authority/failed-identity-verification/business/
+- Revolut Business, Identverfahren inkl. Video-Selfie: https://help.revolut.com/en-DE/business/help/setting-up-an-account/identity-verification-proof-of-authority/what-s-the-identity-verification-process-for-team-members/
+- Vivid Business, Founder Accounts: https://help-business.vivid.money/en/articles/9691686-who-can-be-onboarded-for-vivid-founder-accounts
 - Handelsblatt, Revolut Geschäftskonto mit deutscher IBAN: https://www.handelsblatt.com/geschaeftskonto/anbieter/revolut/
 - Wise Help, ID-Verifizierung: https://wise.com/help/articles/2548525/what-will-you-need-for-id-verification
 - reisetopia, Wise Geschäftskonto (Kosten, BE-IBAN): https://reisetopia.de/geschaeftskonto/wise-geschaeftskonto/
