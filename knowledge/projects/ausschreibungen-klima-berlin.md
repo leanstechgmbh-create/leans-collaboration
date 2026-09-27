@@ -12,16 +12,75 @@
 - 54 Einträge insgesamt (3 Projekte sind doppelt gelistet), davon **5 in Berlin**, 3 in Brandenburg, 46 im restlichen Bundesgebiet.
 - Profil **B „TGA Berlin/Brandenburg“ filtert offenbar nicht nach Region**: 37 Treffer in drei Tagen, nur 7 davon in Berlin/Brandenburg (4 Berlin). Der Rest kommt aus Hamburg, Hessen, Bayern, Baden-Württemberg usw.
 - Empfehlung: In Vergabehero beim Profil B einen Regionsfilter (Berlin bzw. PLZ-Umkreis) setzen. Profil A liefert fast nur Treffer außerhalb Berlins (5 von 53) und kann pausiert werden, wenn nur Berlin gewollt ist.
+- Ergebnis der Bearbeitung: **2× GO** (beide WBM-Kälteausschreibungen), 1× nur bei Heizung/Sanitär (Forschungsverbund), 2× NO-GO (Berliner Wasserbetriebe, Friedrich-Ebert-Stiftung). Details stehen unter „Bearbeitung Berlin“.
 
 ## Berlin (sortiert nach Frist)
 
 | # | Frist | Ausschreibung | Auftraggeber | Match | Worauf beruht „Berlin“ | Hinweis |
 |---|-------|---------------|--------------|-------|------------------------|---------|
 | 1 | 12.10.2026 | [Instandsetzung von Entwässerungsanlagen und Auswechslung von Trinkwasseranlagen](https://vergabehero.eu/ausschreibungen/instandsetzung-von-entwaesserungsanlagen-und-auswechslung-von-trinkwasseranlagen--cmui4kib009no7d7y1heb51zp) | Berliner Wasserbetriebe | Gut (nur A) | Auftraggeber ist das Berliner Landesunternehmen | Fachlich Sanitär/Entwässerung, kein Klima/Kälte |
-| 2 | 13.10.2026 | [Austausch und Neuinstallation von Kälteanlagen mit Rohrnetzarbeiten](https://vergabehero.eu/ausschreibungen/austausch-und-neuinstallation-von-kaelteanlagen-mit-rohrnetzarbeiten--cmuhx8p1l03x8rtxyi17iqjcg) | WBM | **Perfekt** (A + B) | „WBM“ = WBM Wohnungsbaugesellschaft Berlin-Mitte; Ausführungsort bestätigen | Kerngeschäft Kälte – **Priorität 1** |
+| 2 | 13.10.2026 | [Austausch und Neuinstallation von Kälteanlagen mit Rohrnetzarbeiten](https://vergabehero.eu/ausschreibungen/austausch-und-neuinstallation-von-kaelteanlagen-mit-rohrnetzarbeiten--cmuhx8p1l03x8rtxyi17iqjcg) | WBM Immobilien-Service GmbH | **Perfekt** (A + B) | Spandauer Str. 2, 10178 Berlin-Mitte (per Websuche bestätigt) | Kerngeschäft Kälte – **Priorität 1** |
 | 3 | 22.10.2026 | [Erneuerung von Rückkühlern und Verlegung der Rohrleitungen](https://vergabehero.eu/ausschreibungen/erneuerung-von-rueckkuehlern-und-verlegung-der-rohrleitungen--cmuflke2h01cjrtxy3y0fs1h7) | WBM | **Perfekt** (A + B) | wie #2 | Kerngeschäft Kälte – **Priorität 2** |
 | 4 | 26.10.2026 | [Kleinteilige Bauunterhaltungsarbeiten an Heizungs-, Wasser- und Entwässerungsanlagen](https://vergabehero.eu/ausschreibungen/kleinteilige-bauunterhaltungsarbeiten-an-heizungs-wasser-und-entwaesserungsanlag--cmughsyno02s6rtxyyrgrazg3) | Forschungsverbund Berlin e.V. | Gut (A + B) | Sitz in Berlin; einzelne Institute auch in Brandenburg, Ort bestätigen | Heizung/Sanitär, kein Klima/Kälte |
 | 5 | 22.07.2026 (!) | [Haustechnikarbeiten für die energetische Sanierung eines Gebäudes in Berlin](https://vergabehero.eu/ausschreibungen/haustechnikarbeiten-fuer-die-energetische-sanierung-eines-gebaeudes-in-berlin--cmui4k70608r07d7y9gcftyq3) | Friedrich-Ebert-Stiftung e.V. | Gut (A + B) | „Berlin“ steht im Titel | Frist laut Mail schon abgelaufen, kam aber am 27.09. als neuer Treffer – auf Vergabehero prüfen, ob Datenfehler oder Frist verlängert |
+
+## Bearbeitung Berlin (Stand 2026-09-27)
+
+Recherche per Websuche. Die Portale selbst (vergabehero.eu, wbm.de, tendigo.de) waren aus der Arbeitsumgebung nicht abrufbar. Im Gmail-Postfach gibt es bisher keinen Kontakt zu WBM, Forschungsverbund oder einer Vergabeplattform. Eine Registrierung auf der jeweiligen Plattform ist also vermutlich noch nötig.
+
+### #2 WBM – Austausch Kälteanlage Spandauer Str. 2 „Ladys Company“ → **GO**
+
+- Auftraggeber: WBM Immobilien-Service GmbH
+- Ort: Spandauer Str. 2, 10178 Berlin
+- Leistung: Alte Kälteanlage demontieren und durch **zwei neue Anlagen** ersetzen, dazu Rohrnetzarbeiten, Elektroinstallation, Wartung und Reinigung
+- Termine:
+  - veröffentlicht 25.09.2026
+  - **Bieterfragen bis 06.10.2026**
+  - **Angebot bis 13.10.2026**
+  - **Ausführung 02.11. bis 06.11.2026** (eine Woche)
+  - Revisionsunterlagen 2 Wochen vor Abnahme
+- Gewährleistung 4 Jahre ab Abnahme. Dazu kommt ein **Wartungs- und Instandhaltungsvertrag über 4 Jahre** nach Fertigstellung, der mit kalkuliert werden muss.
+- Quelle: [tendigo.de](https://tendigo.de/ausschreibung/austausch-kaelteanlage-spandauer-str-2-ladys-company-125f1e30c3) (Inhalt aus der Websuche)
+- Nächste Schritte:
+  1. Vergabeunterlagen über den Link in Vergabehero herunterladen, dafür bei Bedarf auf der Plattform registrieren.
+  2. Geräteleistung, Kältemittel und Aufstellort aus dem LV ermitteln. **Sofort beim Großhändler die Lieferzeit für zwei Anlagen anfragen**, denn die Montage ist fest auf die KW 45 gelegt.
+  3. Unklare Punkte bis 06.10. als Bieterfrage stellen, zum Beispiel ob eine Ortsbesichtigung möglich ist und wie die Bestandsanlage und die Stromversorgung aussehen.
+  4. Die Kapazität für die KW 45 einplanen (Monteure und Kälteschein nach F-Gase-Verordnung).
+  5. Angebot inklusive der 4-Jahres-Wartung bis 13.10. abgeben.
+
+### #3 WBM – Erneuerung von Rückkühlern und Verlegung der Rohrleitungen → **GO (Unterlagen prüfen)**
+
+- Frist 22.10.2026. Das ist Kerngeschäft Kälte.
+- Über die Websuche sind keine weiteren Details auffindbar. Ort, Umfang und Plattform stehen nur in der Vergabehero-Detailseite oder in den Vergabeunterlagen.
+- Nächster Schritt: Unterlagen öffnen und Ort, Anzahl und Leistung der Rückkühler sowie den Ausführungszeitraum eintragen.
+
+### #4 Forschungsverbund Berlin – kleinteilige Bauunterhaltung Heizung/Wasser/Entwässerung → **Nur wenn Heizung/Sanitär angeboten wird**
+
+- Frist 26.10.2026
+- Der Forschungsverbund veröffentlicht über [vergabekooperation.berlin](https://vergabekooperation.berlin/NetServer/) ([Ausschreibungsseite FVB](https://www.fv-berlin.de/ausschreibungen)).
+- Die Institute liegen überwiegend in Berlin (Adlershof, Buch, Mitte, Friedrichshagen). Das IGB hat zusätzlich einen Standort in Brandenburg (Neuglobsow). Den Ort also in den Unterlagen prüfen.
+- Die Leistung ist Heizung und Sanitär, nicht Klima/Kälte.
+
+### #1 Berliner Wasserbetriebe – Entwässerung/Trinkwasser → **NO-GO**
+
+- Die gefundene BWB-Ausschreibung dieser Art ist Leitungs- und Tiefbau: Trinkwasserleitungen DN 150/250 (ca. 114 m), Mischwasserkanal (ca. 19 m) und Schachtbauwerke. Das ist kein Gewerk von Leans Tech.
+- Quelle: [bauportal-deutschland.de](https://www.bauportal-deutschland.de/oeffentliche_ausschreibung_vobvol_details_10179_Berlin_Bau_von_Druckrohrleitungen_fuer_die_Trinkwasserversorgung_Bau_von_Entwaesserungsanlagen_3183728.html). Dass es genau dieselbe Ausschreibung ist, ist nicht bestätigt. Der Titel in Vergabehero weist aber in dieselbe Richtung.
+
+### #5 Friedrich-Ebert-Stiftung – Haustechnik energetische Sanierung → **NO-GO (vorerst)**
+
+- Die Frist laut Mail war der 22.07.2026, sie ist also abgelaufen. In der Websuche findet sich keine neue Bekanntmachung.
+- Ort vermutlich Hiroshimastraße 17/28, 10785 Berlin-Tiergarten (Sitz der FES). Das ist nicht bestätigt.
+- Nur weiterverfolgen, wenn Vergabehero eine neue Frist anzeigt.
+
+### Termine
+
+| Datum | Was |
+|-------|-----|
+| Di 06.10.2026 | WBM Kälteanlage: letzter Tag für Bieterfragen |
+| Di 13.10.2026 | WBM Kälteanlage: Angebotsabgabe |
+| Do 22.10.2026 | WBM Rückkühler: Angebotsabgabe |
+| Mo 26.10.2026 | Forschungsverbund Berlin: Angebotsabgabe (falls Heizung/Sanitär) |
+| Mo 02.11. – Fr 06.11.2026 (KW 45) | WBM Kälteanlage: Ausführung bei Zuschlag |
 
 ## Brandenburg (Umland, nur zur Info)
 
