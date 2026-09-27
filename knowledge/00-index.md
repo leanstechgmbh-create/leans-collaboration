@@ -11,6 +11,10 @@
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 
+## Runbooks
+
+- [[projects/mail-mcp-transport-closed]] - Mail-MCP `mail_leanstech` meldet "Transport closed": Diagnose mit `scripts/mcp_stdio_probe.py`.
+
 ## Wichtige Regeln
 
 - Board zuerst lesen.
