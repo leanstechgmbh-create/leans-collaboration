@@ -41,8 +41,9 @@ Recherche per Websuche. Die Portale selbst (vergabehero.eu, wbm.de, tendigo.de) 
   - Revisionsunterlagen 2 Wochen vor Abnahme
 - Gewährleistung 4 Jahre ab Abnahme. Dazu kommt ein **Wartungs- und Instandhaltungsvertrag über 4 Jahre** nach Fertigstellung, der mit kalkuliert werden muss.
 - Quelle: [tendigo.de](https://tendigo.de/ausschreibung/austausch-kaelteanlage-spandauer-str-2-ladys-company-125f1e30c3) (Inhalt aus der Websuche)
+- Plattform: Die WBM vergibt ausschließlich über die **Vergabeplattform des Landes Berlin** ([my.vergabeplattform.berlin.de](https://my.vergabeplattform.berlin.de)). Für den Download, für Antworten auf Bieterfragen und für die elektronische Abgabe ist eine **kostenlose Registrierung** nötig. Bieterfragen laufen über die Plattform, nicht per E-Mail.
 - Nächste Schritte:
-  1. Vergabeunterlagen über den Link in Vergabehero herunterladen, dafür bei Bedarf auf der Plattform registrieren.
+  1. Auf der Vergabeplattform Berlin registrieren und die Vergabeunterlagen herunterladen (LV, Formblätter, Pläne).
   2. Geräteleistung, Kältemittel und Aufstellort aus dem LV ermitteln. **Sofort beim Großhändler die Lieferzeit für zwei Anlagen anfragen**, denn die Montage ist fest auf die KW 45 gelegt.
   3. Unklare Punkte bis 06.10. als Bieterfrage stellen, zum Beispiel ob eine Ortsbesichtigung möglich ist und wie die Bestandsanlage und die Stromversorgung aussehen.
   4. Die Kapazität für die KW 45 einplanen (Monteure und Kälteschein nach F-Gase-Verordnung).
@@ -52,7 +53,7 @@ Recherche per Websuche. Die Portale selbst (vergabehero.eu, wbm.de, tendigo.de) 
 
 - Frist 22.10.2026. Das ist Kerngeschäft Kälte.
 - Über die Websuche sind keine weiteren Details auffindbar. Ort, Umfang und Plattform stehen nur in der Vergabehero-Detailseite oder in den Vergabeunterlagen.
-- Nächster Schritt: Unterlagen öffnen und Ort, Anzahl und Leistung der Rückkühler sowie den Ausführungszeitraum eintragen.
+- Nächster Schritt: Unterlagen öffnen (ebenfalls über die Vergabeplattform Berlin, da WBM) und Ort, Anzahl und Leistung der Rückkühler sowie den Ausführungszeitraum eintragen.
 
 ### #4 Forschungsverbund Berlin – kleinteilige Bauunterhaltung Heizung/Wasser/Entwässerung → **Nur wenn Heizung/Sanitär angeboten wird**
 
