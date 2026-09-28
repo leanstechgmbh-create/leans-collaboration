@@ -83,12 +83,23 @@ Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Positi
 8. Prüfen und zuordnen: Welt-der-Bäder-Rechnung 30076WDB vom 16.10.2025 über 3.729,95 € brutto (4 freistehende Wannen LISBON, Lieferadresse „Liesborner Weg 19 Willa“, Drive `1Qzi2f1GiOfqbdezAy-D6yz2kdAAyHFIh`) und Waschtisch TWG71 (Bernstein, 16.10.2025, 528,90 €). Das ist Material von Oktober 2025, für das keine Ausgangsrechnung gefunden wurde. Unklar ist, ob es zur Villa oder zum Neubau gehört.
 9. Das LV/Angebot der Villa suchen und ablegen (siehe „Auftrag“).
 
-## Abgrenzung: Neubau Butterfly Houses 19 a+b (Projekt 1150)
+## Neubau Butterfly Houses 19 a + b (Projekt 1150) – Stand 28.09.2026
 
-- Bauvertrag HLS mit CREST Living, Auftrag 20250418_#, **Pauschalpreis 300.000,00 € brutto** laut Anlage 1 / Zahlungsplan vom 15.05.2025 (Drive `1LH56zzSG3zcMYjf09K-6EPvui0YqXvEK`).
-- Zahlungsplan: 45.000 / 60.000 / 45.000 / 60.000 / 45.000 / 30.000 / 15.000 (Inbetriebnahme und Abnahme).
-- Abschlagsrechnungen: 1.–5. und 7. AR entsprechen den ersten sechs Raten, die 8. AR 2025-98 (11.000 €) ist laut OP-Liste offen. Damit sind 296.000 € von 300.000 € abgerechnet. Nachtragsrechnung 2025-70: 18.166,94 € gestellt, 13.318,89 € geprüft, 11.957,03 € gezahlt.
-- CREST behält laut Verwendungszweck 10 % Sicherheitseinbehalt („SE10“) ein. Dafür wird später eine eigene Schlussrechnung fällig; sie ist nicht Teil dieser Aufstellung.
+Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_Nachtraege, 4_Rechnungen). Übersicht über beide Projekte: [[00_Uebersicht_Liesborner_Weg_19_Villa_und_Neubau.pdf]].
+
+- **Auftrag:** Anlage 1 „Zahlungsplan“ zum Bauvertrag HLS vom 15.05.2025, pauschal **300.000,00 € brutto**. Raten: 45.000 / 60.000 / 45.000 / 60.000 / 45.000 / 30.000 / 15.000. Der unterschriebene Bauvertrag liegt nicht in Drive.
+- **Getrennt wurde nach Haus, nicht nach Gewerk:** Angebot 233 v3 für Haus 1 (19 a) über 157.472,66 €, Angebot 234 v3 für Haus 2 (19 b) über 155.198,57 €. Klima, Lüftung, Heizung inkl. Wärmepumpe/FBH und Sanitär sind Titel innerhalb dieser Angebote. Vorversionen: 202, 203, 213, 233/234 v1 und v2. Nach Gewerk **und** Haus getrennt wurde bei Scharfenberger Str. 26 (Angebote 102–105, 43–45).
+- **Nachträge:**
+  - NA 1 (216): CREST hat **5.200 € netto** freigegeben. In der 6. AR sind aber 5.200 € **brutto** abgerechnet, also **830,25 € netto zu wenig**.
+  - NA 2 (282, identisch mit 283): 8.118,89 €.
+  - Nicht abgerechnet: 217 (653,55 €) und Angebot 230 Wasserzählerschacht (1.231,32 €). Zu klären, ob beauftragt.
+- **Rechnungen:** 1.–5. AR, 6. AR/Nachtrag 2025-70, 7. AR und 8. AR ergeben zusammen 309.318,89 € brutto. Gezahlt wurden 240.546,62 €.
+  - Die **8. AR 2025-98 über 11.000 € ist offen**; bis April 2026 ist keine Zahlung eingegangen.
+  - Die Restrate von 4.000 € ist noch nicht abgerechnet.
+- **Einbehalte:**
+  - Sicherheitseinbehalt 10 %, rechnerisch 28.500 € auf die Raten und 1.427,11 € auf den Nachtrag.
+  - Bauabzugsteuer 19.593,40 € auf die 1.–3. AR. Sie wurde ans Finanzamt abgeführt und muss dort angerechnet werden; gegenüber CREST ist sie keine offene Forderung.
+- **Freistellungsbescheinigung § 48b EStG:** Laut CREST-Prüfblatt gültig bis **02.07.2026**, also abgelaufen. Eine neue Bescheinigung beantragen, sonst behält CREST 15 % ein.
 
 ## Prozesshinweis
 
