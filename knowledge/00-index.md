@@ -7,6 +7,10 @@
 - [[decisions]]
 - [[prompts]]
 
+## Projekte
+
+- [[projects/gmbh-gruendung-berlin|GmbH-Gründung in Berlin (bosnischer Pass, Aufenthaltstitel)]]
+
 ## Aktueller Workflow
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
