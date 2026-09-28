@@ -126,7 +126,7 @@ def build(path):
     E.append(Spacer(1, 3*mm))
     E.append(KeepTogether([Paragraph(
         f"Bitte überweisen Sie <b>{eur(offen_sum)}</b> innerhalb von 10 Tagen unter Angabe der Rechnungsnummer auf das unten "
-        "genannte Konto. Eine gültige Freistellungsbescheinigung nach § 48b EStG liegt bei (kein Bauabzug).", st),
+        "genannte Konto.", st),
         Spacer(1, 2*mm),
         Paragraph("Hinweis Rundung: Im Dok. 176 wurde die USt je Position brutto gerundet (22.541,30 €); hier wird die USt auf die "
                   "Nettosumme gerechnet (FBH 22.541,29 €), daher 1 Cent Differenz.", small)]))

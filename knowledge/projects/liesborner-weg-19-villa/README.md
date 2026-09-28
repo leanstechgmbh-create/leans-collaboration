@@ -57,6 +57,12 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 
 Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Position gerundet, deshalb liegt die FBH hier 1 Cent niedriger (22.541,29 statt 22.541,30).
 
+### Variante: eigenständige Schlussrechnung Fußbodenheizung (28.09.2026)
+
+- Datei: [[Schlussrechnung_Fussbodenheizung_ENTWURF_BV_Liesborner_Weg_19_Villa.pdf]], an CREST Living. Sie enthält nur die Heizungsleistungen: FBH 21.525,30 € − 12 % Rabatt + hydraulischer Abgleich 270,00 € = **19.212,26 € netto, 22.862,59 € brutto**, Zahlungen 0,00 €.
+- Sie ersetzt Dok. 176 und Dok. 159. **Je nach Versand die kumulierte Fassung oder diese Variante verwenden, nicht beide.**
+- Nachprüfung vom 28.09.2026: Eine Rechnung **2024-23 gibt es in Drive nicht** (weder als Datei noch im Text). In den vorhandenen Kontoauszügen (02/2024, 08–09/2024, 01/2025–04/2026) und in „Abgleich_Ausgangsrechnungen_2025“ gibt es **keine Zahlung** auf die Fußbodenheizung, auf Dok. 176, auf Dok. 159 oder auf 2024-23.
+
 ## To-dos vor dem Versand
 
 1. Nächste freie Rechnungsnummer 2026-__ und das Datum eintragen. Laut rechnungen_2026.md war zuletzt 2026-38 vergeben (Stand 07/2026), die Nummer vorher prüfen.
@@ -65,7 +71,7 @@ Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Positi
 4. **Stornorechnung zu RE 2025-8** ausstellen. Sie ist durch 2025-17 ersetzt, weist aber USt aus.
 5. Die Differenz von 847,00 € netto zwischen 2025-8 und 2025-17 klären (siehe oben) und gegebenenfalls in die Schlussrechnung aufnehmen.
 6. Die Zahlung von RE 2024-47 über die Kontoauszüge Apr.–Jul. 2024 belegen. Ist sie unbezahlt, erhöht sich der Zahlbetrag um 14.852,39 €.
-7. Eine gültige Freistellungsbescheinigung nach § 48b EStG beilegen. CREST hat bei früheren Zahlungen 15 % Bauabzug einbehalten.
+7. Prüfen, ob eine gültige Freistellungsbescheinigung nach § 48b EStG vorliegt, und sie gegebenenfalls beilegen. CREST hat bei früheren Zahlungen 15 % Bauabzug einbehalten; in Drive liegt nur eine Bescheinigung zu § 13b UStG.
 8. Prüfen und zuordnen: Welt-der-Bäder-Rechnung 30076WDB vom 16.10.2025 über 3.729,95 € brutto (4 freistehende Wannen LISBON, Lieferadresse „Liesborner Weg 19 Willa“, Drive `1Qzi2f1GiOfqbdezAy-D6yz2kdAAyHFIh`) und Waschtisch TWG71 (Bernstein, 16.10.2025, 528,90 €). Das ist Material von Oktober 2025, für das keine Ausgangsrechnung gefunden wurde. Unklar ist, ob es zur Villa oder zum Neubau gehört.
 9. Das LV/Angebot der Villa suchen und ablegen (siehe „Auftrag“).
 
