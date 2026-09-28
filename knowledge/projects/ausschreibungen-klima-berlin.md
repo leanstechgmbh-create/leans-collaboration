@@ -83,6 +83,25 @@ Recherche per Websuche. Die Portale selbst (vergabehero.eu, wbm.de, tendigo.de) 
 | Mo 26.10.2026 | Forschungsverbund Berlin: Angebotsabgabe (falls Heizung/Sanitär) |
 | Mo 02.11. – Fr 06.11.2026 (KW 45) | WBM Kälteanlage: Ausführung bei Zuschlag |
 
+## Neue Treffer 28.09.2026
+
+Vergabehero-Mail vom 28.09.2026: 34 Treffer, davon 19 verschiedene Ausschreibungen. **Keine neue Klima-/Kälte-Ausschreibung in Berlin.**
+
+| Frist | Ausschreibung | Auftraggeber | Ort | Bewertung |
+|-------|---------------|--------------|-----|-----------|
+| 11.11.2026 | [Technische Objektbetreuung und Winterdienst](https://vergabehero.eu/ausschreibungen/technische-objektbetreuung-und-winterdienst--cmukq0i1n02n2srdnaw0et11w) | Heinrich Böll Stiftung e.V. | vermutlich Berlin (Sitz der Stiftung in Berlin-Mitte), nicht bestätigt | NO-GO: Facility-Management und Winterdienst, kein Klima |
+| 27.10.2026 | [Winterbaubeheizung für eine Doppelturnhalle](https://vergabehero.eu/ausschreibungen/lieferung-aufbau-betrieb-und-rueckbau-einer-winterbaubeheizung-fuer-eine-doppelt--cmukq2k26045zsrdnvhc9lzgc) | Stadt Finsterwalde | Brandenburg | NO-GO: Bauheizung, außerhalb Berlin |
+| 30.10.2026 | [Installation von Lüftungsanlagen und Lüftungskanälen](https://vergabehero.eu/ausschreibungen/installation-von-lueftungsanlagen-und-lueftungskanaelen--cmukq2g9j0418srdnr6xvctof) | Fraunhofer-Gesellschaft, Vergabestelle Bau | nicht in der Mail. Das Sanitär-Los derselben Vergabestelle mit gleicher Frist ist der IZN-Neubau in **Freiburg** ([tendigo.de](https://tendigo.de/ausschreibung/sanitaer-und-sondermedien-70-00482-2180-431a-pr1304559-e23c23f546)) | vermutlich nicht Berlin |
+
+Aussortiert (Rest):
+- NRW: Münster (2), Wuppertal (2), Bonn
+- Niedersachsen: Uelzen (2), Braunschweig, Deutsch Evern
+- Hessen: Kassel (3)
+- Hamburg: Schulbau Hamburg, HafenCity
+- Baden-Württemberg: Fraunhofer Sanitär (Freiburg)
+- Sachsen: Stadtwerke Görlitz
+- Gemeinde Rosengarten (Niedersachsen oder Baden-Württemberg, nicht Berlin)
+
 ## Brandenburg (Umland, nur zur Info)
 
 | Frist | Ausschreibung | Auftraggeber | Match | Ort |
