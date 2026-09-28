@@ -7,6 +7,10 @@
 - [[decisions]]
 - [[prompts]]
 
+## Projekte
+
+- [[projects/ausschreibungen-klima-berlin|Ausschreibungen Klima/Kälte/TGA – Berlin]]
+
 ## Aktueller Workflow
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
