@@ -124,12 +124,20 @@ Hinweis: Händlerseiten widersprechen sich bei der Leistung des CU-2Z50ABEC (ein
 ## 7. Nächster Schritt
 Auf Semirs Antworten zu Abschnitt 6 warten und dann das Angebot sowie die Antwort-Mail als **Entwurf** erstellen. **Nichts versenden ohne „senden“ von Semir.**
 
-## 8. Angebot 413 (Entwurf) – Kalkulationsbasis
-- Kunde hat sich **kein konkretes Gerät ausgesucht**. Er nennt nur die Serie „Power Heat Multi“ und die IG-Leistungsklassen (3,5/3,5/2,5–2,6/2,5–2,6 kW).
-- AG CU-2Z50ABEC: 2.695,25 € EP = breeze24-Preis 2.349 € brutto / 1,19 × 0,95 + 820 € Montage (Formel wie Angebot 405 intern)
-- IG Etherea CS-Z25CKEW 1.642,50 € (wie Angebot 404); CS-Z35CKEW 1.742,50 € (**geschätzt, EK prüfen**)
-- Übrige EP aus Angebot 404/412: Leitung 50,90 €/m, Steuerleitung 6,20 €/m, Kondensat 22 €/m, Kanal 24,50 €/m, Kernbohrung 170 € (50-cm-Wand), Bigfoot 230 €, Dichtheit/Vakuum 650 € psch, Elektro 450 € je AG + Wartungsschalter 145 €
-- Anfahrt 1.080 € psch (Vorschlag: 2 Tage × ca. 260 km + Fahrzeit 2 Monteure) → Semir entscheidet
-- Heizlastberechnung als Bedarfsposition 390 € (Vorschlag), wird bei Auftrag angerechnet
-- Summe: netto 18.911,30 € / brutto 22.504,45 € (davon Elektro brutto 1.416,10 €)
-- Gelb markiert (vor Versand füllen): Anrede, Straße, Datum, komplette Heizdaten-Tabelle aus Panasonic-Datenblatt
+## 8. Angebote 413–415 (Entwürfe, nicht versendet)
+- Der Kunde hat sich **kein konkretes Gerät ausgesucht**. Er nennt nur die Serie „Power Heat Multi“ und die IG-Leistungsklassen (3,5/3,5/2,5–2,6/2,5–2,6 kW).
+- Semir wollte zusätzlich je eine förderfähige Variante von Panasonic und von Mitsubishi Heavy.
+- Preisformel für Panasonic-Geräte (wie Angebot 405 intern): breeze24 brutto / 1,19 × 0,95 + 820 € Montage
+  - CU-2Z50ABEC 2.349 € → EP 2.695,25 € · CU-2Z50CBE 1.939 € → 2.367,94 € · CS-Z35CKEW 719 € → 1.393,99 € · CS-Z25CKEW 599 € → 1.298,19 €
+- Mitsubishi Heavy: EP aus Angebot 398 (SCM60ZS-W 2.739,92 €, SRK35ZSX-WF 1.285,67 €, SRK25ZSX-WF 1.268,87 €, Leitung 57,90 €/m)
+- Übrige EP aus Angebot 404/412; Anfahrt 1.080 € psch (Vorschlag); Heizlast 390 € (bei 414/415 feste Position, weil Fördervoraussetzung)
+
+| Nr. | System | brutto | KfW 458 (30 %) |
+|---|---|---|---|
+| 413 | 2 × CU-2Z50ABEC Power Heat (Kundenwunsch) | 20.855,54 € | BAFA-Listung ABEC ungeprüft |
+| 414 | 2 × CU-2Z50CBE (gelistet laut Angebot 404) | 20.540,64 € | ca. 6.162 € |
+| 415 | 2 × SCM60ZS-W (gelistet laut Förderübersicht Karadag, 16.09.2026) | 21.331,61 € | ca. 6.399 € |
+
+- Förderregeln aus Drive „Foerderuebersicht Frau Karadag.md“ (primärquellengeprüft 16.09.2026): Gerät BAFA-gelistet, Kombinationslabel A++ Heizen, Heizlast DIN EN 12831, Einregulierung der Luftvolumenströme, Schallanforderung 10 dB unter Grenzwert, iMSys, Vertrag mit aufschiebender Bedingung, max. 28.000 € förderfähig, kein Klimageschwindigkeitsbonus ohne fossile Altheizung.
+- Risiko 415: MHI-Heizbetrieb nur bis −15 °C (laut Angebot 398). Als alleinige Heizung in Coswig kritisch.
+- Gelb markiert (vor Versand füllen): Anrede, Straße, Datum, Heizdaten-Tabellen, Kombinationslabel, BAFA-Listung ABEC.
