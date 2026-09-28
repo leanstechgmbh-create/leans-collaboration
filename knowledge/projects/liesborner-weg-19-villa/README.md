@@ -43,7 +43,7 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 
 ## Kumulierte Schlussrechnung (Entwurf)
 
-- Datei: [[Schlussrechnung_kumuliert_ENTWURF_BV_Liesborner_Weg_19_Villa.pdf]]; Rechenblatt mit Formeln: [[Kumulierte_Aufstellung_BV_Liesborner_Weg_19_Villa.xlsx]]
+- Datei: [[Villa_0200/2_Schlussrechnung/Alternative_kumuliert_alle_Villa-Leistungen_ENTWURF.pdf]]; Rechenblatt mit Formeln: [[Villa_0200/Aufstellung_Villa.xlsx]]
 - Empfänger (Empfehlung): CREST Living GmbH & Co. KG, Liesborner Weg 19, 13507 Berlin
 
 | | netto | USt 19 % | brutto |
@@ -59,16 +59,16 @@ Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Positi
 
 ### Variante: eigenständige Schlussrechnung Fußbodenheizung (28.09.2026)
 
-- Datei: [[Schlussrechnung_Fussbodenheizung_ENTWURF_BV_Liesborner_Weg_19_Villa.pdf]], an CREST Living. Sie enthält nur die Heizungsleistungen: FBH 21.525,30 € − 12 % Rabatt + hydraulischer Abgleich 270,00 € = **19.212,26 € netto, 22.862,59 € brutto**, Zahlungen 0,00 €.
+- Datei: [[Villa_0200/2_Schlussrechnung/Alternative_19.212,26_netto_mit_12-Prozent-Rabatt_ENTWURF.pdf]], an CREST Living. Sie enthält nur die Heizungsleistungen: FBH 21.525,30 € − 12 % Rabatt + hydraulischer Abgleich 270,00 € = **19.212,26 € netto, 22.862,59 € brutto**, Zahlungen 0,00 €.
 - Sie ersetzt Dok. 176 und Dok. 159. **Je nach Versand die kumulierte Fassung oder diese Variante verwenden, nicht beide.**
 - Nachprüfung vom 28.09.2026: Eine Rechnung **2024-23 gibt es in Drive nicht** (weder als Datei noch im Text). In den vorhandenen Kontoauszügen (02/2024, 08–09/2024, 01/2025–04/2026) und in „Abgleich_Ausgangsrechnungen_2025“ gibt es **keine Zahlung** auf die Fußbodenheizung, auf Dok. 176, auf Dok. 159 oder auf 2024-23.
 
 ### Schlussrechnung Fußbodenheizung über 20.000 € netto (Wunsch Semir, 28.09.2026)
 
-- Datei: [[Schlussrechnung_Fussbodenheizung_20000_netto_ENTWURF_Villa.pdf]] im LEANS-Rechnungslayout (Logo, Kopf und Fußzeile wie RE 2025-17), an CREST Living.
+- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_Fussbodenheizung_20.000_netto_ENTWURF.pdf]] im LEANS-Rechnungslayout (Logo, Kopf und Fußzeile wie RE 2025-17), an CREST Living.
 - Positionen zu Listenpreisen: hydraulischer Abgleich 270,00 € + Fußbodenheizung 21.525,30 € = 21.795,30 € netto. Davon geht ein Nachlass von 1.795,30 € netto (8,24 %) ab, womit die Rechnung auf **20.000,00 € netto** kommt. Dazu 19 % USt 3.800,00 €, **Zahlbetrag 23.800,00 €**.
 - **Achtung:** Dok. 176 gewährte 12 % Rabatt (Heizung dann 19.212,26 € netto). Die 20.000 € netto liegen **787,74 € netto (937,41 € brutto) höher**. Vor dem Versand klären, ob das mit CREST so vereinbart ist, sonst die Fassung mit 19.212,26 € verwenden.
-- Rechnungsmappe mit allen 7 Villa-Belegen (Deckblatt und Originale): [[Rechnungsmappe_Villa_Liesborner_Weg_19.pdf]].
+- Rechnungsmappe mit allen 7 Villa-Belegen (Deckblatt und Originale): [[Villa_0200/Rechnungsmappe_Villa_alle_Belege.pdf]].
 - Zuletzt gefundene Rechnungsnummer: 2026-43 vom 01.09.2026. 2026-39 und 2026-40 sind in Drive doppelt vergeben. Die nächste freie Nummer vor der Vergabe prüfen.
 
 ## To-dos vor dem Versand
