@@ -11,6 +11,8 @@
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 
+Claude kann Codex direkt ueber das Codex Plugin aufrufen: `../docs/Codex-Plugin.md`, Entscheidung [[2026-09-29-codex-plugin-cc]].
+
 ## Wichtige Regeln
 
 - Board zuerst lesen.
