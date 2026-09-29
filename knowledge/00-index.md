@@ -7,6 +7,10 @@
 - [[decisions]]
 - [[prompts]]
 
+## Projekte
+
+- [[projects/liesborner-weg-19-villa/README|BV Liesborner Weg 19 – Villa: Rechnungen & kumulierte Schlussrechnung]]
+
 ## Aktueller Workflow
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
