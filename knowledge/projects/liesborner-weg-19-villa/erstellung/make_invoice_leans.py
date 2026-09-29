@@ -21,6 +21,9 @@ ZIEL_NETTO = D("20000.00")
 META = dict(nr="2026-___", datum="__.__.2026", ziel="10 Tage", faellig="__.__.2026")
 EMPF = ["CREST Living GmbH & Co. KG", "Liesborner Weg 19", "13507 Berlin"]
 WATERMARK = True
+# FBH OG/UG fertig 04.11.2023 (Protokoll 02.11.2023), Rest EG ab 13.12.2023 (Protokoll 11.12.2023),
+# hydraulischer Abgleich 03.12.2024 (Dok. 159). Sanitär 07.01.2024 liegt dazwischen.
+LEISTUNGSZEITRAUM = "11.2023 – 03.12.2024"
 
 def eur(x):
     return f"{D(x):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + " €"
@@ -85,7 +88,7 @@ def build(path):
     E = [Paragraph("<font color='#4CAF50' size='14'><b>SCHLUSSRECHNUNG</b></font>", ParagraphStyle("t", fontName="LB", fontSize=14, leading=18)),
          Spacer(1, 3*mm),
          Paragraph("BV: Liesborner Weg 19<br/>13507 Berlin (Villa)<br/>Gewerk: Fußbodenheizung und hydraulischer Abgleich<br/>"
-                   "Leistungszeitraum: 01.2024 – 03.12.2024", P),
+                   f"Leistungszeitraum: {LEISTUNGSZEITRAUM}", P),
          Spacer(1, 4*mm)]
     data = [["Nr.", "Beschreibung", "Menge", "Einheit", "Einzelpreis", "USt. %", "USt.", "Betrag"]]
     for i, (p, t, q, u, ep, _) in enumerate(items, 1):

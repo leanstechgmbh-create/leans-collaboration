@@ -1,4 +1,4 @@
-"""Übersicht Liesborner Weg 19: Villa (0200) und Neubau 19 a+b (1150) – Stand 28.09.2026."""
+"""Übersicht Liesborner Weg 19: Villa (0200) und Neubau 19 a+b (1150) – Stand 29.09.2026."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -28,13 +28,13 @@ def tab(rows, widths, colour=None, right=()):
 def build(out):
     doc = SimpleDocTemplate(out, pagesize=landscape(A4), leftMargin=12*mm, rightMargin=12*mm, topMargin=12*mm, bottomMargin=12*mm,
                             title="Übersicht Liesborner Weg 19 – Villa und Neubau 19 a+b", author="LEANS Tech GmbH")
-    E = [Paragraph("Übersicht Liesborner Weg 19, 13507 Berlin – Stand 28.09.2026", H1),
+    E = [Paragraph("Übersicht Liesborner Weg 19, 13507 Berlin – Stand 29.09.2026", H1),
          Paragraph("Zwei getrennte Bauvorhaben, beide für <b>CREST Living GmbH &amp; Co. KG</b>. Achtung: Alle CREST-Firmen haben ihren Sitz am Liesborner Weg 19 – "
                    "die Adresse allein sagt nichts über die Baustelle. Maßgeblich ist die Zeile „BV:“ auf dem Beleg. "
                    "Zahlungen laut Kontoauszügen 02/2024, 08–09/2024 und 01/2025–04/2026 (übrige Monate fehlen in Drive).", P),
          Spacer(1, 3*mm),
          tab([["", "Villa (Bestand) – Projekt 0200 „ALT“", "Neubau Butterfly Houses 19 a + b – Projekt 1150 „NEU“"],
-              ["Zeitraum", "Jan. 2024 – Dez. 2024 (Nachträge bis Apr. 2025)", "Mai 2025 – Dez. 2025 (laufend)"],
+              ["Zeitraum", "Nov. 2023 – Dez. 2024 (Rechnungen bis Apr. 2025)", "Mai 2025 – Dez. 2025 (laufend)"],
               ["Auftrag", "kein schriftlicher Auftrag in Drive; Beauftragung über CREST-Baustellenprotokolle + Nachtragsangebot 175",
                "Bauvertrag HLS, Anlage 1 Zahlungsplan vom 15.05.2025: Pauschal 300.000,00 € brutto (unterschriebener Vertrag nicht in Drive)"],
               ["Gewerke", "Sanitärobjekte/Armaturen, Heizung (Fußbodenheizung, hydraulischer Abgleich)", "Klima, Lüftung, Heizung inkl. Wärmepumpe + FBH, Sanitär – je Haus"],
@@ -55,7 +55,10 @@ def build(out):
          Spacer(1, 2*mm),
          Paragraph("<b>Neue Schlussrechnung Fußbodenheizung:</b> Positionen zu Listenpreisen 21.795,30 € netto (FBH 21.525,30 + hydr. Abgleich 270,00), "
                    "Nachlass 1.795,30 € → <b>20.000,00 € netto + 3.800,00 € USt = 23.800,00 € brutto</b>. Hinweis: Dok. 176 hatte 12 % Rabatt "
-                   "(= 19.212,26 € netto); die 20.000 € liegen 787,74 € netto darüber.", P),
+                   "(= 19.212,26 € netto); die 20.000 € liegen 787,74 € netto darüber. "
+                   "<b>Gleichwertig als kumulierte Schlussrechnung</b> über alle Villa-Leistungen: Gesamtleistung 37.239,00 € netto / 44.314,41 € brutto, "
+                   "abzgl. RE 2024-47 und RE 2025-17 → gleicher Zahlbetrag 23.800,00 €. Nur eine der beiden Fassungen versenden. "
+                   "Leistungszeitraum laut CREST-Protokollen 11.2023 – 03.12.2024.", P),
          PageBreak(),
          Paragraph("2. Neubau Butterfly Houses – Liesborner Weg 19 a + b (Projekt 1150)", H2),
          Paragraph("<b>Getrennt wurde nach Haus, nicht nach Gewerk:</b> je Haus ein Komplettangebot; Klima, Lüftung, Heizung inkl. Wärmepumpe/FBH und Sanitär sind Titel "

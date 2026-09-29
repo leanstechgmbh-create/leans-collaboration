@@ -1,20 +1,20 @@
 # BV Liesborner Weg 19 – Villa (Projekt 0200): Rechnungen, offener Betrag, kumulierte Schlussrechnung
 
-Stand: 28.09.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstechgmbh@gmail.com (nur gelesen, nichts geändert)
+Stand: 29.09.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstechgmbh@gmail.com (nur gelesen, nichts geändert)
 
 ## Kurzfazit
 
 - **Villa = Projekt 0200 „Liesborner Weg (ALT)“.** Der Neubau „Butterfly Houses 19 a+b“ ist Projekt 1150 (NEU) und wird hier nur zur Abgrenzung erwähnt.
 - **Bauherr/Auftraggeber der Villa ist die CREST Living GmbH & Co. KG.** Sie hat die Baustellenprotokolle „BV Liesborner Weg 19 Villa“ geführt und die Villa-Rechnungen 2024-47 und 2025-17 erhalten. Achtung: Alle CREST-Firmen haben ihren Sitz am Liesborner Weg 19. Deshalb steht diese Adresse auf fast jeder CREST-Rechnung, auch bei ganz anderen Baustellen.
 - **Die offenen „ca. 20.000 €“ sind die „Schlussrechnung 176“ Fußbodenheizung über 22.541,30 € brutto vom 05.01.2025.** Sie wurde nie bezahlt. Wahrscheinlicher Grund: Das Dokument wurde mit der Angebotsvorlage erstellt. Es hat nur eine „Angebotsnummer 176“ und „Gültig bis“, aber keine Rechnungsnummer, kein Fälligkeitsdatum und keine Bankverbindung. Außerdem ging es an die CREST Investment GmbH statt an CREST Living. Dasselbe gilt für „Rechnung 159“ (hydraulischer Abgleich, 321,30 €), die ebenfalls unbezahlt ist.
-- **Ergebnis:** Entwurf einer kumulierten Schlussrechnung an CREST Living. Sie ersetzt Dok. 159 und Dok. 176. Zahlbetrag **22.862,59 €**; vorbehaltlich der noch nicht verifizierten Zahlung von RE 2024-47.
+- **Ergebnis (Wunsch Semir):** Heizung pauschal **20.000,00 € netto**, Zahlbetrag **23.800,00 €** an CREST Living. Es gibt zwei gleichwertige Fassungen, von denen **nur eine** versendet wird: die kumulierte Schlussrechnung über alle Villa-Leistungen (Sanitär + Heizung, mit Abzug von 2024-47 und 2025-17) oder die Schlussrechnung nur über die Fußbodenheizung. Beide ersetzen Dok. 159 und Dok. 176. Die älteren Fassungen mit 12 % Rabatt (22.862,59 €) liegen als Alternative bei.
 
 ## Auftrag
 
 - **In Drive gibt es keinen schriftlichen Auftrag und kein LV/Angebot für die Villa.** Die Übersicht „Zahlungsübersicht – Soll-Ist pro Projekt (Stand 15.07.2026)“ vermerkt das ebenfalls („Vertrag FEHLT“).
 - Die Positionsnummern der Rechnungen (1.1.1 … 1.4.16 Sanitär, 2.1/2.7.0 … 2.11 Heizung) verweisen auf ein LV, das nicht abgelegt ist. **Das LV bitte aus dem Rechnungsprogramm oder dem Mail-Archiv (info@/sr@) ziehen.**
 - Nachweise für die Beauftragung:
-  - Baustellenprotokolle der CREST Living („Protokoll Baustellensitzung BV Liesborner Weg 19 Villa“). Semir Redzic ist ab 10.01.2024 Teilnehmer. Am 24.01.2024 steht dort „Heizprotokoll bitte an Lukas senden -> Semir“. Laut Protokoll gilt: „… ist Vertragsbestandteil“.
+  - Baustellenprotokolle der CREST Living („Protokoll Baustellensitzung BV Liesborner Weg 19 Villa“). Semir Redzic (LEANSTECH) ist ab 07.09.2023 in den Protokollen genannt. Laut Protokoll vom 02.11.2023 war die Fußbodenheizung in OG/UG am 04.11.2023 fertig; laut Protokoll vom 11.12.2023 legte LEANSTECH ab 13.12.2023 den restlichen Teil im EG (Estrich EG in KW 2/2024). **Leistungszeitraum der Villa daher 11.2023 – 03.12.2024**, nicht erst ab 01.2024. Am 24.01.2024 steht dort „Heizprotokoll bitte an Lukas senden -> Semir“. Laut Protokoll gilt: „… ist Vertragsbestandteil“.
   - Nachtragsangebot 175 vom 05.01.2025 an CREST Living.
   - Ordner: „Mail-Anhaenge 2023-2024 (aus GMX)“, Drive-ID `1vW6B96oradQsBnmi6KctLhmnaMvPX6Ct`.
 
@@ -41,9 +41,30 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 - Für Dok. 176, Dok. 159 und RE 2025-8 gibt es im gesamten geprüften Zeitraum keine Zahlung.
 - **Lücken:** Für 2024 fehlen die Auszüge Jan., März–Jul. und Okt.–Dez., für 2026 alles ab Mai. Die Zahlung von RE 2024-47 (fällig 26.04.2024) lässt sich deshalb nicht belegen. Die fehlenden Auszüge im Volksbank-Onlinebanking herunterladen.
 
-## Kumulierte Schlussrechnung (Entwurf)
+## Kumulierte Schlussrechnung über alle Villa-Leistungen, Heizung pauschal 20.000 € netto (29.09.2026)
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Alternative_kumuliert_alle_Villa-Leistungen_ENTWURF.pdf]]; Rechenblatt mit Formeln: [[Villa_0200/Aufstellung_Villa.xlsx]]
+- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_kumuliert_alle_Villa-Leistungen_20.000_netto_ENTWURF.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
+- Aufbau: A. alle 43 Positionen, gegliedert nach den bisherigen Einzelabrechnungen (Titel 1 = RE 2024-47, Titel 2 = RE 2025-17, Titel 3 = Dok. 159, Titel 4 = Dok. 176), jede Position mit Verweis auf Beleg und Original-Pos.; B. Zusammenstellung; C. Abrechnung mit Abzug der gestellten Rechnungen (netto und USt, § 14 Abs. 5 UStG).
+
+| | netto | USt 19 % | brutto |
+|---|---:|---:|---:|
+| Titel 1 Sanitär (RE 2024-47) | 12.481,00 | | |
+| Titel 2 Sanitär-Nachtrag (RE 2025-17) | 4.758,00 | | |
+| Titel 3 hydraulischer Abgleich (Dok. 159) | 270,00 | | |
+| Titel 4 Fußbodenheizung (Dok. 176) | 21.525,30 | | |
+| Nachlass Heizung (Titel 3 + 4 pauschal auf 20.000,00) | −1.795,30 | | |
+| **Gesamtleistung** | **37.239,00** | 7.075,41 | **44.314,41** |
+| abzgl. RE 2024-47 | −12.481,00 | −2.371,39 | −14.852,39 |
+| abzgl. RE 2025-17 | −4.758,00 | −904,02 | −5.662,02 |
+| **Zahlbetrag** | **20.000,00** | **3.800,00** | **23.800,00** |
+
+- Prüfung: Die 43 Positionsbeträge wurden aus dem erzeugten PDF zurückgelesen und je Titel summiert; die Summen stimmen mit den Originalrechnungen überein (12.481,00 / 4.758,00 / 270,00 / 21.525,30).
+- Nicht enthalten: die 847,00 € netto aus RE 2025-8, die in 2025-17 fehlen (siehe oben).
+- Der Zahlbetrag setzt voraus, dass 2024-47 bezahlt ist oder separat bezahlt wird. 2024-47 bleibt als eigene Rechnung gültig.
+
+## Ältere Fassung: kumuliert mit 12 % Rabatt auf die FBH (Entwurf)
+
+- Datei: [[Villa_0200/2_Schlussrechnung/Alternative_kumuliert_mit_12-Prozent-Rabatt_ENTWURF.pdf]]; Rechenblatt mit Formeln: [[Villa_0200/Aufstellung_Villa.xlsx]]
 - Empfänger (Empfehlung): CREST Living GmbH & Co. KG, Liesborner Weg 19, 13507 Berlin
 
 | | netto | USt 19 % | brutto |

@@ -70,8 +70,8 @@ def build(path):
     E.append(Paragraph("SCHLUSSRECHNUNG (kumuliert)", h1))
     E.append(Paragraph("<b>BV:</b> Liesborner Weg 19, 13507 Berlin – Villa (Bestandsgebäude) &nbsp;·&nbsp; "
                        "<b>Gewerke:</b> Sanitärobjekte/Armaturenmontage, Heizung (Fußbodenheizung, hydraulischer Abgleich)<br/>"
-                       "<b>Leistungszeitraum:</b> 07.01.2024 – 03.12.2024 &nbsp;·&nbsp; <b>Grundlage:</b> Beauftragung durch CREST Living "
-                       "(Baustellensitzungen BV Liesborner Weg 19 Villa, Jan. 2024 ff.), Nachtragsangebot 175 vom 05.01.2025", st))
+                       "<b>Leistungszeitraum:</b> 11.2023 – 03.12.2024 &nbsp;·&nbsp; <b>Grundlage:</b> Beauftragung durch CREST Living "
+                       "(Baustellensitzungen BV Liesborner Weg 19 Villa, ab 09.2023), Nachtragsangebot 175 vom 05.01.2025", st))
     E.append(Spacer(1, 2*mm))
     E.append(Paragraph("Diese Schlussrechnung fasst sämtliche Leistungen am BV zusammen. Sie <b>ersetzt die Dokumente „Schlussrechnung 176“ vom 05.01.2025</b> (Fußbodenheizung, 22.541,30 € brutto) "
                        "<b>und „Rechnung 159“ vom 03.12.2024</b> (hydraulischer Abgleich, 321,30 € brutto), die beide an CREST Investment GmbH "

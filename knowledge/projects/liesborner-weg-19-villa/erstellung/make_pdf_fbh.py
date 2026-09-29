@@ -27,7 +27,7 @@ def build(path):
     head.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP")]))
     E += [head, Spacer(1, 6*mm), Paragraph("SCHLUSSRECHNUNG Fußbodenheizung", h1)]
     E.append(Paragraph("<b>BV:</b> Liesborner Weg 19, 13507 Berlin – Villa &nbsp;·&nbsp; <b>Gewerk:</b> Heizung / Fußbodenheizung<br/>"
-                       "<b>Leistungszeitraum:</b> 01/2024 – 03.12.2024 (Verlegung, Befüllung, Aufheizen; hydraulischer Abgleich am 03.12.2024)", st))
+                       "<b>Leistungszeitraum:</b> 11/2023 – 03.12.2024 (Verlegung OG/UG bis 04.11.2023, EG ab 13.12.2023, Befüllung, Aufheizen; hydraulischer Abgleich am 03.12.2024)", st))
     E.append(Spacer(1, 2*mm))
     E.append(Paragraph("Diese Schlussrechnung <b>ersetzt</b> die Dokumente „Schlussrechnung 176“ vom 05.01.2025 (22.541,30 €) und "
                        "„Rechnung 159“ vom 03.12.2024 (321,30 €), die ohne Rechnungsnummer an CREST Investment GmbH gingen. "
