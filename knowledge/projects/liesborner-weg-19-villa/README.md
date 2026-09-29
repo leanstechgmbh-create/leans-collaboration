@@ -73,15 +73,20 @@ Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Positi
 
 ## To-dos vor dem Versand
 
-1. Nächste freie Rechnungsnummer 2026-__ und das Datum eintragen. Laut rechnungen_2026.md war zuletzt 2026-38 vergeben (Stand 07/2026), die Nummer vorher prüfen.
+1. Rechnungsnummer und Datum eintragen. Zuletzt vergeben ist **2026-43 vom 01.09.2026** (am PDF geprüft, Drive `1cJDHEPCyvEOOX2X3l6J_upWpi_aokoAV`). Vorschlag: **2026-44**. Die Drive-Übersicht „00 Übersicht – offene Rechnungen und Entwürfe“ vom 28.09.2026 schlägt 2026-44 ff. aber auch für sieben andere Entwürfe vor. Jede Nummer nur einmal vergeben, in Versandreihenfolge.
 2. Mit CREST klären, ob die Villa an **CREST Living** (empfohlen, zahlt die Villa-Rechnungen) oder an CREST Investment abgerechnet wird.
 3. CREST Investment schriftlich mitteilen, dass Dok. 159 und Dok. 176 storniert und durch die Schlussrechnung ersetzt werden. Beide Dokumente weisen USt aus.
 4. **Stornorechnung zu RE 2025-8** ausstellen. Sie ist durch 2025-17 ersetzt, weist aber USt aus.
 5. Die Differenz von 847,00 € netto zwischen 2025-8 und 2025-17 klären (siehe oben) und gegebenenfalls in die Schlussrechnung aufnehmen.
 6. Die Zahlung von RE 2024-47 über die Kontoauszüge Apr.–Jul. 2024 belegen. Ist sie unbezahlt, erhöht sich der Zahlbetrag um 14.852,39 €.
-7. Prüfen, ob eine gültige Freistellungsbescheinigung nach § 48b EStG vorliegt, und sie gegebenenfalls beilegen. CREST hat bei früheren Zahlungen 15 % Bauabzug einbehalten; in Drive liegt nur eine Bescheinigung zu § 13b UStG.
+7. **Freistellungsbescheinigung § 48b EStG: abgelaufen.** Die neueste Bescheinigung in Drive gilt vom 03.07.2025 bis 02.07.2026 („Freistellungsbescheinigung 2025 48b.pdf“, Drive `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`). Eine neuere Bescheinigung oder einen neuen Antrag der LEANS Tech GmbH gibt es in Drive nicht. Ohne gültige Bescheinigung muss CREST 15 % einbehalten, bei 23.800,00 € also 3.570,00 €. Eine neue Bescheinigung beim FA für Körperschaften III beantragen.
 8. Prüfen und zuordnen: Welt-der-Bäder-Rechnung 30076WDB vom 16.10.2025 über 3.729,95 € brutto (4 freistehende Wannen LISBON, Lieferadresse „Liesborner Weg 19 Willa“, Drive `1Qzi2f1GiOfqbdezAy-D6yz2kdAAyHFIh`) und Waschtisch TWG71 (Bernstein, 16.10.2025, 528,90 €). Das ist Material von Oktober 2025, für das keine Ausgangsrechnung gefunden wurde. Unklar ist, ob es zur Villa oder zum Neubau gehört.
 9. Das LV/Angebot der Villa suchen und ablegen (siehe „Auftrag“).
+10. **Bankverbindung festlegen.** Der Entwurf nennt die Berliner Volksbank (DE21 1009 0000 2911 7280 04), wie die Villa-Rechnungen 2024/2025. Die letzte Rechnung 2026-43 nennt dagegen N26 mit Kontoinhaber Semir Redzic (privat) als „neue Bankverbindung“. Eine GmbH-Forderung auf ein Privatkonto mit dem Steuerberater abstimmen.
+11. **Empfänger der Mail:** Die Mailadresse von Lukas Stockmaier (CREST-Bauleitung Villa) ist weder in Drive noch in Gmail zu finden. Auf dem Briefkopf der CREST Living steht info@crest-investment.com; die Mitarbeitenden haben Kürzel-Adressen (sb@, vp@crest-investment.com). Mailentwurf: [[Villa_0200/3_Versand/Mail_an_CREST_Schlussrechnung_FBH_ENTWURF.txt]].
+12. Die Kontoauszüge in Drive reichen nur bis 31.05.2026. Vor dem Versand die Eingänge Juni bis September prüfen.
+
+Gegenprüfung vom 29.09.2026: Die übrigen offenen CREST-Living-Rechnungen aus der OP-Liste vom 15.07.2026 gehören **nicht** zur Villa, sondern zu anderen Objekten: 2024-110 An der Stammbahn 99, 2024-111 Heerstr. 71, 2025-18 und 2025-22 Stahnsdorf, 2025-81 SBS WE 2.2.1. Quellen: rechnungen_2024.md, rechnungen_2025_teil1.md, PDF 2025-81.
 
 ## Neubau Butterfly Houses 19 a + b (Projekt 1150) – Stand 28.09.2026
 

@@ -96,7 +96,9 @@ def build(out):
                    "• Nachtrag 1: 830,25 € netto zu wenig abgerechnet (siehe oben). • Unterschriebenen Bauvertrag HLS suchen.", P)]),
          Spacer(1, 3*mm),
          Paragraph("<b>Wichtig für beide Projekte:</b> Laut CREST-Prüfblatt war die Freistellungsbescheinigung (§ 48b EStG) nur bis <b>02.07.2026</b> gültig. "
-                   "Ohne neue Bescheinigung darf CREST von jeder Zahlung 15 % Bauabzugsteuer einbehalten – bei der neuen Schlussrechnung wären das 3.570,00 €.", P)]
+                   "Eine neuere Bescheinigung liegt nicht in Drive (geprüft 29.09.2026). "
+                   "Ohne neue Bescheinigung darf CREST von jeder Zahlung 15 % Bauabzugsteuer einbehalten – bei der neuen Schlussrechnung wären das 3.570,00 €. "
+                   "<b>Bankverbindung vor dem Versand festlegen:</b> Der Entwurf nennt die Berliner Volksbank, die letzte Rechnung 2026-43 dagegen N26 (Kontoinhaber Semir Redzic privat).", P)]
     doc.build(E)
 
 if __name__ == "__main__":
