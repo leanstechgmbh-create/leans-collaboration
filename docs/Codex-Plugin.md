@@ -35,6 +35,17 @@ Claude Code im LEANS-Ordner starten und dort eingeben:
 /codex:setup
 ```
 
+Alternativ ohne laufende Claude-Code-Sitzung direkt in PowerShell (danach Claude Code neu starten
+und `/codex:setup` ausfuehren):
+
+```powershell
+claude plugin marketplace add openai/codex-plugin-cc
+claude plugin install codex@openai-codex
+```
+
+Marketplace-Name `openai-codex` und Plugin-Name `codex` stammen aus dem Manifest des Plugins
+(`.claude-plugin/marketplace.json`, Version 1.0.6, Stand 2026-09-30).
+
 `/codex:setup` prueft, ob Codex installiert und angemeldet ist. Fehlt Codex und ist npm vorhanden,
 bietet der Befehl die Installation an. Alternativ selbst installieren:
 
@@ -142,8 +153,10 @@ Ohne Konfiguration und ohne `--model`/`--effort` waehlt Codex seine eigenen Stan
 
 ## Sicherheit
 
-- Das Plugin bringt einen `SessionStart`-Hook mit (fuer `/codex:transfer`) und optional den
-  `Stop`-Hook des Review Gates. Hooks laufen mit den Rechten des lokalen Benutzers.
+- Das Plugin registriert Hooks fuer `SessionStart`, `SessionEnd` und `Stop`. Der `Stop`-Hook
+  beendet sich sofort, solange das Review Gate aus ist. Hooks laufen mit den Rechten des lokalen
+  Benutzers.
+- Lizenz des Plugins: Apache 2.0.
 - `/codex:transfer` uebertraegt den Claude-Sitzungsverlauf aus `~/.claude/projects` an Codex.
   Keine Sitzungen mit Zugangsdaten oder vertraulichen Daten transferieren.
 - `/codex:rescue` kann Dateien aendern. Vor dem Commit den Diff pruefen.
