@@ -26,6 +26,7 @@ git commit -m "chore: initialize leans collaboration workspace"
 - `knowledge/` - Obsidian-kompatibler Wissensordner.
 - `scripts/leans-board.ps1` - kleine Automatisierung fuer Board-Aktionen.
 - `tests/leans-board.tests.ps1` - prueft die wichtigsten Board-Aktionen.
+- `docs/Codex-Plugin.md` - direkte Verbindung Claude -> Codex ueber das offizielle OpenAI-Plugin.
 
 ## Typischer Ablauf
 
