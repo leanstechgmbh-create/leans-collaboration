@@ -1,0 +1,87 @@
+{
+  "$schema_version": "1.0",
+  "id": "lg-us30f-nr0-uuc1-u40",
+  "erfasst_am": "2026-10-06",
+  "quelle_typ": "Webrecherche (Herstellerdatenblatt + Haendlerangaben)",
+  "hersteller": "LG Electronics",
+  "geraetetyp": "Wandgeraet (Single Split, Monosplit)",
+  "baureihe": "Universal / Standard Inverter (CAC)",
+  "leistungsklasse_btu": 30000,
+  "kaeltemittel": "R32",
+  "innengeraet": {
+    "modell": "US30F.NR0",
+    "bauform": "Wandgeraet",
+    "abmessungen_mm": { "breite": 1200, "hoehe": 360, "tiefe": 265 },
+    "gewicht_kg": 18.3,
+    "schalldruck_kuehlen_dba": { "hoch": 46, "mittel": 42, "niedrig": 38 },
+    "wlan": "optional (Modul nachruestbar)"
+  },
+  "aussengeraet": {
+    "modell": "UUC1.U40",
+    "typ": "Universal-Aussengeraet fuer 1 Innengeraet (Standard/Compact/H-Inverter)",
+    "abmessungen_mm": { "breite": 950, "hoehe": 834, "tiefe": 330 },
+    "gewicht_kg": 57.7,
+    "schalldruck_dba": { "kuehlen": 50, "heizen": 52 },
+    "verdichter": "Twin Rotary DC Inverter",
+    "stromversorgung": "230 V / 1 Ph / 50 Hz",
+    "alternative": "UUB1.U20 (kleiner, guenstiger, weniger Leistungsreserve)"
+  },
+  "leistung": {
+    "kuehlen_kw": { "min": 3.2, "nenn": 8.0, "max": 9.0 },
+    "heizen_kw": { "min": 3.6, "nenn": 9.0, "max": 10.0 },
+    "leistungsaufnahme_kuehlen_kw": { "min": 0.50, "nenn": 2.28, "max": 3.17 },
+    "leistungsaufnahme_heizen_kw": { "min": 0.50, "nenn": 2.50, "max": 3.20 },
+    "eer": 3.51,
+    "cop": 3.6,
+    "seer": 7.0,
+    "scop": 4.3,
+    "energieklasse_kuehlen": "A++",
+    "energieklasse_heizen": "A+",
+    "jahresverbrauch_kwh": { "kuehlen": 400, "heizen": 1758 }
+  },
+  "einsatzbereich": {
+    "aussentemperatur_kuehlen_c": { "min": -20, "max": 50 },
+    "aussentemperatur_heizen_c": { "min": -20, "max": 18 },
+    "raumgroesse_m2_herstellerangabe": 56,
+    "raumgroesse_m2_haendlerangabe": 80,
+    "hinweis_raumgroesse": "Angaben schwanken je nach Daemmstandard und Rechenbasis; 8,0 kW decken typisch 60-85 m2 ab."
+  },
+  "installation": {
+    "fluessigkeitsleitung_mm": 9.52,
+    "fluessigkeitsleitung_zoll": "3/8",
+    "gasleitung_mm": 15.88,
+    "gasleitung_zoll": "5/8",
+    "leitungslaenge_m": { "min": 5, "max": 30, "vorbefuellt_bis": 7.5 },
+    "max_hoehendifferenz_m": 30,
+    "montage_pflicht": "Kaeltefachbetrieb (F-Gase-Zertifizierung)"
+  },
+  "preise": {
+    "waehrung": "EUR",
+    "stand": "2026-10-06",
+    "inkl_mwst": true,
+    "ohne_montage": true,
+    "set_komplett": [
+      { "haendler": "Breeze24", "konfiguration": "US30F.NR0 + UUC1.U40", "preis": 3054.00 },
+      { "haendler": "Klimagic", "konfiguration": "Universal Standard Wandgeraet Set 8,0 kW", "preis": 2497.00, "hinweis": "ab-Preis, Aussengeraet-Variante nicht eindeutig" },
+      { "haendler": "Klimaanlagen24", "konfiguration": "US30F.NR0 + UUB1.U20", "preis": null, "hinweis": "gelistet, Preis nicht abrufbar" }
+    ],
+    "einzelkomponenten": [
+      { "haendler": "Breeze24", "komponente": "US30F.NR0 Innengeraet", "preis": 1349.00 },
+      { "haendler": "Breeze24", "komponente": "UUC1.U40 Aussengeraet", "preis": 1859.00 }
+    ],
+    "ausland_referenz": [
+      { "land": "PL", "konfiguration": "US30F.NR0 + UUC1.U40", "preis": 10140, "waehrung": "PLN", "hinweis": "netto" }
+    ],
+    "montage_schaetzung_eur": { "min": 800, "max": 1500 },
+    "spanne_komplettset_eur": { "min": 2497, "max": 3054 }
+  },
+  "quellen": [
+    "https://www.lg.com/content/dam/channel/wcms/uk/business/download/airsolution/2021%20Sales%20Spec%20Sheet%20Single_Wall%20Mounted%20US30F_US36F_20210719_185840530_.pdf",
+    "https://www.bittel.bg/en/inverter-air-conditioner-lg-us30-f-nr0-uuc1-u40",
+    "https://breeze24.com/klimaanlagen/innengeraete/innengeraete-split-systeme/wandgeraete/lg-electronics-wandgeraet-universal-8-0-kw-us30f-nr0-nur-monosplit-r32",
+    "https://www.breeze24.com/klimaanlagen/aussengeraete/aussengeraete-split-systeme/aussengeraete-fuer-1-innengeraet/lg-electronics-aussengeraet-uuc1-u40-fuer-1-innengeraet-6-8kw-r32",
+    "https://www.schiessl-kaelte.com/de_DE/Shop/Klimageraete-Lueftung/Klimageraete/Single/Multi-Split/Single-Split-Au%C3%9Fengeraete/LG-Klima-Aussengeraet-STANDARD-COMPACT-H-UUC1.U40-R32~p465377",
+    "https://klimagic.de/LG-Klimaanlage-Universal-Standard-Wandgeraet-Set",
+    "https://klimaanlagen24.com/products/lg-inverter-universal-wandgerste-us30f-nr0-uub1-u20"
+  ]
+}
