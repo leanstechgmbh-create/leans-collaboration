@@ -9,9 +9,10 @@
  ],
  "kopf": [
   "BV: Koloniestr. 10 in 12209 Berlin",
-  "Gewerk: Sanitär",
+  "Gewerk: Sanitär und Heizung",
   "Abschnitt 1: WC und Bad – Vorwandinstallation, Abwasser- und Trinkwasserleitungen",
-  "Abschnitt 2: Küche – Waschmaschinenanschluss und Leitungsanpassung"
+  "Abschnitt 2: Küche – Waschmaschinenanschluss und Leitungsanpassung",
+  "Abschnitt 3: Heizung – Fußbodenheizung Dusche, Pumpenumschluss Heizungsraum"
  ],
  "abschnitte": [
   {
@@ -33,7 +34,7 @@
      "text": "Bodengleiche Dusche: Duschrinne 80 cm Edelstahl mit Ablauf DN 50, inkl. Verbundabdichtung (Dichtmanschette, Dichtband, Flüssigfolie) und Anschluss an Abwasserleitung, liefern und montieren. Estrich, Gefälle und Fliesen bauseits.",
      "menge": 2,
      "einheit": "Stk.",
-     "ep": 895.0
+     "ep": 775.0
     },
     {
      "text": "Abwasserleitung HT-Rohr DN 110 (PP), inkl. Formstücken, Schallschutzschellen und Befestigung, liefern und montieren",
@@ -107,12 +108,29 @@
      "ep": 44.9
     }
    ]
+  },
+  {
+   "titel": "Heizung",
+   "positionen": [
+    {
+     "text": "Elektrische Fußbodenheizung im Duschbereich, ca. 3 m², inkl. Dämmung, Anschlüssen und Regler mit Bodenfühler, liefern und montieren, pauschal",
+     "menge": 1,
+     "einheit": "pschl.",
+     "ep": 420.0
+    },
+    {
+     "text": "Heizungsarbeiten im Heizungsraum: Umschluss von Pumpe auf Pumpe, inkl. Absperrungen, Verschraubungen und Entlüftung, pauschal",
+     "menge": 1,
+     "einheit": "pschl.",
+     "ep": 575.0
+    }
+   ]
   }
  ],
  "hinweise": [
   "Keramik (WC, Waschtisch), Armaturen und Duschabtrennung sind nicht enthalten und werden nach Auswahl separat angeboten.",
   "Estrich-, Fliesen-, Maler-, Putz- und Trockenbauarbeiten sowie Erdarbeiten für die Grundleitung bauseits.",
-  "Die Abschnitte 1 und 2 können auch getrennt beauftragt werden.",
+  "Die Abschnitte 1 bis 3 können auch getrennt beauftragt werden.",
   "Preise gelten bei zusammenhängender Ausführung und freiem Zugang zur Baustelle."
  ]
 }
