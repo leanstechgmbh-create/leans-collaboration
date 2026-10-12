@@ -79,17 +79,30 @@ def build(total_pages):
     story.append(Spacer(1, 6*mm))
     cw = [10*mm, 72*mm, 14*mm, 15*mm, 21*mm, 15*mm, 15*mm, 22*mm]
     head = [Paragraph(x, ParagraphStyle("hh", parent=stb, alignment=TA_RIGHT if i >= 2 else 0)) for i, x in enumerate(["Nr.", "Beschreibung", "Menge", "Einheit", "Einzelpreis", "USt. %", "USt.", "Betrag"])]
-    rows = [head]; netto = 0.0
-    for i, p in enumerate(SPEC["positionen"], 1):
-        n = p["menge"] * p["ep"]; ust = round(n * 0.19, 2); netto += n
-        rows.append([Paragraph(str(i), st), Paragraph(p["text"], st), Paragraph(num(p["menge"]), str_),
-                     Paragraph(p["einheit"], str_), Paragraph(eur(p["ep"]), str_), Paragraph("19,00 %", str_),
-                     Paragraph(eur(ust), str_), Paragraph(eur(n), str_)])
+    rows = [head]; netto = 0.0; styles = []
+    sts = ParagraphStyle("sec", parent=stb, fontSize=9.2, textColor=GREEN)
+    abschnitte = SPEC.get("abschnitte") or [{"titel": None, "positionen": SPEC["positionen"]}]
+    for a_i, a in enumerate(abschnitte, 1):
+        multi = len(abschnitte) > 1
+        if multi:
+            r = len(rows); rows.append([Paragraph(f"{a_i}", sts), Paragraph(a["titel"], sts), "", "", "", "", "", ""])
+            styles += [("SPAN", (1, r), (-1, r)), ("TOPPADDING", (0, r), (-1, r), 7)]
+        sub = 0.0
+        for i, p in enumerate(a["positionen"], 1):
+            n = round(p["menge"] * p["ep"], 2); ust = round(n * 0.19, 2); sub += n
+            nr = f"{a_i}.{i}" if multi else str(i)
+            rows.append([Paragraph(nr, st), Paragraph(p["text"], st), Paragraph(num(p["menge"]), str_),
+                         Paragraph(p["einheit"], str_), Paragraph(eur(p["ep"]), str_), Paragraph("19,00 %", str_),
+                         Paragraph(eur(ust), str_), Paragraph(eur(n), str_)])
+        netto += sub
+        if multi:
+            r = len(rows); rows.append(["", Paragraph(f"Zwischensumme Abschnitt {a_i} ({a['titel']}) netto", stbr), "", "", "", "", "", Paragraph(eur(sub), stbr)])
+            styles += [("SPAN", (1, r), (6, r)), ("LINEABOVE", (1, r), (-1, r), 0.4, GREEN), ("BOTTOMPADDING", (0, r), (-1, r), 6)]
     t = Table(rows, colWidths=cw, repeatRows=1)
     t.setStyle(TableStyle([("BACKGROUND", (0,0), (-1,0), LIGHT), ("VALIGN", (0,0), (-1,-1), "TOP"),
                            ("TOPPADDING", (0,0), (-1,-1), 3), ("BOTTOMPADDING", (0,0), (-1,-1), 3),
                            ("LEFTPADDING", (0,0), (-1,-1), 3), ("RIGHTPADDING", (0,0), (-1,-1), 3),
-                           ("LINEBELOW", (0,-1), (-1,-1), 0.8, GREEN)]))
+                           ("LINEBELOW", (0,-1), (-1,-1), 0.8, GREEN)] + styles))
     story.append(t)
     netto = round(netto, 2); ust = round(netto * 0.19, 2); brutto = round(netto + ust, 2)
     tot = Table([[Paragraph("Nettobetrag", stb), Paragraph(eur(netto), stbr)],
