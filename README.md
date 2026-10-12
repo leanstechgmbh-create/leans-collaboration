@@ -26,6 +26,7 @@ git commit -m "chore: initialize leans collaboration workspace"
 - `knowledge/` - Obsidian-kompatibler Wissensordner.
 - `scripts/leans-board.ps1` - kleine Automatisierung fuer Board-Aktionen.
 - `tests/leans-board.tests.ps1` - prueft die wichtigsten Board-Aktionen.
+- `.claude/skills/`, `.agents/skills/` - Vercel Labs Agent Skills fuer Claude und Codex, siehe `knowledge/decisions/2026-10-12-vercel-agent-skills.md`.
 
 ## Typischer Ablauf
 
