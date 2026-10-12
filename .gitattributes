@@ -1,0 +1,2 @@
+# Shell-Skripte der Agent-Skills muessen auch unter Windows (Git Bash/WSL) mit LF ausgecheckt werden.
+*.sh text eol=lf

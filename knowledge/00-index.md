@@ -6,6 +6,7 @@
 - [[projects]]
 - [[decisions]]
 - [[prompts]]
+- [[2026-10-12-vercel-agent-skills]] - Vercel Labs Agent Skills fuer Claude und Codex
 
 ## Aktueller Workflow
 
