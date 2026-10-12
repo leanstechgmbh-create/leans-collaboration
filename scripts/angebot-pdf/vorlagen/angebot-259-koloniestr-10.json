@@ -1,26 +1,118 @@
 {
- "nummer": "259", "datum": "12. Okt. 2026", "gueltig": "11. Nov. 2026",
- "empfaenger": ["Auftraggeber (bitte eintragen)", "Straße Nr.", "PLZ Ort"],
- "kopf": ["BV: Koloniestr. 10 in 12209 Berlin", "Gewerk: Sanitär", "Abschnitt 1: WC und Bad – Vorwandinstallation, Abwasser- und Trinkwasserleitungen", "Abschnitt 2: Küche – Waschmaschinenanschluss und Leitungsanpassung"],
- "abschnitte": [
-  {"titel": "WC und Bad", "positionen": [
-   {"text": "Montageelement Wand-WC Geberit Duofix, 112 cm, mit UP-Spülkasten Sigma 12 cm, inkl. Betätigungsplatte Sigma01 weiß und Schallschutzset, liefern und montieren", "menge": 2, "einheit": "Stk.", "ep": 379.00},
-   {"text": "Montageelement Waschtisch Geberit Duofix, 112 cm, für Standarmatur, inkl. Wandbefestigungsset, liefern und montieren", "menge": 2, "einheit": "Stk.", "ep": 245.00},
-   {"text": "Bodengleiche Dusche: Duschrinne 80 cm Edelstahl mit Ablauf DN 50, inkl. Verbundabdichtung (Dichtmanschette, Dichtband, Flüssigfolie) und Anschluss an Abwasserleitung, liefern und montieren. Estrich, Gefälle und Fliesen bauseits.", "menge": 2, "einheit": "Stk.", "ep": 895.00},
-   {"text": "Abwasserleitung HT-Rohr DN 110 (PP), inkl. Formstücken, Schallschutzschellen und Befestigung, liefern und montieren", "menge": 6, "einheit": "m", "ep": 69.90},
-   {"text": "Abwasserleitung HT-Rohr DN 50 (PP), inkl. Formstücken und Befestigung, liefern und montieren", "menge": 10, "einheit": "m", "ep": 44.90},
-   {"text": "Grundleitung KG2000-Rohr DN 110 (PP-MD, SN10), inkl. Formstücken, verlegen und anschließen. Erdarbeiten, Sandbett und Verfüllung bauseits.", "menge": 8, "einheit": "m", "ep": 59.90},
-   {"text": "Anschluss an vorhandene Abwasserleitung, inkl. Trenn-, Stemm- und Anschlussarbeiten, pauschal", "menge": 1, "einheit": "pschl.", "ep": 460.00},
-   {"text": "Trinkwasserleitung Mehrschichtverbundrohr Fa. Fränkische Alpex F50 Profi 16x2 / 20x2, vorgedämmt, inkl. Pressfittingen, Form- und Verbindungsstücken und Befestigung, liefern und montieren", "menge": 50, "einheit": "m", "ep": 53.40}
-  ]},
-  {"titel": "Küche", "positionen": [
-   {"text": "Kupferrohr umsetzen und erneuern, Cu 15/18 mm, inkl. Lötfittingen, Übergängen auf Bestand und Befestigung, liefern und montieren", "menge": 4, "einheit": "m", "ep": 69.90},
-   {"text": "Abflussleitung für Waschmaschine versetzen und anpassen, inkl. Formstücken und Befestigung", "menge": 1, "einheit": "pschl.", "ep": 265.00},
-   {"text": "Waschmaschinenanschluss neu herstellen: Geräteanschlussventil 1/2\" mit Rückflussverhinderer und UP-Waschmaschinensiphon mit Rosette, liefern und montieren", "menge": 1, "einheit": "Stk.", "ep": 265.00},
-   {"text": "Abflussrohr HT DN 50 anpassen und ändern, inkl. Formstücken, Schellen und Befestigung", "menge": 6, "einheit": "m", "ep": 44.90},
-   {"text": "Anschluss an vorhandene Rohrleitungen mit Mehrschichtverbundrohr Fa. Fränkische Alpex 16x2, inkl. Isolierung, Pressfittingen und Befestigung, liefern und montieren", "menge": 8, "einheit": "m", "ep": 53.40},
-   {"text": "Übergänge Warm- und Kaltwasser auf Bestandsleitung, pauschal", "menge": 1, "einheit": "pschl.", "ep": 150.00}
-  ]}
+ "nummer": "259",
+ "datum": "12. Okt. 2026",
+ "gueltig": "11. Nov. 2026",
+ "empfaenger": [
+  "Auftraggeber (bitte eintragen)",
+  "Straße Nr.",
+  "PLZ Ort"
  ],
- "hinweise": ["Keramik (WC, Waschtisch), Armaturen und Duschabtrennung sind nicht enthalten und werden nach Auswahl separat angeboten.", "Estrich-, Fliesen-, Maler-, Putz- und Trockenbauarbeiten sowie Erdarbeiten für die Grundleitung bauseits.", "Die Abschnitte 1 und 2 können auch getrennt beauftragt werden.", "Preise gelten bei zusammenhängender Ausführung und freiem Zugang zur Baustelle."]
+ "kopf": [
+  "BV: Koloniestr. 10 in 12209 Berlin",
+  "Gewerk: Sanitär",
+  "Abschnitt 1: WC und Bad – Vorwandinstallation, Abwasser- und Trinkwasserleitungen",
+  "Abschnitt 2: Küche – Waschmaschinenanschluss und Leitungsanpassung"
+ ],
+ "abschnitte": [
+  {
+   "titel": "WC und Bad",
+   "positionen": [
+    {
+     "text": "Montageelement Wand-WC Geberit Duofix, 112 cm, mit UP-Spülkasten Sigma 12 cm, inkl. Betätigungsplatte Sigma01 weiß und Schallschutzset, liefern und montieren",
+     "menge": 2,
+     "einheit": "Stk.",
+     "ep": 379.0
+    },
+    {
+     "text": "Montageelement Waschtisch Geberit Duofix, 112 cm, für Standarmatur, inkl. Wandbefestigungsset, liefern und montieren",
+     "menge": 2,
+     "einheit": "Stk.",
+     "ep": 245.0
+    },
+    {
+     "text": "Bodengleiche Dusche: Duschrinne 80 cm Edelstahl mit Ablauf DN 50, inkl. Verbundabdichtung (Dichtmanschette, Dichtband, Flüssigfolie) und Anschluss an Abwasserleitung, liefern und montieren. Estrich, Gefälle und Fliesen bauseits.",
+     "menge": 2,
+     "einheit": "Stk.",
+     "ep": 895.0
+    },
+    {
+     "text": "Abwasserleitung HT-Rohr DN 110 (PP), inkl. Formstücken, Schallschutzschellen und Befestigung, liefern und montieren",
+     "menge": 6,
+     "einheit": "m",
+     "ep": 69.9
+    },
+    {
+     "text": "Abwasserleitung HT-Rohr DN 50 (PP), inkl. Formstücken und Befestigung, liefern und montieren",
+     "menge": 10,
+     "einheit": "m",
+     "ep": 44.9
+    },
+    {
+     "text": "Grundleitung KG2000-Rohr DN 110 (PP-MD, SN10), inkl. Formstücken, verlegen und anschließen. Erdarbeiten, Sandbett und Verfüllung bauseits.",
+     "menge": 8,
+     "einheit": "m",
+     "ep": 59.9
+    },
+    {
+     "text": "Anschluss an vorhandene Abwasserleitung, inkl. Trenn-, Stemm- und Anschlussarbeiten, pauschal",
+     "menge": 1,
+     "einheit": "pschl.",
+     "ep": 460.0
+    },
+    {
+     "text": "Trinkwasserleitung Mehrschichtverbundrohr Fa. Fränkische Alpex F50 Profi 16x2 / 20x2, vorgedämmt, inkl. Pressfittingen, Form- und Verbindungsstücken und Befestigung, liefern und montieren",
+     "menge": 50,
+     "einheit": "m",
+     "ep": 53.4
+    },
+    {
+     "text": "Anschluss an vorhandene Rohrleitungen mit Mehrschichtverbundrohr Fa. Fränkische Alpex 16x2, inkl. Isolierung, Pressfittingen und Befestigung, liefern und montieren",
+     "menge": 8,
+     "einheit": "m",
+     "ep": 53.4
+    },
+    {
+     "text": "Übergänge Warm- und Kaltwasser auf Bestandsleitung, pauschal",
+     "menge": 1,
+     "einheit": "pschl.",
+     "ep": 150.0
+    }
+   ]
+  },
+  {
+   "titel": "Küche",
+   "positionen": [
+    {
+     "text": "Kupferrohr umsetzen und erneuern, Cu 15/18 mm, inkl. Lötfittingen, Übergängen auf Bestand und Befestigung, liefern und montieren",
+     "menge": 4,
+     "einheit": "m",
+     "ep": 69.9
+    },
+    {
+     "text": "Abflussleitung für Waschmaschine versetzen und anpassen, inkl. Formstücken und Befestigung",
+     "menge": 1,
+     "einheit": "pschl.",
+     "ep": 265.0
+    },
+    {
+     "text": "Waschmaschinenanschluss neu herstellen: Geräteanschlussventil 1/2\" mit Rückflussverhinderer und UP-Waschmaschinensiphon mit Rosette, liefern und montieren",
+     "menge": 1,
+     "einheit": "Stk.",
+     "ep": 265.0
+    },
+    {
+     "text": "Abflussrohr HT DN 50 anpassen und ändern, inkl. Formstücken, Schellen und Befestigung",
+     "menge": 6,
+     "einheit": "m",
+     "ep": 44.9
+    }
+   ]
+  }
+ ],
+ "hinweise": [
+  "Keramik (WC, Waschtisch), Armaturen und Duschabtrennung sind nicht enthalten und werden nach Auswahl separat angeboten.",
+  "Estrich-, Fliesen-, Maler-, Putz- und Trockenbauarbeiten sowie Erdarbeiten für die Grundleitung bauseits.",
+  "Die Abschnitte 1 und 2 können auch getrennt beauftragt werden.",
+  "Preise gelten bei zusammenhängender Ausführung und freiem Zugang zur Baustelle."
+ ]
 }
