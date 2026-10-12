@@ -21,7 +21,7 @@ def eur(x): return f"{x:,.2f}".replace(",", "X").replace(".", ",").replace("X", 
 def num(x): return f"{x:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 W, H = A4; ML, MR = 18*mm, 18*mm
-st = ParagraphStyle("n", fontName="LS", fontSize=8.6, leading=11.5, textColor=colors.black)
+st = ParagraphStyle("n", fontName="LS", fontSize=8.6, leading=11, textColor=colors.black)
 stb = ParagraphStyle("b", parent=st, fontName="LS-B")
 sth = ParagraphStyle("h", parent=st, fontName="LS-B", fontSize=9, textColor=colors.white)
 stt = ParagraphStyle("t", parent=st, fontName="LS-B", fontSize=14, textColor=GREEN, leading=18)
@@ -64,8 +64,8 @@ class Doc(BaseDocTemplate):
     def __init__(self, fn, **kw):
         super().__init__(fn, pagesize=A4, leftMargin=ML, rightMargin=MR, topMargin=0, bottomMargin=0, **kw)
         self.total_pages = 1
-        f1 = Frame(ML, 34*mm, W-ML-MR, H - 34*mm - 96*mm, id="f1", leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
-        f2 = Frame(ML, 34*mm, W-ML-MR, H - 34*mm - 50*mm, id="f2", leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
+        f1 = Frame(ML, 31*mm, W-ML-MR, H - 31*mm - 96*mm, id="f1", leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
+        f2 = Frame(ML, 31*mm, W-ML-MR, H - 31*mm - 47*mm, id="f2", leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
         self.addPageTemplates([PageTemplate("first", [f1], onPage=header_footer),
                                PageTemplate("later", [f2], onPage=header_footer)])
     def handle_pageBegin(self):
@@ -74,9 +74,9 @@ class Doc(BaseDocTemplate):
 
 def build(total_pages):
     doc = Doc(OUT); doc.total_pages = total_pages
-    story = [Paragraph("ANGEBOT", stt), Spacer(1, 5*mm)]
+    story = [Paragraph("ANGEBOT", stt), Spacer(1, 4*mm)]
     for line in SPEC["kopf"]: story.append(Paragraph(line, st))
-    story.append(Spacer(1, 6*mm))
+    story.append(Spacer(1, 5*mm))
     cw = [10*mm, 72*mm, 14*mm, 15*mm, 21*mm, 15*mm, 15*mm, 22*mm]
     head = [Paragraph(x, ParagraphStyle("hh", parent=stb, alignment=TA_RIGHT if i >= 2 else 0)) for i, x in enumerate(["Nr.", "Beschreibung", "Menge", "Einheit", "Einzelpreis", "USt. %", "USt.", "Betrag"])]
     rows = [head]; netto = 0.0; styles = []
@@ -100,7 +100,7 @@ def build(total_pages):
             styles += [("SPAN", (1, r), (6, r)), ("LINEABOVE", (1, r), (-1, r), 0.4, GREEN), ("BOTTOMPADDING", (0, r), (-1, r), 6)]
     t = Table(rows, colWidths=cw, repeatRows=1)
     t.setStyle(TableStyle([("BACKGROUND", (0,0), (-1,0), LIGHT), ("VALIGN", (0,0), (-1,-1), "TOP"),
-                           ("TOPPADDING", (0,0), (-1,-1), 3), ("BOTTOMPADDING", (0,0), (-1,-1), 3),
+                           ("TOPPADDING", (0,0), (-1,-1), 2), ("BOTTOMPADDING", (0,0), (-1,-1), 2),
                            ("LEFTPADDING", (0,0), (-1,-1), 3), ("RIGHTPADDING", (0,0), (-1,-1), 3),
                            ("LINEBELOW", (0,-1), (-1,-1), 0.8, GREEN)] + styles))
     story.append(t)
@@ -110,10 +110,11 @@ def build(total_pages):
                  [Paragraph('<font color="#5BAE5B" size="10">Gesamt</font>', stb), Paragraph(f'<font color="#5BAE5B" size="10">{eur(brutto)}</font>', stbr)]],
                 colWidths=[30*mm, 32*mm], hAlign="RIGHT")
     tot.setStyle(TableStyle([("LINEABOVE", (0,2), (-1,2), 0.8, GREEN), ("TOPPADDING", (0,0), (-1,-1), 2), ("BOTTOMPADDING", (0,0), (-1,-1), 2)]))
-    story += [Spacer(1, 5*mm), KeepTogether(tot)]
+    tail = [Spacer(1, 4*mm), tot]
     if SPEC.get("hinweise"):
-        story += [Spacer(1, 8*mm), Paragraph("Hinweise", stb)]
-        for h in SPEC["hinweise"]: story.append(Paragraph("• " + h, st))
+        tail += [Spacer(1, 5*mm), Paragraph("Hinweise", stb)]
+        for h in SPEC["hinweise"]: tail.append(Paragraph("\u2022 " + h, ParagraphStyle("hw", parent=st, fontSize=8, leading=10)))
+    story.append(KeepTogether(tail))
     doc.build(story)
     return doc.page, netto, ust, brutto
 
