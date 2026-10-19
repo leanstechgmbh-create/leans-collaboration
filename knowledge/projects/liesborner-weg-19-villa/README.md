@@ -125,7 +125,7 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
   - Die Restrate von 4.000 € ist noch nicht abgerechnet.
 - **Einbehalte:**
   - Sicherheitseinbehalt 10 %, rechnerisch 28.500 € auf die Raten und 1.427,11 € auf den Nachtrag.
-  - Bauabzugsteuer 19.593,40 € auf die 1.–3. AR. Sie wurde ans Finanzamt abgeführt und muss dort angerechnet werden; gegenüber CREST ist sie keine offene Forderung.
+  - Bauabzugsteuer 19.593,40 € auf die 1.–3. AR. Sie wurde ans Finanzamt abgeführt (so mit CREST vereinbart, bestätigt von Semir am 19.10.2026) und muss dort angerechnet werden; gegenüber CREST ist sie keine offene Forderung. In der Schlussrechnung zählt sie als Zahlung.
 - **Freistellungsbescheinigung § 48b EStG:** Laut CREST-Prüfblatt gültig bis **02.07.2026**, also abgelaufen. Eine neue Bescheinigung beantragen, sonst behält CREST 15 % ein.
 
 ### Kumulierte Schlussrechnung Neubau 19 a + b, beide Häuser zusammen (Entwurf, 19.10.2026)
