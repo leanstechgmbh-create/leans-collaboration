@@ -1,13 +1,25 @@
 # BV Liesborner Weg 19 – Villa (Projekt 0200): Rechnungen, offener Betrag, kumulierte Schlussrechnung
 
-Stand: 29.09.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstechgmbh@gmail.com (nur gelesen, nichts geändert)
+Stand: 19.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstechgmbh@gmail.com (nur gelesen, nichts geändert)
 
 ## Kurzfazit
 
 - **Villa = Projekt 0200 „Liesborner Weg (ALT)“.** Der Neubau „Butterfly Houses 19 a+b“ ist Projekt 1150 (NEU) und wird hier nur zur Abgrenzung erwähnt.
 - **Bauherr/Auftraggeber der Villa ist die CREST Living GmbH & Co. KG.** Sie hat die Baustellenprotokolle „BV Liesborner Weg 19 Villa“ geführt und die Villa-Rechnungen 2024-47 und 2025-17 erhalten. Achtung: Alle CREST-Firmen haben ihren Sitz am Liesborner Weg 19. Deshalb steht diese Adresse auf fast jeder CREST-Rechnung, auch bei ganz anderen Baustellen.
 - **Die offenen „ca. 20.000 €“ sind die „Schlussrechnung 176“ Fußbodenheizung über 22.541,30 € brutto vom 05.01.2025.** Sie wurde nie bezahlt. Wahrscheinlicher Grund: Das Dokument wurde mit der Angebotsvorlage erstellt. Es hat nur eine „Angebotsnummer 176“ und „Gültig bis“, aber keine Rechnungsnummer, kein Fälligkeitsdatum und keine Bankverbindung. Außerdem ging es an die CREST Investment GmbH statt an CREST Living. Dasselbe gilt für „Rechnung 159“ (hydraulischer Abgleich, 321,30 €), die ebenfalls unbezahlt ist.
-- **Ergebnis (Semir, 19.10.2026):** Bei der Villa sind **20.000,00 € brutto** offen. Davon ziehen wir selbst 3.000,00 € brutto für Gasanschluss und Inbetriebnahme Trinkwasser ab → **Zahlbetrag 17.000,00 € brutto** (14.285,71 € netto + 2.714,29 € USt) an CREST Living. Es gibt zwei gleichwertige Fassungen, von denen **nur eine** versendet wird: die kumulierte Schlussrechnung über alle Villa-Leistungen (Sanitär + Heizung, mit Abzug von 2024-47 und 2025-17) oder die Schlussrechnung nur über die Fußbodenheizung. Beide ersetzen Dok. 159 und Dok. 176. Die älteren Fassungen mit 12 % Rabatt (22.862,59 €) liegen als Alternative bei.
+- **Ergebnis (Semir, 19.10.2026):** Bei der Villa sind **20.000,00 € brutto** offen. Davon ziehen wir selbst 3.000,00 € brutto für Gasanschluss und Inbetriebnahme Trinkwasser ab → **Zahlbetrag 17.000,00 € brutto** (14.285,71 € netto + 2.714,29 € USt) an CREST Living. Versendet wird die **kumulierte Schlussrechnung Nr. 2026-44** über alle Villa-Leistungen (Sanitär + Heizung, mit Abzug von 2024-47 und 2025-17). Sie ersetzt Dok. 159 und Dok. 176. Die Fassung nur über die Fußbodenheizung und die älteren Fassungen mit 12 % Rabatt (22.862,59 €) liegen unter `Entwuerfe_und_Alternativen/` und werden nicht versendet.
+
+## Endgültige Schlussrechnungen (freigegeben von Semir am 19.10.2026)
+
+| Nr. | BV | Datei | Zahlbetrag |
+|---|---|---|---:|
+| **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_kumuliert_17.000_brutto.pdf]] | **17.000,00 €** (14.285,71 netto + 2.714,29 USt) |
+| **2026-45** | Neubau 19 a + b (1150), beide Häuser, 2 Seiten | [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_45.745,31.pdf]] | **45.745,31 €** (Rest 4.988,00 + 8. AR 11.000,00 + SE 29.757,31) |
+
+- Rechnungsdatum 19.10.2026, Zahlungsziel 10 Tage, fällig **29.10.2026**, Bankverbindung **Berliner Volksbank** DE21 1009 0000 2911 7280 04. Fußzeile mit Geschäftsführer und Registergericht (§ 35a GmbHG).
+- Erzeugt mit `erstellung/make_final.py` (ohne Wasserzeichen, ohne Platzhalter). RE 2024-47 steht in der Zahlungsaufstellung als „bezahlt“ (Aussage Semir; Datum mangels Kontoauszug 04–07/2024 nicht belegbar).
+- Versandmail für beide Rechnungen: [[00_Mail_an_CREST_Schlussrechnungen_2026-44_und_2026-45.txt]], mit 8 Punkten, die vor dem Versand zu erledigen sind (u. a. die 6 Fachunternehmererklärungen unterschreiben). **Nichts wurde versendet.**
+- Die Entwürfe liegen unter `Villa_0200/2_Schlussrechnung/Entwuerfe_und_Alternativen/` und `Neubau_19ab_1150/5_Schlussrechnung/Entwuerfe/`.
 
 ## Auftrag
 
@@ -22,7 +34,7 @@ Stand: 29.09.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 
 | Beleg | Datum | Empfänger | Gewerk | netto | brutto | Status |
 |---|---|---|---|---:|---:|---|
-| RE 2024-47 | 16.04.2024 | CREST Living GmbH & Co. KG | Sanitärobjekte / Montage Armaturen | 12.481,00 | 14.852,39 | gültig; Zahlung **nicht verifizierbar** (Kontoauszüge Apr.–Jul. 2024 fehlen); nicht in OP-Liste 15.07.2026 |
+| RE 2024-47 | 16.04.2024 | CREST Living GmbH & Co. KG | Sanitärobjekte / Montage Armaturen | 12.481,00 | 14.852,39 | **bezahlt laut Semir**; Datum nicht belegbar (Kontoauszüge Apr.–Jul. 2024 fehlen); nicht in OP-Liste 15.07.2026 |
 | Dok. 159 | 03.12.2024 | CREST Investment GmbH | Heizung – hydraulischer Abgleich | 270,00 | 321,30 | **unbezahlt** (Jan. 2025–Apr. 2026 keine Zahlung); nur Angebotsnummer |
 | Dok. 176 „Schlussrechnung“ | 05.01.2025 | CREST Investment GmbH | Fußbodenheizung (12 % Rabatt) | 18.942,26 | 22.541,30 | **OFFEN**; nur Angebotsnummer; in OP-Liste 15.07.2026 |
 | NA 175 | 05.01.2025 | CREST Living GmbH & Co. KG | Nachtragsangebot Sanitärobjekte | 5.605,00 | 6.669,95 | Angebot |
@@ -32,7 +44,7 @@ Stand: 29.09.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 
 Drive-Datei-IDs: 2024-47 `1g6nY1jQ-8vG3aS5XhX6H6acuorJHnNb1`, 159 `1uzr4oftGcv9a1kAyKVSrmYjRWDeN_Eq5`, 176 `1foZqeVpqvHKekiLv0qZJMnfcPezxwBKZ`, NA 175 `1JRWNYV_kejBgctS9o1diSfqkidg0sI0D`, Dok. 175 `1rTdochXOIHlzC_eGiEUnTnm8p6fh4EVM`, 2025-8 `1Wp1fnJ1YDxFhOI_ShhnBsH4_b5bpgIS-`, 2025-17 `1Qbcqk--Kr-13q1xiiQopgAto4NLtN_Rj`.
 
-RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto). In 2025-8 stehen zusätzlich 1.1.3, 1.2.6, 1.3.6 und 1.4.6 (2×229); in 2025-17 zusätzlich 1.1.1* und 1.4.6 (schwenkbar, 429). Die Differenz beträgt **847,00 € netto**. Ob diese Leistungen erbracht und noch abzurechnen sind, ist zu klären. Sie sind im Entwurf **nicht** enthalten.
+RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto). In 2025-8 stehen zusätzlich 1.1.3, 1.2.6, 1.3.6 und 1.4.6 (2×229); in 2025-17 zusätzlich 1.1.1* und 1.4.6 (schwenkbar, 429). Die Differenz beträgt **847,00 € netto**. Ob diese Leistungen erbracht und noch abzurechnen sind, ist zu klären. Sie sind in 2026-44 **nicht** enthalten.
 
 ## Zahlungsabgleich (Berliner Volksbank, Geschäftsgiro DE21 1009 0000 2911 7280 04)
 
@@ -41,9 +53,9 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 - Für Dok. 176, Dok. 159 und RE 2025-8 gibt es im gesamten geprüften Zeitraum keine Zahlung.
 - **Lücken:** Für 2024 fehlen die Auszüge Jan., März–Jul. und Okt.–Dez., für 2026 alles ab Mai. Die Zahlung von RE 2024-47 (fällig 26.04.2024) lässt sich deshalb nicht belegen. Die fehlenden Auszüge im Volksbank-Onlinebanking herunterladen.
 
-## Kumulierte Schlussrechnung über alle Villa-Leistungen, Heizung pauschal 20.000 € netto (29.09.2026)
+## Schlussrechnung 2026-44: kumuliert über alle Villa-Leistungen, Heizung pauschal 20.000 € brutto
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_kumuliert_alle_Villa-Leistungen_17.000_brutto_ENTWURF.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
+- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_kumuliert_17.000_brutto.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
 - Aufbau: A. alle 43 Positionen, gegliedert nach den bisherigen Einzelabrechnungen (Titel 1 = RE 2024-47, Titel 2 = RE 2025-17, Titel 3 = Dok. 159, Titel 4 = Dok. 176), jede Position mit Verweis auf Beleg und Original-Pos.; B. Zusammenstellung; C. Abrechnung mit Abzug der gestellten Rechnungen (netto und USt, § 14 Abs. 5 UStG).
 
 | | netto | USt 19 % | brutto |
@@ -60,13 +72,13 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 | **Zahlbetrag** | **14.285,71** | **2.714,29** | **17.000,00** |
 
 - Prüfung: Die 43 Positionsbeträge wurden aus dem erzeugten PDF zurückgelesen und je Titel summiert; die Summen stimmen mit den Originalrechnungen überein (12.481,00 / 4.758,00 / 270,00 / 21.525,30).
-- **D. Zahlungsaufstellung** (ergänzt 19.10.2026): jede Villa-Rechnung mit Betrag, gezahlt, Zahlungsdatum und offen. RE 2025-17 wurde am 19.09.2025 mit 5.662,02 € bezahlt (Kontoauszug, Vwz. „R. 2025-17 v. 14.04.25, BV. Liesborner Weg 19“). RE 2024-47 gilt laut Semir als bezahlt („genau 20.000 € offen“). Das Zahlungsdatum ist rot als Platzhalter markiert, weil die Kontoauszüge 04–07/2024 weiter fehlen; in Drive liegen aus 2024 nur 02, 08 und 09. Dok. 159 und 176 sind mit 0,00 € gezahlt aufgeführt und werden durch diese Schlussrechnung ersetzt. Summe offen 17.000,00 €.
+- **D. Zahlungsaufstellung** (ergänzt 19.10.2026): jede Villa-Rechnung mit Betrag, gezahlt, Zahlungsdatum und offen. RE 2025-17 wurde am 19.09.2025 mit 5.662,02 € bezahlt (Kontoauszug, Vwz. „R. 2025-17 v. 14.04.25, BV. Liesborner Weg 19“). RE 2024-47 gilt laut Semir als bezahlt („genau 20.000 € offen“). In 2026-44 steht als Zahlungsdatum „bezahlt“, weil die Kontoauszüge 04–07/2024 weiter fehlen; in Drive liegen aus 2024 nur 02, 08 und 09. Dok. 159 und 176 sind mit 0,00 € gezahlt aufgeführt und werden durch diese Schlussrechnung ersetzt. Summe offen 17.000,00 €.
 - Nicht enthalten: die 847,00 € netto aus RE 2025-8, die in 2025-17 fehlen (siehe oben).
 - Der Zahlbetrag setzt voraus, dass 2024-47 bezahlt ist oder separat bezahlt wird. 2024-47 bleibt als eigene Rechnung gültig.
 
 ## Ältere Fassung: kumuliert mit 12 % Rabatt auf die FBH (Entwurf)
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Alternative_kumuliert_mit_12-Prozent-Rabatt_ENTWURF.pdf]]; Rechenblatt mit Formeln: [[Villa_0200/Aufstellung_Villa.xlsx]]
+- Datei: [[Villa_0200/2_Schlussrechnung/Entwuerfe_und_Alternativen/Alternative_kumuliert_mit_12-Prozent-Rabatt_ENTWURF.pdf]]; Rechenblatt mit Formeln: [[Villa_0200/Aufstellung_Villa.xlsx]]
 - Empfänger (Empfehlung): CREST Living GmbH & Co. KG, Liesborner Weg 19, 13507 Berlin
 
 | | netto | USt 19 % | brutto |
@@ -82,31 +94,31 @@ Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Positi
 
 ### Variante: eigenständige Schlussrechnung Fußbodenheizung (28.09.2026)
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Alternative_19.212,26_netto_mit_12-Prozent-Rabatt_ENTWURF.pdf]], an CREST Living. Sie enthält nur die Heizungsleistungen: FBH 21.525,30 € − 12 % Rabatt + hydraulischer Abgleich 270,00 € = **19.212,26 € netto, 22.862,59 € brutto**, Zahlungen 0,00 €.
+- Datei: [[Villa_0200/2_Schlussrechnung/Entwuerfe_und_Alternativen/Alternative_19.212,26_netto_mit_12-Prozent-Rabatt_ENTWURF.pdf]], an CREST Living. Sie enthält nur die Heizungsleistungen: FBH 21.525,30 € − 12 % Rabatt + hydraulischer Abgleich 270,00 € = **19.212,26 € netto, 22.862,59 € brutto**, Zahlungen 0,00 €.
 - Sie ersetzt Dok. 176 und Dok. 159. **Je nach Versand die kumulierte Fassung oder diese Variante verwenden, nicht beide.**
 - Nachprüfung vom 28.09.2026: Eine Rechnung **2024-23 gibt es in Drive nicht** (weder als Datei noch im Text). In den vorhandenen Kontoauszügen (02/2024, 08–09/2024, 01/2025–04/2026) und in „Abgleich_Ausgangsrechnungen_2025“ gibt es **keine Zahlung** auf die Fußbodenheizung, auf Dok. 176, auf Dok. 159 oder auf 2024-23.
 
-### Schlussrechnung Fußbodenheizung über 20.000 € netto (Wunsch Semir, 28.09.2026)
+### Entwurf: Schlussrechnung nur Fußbodenheizung, 17.000 € brutto (nicht versendet)
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_Fussbodenheizung_17.000_brutto_ENTWURF.pdf]] im LEANS-Rechnungslayout (Logo, Kopf und Fußzeile wie RE 2025-17), an CREST Living.
+- Datei: [[Villa_0200/2_Schlussrechnung/Entwuerfe_und_Alternativen/Schlussrechnung_Fussbodenheizung_17.000_brutto_ENTWURF.pdf]] im LEANS-Rechnungslayout (Logo, Kopf und Fußzeile wie RE 2025-17), an CREST Living.
 - Positionen zu Listenpreisen: hydraulischer Abgleich 270,00 € + Fußbodenheizung 21.525,30 € = 21.795,30 € netto (25.936,41 € brutto). Pauschaliert auf **20.000,00 € brutto** (Nachlass 5.936,41 € brutto / 4.988,58 € netto), dann **abzgl. 3.000,00 € brutto für Gasanschluss und Inbetriebnahme Trinkwasser** (Semir 19.10.2026: „ca. 3.000 €, selbst abziehen“) → **Zahlbetrag 17.000,00 € brutto = 14.285,71 € netto + 2.714,29 € USt**. Netto und USt sind aus der Bruttopauschale herausgerechnet (Rundung 0,01 €). Den genauen Abzug noch bestätigen. Zum Vergleich: Dok. 159 + 176 ergaben 22.862,60 € brutto; die neue Rechnung liegt damit 5.862,60 € darunter.
 - Frühere Annahme 20.000 € netto (23.800 € brutto) ist überholt: offen sind laut Semir 20.000 € **brutto**.
 - Rechnungsmappe mit allen 7 Villa-Belegen (Deckblatt und Originale): [[Villa_0200/Rechnungsmappe_Villa_alle_Belege.pdf]].
-- Zuletzt gefundene Rechnungsnummer: 2026-43 vom 01.09.2026. 2026-39 und 2026-40 sind in Drive doppelt vergeben. Die nächste freie Nummer vor der Vergabe prüfen.
+- Vor 2026-44 zuletzt vergeben: 2026-43 vom 01.09.2026. 2026-39 und 2026-40 sind in Drive doppelt vergeben. Mit 2026-44 und 2026-45 ist die nächste freie Nummer **2026-46**.
 
 ## To-dos vor dem Versand
 
-1. Rechnungsnummer und Datum eintragen. Zuletzt vergeben ist **2026-43 vom 01.09.2026** (am PDF geprüft, Drive `1cJDHEPCyvEOOX2X3l6J_upWpi_aokoAV`). Vorschlag: **2026-44**. Die Drive-Übersicht „00 Übersicht – offene Rechnungen und Entwürfe“ vom 28.09.2026 schlägt 2026-44 ff. aber auch für sieben andere Entwürfe vor. Jede Nummer nur einmal vergeben, in Versandreihenfolge.
+1. ~~Rechnungsnummer und Datum eintragen~~ – erledigt 19.10.2026: **2026-44** (Villa) und **2026-45** (Neubau). Vorher zuletzt vergeben: 2026-43 vom 01.09.2026 (Drive `1cJDHEPCyvEOOX2X3l6J_upWpi_aokoAV`). Die sieben anderen Entwürfe aus der Drive-Übersicht vom 28.09.2026 bekommen 2026-46 ff.
 2. Mit CREST klären, ob die Villa an **CREST Living** (empfohlen, zahlt die Villa-Rechnungen) oder an CREST Investment abgerechnet wird.
 3. CREST Investment schriftlich mitteilen, dass Dok. 159 und Dok. 176 storniert und durch die Schlussrechnung ersetzt werden. Beide Dokumente weisen USt aus.
 4. **Stornorechnung zu RE 2025-8** ausstellen. Sie ist durch 2025-17 ersetzt, weist aber USt aus.
 5. Die Differenz von 847,00 € netto zwischen 2025-8 und 2025-17 klären (siehe oben) und gegebenenfalls in die Schlussrechnung aufnehmen.
-6. Die Zahlung von RE 2024-47 über die Kontoauszüge Apr.–Jul. 2024 belegen. Ist sie unbezahlt, erhöht sich der Zahlbetrag um 14.852,39 €.
-7. **Freistellungsbescheinigung § 48b EStG: abgelaufen.** Die neueste Bescheinigung in Drive gilt vom 03.07.2025 bis 02.07.2026 („Freistellungsbescheinigung 2025 48b.pdf“, Drive `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`). Eine neuere Bescheinigung oder einen neuen Antrag der LEANS Tech GmbH gibt es in Drive nicht. Ohne gültige Bescheinigung muss CREST 15 % einbehalten, bei 17.000,00 € also 2.550,00 €. Eine neue Bescheinigung beim FA für Körperschaften III beantragen.
-8. Prüfen und zuordnen: Welt-der-Bäder-Rechnung 30076WDB vom 16.10.2025 über 3.729,95 € brutto (4 freistehende Wannen LISBON, Lieferadresse „Liesborner Weg 19 Willa“, Drive `1Qzi2f1GiOfqbdezAy-D6yz2kdAAyHFIh`) und Waschtisch TWG71 (Bernstein, 16.10.2025, 528,90 €). Das ist Material von Oktober 2025, für das keine Ausgangsrechnung gefunden wurde. Unklar ist, ob es zur Villa oder zum Neubau gehört.
+6. RE 2024-47 gilt laut Semir als bezahlt. Zur Sicherheit die Zahlung über die Kontoauszüge Apr.–Jul. 2024 belegen.
+7. **Freistellungsbescheinigung § 48b EStG: abgelaufen.** Die neueste Bescheinigung in Drive gilt vom 03.07.2025 bis 02.07.2026 („Freistellungsbescheinigung 2025 48b.pdf“, Drive `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`). Eine neuere Bescheinigung oder einen neuen Antrag der LEANS Tech GmbH gibt es in Drive nicht. Ohne gültige Bescheinigung muss CREST 15 % einbehalten: 2.550,00 € bei 2026-44 und 6.861,80 € bei 2026-45. Eine neue Bescheinigung beim FA für Körperschaften III beantragen.
+8. ~~Welt-der-Bäder-Rechnung zuordnen~~ – geklärt 19.10.2026: Eingangsrechnung **30076WDB** vom 16.10.2025 (Welt der Bäder SL / Entorno Baño S.L., Drive `1Qzi2f1GiOfqbdezAy-D6yz2kdAAyHFIh`), 4 freistehende Badewannen **LISBON** matt (2 × 170 cm, 2 × 160 cm), 3.134,41 € netto / 3.729,95 € brutto, bezahlt am 17.10.2025 (Kontoauszug, Vwz. „30076WDB“). Das sind die freistehenden Badewannen aus **Pos. 4.28 der Neubau-Angebote 233 und 234 (je Haus 2 Stück)**. Sie gehören zum Neubau 19 a + b und sind in der Pauschale enthalten. Deshalb gibt es keine eigene Ausgangsrechnung, und für die Villa ist nichts nachzuberechnen. Eine Stunden- oder Regierechnung zur Villa gibt es in Drive nicht. Offen bleibt der Waschtisch TWG71 (Bernstein, 16.10.2025, 528,90 €).
 9. Das LV/Angebot der Villa suchen und ablegen (siehe „Auftrag“).
-10. **Bankverbindung festlegen.** Der Entwurf nennt die Berliner Volksbank (DE21 1009 0000 2911 7280 04), wie die Villa-Rechnungen 2024/2025. Die letzte Rechnung 2026-43 nennt dagegen N26 mit Kontoinhaber Semir Redzic (privat) als „neue Bankverbindung“. Eine GmbH-Forderung auf ein Privatkonto mit dem Steuerberater abstimmen.
-11. **Empfänger der Mail:** Die Mailadresse von Lukas Stockmaier (CREST-Bauleitung Villa) ist weder in Drive noch in Gmail zu finden. Auf dem Briefkopf der CREST Living steht info@crest-investment.com; die Mitarbeitenden haben Kürzel-Adressen (sb@, vp@crest-investment.com). Mailentwurf: [[Villa_0200/3_Versand/Mail_an_CREST_Schlussrechnung_FBH_ENTWURF.txt]].
+10. ~~Bankverbindung festlegen~~ – erledigt 19.10.2026: **Berliner Volksbank** (DE21 1009 0000 2911 7280 04) in beiden Schlussrechnungen.
+11. **Empfänger der Mail:** Die Mailadresse von Lukas Stockmaier (CREST-Bauleitung Villa) ist weder in Drive noch in Gmail zu finden. Auf dem Briefkopf der CREST Living steht info@crest-investment.com; die Mitarbeitenden haben Kürzel-Adressen (sb@, vp@crest-investment.com). Versandmail: [[00_Mail_an_CREST_Schlussrechnungen_2026-44_und_2026-45.txt]].
 12. Die Kontoauszüge in Drive reichen nur bis 31.05.2026. Vor dem Versand die Eingänge Juni bis September prüfen.
 13. **Versandmails der Villa-Rechnungen fehlen.** Die Rechnungen gingen laut Semir meist über GMX (LeansTech@gmx.de) oder Web.de (LEANSTECH-GmbH@web.de) raus. In Drive liegen aus GMX nur die Anhänge des CREST-Verlaufs „Bauberatung Liesborner Weg 19“ (06/2023–08/2024: Protokolle, Pläne, Fotos, keine Rechnungen). Der lokale Mailexport (wie „Frank Grass Mails“) hat Gmail, IONOS und Web.de abgedeckt, GMX nicht. Für GMX und Web.de gibt es hier keinen Zugriff und keinen Konnektor. Nötig: in beiden Postfächern unter „Gesendet“ und im Posteingang nach „Liesborner“, „CREST“, „Stockmaier“, „crest-investment“, „159“, „176“, „175“, „2024-47“, „2025-8“, „2025-17“ suchen und die Treffer wie beim Frank-Grass-Export nach Drive legen oder an leanstechgmbh@gmail.com weiterleiten. Daraus ergeben sich Versanddatum, Empfängeradresse (Herr Stockmaier; vermutlich Kürzel-Adresse wie sb@/vp@, nicht belegt) und etwaige Antworten von CREST zu Dok. 176/159.
 
@@ -130,9 +142,9 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
   - Bauabzugsteuer 19.593,40 € auf die 1.–3. AR. Sie wurde ans Finanzamt abgeführt (so mit CREST vereinbart, bestätigt von Semir am 19.10.2026) und muss dort angerechnet werden; gegenüber CREST ist sie keine offene Forderung. In der Schlussrechnung zählt sie als Zahlung.
 - **Freistellungsbescheinigung § 48b EStG:** Laut CREST-Prüfblatt gültig bis **02.07.2026**, also abgelaufen. Eine neue Bescheinigung beantragen, sonst behält CREST 15 % ein.
 
-### Kumulierte Schlussrechnung Neubau 19 a + b, beide Häuser zusammen (Entwurf, 19.10.2026)
+### Schlussrechnung 2026-45 Neubau 19 a + b, beide Häuser zusammen (19.10.2026)
 
-- Datei: [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_kumuliert_Neubau_19ab_45.745,31_ENTWURF.pdf]] im LEANS-Layout an CREST Living, 2 Seiten. Skripte: `erstellung/data_neubau.py` (Daten und Prüfungen) und `erstellung/make_invoice_neubau.py`.
+- Datei: [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_45.745,31.pdf]] im LEANS-Layout an CREST Living, 2 Seiten. Skripte: `erstellung/data_neubau.py` (Daten und Prüfungen) und `erstellung/make_invoice_neubau.py`.
 - **A. Gesamtleistung:** Pauschale 300.000,00 € brutto + NA 1 (216) 5.200,00 € netto, wie im CREST-Prüfblatt freigegeben, + NA 2 (282) 6.822,60 € netto = **264.123,44 € netto / 314.306,89 € brutto**.
 - **B. Abzug** aller 8 Abschlagsrechnungen mit Netto und USt: 309.318,89 € brutto. **Restbetrag 4.988,00 €** = Restrate 4.000,00 € + Differenz NA 1 von 988,00 €.
 - **C. Zahlungsaufstellung** je AR. Rechenweise wie im CREST-Prüfblatt: Bauumlage 0,25 % netto, Sicherheitseinbehalt 10 %, Skonto 3 %, Bauabzug 15 %. Alle 7 Zahlungen stimmen auf den Cent mit dem Kontoauszug überein (`python3 data_neubau.py`). Summen: gezahlt 240.546,62 €, Bauabzug ans Finanzamt 19.593,40 €, Sicherheitseinbehalt 29.757,31 €, Skonto 7.675,75 €, Bauumlage 745,81 €.
@@ -146,7 +158,7 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
 
 ## Gesamtmappe und Fachunternehmererklärungen (19.10.2026)
 
-- **Gesamtmappe:** [[00_Gesamtmappe_Liesborner_Weg_19_Villa_und_Neubau.pdf]] mit 60 Seiten. Sie beginnt mit einem Deckblatt mit anklickbarem Inhaltsverzeichnis (36 Einträge) und hat Lesezeichen. Inhalt: Übersicht; A Villa mit beiden Schlussrechnungen (Entwurf, 17.000 € brutto), Fachunternehmererklärungen, Mailentwurf und 7 Original-Belegen; B Neubau mit Schlussrechnung (Entwurf, 45.745,31 €), 4 Fachunternehmererklärungen, Auftrag, Angeboten, Nachträgen und 8 Abschlagsrechnungen mit CREST-Prüfblatt. Skript: `erstellung/make_gesamtmappe.py`; es prüft, dass jeder Link auf die richtige Seite zeigt.
+- **Gesamtmappe:** [[00_Gesamtmappe_Liesborner_Weg_19_Villa_und_Neubau.pdf]] mit 59 Seiten. Sie beginnt mit einem Deckblatt mit anklickbarem Inhaltsverzeichnis (35 Einträge) und hat Lesezeichen. Inhalt: Übersicht; Versandmail; A Villa mit Schlussrechnung 2026-44 (17.000 € brutto), 2 Fachunternehmererklärungen und 7 Original-Belegen; B Neubau mit Schlussrechnung 2026-45 (45.745,31 €), 4 Fachunternehmererklärungen, Auftrag, Angeboten, Nachträgen und 8 Abschlagsrechnungen mit CREST-Prüfblatt. Skript: `erstellung/make_gesamtmappe.py`; es prüft, dass jeder Link auf die richtige Seite zeigt.
 - **Fachunternehmererklärungen** im LEANS-Layout und Wortlaut der bisherigen Erklärungen (Vorlage: Erklärung Heizung für CREST Tegeler See vom 22.11.2025), an CREST Living:
   - Villa: Heizung (Fußbodenheizung, hydraulischer Abgleich) und Sanitär, in `Villa_0200/4_Fachunternehmererklaerungen/`
   - Neubau 19 a + b (Auftrag 20250418_#): Heizung inkl. Wärmepumpe und FBH, Sanitär, Lüftung und Klima, in `Neubau_19ab_1150/6_Fachunternehmererklaerungen/`

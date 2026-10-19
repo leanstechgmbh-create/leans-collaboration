@@ -1,4 +1,4 @@
-"""Übersicht Liesborner Weg 19: Villa (0200) und Neubau 19 a+b (1150) – Stand 29.09.2026."""
+"""Übersicht Liesborner Weg 19: Villa (0200) und Neubau 19 a+b (1150) – Stand 19.10.2026."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -28,7 +28,7 @@ def tab(rows, widths, colour=None, right=()):
 def build(out):
     doc = SimpleDocTemplate(out, pagesize=landscape(A4), leftMargin=12*mm, rightMargin=12*mm, topMargin=12*mm, bottomMargin=12*mm,
                             title="Übersicht Liesborner Weg 19 – Villa und Neubau 19 a+b", author="LEANS Tech GmbH")
-    E = [Paragraph("Übersicht Liesborner Weg 19, 13507 Berlin – Stand 29.09.2026", H1),
+    E = [Paragraph("Übersicht Liesborner Weg 19, 13507 Berlin – Stand 19.10.2026", H1),
          Paragraph("Zwei getrennte Bauvorhaben, beide für <b>CREST Living GmbH &amp; Co. KG</b>. Achtung: Alle CREST-Firmen haben ihren Sitz am Liesborner Weg 19 – "
                    "die Adresse allein sagt nichts über die Baustelle. Maßgeblich ist die Zeile „BV:“ auf dem Beleg. "
                    "Zahlungen laut Kontoauszügen 02/2024, 08–09/2024 und 01/2025–04/2026 (übrige Monate fehlen in Drive).", P),
@@ -39,25 +39,24 @@ def build(out):
                "Bauvertrag HLS, Anlage 1 Zahlungsplan vom 15.05.2025: Pauschal 300.000,00 € brutto (unterschriebener Vertrag nicht in Drive)"],
               ["Gewerke", "Sanitärobjekte/Armaturen, Heizung (Fußbodenheizung, hydraulischer Abgleich)", "Klima, Lüftung, Heizung inkl. Wärmepumpe + FBH, Sanitär – je Haus"],
               ["Abgerechnet (brutto)", "gültig: 20.514,41 € (RE 2024-47, 2025-17); ungültig/ohne Nr.: 22.862,60 € (Dok. 159, 176)", "309.318,89 € (8 Rechnungen inkl. Nachtrag)"],
-              ["Offen", "Dok. 159 + 176 = 22.862,60 € → neue Schlussrechnung 17.000 € brutto (20.000 brutto abzgl. 3.000 Gas/Trinkwasser)", "8. AR 11.000 €, Restrate 4.000 €, Sicherheitseinbehalte, Schlussrechnung"]],
+              ["Offen", "Schlussrechnung 2026-44 vom 19.10.2026: 17.000,00 € brutto (20.000 brutto abzgl. 3.000 Gas/Trinkwasser), ersetzt Dok. 159 + 176", "Schlussrechnung 2026-45 vom 19.10.2026: Zahlbetrag 45.745,31 € (Rest 4.988,00 + 8. AR 11.000,00 + Sicherheitseinbehalt 29.757,31)"]],
              [30, 118, 125]),
          Paragraph("1. Villa – Liesborner Weg 19 (Projekt 0200)", H2),
          tab([["Beleg", "Datum", "Adressiert an", "Gewerk", "Netto", "Brutto", "Zahlung", "Status / To-do"],
-              ["RE 2024-47", "16.04.2024", "CREST Living", "Sanitärobjekte, Montage Armaturen", "12.481,00", "14.852,39", "nicht belegbar", "Kontoauszüge Apr.–Jul. 2024 besorgen"],
-              ["Dok. 159", "03.12.2024", "CREST Investment", "Heizung – hydraulischer Abgleich", "270,00", "321,30", "keine", "OFFEN – nur Angebotsnr.; in neue SR übernommen"],
-              ["Dok. 176 (SR)", "05.01.2025", "CREST Investment", "Fußbodenheizung (12 % Rabatt)", "18.942,26", "22.541,30", "keine", "OFFEN – nur Angebotsnr.; in neue SR übernommen"],
+              ["RE 2024-47", "16.04.2024", "CREST Living", "Sanitärobjekte, Montage Armaturen", "12.481,00", "14.852,39", "laut Semir bezahlt", "Datum nicht belegbar (Kontoauszüge Apr.–Jul. 2024 fehlen)"],
+              ["Dok. 159", "03.12.2024", "CREST Investment", "Heizung – hydraulischer Abgleich", "270,00", "321,30", "keine", "ersetzt durch SR 2026-44"],
+              ["Dok. 176 (SR)", "05.01.2025", "CREST Investment", "Fußbodenheizung (12 % Rabatt)", "18.942,26", "22.541,30", "keine", "ersetzt durch SR 2026-44"],
               ["NA 175", "05.01.2025", "CREST Living", "Nachtragsangebot Sanitärobjekte", "5.605,00", "6.669,95", "–", "Angebot"],
               ["Dok. 175", "05.01.2025", "CREST Investment", "Sanitär-Nachtrag", "5.605,00", "6.669,95", "–", "Vorversion von RE 2025-8"],
               ["RE 2025-8", "28.03.2025", "CREST Investment", "Sanitär-Nachtrag", "5.605,00", "6.669,95", "keine", "durch 2025-17 ersetzt → Stornorechnung schreiben"],
               ["RE 2025-17", "14.04.2025", "CREST Living", "Sanitär-Nachtrag (korrigiert)", "4.758,00", "5.662,02", "19.09.2025: 5.662,02", "bezahlt"],
-              ["NEU: SR FBH", "(Entwurf)", "CREST Living", "FBH + hydr. Abgleich, abzgl. Gas/TW", "14.285,71", "17.000,00", "–", "ersetzt Dok. 159 + 176; Nr./Datum vergeben"]],
-             [22, 21, 26, 53, 19, 19, 30, 83], colour={2: RED, 3: RED, 6: AMB, 7: GRN, 8: AMB}, right=(4, 5)),
+              ["SR 2026-44", "19.10.2026", "CREST Living", "kumuliert, alle Villa-Leistungen, abzgl. Gas/TW", "14.285,71", "17.000,00", "–", "fällig 29.10.2026; ersetzt Dok. 159 + 176"]],
+             [22, 21, 26, 53, 19, 19, 30, 83], colour={1: AMB, 6: AMB, 7: GRN, 8: AMB}, right=(4, 5)),
          Spacer(1, 2*mm),
-         Paragraph("<b>Neue Schlussrechnung Fußbodenheizung:</b> Positionen zu Listenpreisen 21.795,30 € netto (FBH 21.525,30 + hydr. Abgleich 270,00), "
+         Paragraph("<b>Schlussrechnung 2026-44 (kumuliert, 3 Seiten):</b> Heizung zu Listenpreisen 21.795,30 € netto (FBH 21.525,30 + hydr. Abgleich 270,00), "
                    "pauschaliert auf 20.000,00 € brutto, abzgl. Gasanschluss und Inbetriebnahme Trinkwasser 3.000,00 € brutto → <b>17.000,00 € brutto (14.285,71 € netto + 2.714,29 € USt)</b>. Hinweis: Dok. 176 hatte 12 % Rabatt "
-                   "(= 19.212,26 € netto); die 20.000 € liegen 787,74 € netto darüber. "
-                   "<b>Gleichwertig als kumulierte Schlussrechnung</b> über alle Villa-Leistungen: Gesamtleistung 31.524,71 € netto / 37.514,41 € brutto, "
-                   "abzgl. RE 2024-47 und RE 2025-17 → gleicher Zahlbetrag 17.000,00 €. Nur eine der beiden Fassungen versenden. "
+                   "(= 19.212,26 € netto). Gesamtleistung aller Villa-Leistungen 31.524,71 € netto / 37.514,41 € brutto, "
+                   "abzgl. RE 2024-47 und RE 2025-17 → Zahlbetrag 17.000,00 €. Die Fassung nur über die Fußbodenheizung liegt als Entwurf bei und wird nicht versendet. "
                    "Leistungszeitraum laut CREST-Protokollen 11.2023 – 03.12.2024.", P),
          PageBreak(),
          Paragraph("2. Neubau Butterfly Houses – Liesborner Weg 19 a + b (Projekt 1150)", H2),
@@ -97,13 +96,13 @@ def build(out):
                    "• Sicherheitseinbehalt 10 %: rechnerisch 28.500 € auf die Raten + 1.427,11 € auf den Nachtrag → nach Abnahme/Bürgschaft zurückfordern. "
                    "• Bauabzugsteuer 19.593,40 € (1.–3. AR) hat CREST ans Finanzamt abgeführt → beim Finanzamt anrechnen lassen, keine Forderung an CREST. "
                    "• Nachtrag 1: 830,25 € netto zu wenig abgerechnet (siehe oben). • Unterschriebenen Bauvertrag HLS suchen. "
-                   "<b>• Kumulierte Schlussrechnung (Entwurf, beide Häuser):</b> Gesamtleistung 314.306,89 € − 8 AR 309.318,89 € = Rest 4.988,00 € "
+                   "<b>• Schlussrechnung 2026-45 vom 19.10.2026 (beide Häuser, fällig 29.10.2026):</b> Gesamtleistung 314.306,89 € − 8 AR 309.318,89 € = Rest 4.988,00 € "
                    "+ offene 8. AR 11.000,00 € + Sicherheitseinbehalt 29.757,31 € = <b>Zahlbetrag 45.745,31 €</b>.", P)]),
          Spacer(1, 3*mm),
          Paragraph("<b>Wichtig für beide Projekte:</b> Laut CREST-Prüfblatt war die Freistellungsbescheinigung (§ 48b EStG) nur bis <b>02.07.2026</b> gültig. "
                    "Eine neuere Bescheinigung liegt nicht in Drive (geprüft 29.09.2026). "
-                   "Ohne neue Bescheinigung darf CREST von jeder Zahlung 15 % Bauabzugsteuer einbehalten – bei der neuen Villa-Schlussrechnung wären das 2.550,00 €. "
-                   "<b>Bankverbindung vor dem Versand festlegen:</b> Der Entwurf nennt die Berliner Volksbank, die letzte Rechnung 2026-43 dagegen N26 (Kontoinhaber Semir Redzic privat).", P)]
+                   "Ohne neue Bescheinigung darf CREST von jeder Zahlung 15 % Bauabzugsteuer einbehalten – bei 2026-44 wären das 2.550,00 €, bei 2026-45 6.861,80 €. "
+                   "<b>Bankverbindung:</b> Beide Schlussrechnungen nennen die Berliner Volksbank, DE21 1009 0000 2911 7280 04 (festgelegt am 19.10.2026).", P)]
     doc.build(E)
 
 if __name__ == "__main__":

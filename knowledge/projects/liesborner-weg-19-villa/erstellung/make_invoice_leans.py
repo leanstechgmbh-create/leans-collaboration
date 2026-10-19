@@ -67,8 +67,9 @@ def page(c, doc):
     c.setStrokeColor(GREEN); c.setLineWidth(0.6); c.line(20*mm, 30*mm, W - 20*mm, 30*mm)
     rows = [[("Adresse", "Berlepschstr. 165 • 14165 • Berlin"), ("HR-Nr", "HRB 249080 B"), ("USt-IdNr.", "DE357948720")],
             [("E-Mail", "info@leanstech-gmbh.de"), ("Tel.", "+491708280836"), ("Website", "www.leanstech-gmbh.de")],
-            [("Bank", "Berliner Volksbank"), ("SWIFT/BIC", "BEVODEBB"), ("IBAN", "DE21100900002911728004")]]
-    y = 25*mm
+            [("Bank", "Berliner Volksbank"), ("SWIFT/BIC", "BEVODEBB"), ("IBAN", "DE21100900002911728004")],
+            [("Geschäftsführer", "Semir Redzic"), ("Registergericht", "Amtsgericht Charlottenburg")]]   # § 35a GmbHG
+    y = 26*mm
     for row in rows:
         parts = [(k, v) for k, v in row]
         width = sum(c.stringWidth(k + " ", "LB", 7.5) + c.stringWidth(v, "L", 7.5) for k, v in parts) + 8*mm*(len(parts)-1)
@@ -76,8 +77,8 @@ def page(c, doc):
         for k, v in parts:
             c.setFont("LB", 7.5); c.drawString(x, y, k + " "); x += c.stringWidth(k + " ", "LB", 7.5)
             c.setFont("L", 7.5); c.drawString(x, y, v); x += c.stringWidth(v, "L", 7.5) + 8*mm
-        y -= 4*mm
-    c.setFont("L", 7.5); c.drawCentredString(W/2, 10*mm, f"{doc.page}")
+        y -= 3.8*mm
+    c.setFont("L", 7.5); c.drawCentredString(W/2, 8*mm, f"{doc.page}")
     c.restoreState()
 
 def build(path):

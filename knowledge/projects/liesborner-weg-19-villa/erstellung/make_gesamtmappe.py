@@ -1,5 +1,5 @@
-"""Gesamtmappe Liesborner Weg 19: Deckblatt mit anklickbarem Inhaltsverzeichnis, Übersicht, Villa und Neubau
-(Schlussrechnungen, Fachunternehmererklärungen, Mailentwurf, alle Original-Belege) in einem PDF mit Lesezeichen."""
+"""Gesamtmappe Liesborner Weg 19: Deckblatt mit anklickbarem Inhaltsverzeichnis, Übersicht, Versandmail, Villa und Neubau
+(Schlussrechnungen 2026-44/2026-45, Fachunternehmererklärungen, alle Original-Belege) in einem PDF mit Lesezeichen."""
 import os, sys, glob, tempfile
 import pymupdf
 from reportlab.lib.pagesizes import A4
@@ -18,20 +18,18 @@ V, N = "Villa_0200", "Neubau_19ab_1150"
 def eintraege():
     """(Ebene, Kürzel, Titel, Pfad oder Sonderseite)"""
     e = [(1, "", "Übersicht Villa und Neubau 19 a + b", "00_Uebersicht_Liesborner_Weg_19_Villa_und_Neubau.pdf"),
+         (1, "", "Mail an CREST zu beiden Schlussrechnungen (mit Punkten vor dem Versand)", "#mail"),
          (1, "A", "Villa – BV Liesborner Weg 19 (Projekt 0200)", "#teil:A"),
-         (2, "A1", "Schlussrechnung kumuliert, alle Villa-Leistungen – 17.000,00 € brutto (Entwurf)",
-          f"{V}/2_Schlussrechnung/Schlussrechnung_kumuliert_alle_Villa-Leistungen_17.000_brutto_ENTWURF.pdf"),
-         (2, "A2", "Schlussrechnung nur Fußbodenheizung – 17.000,00 € brutto (Entwurf, alternativ zu A1)",
-          f"{V}/2_Schlussrechnung/Schlussrechnung_Fussbodenheizung_17.000_brutto_ENTWURF.pdf"),
-         (2, "A3", "Fachunternehmererklärung Heizung (Fußbodenheizung, hydraulischer Abgleich)",
+         (2, "A1", "Schlussrechnung Nr. 2026-44 vom 19.10.2026, kumuliert – Zahlbetrag 17.000,00 € brutto",
+          f"{V}/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_kumuliert_17.000_brutto.pdf"),
+         (2, "A2", "Fachunternehmererklärung Heizung (Fußbodenheizung, hydraulischer Abgleich)",
           f"{V}/4_Fachunternehmererklaerungen/FUE_Villa_Heizung_Fussbodenheizung.pdf"),
-         (2, "A4", "Fachunternehmererklärung Sanitär", f"{V}/4_Fachunternehmererklaerungen/FUE_Villa_Sanitaer.pdf"),
-         (2, "A5", "Mailentwurf an CREST (mit Punkten vor dem Versand)", "#mail")]
-    for i, f in enumerate(sorted(glob.glob(os.path.join(ROOT, V, "1_Belege_Original", "*.pdf"))), 6):
+         (2, "A3", "Fachunternehmererklärung Sanitär", f"{V}/4_Fachunternehmererklaerungen/FUE_Villa_Sanitaer.pdf")]
+    for i, f in enumerate(sorted(glob.glob(os.path.join(ROOT, V, "1_Belege_Original", "*.pdf"))), 4):
         e.append((2, f"A{i}", "Original: " + os.path.basename(f)[3:-4].replace("_", " "), os.path.relpath(f, ROOT)))
     e += [(1, "B", "Neubau Butterfly Houses – Liesborner Weg 19 a + b (Projekt 1150)", "#teil:B"),
-          (2, "B1", "Schlussrechnung kumuliert mit Zahlungsaufstellung – Zahlbetrag 45.745,31 € (Entwurf)",
-           f"{N}/5_Schlussrechnung/Schlussrechnung_kumuliert_Neubau_19ab_45.745,31_ENTWURF.pdf")]
+          (2, "B1", "Schlussrechnung Nr. 2026-45 vom 19.10.2026, kumuliert mit Zahlungsaufstellung – Zahlbetrag 45.745,31 €",
+           f"{N}/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_45.745,31.pdf")]
     fue = [("Heizung inkl. Wärmepumpe und Fußbodenheizung", "Heizung"), ("Sanitär", "Sanitaer"), ("Lüftung", "Lueftung"), ("Klima", "Klima")]
     for i, (t, d) in enumerate(fue, 2):
         e.append((2, f"B{i}", f"Fachunternehmererklärung {t}", f"{N}/6_Fachunternehmererklaerungen/FUE_Neubau_19ab_{d}.pdf"))
@@ -61,7 +59,7 @@ def deckblatt(path, e, seiten):
     E = [Paragraph("Gesamtmappe BV Liesborner Weg 19, 13507 Berlin", H1), Spacer(1, 2*mm),
          Paragraph("Villa (Projekt 0200) und Neubau Butterfly Houses 19 a + b (Projekt 1150) · Auftraggeber CREST Living GmbH &amp; Co. KG · "
                    "LEANS Tech GmbH · Stand 19.10.2026", P), Spacer(1, 2*mm),
-         Paragraph("<b>Hinweis:</b> Schlussrechnungen sind Entwürfe (Rechnungsnummer, Datum und Bankverbindung noch offen). "
+         Paragraph("<b>Hinweis:</b> Schlussrechnungen Nr. 2026-44 und 2026-45 vom 19.10.2026, fällig 29.10.2026, Berliner Volksbank. "
                    "Fachunternehmererklärungen sind zur Unterschrift vorbereitet. Einträge im Inhaltsverzeichnis sind anklickbar; "
                    "die Lesezeichen im PDF-Viewer führen ebenfalls zu jedem Dokument.", P), Spacer(1, 4*mm), t]
     doc.build(E)
@@ -72,15 +70,15 @@ def trennblatt(path, titel, unter):
                Paragraph(unter, ParagraphStyle("y", parent=P, fontSize=11, leading=15, alignment=1))])
 
 def mailseite(path):
-    txt = open(os.path.join(ROOT, V, "3_Versand", "Mail_an_CREST_Schlussrechnung_FBH_ENTWURF.txt"), encoding="utf-8").read()
+    txt = open(os.path.join(ROOT, "00_Mail_an_CREST_Schlussrechnungen_2026-44_und_2026-45.txt"), encoding="utf-8").read()
     doc = SimpleDocTemplate(path, pagesize=A4, leftMargin=18*mm, rightMargin=14*mm, topMargin=16*mm, bottomMargin=14*mm)
-    doc.build([Paragraph("A5 · Mailentwurf an CREST", ParagraphStyle("h", parent=H1, fontSize=13, leading=17)), Spacer(1, 3*mm),
+    doc.build([Paragraph("Mail an CREST zu den Schlussrechnungen 2026-44 und 2026-45", ParagraphStyle("h", parent=H1, fontSize=13, leading=17)), Spacer(1, 3*mm),
                Preformatted(txt, ParagraphStyle("m", fontName="M", fontSize=7.6, leading=9.6, textColor=inv.GREY))])
 
 def build(out):
     e = eintraege(); tmp = tempfile.mkdtemp()
-    teile = {"#teil:A": ("A · Villa", "BV Liesborner Weg 19 (Projekt 0200)<br/>Schlussrechnung, Fachunternehmererklärungen, Mailentwurf, Original-Belege"),
-             "#teil:B": ("B · Neubau 19 a + b", "Butterfly Houses, Liesborner Weg 19 a und b (Projekt 1150)<br/>Schlussrechnung, Fachunternehmererklärungen, Auftrag, Angebote, Nachträge, Rechnungen")}
+    teile = {"#teil:A": ("A · Villa", "BV Liesborner Weg 19 (Projekt 0200)<br/>Schlussrechnung 2026-44, Fachunternehmererklärungen, Original-Belege"),
+             "#teil:B": ("B · Neubau 19 a + b", "Butterfly Houses, Liesborner Weg 19 a und b (Projekt 1150)<br/>Schlussrechnung 2026-45, Fachunternehmererklärungen, Auftrag, Angebote, Nachträge, Rechnungen")}
     docs = []
     for i, (lvl, kz, titel, src) in enumerate(e):
         if src in teile:

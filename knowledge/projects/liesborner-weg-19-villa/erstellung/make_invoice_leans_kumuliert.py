@@ -129,7 +129,7 @@ def build(path):
     rot = lambda t: Paragraph(f"<font color='#B00000'>{t}</font>", PT)
     zr = [["Rechnung", "Datum", "Leistung", "brutto", "gezahlt", "Zahlungsdatum", "offen"]]
     for nr, dat, emp, gew, n, u, b in VORRECHNUNGEN:
-        datum = ZAHLUNGSDATUM.get(nr) or rot(ZAHLUNGSDATUM_OFFEN)
+        datum = ZAHLUNGSDATUM.get(nr) or (rot(ZAHLUNGSDATUM_OFFEN) if "_" in ZAHLUNGSDATUM_OFFEN else ZAHLUNGSDATUM_OFFEN)
         zr.append([f"RE {nr}", dat, Paragraph(gew, PT), eur(b), eur(b), datum, eur(0)])
     zr += [["Dok. 159", "03.12.2024", Paragraph("Hydraulischer Abgleich – ersetzt durch diese Schlussrechnung", PT), "321,30 €", eur(0), "–", eur(0)],
            ["Dok. 176", "05.01.2025", Paragraph("Fußbodenheizung – ersetzt durch diese Schlussrechnung", PT), "22.541,30 €", eur(0), "–", eur(0)],
