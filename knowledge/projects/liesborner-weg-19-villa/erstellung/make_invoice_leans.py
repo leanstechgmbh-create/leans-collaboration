@@ -17,9 +17,17 @@ pdfmetrics.registerFont(TTFont("LB", LIB + "LiberationSans-Bold.ttf"))
 GREEN = colors.HexColor("#4CAF50"); HEAD = colors.HexColor("#DCEFDD"); GREY = colors.HexColor("#333333")
 LOGO = "logo_leans.png"
 
-ZIEL_NETTO = D("20000.00")
-# Abzug laut Semir (19.10.2026): Gasanschluss und Inbetriebnahme Trinkwasser, ca. 3.000 € netto – von uns selbst abgezogen
-ABZUG_NETTO = D("3000.00")
+# Laut Semir (19.10.2026): Bei der Villa sind 20.000 € BRUTTO offen. Davon ziehen wir selbst ca. 3.000 € brutto
+# für Gasanschluss und Inbetriebnahme Trinkwasser ab → Zahlbetrag 17.000 € brutto. Netto und USt werden aus den
+# Bruttobeträgen herausgerechnet (USt = brutto − netto).
+ZIEL_BRUTTO = D("20000.00")
+ABZUG_BRUTTO = D("3000.00")
+ZIEL_NETTO = r2(ZIEL_BRUTTO / (1 + VAT))            # 16.806,72
+ABZUG_NETTO = r2(ABZUG_BRUTTO / (1 + VAT))          # 2.521,01
+REST_BRUTTO = ZIEL_BRUTTO - ABZUG_BRUTTO            # 17.000,00
+REST_NETTO = r2(REST_BRUTTO / (1 + VAT))            # 14.285,71
+REST_UST = REST_BRUTTO - REST_NETTO                 # 2.714,29
+assert ZIEL_NETTO - ABZUG_NETTO == REST_NETTO
 ABZUG_TEXT = "abzgl. Gasanschluss und Inbetriebnahme Trinkwasser (pauschal)"
 META = dict(nr="2026-___", datum="__.__.2026", ziel="10 Tage", faellig="__.__.2026")
 EMPF = ["CREST Living GmbH & Co. KG", "Liesborner Weg 19", "13507 Berlin"]
@@ -79,11 +87,9 @@ def build(path):
     netto_liste = sum(line_total(q, ep) for _, _, q, _, ep, _ in items)
     brutto_liste = sum(r2(line_total(q, ep) * (1 + VAT)) for _, _, q, _, ep, _ in items)
     nachlass_netto = netto_liste - ZIEL_NETTO
-    netto = ZIEL_NETTO - ABZUG_NETTO
-    ust = r2(netto * VAT); brutto = netto + ust
-    ziel_brutto = r2(ZIEL_NETTO * (1 + VAT))
-    nachlass_brutto = brutto_liste - ziel_brutto
-    abzug_brutto = ziel_brutto - brutto
+    netto, ust, brutto = REST_NETTO, REST_UST, REST_BRUTTO
+    nachlass_brutto = brutto_liste - ZIEL_BRUTTO
+    abzug_brutto = ABZUG_BRUTTO
 
     doc = BaseDocTemplate(path, pagesize=A4, leftMargin=20*mm, rightMargin=20*mm, topMargin=90*mm, bottomMargin=34*mm,
                           title="Schlussrechnung Fußbodenheizung – BV Liesborner Weg 19 (Villa)", author="LEANS Tech GmbH")
@@ -102,7 +108,7 @@ def build(path):
         data.append([str(i), Paragraph(f"{p} {t}", P), num(q), u, eur(ep), "19,00 %", eur(v), eur(n + v)])
     k = len(data)
     data += [["", Paragraph("Zwischensumme (brutto)", P), "", "", "", "", "", eur(brutto_liste)],
-             ["", Paragraph(f"Nachlass (Pauschalierung der Schlusssumme auf {eur(ZIEL_NETTO)} netto; netto {eur(nachlass_netto)})", P), "", "", "", "", "", "-" + eur(nachlass_brutto)],
+             ["", Paragraph(f"Nachlass (Pauschalierung der Schlusssumme auf {eur(ZIEL_BRUTTO)} brutto; netto {eur(nachlass_netto)})", P), "", "", "", "", "", "-" + eur(nachlass_brutto)],
              ["", Paragraph(f"{ABZUG_TEXT}; netto {eur(ABZUG_NETTO)}", P), "", "", "", "", "", "-" + eur(abzug_brutto)],
              ["", Paragraph("<b>Nettobetrag</b>", P), "", "", "", "", "", eur(netto)],
              ["", Paragraph("USt. 19,00 %", P), "", "", "", "", "", eur(ust)],
@@ -122,7 +128,8 @@ def build(path):
     E.append(Spacer(1, 4*mm))
     E.append(KeepTogether([
         Paragraph("Diese Schlussrechnung ersetzt die Dokumente Nr. 176 vom 05.01.2025 (Fußbodenheizung) und Nr. 159 vom 03.12.2024 "
-                  "(hydraulischer Abgleich). Auf beide Dokumente sind bislang keine Zahlungen eingegangen.", P),
+                  "(hydraulischer Abgleich). Auf beide Dokumente sind bislang keine Zahlungen eingegangen. Die Schlusssumme ist als "
+                  "Bruttopauschale vereinbart; Netto und Umsatzsteuer sind daraus herausgerechnet (Rundungsdifferenz bis 0,01 €).", P),
         Spacer(1, 2*mm),
         Paragraph(f"Bitte überweisen Sie den Betrag von <b>{eur(brutto)}</b> bis zum Fälligkeitsdatum ohne Abzug unter Angabe der "
                   "Rechnungsnummer auf das unten genannte Konto.", P)

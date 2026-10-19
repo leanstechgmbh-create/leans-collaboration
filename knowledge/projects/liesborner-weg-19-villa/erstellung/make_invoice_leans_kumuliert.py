@@ -9,7 +9,8 @@ from reportlab.lib.units import mm
 from reportlab.platypus import BaseDocTemplate, PageTemplate, Frame, Paragraph, Spacer, Table, TableStyle, KeepTogether
 from reportlab.lib.styles import ParagraphStyle
 from data import SANITAER, HEIZUNG, VORRECHNUNGEN, VAT, r2, line_total
-from make_invoice_leans import page, P, eur, num, GREY, HEAD, ZIEL_NETTO, LEISTUNGSZEITRAUM, ABZUG_NETTO, ABZUG_TEXT
+from make_invoice_leans import (page, P, eur, num, GREY, HEAD, LEISTUNGSZEITRAUM, ABZUG_TEXT,
+                                ZIEL_BRUTTO, ZIEL_NETTO, ABZUG_BRUTTO, ABZUG_NETTO, REST_BRUTTO, REST_NETTO, REST_UST)
 
 PS = ParagraphStyle("ps", parent=P, fontSize=7, leading=9, textColor="#777777")
 PT = ParagraphStyle("pt", parent=P, fontSize=7.5, leading=9.5)
@@ -43,8 +44,9 @@ def werte():
     heizung_liste = titel[2] + titel[3]
     nachlass = heizung_liste - ZIEL_NETTO
     netto = liste - nachlass - ABZUG_NETTO
-    ust = r2(netto * VAT)
     vr_n = sum(v[4] for v in VORRECHNUNGEN); vr_u = sum(v[5] for v in VORRECHNUNGEN)
+    # USt der Gesamtleistung = USt der gestellten Rechnungen + USt aus der Bruttopauschale (Rest exakt 17.000,00 € brutto)
+    ust = vr_u + REST_UST
     return dict(titel=titel, liste=liste, heizung_liste=heizung_liste, nachlass=nachlass, netto=netto, ust=ust,
                 brutto=netto + ust, rest_netto=netto - vr_n, rest_ust=ust - vr_u, rest_brutto=netto + ust - vr_n - vr_u)
 
@@ -99,8 +101,8 @@ def build(path):
     for ti, (titel, herkunft, beleg, rows) in enumerate(g, 1):
         z.append([f"Titel {ti}: {titel}", eur(w["titel"][ti-1])])
     z += [["Summe zu Listenpreisen", eur(w["liste"])],
-          [Paragraph(f"Nachlass Heizung (Titel 3 + 4: {eur(w['heizung_liste'])} netto, pauschaliert auf {eur(ZIEL_NETTO)} netto)", P), "-" + eur(w["nachlass"])],
-          [Paragraph(ABZUG_TEXT, P), "-" + eur(ABZUG_NETTO)],
+          [Paragraph(f"Nachlass Heizung (Titel 3 + 4: {eur(w['heizung_liste'])} netto, pauschaliert auf {eur(ZIEL_NETTO)} netto = {eur(ZIEL_BRUTTO)} brutto)", P), "-" + eur(w["nachlass"])],
+          [Paragraph(f"{ABZUG_TEXT}: {eur(ABZUG_BRUTTO)} brutto", P), "-" + eur(ABZUG_NETTO)],
           ["Gesamtleistung netto", eur(w["netto"])]]
     k = len(z)
     secB = [Spacer(1, 5*mm), Paragraph("<b>B. Zusammenstellung</b>", P), Spacer(1, 1.5*mm),
@@ -117,7 +119,10 @@ def build(path):
     k = len(a)
     secC = [Spacer(1, 5*mm), Paragraph("<b>C. Abrechnung</b>", P), Spacer(1, 1.5*mm),
             tab(a, [95*mm, 25*mm, 25*mm, 25*mm], [("ALIGN", (1, 0), (-1, -1), "RIGHT"), ("FONT", (0, 1), (-1, 1), "LB", 8),
-                                                   ("LINEABOVE", (0, k-1), (-1, k-1), 0.8, GREY), ("FONT", (0, k-1), (-1, k-1), "LB", 8.5)])]
+                                                   ("LINEABOVE", (0, k-1), (-1, k-1), 0.8, GREY), ("FONT", (0, k-1), (-1, k-1), "LB", 8.5)]),
+            Spacer(1, 1.5*mm),
+            Paragraph("Die Heizung ist als Bruttopauschale vereinbart; Netto und Umsatzsteuer sind daraus herausgerechnet. "
+                      "Dadurch kann die Umsatzsteuer der Gesamtleistung um 0,01 € von 19 % abweichen.", PS)]
     E.append(KeepTogether(secC))
 
     # D. Zahlungsaufstellung: jede Villa-Rechnung, was bezahlt ist und was offen
@@ -150,6 +155,6 @@ if __name__ == "__main__":
     w = build(sys.argv[1])
     for k, v in w.items(): print(f"{k:13} {v}")
     assert w["titel"] == [D("12481.00"), D("4758.00"), D("270.00"), D("21525.30")], w["titel"]
-    assert w["rest_netto"] == ZIEL_NETTO - ABZUG_NETTO and w["rest_ust"] == r2((ZIEL_NETTO - ABZUG_NETTO) * VAT), w
+    assert (w["rest_netto"], w["rest_ust"], w["rest_brutto"]) == (REST_NETTO, REST_UST, REST_BRUTTO), w
     for nr, dat, emp, gew, n, u, b in VORRECHNUNGEN:
         assert sum(line_total(q, ep) for *_, q, u2, ep in dict((x[2], x[3]) for x in gruppen())[f"RE {nr}"]) == n, nr

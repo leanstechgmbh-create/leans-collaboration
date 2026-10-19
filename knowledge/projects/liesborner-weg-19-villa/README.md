@@ -7,7 +7,7 @@ Stand: 29.09.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 - **Villa = Projekt 0200 „Liesborner Weg (ALT)“.** Der Neubau „Butterfly Houses 19 a+b“ ist Projekt 1150 (NEU) und wird hier nur zur Abgrenzung erwähnt.
 - **Bauherr/Auftraggeber der Villa ist die CREST Living GmbH & Co. KG.** Sie hat die Baustellenprotokolle „BV Liesborner Weg 19 Villa“ geführt und die Villa-Rechnungen 2024-47 und 2025-17 erhalten. Achtung: Alle CREST-Firmen haben ihren Sitz am Liesborner Weg 19. Deshalb steht diese Adresse auf fast jeder CREST-Rechnung, auch bei ganz anderen Baustellen.
 - **Die offenen „ca. 20.000 €“ sind die „Schlussrechnung 176“ Fußbodenheizung über 22.541,30 € brutto vom 05.01.2025.** Sie wurde nie bezahlt. Wahrscheinlicher Grund: Das Dokument wurde mit der Angebotsvorlage erstellt. Es hat nur eine „Angebotsnummer 176“ und „Gültig bis“, aber keine Rechnungsnummer, kein Fälligkeitsdatum und keine Bankverbindung. Außerdem ging es an die CREST Investment GmbH statt an CREST Living. Dasselbe gilt für „Rechnung 159“ (hydraulischer Abgleich, 321,30 €), die ebenfalls unbezahlt ist.
-- **Ergebnis (Wunsch Semir):** Heizung pauschal 20.000,00 € netto, davon selbst abgezogen 3.000,00 € netto für Gasanschluss und Inbetriebnahme Trinkwasser (19.10.2026) → **17.000,00 € netto, Zahlbetrag 20.230,00 €** an CREST Living. Es gibt zwei gleichwertige Fassungen, von denen **nur eine** versendet wird: die kumulierte Schlussrechnung über alle Villa-Leistungen (Sanitär + Heizung, mit Abzug von 2024-47 und 2025-17) oder die Schlussrechnung nur über die Fußbodenheizung. Beide ersetzen Dok. 159 und Dok. 176. Die älteren Fassungen mit 12 % Rabatt (22.862,59 €) liegen als Alternative bei.
+- **Ergebnis (Semir, 19.10.2026):** Bei der Villa sind **20.000,00 € brutto** offen. Davon ziehen wir selbst 3.000,00 € brutto für Gasanschluss und Inbetriebnahme Trinkwasser ab → **Zahlbetrag 17.000,00 € brutto** (14.285,71 € netto + 2.714,29 € USt) an CREST Living. Es gibt zwei gleichwertige Fassungen, von denen **nur eine** versendet wird: die kumulierte Schlussrechnung über alle Villa-Leistungen (Sanitär + Heizung, mit Abzug von 2024-47 und 2025-17) oder die Schlussrechnung nur über die Fußbodenheizung. Beide ersetzen Dok. 159 und Dok. 176. Die älteren Fassungen mit 12 % Rabatt (22.862,59 €) liegen als Alternative bei.
 
 ## Auftrag
 
@@ -43,7 +43,7 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 
 ## Kumulierte Schlussrechnung über alle Villa-Leistungen, Heizung pauschal 20.000 € netto (29.09.2026)
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_kumuliert_alle_Villa-Leistungen_17.000_netto_ENTWURF.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
+- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_kumuliert_alle_Villa-Leistungen_17.000_brutto_ENTWURF.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
 - Aufbau: A. alle 43 Positionen, gegliedert nach den bisherigen Einzelabrechnungen (Titel 1 = RE 2024-47, Titel 2 = RE 2025-17, Titel 3 = Dok. 159, Titel 4 = Dok. 176), jede Position mit Verweis auf Beleg und Original-Pos.; B. Zusammenstellung; C. Abrechnung mit Abzug der gestellten Rechnungen (netto und USt, § 14 Abs. 5 UStG).
 
 | | netto | USt 19 % | brutto |
@@ -52,15 +52,15 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 | Titel 2 Sanitär-Nachtrag (RE 2025-17) | 4.758,00 | | |
 | Titel 3 hydraulischer Abgleich (Dok. 159) | 270,00 | | |
 | Titel 4 Fußbodenheizung (Dok. 176) | 21.525,30 | | |
-| Nachlass Heizung (Titel 3 + 4 pauschal auf 20.000,00) | −1.795,30 | | |
-| abzgl. Gasanschluss und Inbetriebnahme Trinkwasser (pauschal, lt. Semir ca. 3.000 €) | −3.000,00 | | |
-| **Gesamtleistung** | **34.239,00** | 6.505,41 | **40.744,41** |
+| Nachlass Heizung (Titel 3 + 4 pauschal auf 20.000,00 brutto = 16.806,72 netto) | −4.988,58 | | |
+| abzgl. Gasanschluss und Inbetriebnahme Trinkwasser (3.000,00 brutto, lt. Semir ca.) | −2.521,01 | | |
+| **Gesamtleistung** | **31.524,71** | 5.989,70 | **37.514,41** |
 | abzgl. RE 2024-47 | −12.481,00 | −2.371,39 | −14.852,39 |
 | abzgl. RE 2025-17 | −4.758,00 | −904,02 | −5.662,02 |
-| **Zahlbetrag** | **17.000,00** | **3.230,00** | **20.230,00** |
+| **Zahlbetrag** | **14.285,71** | **2.714,29** | **17.000,00** |
 
 - Prüfung: Die 43 Positionsbeträge wurden aus dem erzeugten PDF zurückgelesen und je Titel summiert; die Summen stimmen mit den Originalrechnungen überein (12.481,00 / 4.758,00 / 270,00 / 21.525,30).
-- **D. Zahlungsaufstellung** (ergänzt 19.10.2026): jede Villa-Rechnung mit Betrag, gezahlt, Zahlungsdatum und offen. RE 2025-17 wurde am 19.09.2025 mit 5.662,02 € bezahlt (Kontoauszug, Vwz. „R. 2025-17 v. 14.04.25, BV. Liesborner Weg 19“). RE 2024-47 gilt laut Semir als bezahlt („genau 20.000 € offen“). Das Zahlungsdatum ist rot als Platzhalter markiert, weil die Kontoauszüge 04–07/2024 weiter fehlen; in Drive liegen aus 2024 nur 02, 08 und 09. Dok. 159 und 176 sind mit 0,00 € gezahlt aufgeführt und werden durch diese Schlussrechnung ersetzt. Summe offen 20.230,00 €.
+- **D. Zahlungsaufstellung** (ergänzt 19.10.2026): jede Villa-Rechnung mit Betrag, gezahlt, Zahlungsdatum und offen. RE 2025-17 wurde am 19.09.2025 mit 5.662,02 € bezahlt (Kontoauszug, Vwz. „R. 2025-17 v. 14.04.25, BV. Liesborner Weg 19“). RE 2024-47 gilt laut Semir als bezahlt („genau 20.000 € offen“). Das Zahlungsdatum ist rot als Platzhalter markiert, weil die Kontoauszüge 04–07/2024 weiter fehlen; in Drive liegen aus 2024 nur 02, 08 und 09. Dok. 159 und 176 sind mit 0,00 € gezahlt aufgeführt und werden durch diese Schlussrechnung ersetzt. Summe offen 17.000,00 €.
 - Nicht enthalten: die 847,00 € netto aus RE 2025-8, die in 2025-17 fehlen (siehe oben).
 - Der Zahlbetrag setzt voraus, dass 2024-47 bezahlt ist oder separat bezahlt wird. 2024-47 bleibt als eigene Rechnung gültig.
 
@@ -88,9 +88,9 @@ Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Positi
 
 ### Schlussrechnung Fußbodenheizung über 20.000 € netto (Wunsch Semir, 28.09.2026)
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_Fussbodenheizung_17.000_netto_ENTWURF.pdf]] im LEANS-Rechnungslayout (Logo, Kopf und Fußzeile wie RE 2025-17), an CREST Living.
-- Positionen zu Listenpreisen: hydraulischer Abgleich 270,00 € + Fußbodenheizung 21.525,30 € = 21.795,30 € netto. Nachlass 1.795,30 € netto auf 20.000,00 € netto, dann **abzgl. 3.000,00 € netto für Gasanschluss und Inbetriebnahme Trinkwasser** (Semir 19.10.2026: „ca. 3.000 €, selbst abziehen“) → **17.000,00 € netto + 3.230,00 € USt = 20.230,00 €**. Den genauen Betrag noch bestätigen.
-- **Achtung:** Dok. 176 gewährte 12 % Rabatt (Heizung dann 19.212,26 € netto). Die 20.000 € netto liegen **787,74 € netto (937,41 € brutto) höher**. Vor dem Versand klären, ob das mit CREST so vereinbart ist, sonst die Fassung mit 19.212,26 € verwenden.
+- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_Fussbodenheizung_17.000_brutto_ENTWURF.pdf]] im LEANS-Rechnungslayout (Logo, Kopf und Fußzeile wie RE 2025-17), an CREST Living.
+- Positionen zu Listenpreisen: hydraulischer Abgleich 270,00 € + Fußbodenheizung 21.525,30 € = 21.795,30 € netto (25.936,41 € brutto). Pauschaliert auf **20.000,00 € brutto** (Nachlass 5.936,41 € brutto / 4.988,58 € netto), dann **abzgl. 3.000,00 € brutto für Gasanschluss und Inbetriebnahme Trinkwasser** (Semir 19.10.2026: „ca. 3.000 €, selbst abziehen“) → **Zahlbetrag 17.000,00 € brutto = 14.285,71 € netto + 2.714,29 € USt**. Netto und USt sind aus der Bruttopauschale herausgerechnet (Rundung 0,01 €). Den genauen Abzug noch bestätigen. Zum Vergleich: Dok. 159 + 176 ergaben 22.862,60 € brutto; die neue Rechnung liegt damit 5.862,60 € darunter.
+- Frühere Annahme 20.000 € netto (23.800 € brutto) ist überholt: offen sind laut Semir 20.000 € **brutto**.
 - Rechnungsmappe mit allen 7 Villa-Belegen (Deckblatt und Originale): [[Villa_0200/Rechnungsmappe_Villa_alle_Belege.pdf]].
 - Zuletzt gefundene Rechnungsnummer: 2026-43 vom 01.09.2026. 2026-39 und 2026-40 sind in Drive doppelt vergeben. Die nächste freie Nummer vor der Vergabe prüfen.
 
@@ -102,7 +102,7 @@ Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Positi
 4. **Stornorechnung zu RE 2025-8** ausstellen. Sie ist durch 2025-17 ersetzt, weist aber USt aus.
 5. Die Differenz von 847,00 € netto zwischen 2025-8 und 2025-17 klären (siehe oben) und gegebenenfalls in die Schlussrechnung aufnehmen.
 6. Die Zahlung von RE 2024-47 über die Kontoauszüge Apr.–Jul. 2024 belegen. Ist sie unbezahlt, erhöht sich der Zahlbetrag um 14.852,39 €.
-7. **Freistellungsbescheinigung § 48b EStG: abgelaufen.** Die neueste Bescheinigung in Drive gilt vom 03.07.2025 bis 02.07.2026 („Freistellungsbescheinigung 2025 48b.pdf“, Drive `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`). Eine neuere Bescheinigung oder einen neuen Antrag der LEANS Tech GmbH gibt es in Drive nicht. Ohne gültige Bescheinigung muss CREST 15 % einbehalten, bei 20.230,00 € also 3.034,50 €. Eine neue Bescheinigung beim FA für Körperschaften III beantragen.
+7. **Freistellungsbescheinigung § 48b EStG: abgelaufen.** Die neueste Bescheinigung in Drive gilt vom 03.07.2025 bis 02.07.2026 („Freistellungsbescheinigung 2025 48b.pdf“, Drive `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`). Eine neuere Bescheinigung oder einen neuen Antrag der LEANS Tech GmbH gibt es in Drive nicht. Ohne gültige Bescheinigung muss CREST 15 % einbehalten, bei 17.000,00 € also 2.550,00 €. Eine neue Bescheinigung beim FA für Körperschaften III beantragen.
 8. Prüfen und zuordnen: Welt-der-Bäder-Rechnung 30076WDB vom 16.10.2025 über 3.729,95 € brutto (4 freistehende Wannen LISBON, Lieferadresse „Liesborner Weg 19 Willa“, Drive `1Qzi2f1GiOfqbdezAy-D6yz2kdAAyHFIh`) und Waschtisch TWG71 (Bernstein, 16.10.2025, 528,90 €). Das ist Material von Oktober 2025, für das keine Ausgangsrechnung gefunden wurde. Unklar ist, ob es zur Villa oder zum Neubau gehört.
 9. Das LV/Angebot der Villa suchen und ablegen (siehe „Auftrag“).
 10. **Bankverbindung festlegen.** Der Entwurf nennt die Berliner Volksbank (DE21 1009 0000 2911 7280 04), wie die Villa-Rechnungen 2024/2025. Die letzte Rechnung 2026-43 nennt dagegen N26 mit Kontoinhaber Semir Redzic (privat) als „neue Bankverbindung“. Eine GmbH-Forderung auf ein Privatkonto mit dem Steuerberater abstimmen.
