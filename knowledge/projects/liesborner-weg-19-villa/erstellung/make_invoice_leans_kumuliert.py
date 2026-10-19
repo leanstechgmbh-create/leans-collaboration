@@ -12,6 +12,11 @@ from data import SANITAER, HEIZUNG, VORRECHNUNGEN, VAT, r2, line_total
 from make_invoice_leans import page, P, eur, num, GREY, HEAD, ZIEL_NETTO, LEISTUNGSZEITRAUM
 
 PS = ParagraphStyle("ps", parent=P, fontSize=7, leading=9, textColor="#777777")
+PT = ParagraphStyle("pt", parent=P, fontSize=7.5, leading=9.5)
+# Zahlungseingänge laut Kontoauszug Berliner Volksbank. 2024-47 gilt laut Semir als bezahlt; das Datum ist nicht
+# belegt, weil die Kontoauszüge April–Juli 2024 nicht in Drive liegen → rot markierter Platzhalter bis zur Bestätigung.
+ZAHLUNGSDATUM = {"2025-17": "19.09.2025"}
+ZAHLUNGSDATUM_OFFEN = "__.__.2024"
 SHADE = "#F1F7F1"
 
 def gruppen():
@@ -111,14 +116,32 @@ def build(path):
     k = len(a)
     secC = [Spacer(1, 5*mm), Paragraph("<b>C. Abrechnung</b>", P), Spacer(1, 1.5*mm),
             tab(a, [95*mm, 25*mm, 25*mm, 25*mm], [("ALIGN", (1, 0), (-1, -1), "RIGHT"), ("FONT", (0, 1), (-1, 1), "LB", 8),
-                                                   ("LINEABOVE", (0, k-1), (-1, k-1), 0.8, GREY), ("FONT", (0, k-1), (-1, k-1), "LB", 8.5)]),
+                                                   ("LINEABOVE", (0, k-1), (-1, k-1), 0.8, GREY), ("FONT", (0, k-1), (-1, k-1), "LB", 8.5)])]
+    E.append(KeepTogether(secC))
+
+    # D. Zahlungsaufstellung: jede Villa-Rechnung, was bezahlt ist und was offen
+    rot = lambda t: Paragraph(f"<font color='#B00000'>{t}</font>", PT)
+    zr = [["Rechnung", "Datum", "Leistung", "brutto", "gezahlt", "Zahlungsdatum", "offen"]]
+    for nr, dat, emp, gew, n, u, b in VORRECHNUNGEN:
+        datum = ZAHLUNGSDATUM.get(nr) or rot(ZAHLUNGSDATUM_OFFEN)
+        zr.append([f"RE {nr}", dat, Paragraph(gew, PT), eur(b), eur(b), datum, eur(0)])
+    zr += [["Dok. 159", "03.12.2024", Paragraph("Hydraulischer Abgleich – ersetzt durch diese Schlussrechnung", PT), "321,30 €", eur(0), "–", eur(0)],
+           ["Dok. 176", "05.01.2025", Paragraph("Fußbodenheizung – ersetzt durch diese Schlussrechnung", PT), "22.541,30 €", eur(0), "–", eur(0)],
+           ["neu", "", Paragraph("<b>Diese Schlussrechnung</b> – Heizung (Titel 3 + 4)", PT), eur(w["rest_brutto"]), eur(0), "–",
+            eur(w["rest_brutto"])],
+           [Paragraph("<b>Summe offen</b>", PT), "", "", "", "", "", eur(w["rest_brutto"])]]
+    k = len(zr) - 1
+    secD = [Spacer(1, 5*mm), Paragraph("<b>D. Zahlungsaufstellung</b>", P), Spacer(1, 1.5*mm),
+            tab(zr, [24*mm, 18*mm, 50*mm, 20*mm, 19*mm, 20*mm, 19*mm],
+                [("ALIGN", (3, 0), (4, -1), "RIGHT"), ("ALIGN", (6, 0), (6, -1), "RIGHT"), ("LINEABOVE", (0, k), (-1, k), 0.8, GREY),
+                 ("FONT", (6, k), (6, k), "LB", 8.5)]),
             Spacer(1, 4*mm),
             Paragraph("Diese Schlussrechnung ersetzt die Dokumente Nr. 176 vom 05.01.2025 (Fußbodenheizung) und Nr. 159 vom 03.12.2024 "
                       "(hydraulischer Abgleich). Die Rechnungen 2024-47 und 2025-17 bleiben unverändert gültig.", P),
             Spacer(1, 2*mm),
             Paragraph(f"Bitte überweisen Sie den Betrag von <b>{eur(w['rest_brutto'])}</b> bis zum Fälligkeitsdatum ohne Abzug unter Angabe der "
                       "Rechnungsnummer auf das unten genannte Konto.", P)]
-    E.append(KeepTogether(secC))
+    E.append(KeepTogether(secD))
     doc.build(E)
     return w
 

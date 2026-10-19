@@ -59,6 +59,7 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 | **Zahlbetrag** | **20.000,00** | **3.800,00** | **23.800,00** |
 
 - Prüfung: Die 43 Positionsbeträge wurden aus dem erzeugten PDF zurückgelesen und je Titel summiert; die Summen stimmen mit den Originalrechnungen überein (12.481,00 / 4.758,00 / 270,00 / 21.525,30).
+- **D. Zahlungsaufstellung** (ergänzt 19.10.2026): jede Villa-Rechnung mit Betrag, gezahlt, Zahlungsdatum und offen. RE 2025-17 wurde am 19.09.2025 mit 5.662,02 € bezahlt (Kontoauszug, Vwz. „R. 2025-17 v. 14.04.25, BV. Liesborner Weg 19“). RE 2024-47 gilt laut Semir als bezahlt („genau 20.000 € offen“). Das Zahlungsdatum ist rot als Platzhalter markiert, weil die Kontoauszüge 04–07/2024 weiter fehlen; in Drive liegen aus 2024 nur 02, 08 und 09. Dok. 159 und 176 sind mit 0,00 € gezahlt aufgeführt und werden durch diese Schlussrechnung ersetzt. Summe offen 23.800,00 €.
 - Nicht enthalten: die 847,00 € netto aus RE 2025-8, die in 2025-17 fehlen (siehe oben).
 - Der Zahlbetrag setzt voraus, dass 2024-47 bezahlt ist oder separat bezahlt wird. 2024-47 bleibt als eigene Rechnung gültig.
 
