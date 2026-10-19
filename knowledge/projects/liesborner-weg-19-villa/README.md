@@ -128,6 +128,20 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
   - Bauabzugsteuer 19.593,40 € auf die 1.–3. AR. Sie wurde ans Finanzamt abgeführt und muss dort angerechnet werden; gegenüber CREST ist sie keine offene Forderung.
 - **Freistellungsbescheinigung § 48b EStG:** Laut CREST-Prüfblatt gültig bis **02.07.2026**, also abgelaufen. Eine neue Bescheinigung beantragen, sonst behält CREST 15 % ein.
 
+### Kumulierte Schlussrechnung Neubau 19 a + b, beide Häuser zusammen (Entwurf, 19.10.2026)
+
+- Datei: [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_kumuliert_Neubau_19ab_45.745,31_ENTWURF.pdf]] im LEANS-Layout an CREST Living, 2 Seiten. Skripte: `erstellung/data_neubau.py` (Daten und Prüfungen) und `erstellung/make_invoice_neubau.py`.
+- **A. Gesamtleistung:** Pauschale 300.000,00 € brutto + NA 1 (216) 5.200,00 € netto, wie im CREST-Prüfblatt freigegeben, + NA 2 (282) 6.822,60 € netto = **264.123,44 € netto / 314.306,89 € brutto**.
+- **B. Abzug** aller 8 Abschlagsrechnungen mit Netto und USt: 309.318,89 € brutto. **Restbetrag 4.988,00 €** = Restrate 4.000,00 € + Differenz NA 1 von 988,00 €.
+- **C. Zahlungsaufstellung** je AR. Rechenweise wie im CREST-Prüfblatt: Bauumlage 0,25 % netto, Sicherheitseinbehalt 10 %, Skonto 3 %, Bauabzug 15 %. Alle 7 Zahlungen stimmen auf den Cent mit dem Kontoauszug überein (`python3 data_neubau.py`). Summen: gezahlt 240.546,62 €, Bauabzug ans Finanzamt 19.593,40 €, Sicherheitseinbehalt 29.757,31 €, Skonto 7.675,75 €, Bauumlage 745,81 €.
+- **D. Offen:** Restbetrag 4.988,00 € + 8. AR 11.000,00 € = 15.988,00 €, dazu der Sicherheitseinbehalt als eigene Zeile (29.757,31 €) mit Anmerkung. **Zahlbetrag gesamt 45.745,31 €** (Wunsch Semir: SE separat drauf, alles zusammen).
+- Prüfen vor dem Versand:
+  - Bauvertrag HLS: Ob und wann der SE fällig wird (nach Abnahme oder gegen Bürgschaft), steht im Bauvertrag. Der liegt nicht in Drive. Ein Abnahmeprotokoll ist ebenfalls nicht abgelegt.
+  - 3. AR: Skonto 3 % wurde abgezogen, obwohl die Zahlung erst nach 9 Werktagen kam (01.07. → 14.07.2025). Laut Skontoregel des Prüfblatts gelten bei 7 WT 3 % und bei 10 WT nur 2 %. Damit sind evtl. 403,98 € zu viel abgezogen; das hängt vom Eingangsdatum ab.
+  - NA 217 (653,55–808,25 €) und Angebot 230 Wasserzählerschacht (1.231,32 €) sind nicht enthalten. Klären, ob beauftragt.
+  - Die Freistellungsbescheinigung § 48b ist abgelaufen; ohne neue behält CREST 15 % Bauabzug ein.
+  - Eingänge ab Juni 2026 prüfen (Kontoauszüge in Drive nur bis 31.05.2026).
+
 ## Prozesshinweis
 
 `scripts/leans-live.ps1 status/announce` (AGENTS.md Regeln 8/9) konnte nicht ausgeführt werden: Im Cloud-Container ist kein PowerShell installiert. Bitte lokal nachholen.

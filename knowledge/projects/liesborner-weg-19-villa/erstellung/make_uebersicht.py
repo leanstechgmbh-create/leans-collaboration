@@ -96,7 +96,9 @@ def build(out):
          Paragraph("• 8. AR 2025-98 über 11.000 € unbezahlt → erinnern. • Restrate 4.000 € der Pauschale (15.000 − 11.000) noch nicht abgerechnet → mit Schlussrechnung. "
                    "• Sicherheitseinbehalt 10 %: rechnerisch 28.500 € auf die Raten + 1.427,11 € auf den Nachtrag → nach Abnahme/Bürgschaft zurückfordern. "
                    "• Bauabzugsteuer 19.593,40 € (1.–3. AR) hat CREST ans Finanzamt abgeführt → beim Finanzamt anrechnen lassen, keine Forderung an CREST. "
-                   "• Nachtrag 1: 830,25 € netto zu wenig abgerechnet (siehe oben). • Unterschriebenen Bauvertrag HLS suchen.", P)]),
+                   "• Nachtrag 1: 830,25 € netto zu wenig abgerechnet (siehe oben). • Unterschriebenen Bauvertrag HLS suchen. "
+                   "<b>• Kumulierte Schlussrechnung (Entwurf, beide Häuser):</b> Gesamtleistung 314.306,89 € − 8 AR 309.318,89 € = Rest 4.988,00 € "
+                   "+ offene 8. AR 11.000,00 € + Sicherheitseinbehalt 29.757,31 € = <b>Zahlbetrag 45.745,31 €</b>.", P)]),
          Spacer(1, 3*mm),
          Paragraph("<b>Wichtig für beide Projekte:</b> Laut CREST-Prüfblatt war die Freistellungsbescheinigung (§ 48b EStG) nur bis <b>02.07.2026</b> gültig. "
                    "Eine neuere Bescheinigung liegt nicht in Drive (geprüft 29.09.2026). "
