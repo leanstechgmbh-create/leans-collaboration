@@ -18,6 +18,9 @@ GREEN = colors.HexColor("#4CAF50"); HEAD = colors.HexColor("#DCEFDD"); GREY = co
 LOGO = "logo_leans.png"
 
 ZIEL_NETTO = D("20000.00")
+# Abzug laut Semir (19.10.2026): Gasanschluss und Inbetriebnahme Trinkwasser, ca. 3.000 € netto – von uns selbst abgezogen
+ABZUG_NETTO = D("3000.00")
+ABZUG_TEXT = "abzgl. Gasanschluss und Inbetriebnahme Trinkwasser (pauschal)"
 META = dict(nr="2026-___", datum="__.__.2026", ziel="10 Tage", faellig="__.__.2026")
 EMPF = ["CREST Living GmbH & Co. KG", "Liesborner Weg 19", "13507 Berlin"]
 WATERMARK = True
@@ -76,8 +79,11 @@ def build(path):
     netto_liste = sum(line_total(q, ep) for _, _, q, _, ep, _ in items)
     brutto_liste = sum(r2(line_total(q, ep) * (1 + VAT)) for _, _, q, _, ep, _ in items)
     nachlass_netto = netto_liste - ZIEL_NETTO
-    ust = r2(ZIEL_NETTO * VAT); brutto = ZIEL_NETTO + ust
-    nachlass_brutto = brutto_liste - brutto
+    netto = ZIEL_NETTO - ABZUG_NETTO
+    ust = r2(netto * VAT); brutto = netto + ust
+    ziel_brutto = r2(ZIEL_NETTO * (1 + VAT))
+    nachlass_brutto = brutto_liste - ziel_brutto
+    abzug_brutto = ziel_brutto - brutto
 
     doc = BaseDocTemplate(path, pagesize=A4, leftMargin=20*mm, rightMargin=20*mm, topMargin=90*mm, bottomMargin=34*mm,
                           title="Schlussrechnung Fußbodenheizung – BV Liesborner Weg 19 (Villa)", author="LEANS Tech GmbH")
@@ -97,7 +103,8 @@ def build(path):
     k = len(data)
     data += [["", Paragraph("Zwischensumme (brutto)", P), "", "", "", "", "", eur(brutto_liste)],
              ["", Paragraph(f"Nachlass (Pauschalierung der Schlusssumme auf {eur(ZIEL_NETTO)} netto; netto {eur(nachlass_netto)})", P), "", "", "", "", "", "-" + eur(nachlass_brutto)],
-             ["", Paragraph("<b>Nettobetrag</b>", P), "", "", "", "", "", eur(ZIEL_NETTO)],
+             ["", Paragraph(f"{ABZUG_TEXT}; netto {eur(ABZUG_NETTO)}", P), "", "", "", "", "", "-" + eur(abzug_brutto)],
+             ["", Paragraph("<b>Nettobetrag</b>", P), "", "", "", "", "", eur(netto)],
              ["", Paragraph("USt. 19,00 %", P), "", "", "", "", "", eur(ust)],
              ["", Paragraph("<b>Gesamtsumme</b>", P), "", "", "", "", "", eur(brutto)],
              ["", Paragraph("abzgl. bereits geleistete Zahlungen", P), "", "", "", "", "", eur(0)],
@@ -107,9 +114,9 @@ def build(path):
           ("FONT", (0, 0), (-1, 0), "LB", 8), ("BACKGROUND", (0, 0), (-1, 0), HEAD),
           ("TOPPADDING", (0, 0), (-1, -1), 1.6), ("BOTTOMPADDING", (0, 0), (-1, -1), 1.6),
           ("ALIGN", (2, 0), (-1, -1), "RIGHT"), ("ALIGN", (3, 0), (3, -1), "CENTER"),
-          ("LINEABOVE", (0, k), (-1, k), 0.5, GREY), ("LINEABOVE", (0, k+2), (-1, k+2), 0.5, GREY),
-          ("LINEABOVE", (0, k+4), (-1, k+4), 0.5, GREY), ("LINEABOVE", (0, k+6), (-1, k+6), 0.8, GREY),
-          ("FONT", (7, k+2), (7, k+2), "LB", 8), ("FONT", (7, k+4), (7, k+4), "LB", 8), ("FONT", (7, k+6), (7, k+6), "LB", 8.5)]
+          ("LINEABOVE", (0, k), (-1, k), 0.5, GREY), ("LINEABOVE", (0, k+3), (-1, k+3), 0.5, GREY),
+          ("LINEABOVE", (0, k+5), (-1, k+5), 0.5, GREY), ("LINEABOVE", (0, k+7), (-1, k+7), 0.8, GREY),
+          ("FONT", (7, k+3), (7, k+3), "LB", 8), ("FONT", (7, k+5), (7, k+5), "LB", 8), ("FONT", (7, k+7), (7, k+7), "LB", 8.5)]
     for r in range(k, len(data)): st.append(("SPAN", (1, r), (6, r)))
     t.setStyle(TableStyle(st)); E.append(t)
     E.append(Spacer(1, 4*mm))
@@ -122,7 +129,7 @@ def build(path):
         ]))
     doc.build(E)
     return dict(netto_liste=netto_liste, brutto_liste=brutto_liste, nachlass_netto=nachlass_netto,
-                nachlass_brutto=nachlass_brutto, netto=ZIEL_NETTO, ust=ust, brutto=brutto)
+                nachlass_brutto=nachlass_brutto, abzug_netto=ABZUG_NETTO, abzug_brutto=abzug_brutto, netto=netto, ust=ust, brutto=brutto)
 
 if __name__ == "__main__":
     print(build(sys.argv[1]))

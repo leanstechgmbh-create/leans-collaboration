@@ -12,8 +12,8 @@
 ```bash
 pip install reportlab openpyxl pymupdf
 cd erstellung
-python3 make_invoice_leans_kumuliert.py "../Villa_0200/2_Schlussrechnung/Schlussrechnung_kumuliert_alle_Villa-Leistungen_20.000_netto_ENTWURF.pdf"
-python3 make_invoice_leans.py "../Villa_0200/2_Schlussrechnung/Schlussrechnung_Fussbodenheizung_20.000_netto_ENTWURF.pdf"
+python3 make_invoice_leans_kumuliert.py "../Villa_0200/2_Schlussrechnung/Schlussrechnung_kumuliert_alle_Villa-Leistungen_17.000_netto_ENTWURF.pdf"
+python3 make_invoice_leans.py "../Villa_0200/2_Schlussrechnung/Schlussrechnung_Fussbodenheizung_17.000_netto_ENTWURF.pdf"
 python3 make_pdf.py "../Villa_0200/2_Schlussrechnung/Alternative_kumuliert_mit_12-Prozent-Rabatt_ENTWURF.pdf"
 python3 make_pdf_fbh.py "../Villa_0200/2_Schlussrechnung/Alternative_19.212,26_netto_mit_12-Prozent-Rabatt_ENTWURF.pdf"
 python3 make_invoice_neubau.py "../Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_kumuliert_Neubau_19ab_45.745,31_ENTWURF.pdf"
