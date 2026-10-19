@@ -137,7 +137,7 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
 - **D. Offen:** Restbetrag 4.988,00 € + 8. AR 11.000,00 € = 15.988,00 €, dazu der Sicherheitseinbehalt als eigene Zeile (29.757,31 €) mit Anmerkung. **Zahlbetrag gesamt 45.745,31 €** (Wunsch Semir: SE separat drauf, alles zusammen).
 - Prüfen vor dem Versand:
   - Bauvertrag HLS: Ob und wann der SE fällig wird (nach Abnahme oder gegen Bürgschaft), steht im Bauvertrag. Der liegt nicht in Drive. Ein Abnahmeprotokoll ist ebenfalls nicht abgelegt.
-  - 3. AR: Skonto 3 % wurde abgezogen, obwohl die Zahlung erst nach 9 Werktagen kam (01.07. → 14.07.2025). Laut Skontoregel des Prüfblatts gelten bei 7 WT 3 % und bei 10 WT nur 2 %. Damit sind evtl. 403,98 € zu viel abgezogen; das hängt vom Eingangsdatum ab.
+  - Skonto: Die von CREST abgezogenen Skonti (7.675,75 €) werden akzeptiert und nicht zurückgefordert, auch wo verspätet gezahlt wurde (z. B. 3. AR). Entscheidung Semir vom 19.10.2026.
   - NA 217 (653,55–808,25 €) und Angebot 230 Wasserzählerschacht (1.231,32 €) sind nicht enthalten. Klären, ob beauftragt.
   - Die Freistellungsbescheinigung § 48b ist abgelaufen; ohne neue behält CREST 15 % Bauabzug ein.
   - Eingänge ab Juni 2026 prüfen (Kontoauszüge in Drive nur bis 31.05.2026).
