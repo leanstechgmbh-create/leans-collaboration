@@ -144,6 +144,15 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
   - Die Freistellungsbescheinigung § 48b ist abgelaufen; ohne neue behält CREST 15 % Bauabzug ein.
   - Eingänge ab Juni 2026 prüfen (Kontoauszüge in Drive nur bis 31.05.2026).
 
+## Gesamtmappe und Fachunternehmererklärungen (19.10.2026)
+
+- **Gesamtmappe:** [[00_Gesamtmappe_Liesborner_Weg_19_Villa_und_Neubau.pdf]] mit 60 Seiten. Sie beginnt mit einem Deckblatt mit anklickbarem Inhaltsverzeichnis (36 Einträge) und hat Lesezeichen. Inhalt: Übersicht; A Villa mit beiden Schlussrechnungen (Entwurf, 17.000 € brutto), Fachunternehmererklärungen, Mailentwurf und 7 Original-Belegen; B Neubau mit Schlussrechnung (Entwurf, 45.745,31 €), 4 Fachunternehmererklärungen, Auftrag, Angeboten, Nachträgen und 8 Abschlagsrechnungen mit CREST-Prüfblatt. Skript: `erstellung/make_gesamtmappe.py`; es prüft, dass jeder Link auf die richtige Seite zeigt.
+- **Fachunternehmererklärungen** im LEANS-Layout und Wortlaut der bisherigen Erklärungen (Vorlage: Erklärung Heizung für CREST Tegeler See vom 22.11.2025), an CREST Living:
+  - Villa: Heizung (Fußbodenheizung, hydraulischer Abgleich) und Sanitär, in `Villa_0200/4_Fachunternehmererklaerungen/`
+  - Neubau 19 a + b (Auftrag 20250418_#): Heizung inkl. Wärmepumpe und FBH, Sanitär, Lüftung und Klima, in `Neubau_19ab_1150/6_Fachunternehmererklaerungen/`
+  - **Datum und Unterschrift sind frei** und werden von Semir eingesetzt. Bewusst ohne eingescannte Unterschrift. Skript: `erstellung/make_fue.py`.
+- Nicht gefunden in Drive: Datenblätter der verbauten Produkte, Druckprobe-, Spül- und Aufheizprotokolle, VdZ-Bestätigung des hydraulischen Abgleichs und eine „Fachbauleitererklärung“ für beide BV.
+
 ## Prozesshinweis
 
 `scripts/leans-live.ps1 status/announce` (AGENTS.md Regeln 8/9) konnte nicht ausgeführt werden: Im Cloud-Container ist kein PowerShell installiert. Bitte lokal nachholen.
