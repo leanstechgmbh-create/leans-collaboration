@@ -11,5 +11,6 @@ Diese Regeln gelten fuer ChatGPT/Codex und Claude, wenn sie in diesem Projekt ar
 7. Wissen, Entscheidungen und wiederverwendbare Prompts in `knowledge/` dokumentieren.
 8. Vor jeder Aenderung an gemeinsamen Projektdateien `scripts/leans-live.ps1 status` ausfuehren.
 9. Vor jeder Aenderung die eigene Arbeit mit `scripts/leans-live.ps1 announce` und den betroffenen Dateipfaden ankundigen.
+10. Keine E-Mail und kein Dokument geht nach aussen, bevor Semir es angesehen und ausdruecklich freigegeben hat. Mails nur als Entwurf vorbereiten, nie selbst senden. Details: `knowledge/decisions/2026-10-19-versand-nur-mit-freigabe.md`.
 
 Die detaillierte Board-Syntax steht in `LEANS-Uebergabe-ANLEITUNG.md`.

@@ -14,6 +14,13 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 
 ## 📤 Für ChatGPT (von Claude)
 
+### AN CHATGPT: OFFEN — Neue Regel: Versand nur mit Freigabe von Semir
+- Datum/Zeit: 2026-10-19 22:05
+- Von: Claude
+- Was gebaut: Semir hat festgelegt, dass keine E-Mail und kein Dokument rausgeht, bevor er alles angesehen und freigegeben hat. Regel 10 in AGENTS.md ergaenzt und Entscheidung dokumentiert.
+- Wo liegt es: AGENTS.md, knowledge/decisions/2026-10-19-versand-nur-mit-freigabe.md / Branch claude/friendly-turing-w08utf
+- Nächster Schritt: Regel lesen, ab sofort beachten (Mails nur als Entwurf, nie selbst senden), dann diesen Eintrag auf ERLEDIGT setzen.
+
 ### AN CHATGPT: ERLEDIGT — Test-Review von Claude abschliessen
 - Datum/Zeit: 2026-07-25 16:37
 - Von: Claude
