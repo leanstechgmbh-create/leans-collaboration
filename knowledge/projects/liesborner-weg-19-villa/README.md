@@ -13,7 +13,7 @@ Stand: 19.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 
 | Nr. | BV | Datei | Zahlbetrag |
 |---|---|---|---:|
-| **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_kumuliert_17.000_brutto.pdf]] | **17.000,00 €** (14.285,71 netto + 2.714,29 USt) |
+| **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_17.000_brutto.pdf]] | **17.000,00 €** (14.285,71 netto + 2.714,29 USt) |
 | **2026-45** | Neubau 19 a + b (1150), beide Häuser, 2 Seiten | [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf]] | **43.745,31 €** (Rest 2.988,00 nach Abzug 2.000,00 + 8. AR 11.000,00 + SE 29.757,31) |
 
 - Rechnungsdatum 19.10.2026, Zahlungsziel 10 Tage, fällig **29.10.2026**, Bankverbindung **Berliner Volksbank** DE21 1009 0000 2911 7280 04. Fußzeile mit Geschäftsführer und Registergericht (§ 35a GmbHG).
@@ -55,7 +55,7 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 
 ## Schlussrechnung 2026-44: kumuliert über alle Villa-Leistungen, Heizung pauschal 20.000 € brutto
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_kumuliert_17.000_brutto.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
+- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_17.000_brutto.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
 - Aufbau: A. alle 43 Positionen, gegliedert nach den bisherigen Einzelabrechnungen (Titel 1 = RE 2024-47, Titel 2 = RE 2025-17, Titel 3 = Dok. 159, Titel 4 = Dok. 176), jede Position mit Verweis auf Beleg und Original-Pos.; B. Zusammenstellung; C. Abrechnung mit Abzug der gestellten Rechnungen (netto und USt, § 14 Abs. 5 UStG).
 
 | | netto | USt 19 % | brutto |

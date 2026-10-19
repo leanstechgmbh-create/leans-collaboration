@@ -39,6 +39,7 @@ FOOT = [("LEANS Tech GmbH", "Berlepschstr. 165", "14165 Berlin"),
         ("USt. ID: DE357948720", "Geschäftsführer:", "Semir Redzic")]
 BODY = ParagraphStyle("b", fontName="L", fontSize=10.5, leading=15, textColor=GREY, alignment=4, spaceAfter=7)
 W, H = A4
+DATUM = "19.10.2026"   # wie die Schlussrechnungen 2026-44 und 2026-45 (Vorgabe Semir)
 
 def kopf(c, titel, kopfzeilen, kopf_x=48*mm):
     """Logo, Absenderzeile, Empfänger, grüner Titel und fette Kopfzeilen (Bauvorhaben, Gewerk …)."""
@@ -55,10 +56,9 @@ def kopf(c, titel, kopfzeilen, kopf_x=48*mm):
     return y
 
 def unterschrift(c, name="Semir Redzic", zusatz=None):
-    """Ort mit Linie für das Datum und leere Unterschriftslinie – bewusst ohne Datum, Unterschrift und Stempel."""
+    """Ort und Datum der Schlussrechnung, leere Unterschriftslinie – Unterschrift und Stempel setzt Semir selbst."""
     c.setFillColor(GREY); c.setStrokeColor(GREY); c.setLineWidth(0.5); c.setFont("L", 10.5)
-    c.drawString(20*mm, 60*mm, "Berlin, den"); x = 20*mm + c.stringWidth("Berlin, den ", "L", 10.5)
-    c.line(x, 59.2*mm, x + 38*mm, 59.2*mm)
+    c.drawString(20*mm, 60*mm, f"Berlin, den {DATUM}")
     c.line(W - 85*mm, 64*mm, W - 20*mm, 64*mm)
     c.setFont("L", 8.5); c.drawCentredString(W - 52.5*mm, 59.5*mm, "Unterschrift / Firmenstempel")
     c.setFont("L", 10.5); c.drawRightString(W - 20*mm, 52*mm, name)

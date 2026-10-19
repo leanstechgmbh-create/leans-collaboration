@@ -92,13 +92,13 @@ def abrechnung_villa(path):
         ["Rechnung", "Datum", "Gewerk", "netto", "brutto", "bezahlt", "offen"],
         ["RE 2024-47", vr["2024-47"][1], "Sanitär", eur(vr["2024-47"][4]), eur(vr["2024-47"][6]), "bezahlt (lt. Semir)", eur(0)],
         ["RE 2025-17", vr["2025-17"][1], "Sanitär-Nachtrag", eur(vr["2025-17"][4]), eur(vr["2025-17"][6]), "19.09.2025", eur(0)],
-        ["SR 2026-44", STAND, "Heizung, kumuliert", eur(inv.REST_NETTO), eur(inv.REST_BRUTTO), "fällig 29.10.2026", eur(inv.REST_BRUTTO)],
+        ["Schlussrechnung 2026-44", STAND, "Heizung", eur(inv.REST_NETTO), eur(inv.REST_BRUTTO), "fällig 29.10.2026", eur(inv.REST_BRUTTO)],
         ["Summe", "", "", eur(w["netto"]), eur(w["brutto"]), eur(gezahlt), eur(inv.REST_BRUTTO)],
     ]
     ersetzt = [
         ["Beleg", "Datum", "Inhalt", "brutto", "Status"],
-        ["Dok. 159", "03.12.2024", "Hydraulischer Abgleich (nur Angebotsnummer)", "321,30 €", "ersetzt durch SR 2026-44"],
-        ["Dok. 176", "05.01.2025", "„Schlussrechnung“ Fußbodenheizung (nur Angebotsnummer)", "22.541,30 €", "ersetzt durch SR 2026-44"],
+        ["Dok. 159", "03.12.2024", "Hydraulischer Abgleich (nur Angebotsnummer)", "321,30 €", "ersetzt durch Schlussrechnung 2026-44"],
+        ["Dok. 176", "05.01.2025", "„Schlussrechnung“ Fußbodenheizung (nur Angebotsnummer)", "22.541,30 €", "ersetzt durch Schlussrechnung 2026-44"],
         ["NA 175 / Dok. 175", "05.01.2025", "Nachtragsangebot Sanitärobjekte", "6.669,95 €", "Angebot / Vorversion"],
         ["RE 2025-8", "28.03.2025", "Sanitär-Nachtrag (erste Fassung)", "6.669,95 €", "durch RE 2025-17 ersetzt – Storno ausstellen"],
     ]
@@ -316,9 +316,9 @@ def eintraege_villa():
     o = lambda f: os.path.join(V, "1_Belege_Original", f)
     e = [(1, "1", "Abrechnung nach Gewerken", ("#trenn", "Was bei der Villa abgerechnet wurde: Sanitär und Heizung, Rechnungen, Zahlungen, ersetzte Belege")),
          (2, "1.1", "Abrechnung Villa – Gewerke, Rechnungen und Zahlungen", ("#pdf", abrechnung_villa)),
-         (1, "2", "Schlussrechnung", ("#trenn", "Kumulierte Schlussrechnung über alle Villa-Leistungen")),
+         (1, "2", "Schlussrechnung", ("#trenn", "Schlussrechnung über alle Villa-Leistungen")),
          (2, "2.1", "Schlussrechnung Nr. 2026-44 vom 19.10.2026 – Zahlbetrag 17.000,00 € brutto",
-          f"{V}/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_kumuliert_17.000_brutto.pdf"),
+          f"{V}/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_17.000_brutto.pdf"),
          (1, "3", "Rechnungen und Belege (Originale)", ("#trenn", "Alle bisherigen Villa-Belege, einheitlich benannt mit Status"))]
     for i, f in enumerate(sorted(os.listdir(os.path.join(ROOT, V, "1_Belege_Original"))), 1):
         e.append((2, f"3.{i}", os.path.splitext(f)[0][3:].replace("_", " "), o(f)))
@@ -341,7 +341,7 @@ def eintraege_villa():
 def eintraege_neubau():
     e = [(1, "1", "Abrechnung nach Gewerken – Haus A und Haus B", ("#trenn", "Was beim Neubau abgerechnet wurde: Gewerke je Haus, Nachträge, Abschlagsrechnungen, Zahlungen, Schlussrechnung")),
          (2, "1.1", "Abrechnung Neubau 19 a + b – Häuser, Gewerke, Rechnungen und Zahlungen", ("#pdf", abrechnung_neubau)),
-         (1, "2", "Schlussrechnung", ("#trenn", "Kumulierte Schlussrechnung für beide Häuser mit Zahlungsaufstellung und Sicherheitseinbehalt")),
+         (1, "2", "Schlussrechnung", ("#trenn", "Schlussrechnung für beide Häuser mit Zahlungsaufstellung und Sicherheitseinbehalt")),
          (2, "2.1", f"Schlussrechnung Nr. 2026-45 vom 19.10.2026 – Zahlbetrag {eur(data_neubau.werte()['gesamt_offen'])}",
           f"{N}/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf"),
          (1, "3", "Auftrag, Angebote, Nachträge und Abschlagsrechnungen", ("#trenn", "Originale: Zahlungsplan, Angebote 233 (Haus A) und 234 (Haus B), Nachträge, 8 Abschlagsrechnungen mit CREST-Prüfblatt"))]
@@ -366,7 +366,7 @@ def eintraege_neubau():
     return e
 
 HINWEIS = ("<b>Inhalt:</b> Abrechnung, Schlussrechnung, Belege, Freistellungsbescheinigung, Erklärungen und Datenblätter. "
-           "Die Erklärungen sind fertig vorbereitet; es fehlen nur Datum, Unterschrift und Stempel von Semir Redzic. "
+           "Die Erklärungen sind auf den 19.10.2026 datiert; es fehlen nur Unterschrift und Stempel von Semir Redzic. "
            "Einträge im Inhaltsverzeichnis sind anklickbar; die Lesezeichen im PDF-Viewer führen ebenfalls zu jedem Dokument.")
 MAPPEN = [
     (f"{V}/00_Mappe_Villa_0200_Abrechnung_und_Dokumentation.pdf", "Mappe Villa – BV Liesborner Weg 19, 13507 Berlin",

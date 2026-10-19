@@ -61,12 +61,12 @@ def tab(data, widths, style):
 def build(path):
     w = werte(); g = gruppen()
     doc = BaseDocTemplate(path, pagesize=A4, leftMargin=20*mm, rightMargin=20*mm, topMargin=90*mm, bottomMargin=34*mm,
-                          title="Kumulierte Schlussrechnung – BV Liesborner Weg 19 (Villa)", author="LEANS Tech GmbH")
+                          title="Schlussrechnung 2026-44 – BV Liesborner Weg 19 (Villa)", author="LEANS Tech GmbH")
     later = Frame(20*mm, 34*mm, A4[0] - 40*mm, A4[1] - 54*mm, id="later")
     first = Frame(20*mm, 34*mm, A4[0] - 40*mm, A4[1] - 124*mm, id="first")
     doc.addPageTemplates([PageTemplate(id="p1", frames=[first], onPage=page, autoNextPageTemplate="pn"),
                           PageTemplate(id="pn", frames=[later], onPage=page)])
-    E = [Paragraph("<font color='#4CAF50' size='14'><b>SCHLUSSRECHNUNG (kumuliert)</b></font>",
+    E = [Paragraph("<font color='#4CAF50' size='14'><b>SCHLUSSRECHNUNG</b></font>",
                    ParagraphStyle("t", fontName="LB", fontSize=14, leading=18)),
          Spacer(1, 3*mm),
          Paragraph("BV: Liesborner Weg 19<br/>13507 Berlin (Villa)<br/>"
