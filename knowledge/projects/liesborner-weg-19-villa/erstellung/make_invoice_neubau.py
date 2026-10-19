@@ -97,16 +97,25 @@ def build(path):
 
     # D. Offene Beträge: Restbetrag + offene 8. AR, Sicherheitseinbehalt separat obendrauf, dann alles zusammen
     se_liste = ", ".join(f"{r['nr']}: {eur(r['se'])}" for r in w["zeilen"] if r["se"])
+    # Übersicht wie besprochen: erst alles Offene, dann der Pauschalabzug, dann der Zahlbetrag
+    ab = w["abzug"]; vor = w["rest"]["brutto"] + ab["brutto"]
     o = [["", "brutto"],
-         ["Restbetrag dieser Schlussrechnung (Teil B)", eur(w["rest"]["brutto"])],
+         ["Restbetrag Schlussrate und Nachtrag 1 (Teil B vor Abzug)", eur(vor)],
          ["8. Abschlagsrechnung Nr. 2025-98 vom 16.12.2025 (nicht bezahlt)", eur(w["offen_ar"])],
-         ["Zwischensumme offen", eur(w["sofort"])],
+         ["Zwischensumme offen", eur(vor + w["offen_ar"])],
          ["zzgl. Sicherheitseinbehalt 10 % aus der 1. bis 7. AR (siehe Anmerkung)", eur(s["se"])],
+         ["Offen vor Abzug", eur(vor + w["offen_ar"] + s["se"])],
+         [ab["text"][0].upper() + ab["text"][1:], "-" + eur(ab["brutto"])],
          ["Zahlbetrag gesamt", eur(w["gesamt_offen"])]]
+    assert vor + w["offen_ar"] + s["se"] - ab["brutto"] == w["gesamt_offen"]
     secD = [Spacer(1, 5*mm), H("D. Offene Beträge"), Spacer(1, 1.5*mm),
             tab(o, [145*mm, 25*mm], [("ALIGN", (1, 0), (1, -1), "RIGHT"), ("LINEABOVE", (0, 3), (-1, 3), 0.5, GREY),
-                                     ("FONT", (0, 3), (-1, 3), "LB", 8), ("LINEABOVE", (0, 5), (-1, 5), 0.8, GREY),
-                                     ("FONT", (0, 5), (-1, 5), "LB", 8.5)]),
+                                     ("FONT", (0, 3), (-1, 3), "LB", 8), ("LINEABOVE", (0, 5), (-1, 5), 0.5, GREY),
+                                     ("FONT", (0, 5), (-1, 5), "LB", 8), ("LINEABOVE", (0, 7), (-1, 7), 0.8, GREY),
+                                     ("FONT", (0, 7), (-1, 7), "LB", 8.5)]),
+            Spacer(1, 1.5*mm),
+            Paragraph(f"Der Abzug von {eur(ab['brutto'])} ist in Teil A von der Gesamtleistung abgezogen; der Restbetrag in Teil B "
+                      f"({eur(w['rest']['brutto'])}) enthält ihn bereits.", PS),
             Spacer(1, 1.5*mm),
             Paragraph(f"Anmerkung zum Sicherheitseinbehalt: Von Ihren Zahlungen auf die 1. bis 7. Abschlagsrechnung haben Sie jeweils 10 % "
                       f"als Sicherheit einbehalten ({se_liste}), zusammen <b>{eur(s['se'])}</b>. Mit dieser Schlussrechnung bitten wir um "

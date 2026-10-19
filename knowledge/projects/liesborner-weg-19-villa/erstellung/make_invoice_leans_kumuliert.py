@@ -122,7 +122,16 @@ def build(path):
                                                    ("LINEABOVE", (0, k-1), (-1, k-1), 0.8, GREY), ("FONT", (0, k-1), (-1, k-1), "LB", 8.5)]),
             Spacer(1, 1.5*mm),
             Paragraph("Die Heizung ist als Bruttopauschale vereinbart; Netto und Umsatzsteuer sind daraus herausgerechnet. "
-                      "Dadurch kann die Umsatzsteuer der Gesamtleistung um 0,01 € von 19 % abweichen.", PS)]
+                      "Dadurch kann die Umsatzsteuer der Gesamtleistung um 0,01 € von 19 % abweichen.", PS),
+            Spacer(1, 3*mm),
+            # Kurzübersicht wie besprochen: offener Betrag, Abzug, Zahlbetrag (alles brutto)
+            tab([["Kurz zusammengefasst", "brutto"],
+                 ["Offener Betrag Villa (Heizung pauschal)", eur(ZIEL_BRUTTO)],
+                 [ABZUG_TEXT, "-" + eur(ABZUG_BRUTTO)],
+                 ["Zahlbetrag dieser Schlussrechnung", eur(REST_BRUTTO)]],
+                [145*mm, 25*mm], [("ALIGN", (1, 0), (1, -1), "RIGHT"), ("LINEABOVE", (0, 3), (-1, 3), 0.8, GREY),
+                                  ("FONT", (0, 3), (-1, 3), "LB", 8.5)])]
+    assert ZIEL_BRUTTO - ABZUG_BRUTTO == REST_BRUTTO == w["rest_brutto"]
     E.append(KeepTogether(secC))
 
     # D. Zahlungsaufstellung: jede Villa-Rechnung, was bezahlt ist und was offen
