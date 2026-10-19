@@ -8,7 +8,8 @@
 - `make_final.py`: erzeugt die **endgültigen** Schlussrechnungen 2026-44 (Villa) und 2026-45 (Neubau) vom 19.10.2026, fällig 29.10.2026, ohne Wasserzeichen.
 - `data_neubau.py` / `make_invoice_neubau.py`: kumulierte Schlussrechnung Neubau 19 a + b (beide Häuser zusammen) mit Zahlungsaufstellung. `python3 data_neubau.py` gleicht jede Zahlung mit dem Kontoauszug ab.
 - `make_fue.py`: Fachunternehmererklärungen Villa (2) und Neubau (4), Datum/Unterschrift frei.
-- `make_gesamtmappe.py`: Gesamtmappe mit Deckblatt, anklickbarem Inhaltsverzeichnis und Lesezeichen (Übersicht, Versandmail, 2026-44, 2026-45, Fachunternehmererklärungen, Originale).
+- `make_erklaerungen.py`: Unternehmererklärung nach § 96 GEG und Fachbauleitererklärung TGA je BV (Layout aus `make_fue.py`).
+- `make_mappen.py`: zwei getrennte Mappen (Villa, Neubau) mit Abrechnung nach Gewerken, Schlussrechnung, Originalen, Freistellungsbescheinigung, Erklärungen und Datenblättern; Deckblatt mit anklickbarem Inhaltsverzeichnis und Lesezeichen. Braucht die Freistellungsbescheinigung lokal im Projektordner (nicht im Repo, siehe README).
 - `make_pdf.py` / `make_pdf_fbh.py`: ältere Fassungen mit 12 % Rabatt.
 - `make_xlsx.py`, `make_mappe.py`, `make_uebersicht.py`: Excel-Aufstellung, Rechnungsmappe, Übersicht Villa + Neubau.
 
@@ -25,5 +26,6 @@ python3 make_pdf_fbh.py "$E/Alternative_19.212,26_netto_mit_12-Prozent-Rabatt_EN
 python3 make_invoice_neubau.py "../Neubau_19ab_1150/5_Schlussrechnung/Entwuerfe/Schlussrechnung_kumuliert_Neubau_19ab_45.745,31_ENTWURF.pdf"
 python3 make_uebersicht.py ../00_Uebersicht_Liesborner_Weg_19_Villa_und_Neubau.pdf
 python3 make_fue.py ..
-python3 make_gesamtmappe.py ../00_Gesamtmappe_Liesborner_Weg_19_Villa_und_Neubau.pdf   # zuletzt
+python3 make_erklaerungen.py ..
+python3 make_mappen.py   # zuletzt
 ```

@@ -156,14 +156,42 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
   - Die Freistellungsbescheinigung § 48b ist abgelaufen; ohne neue behält CREST 15 % Bauabzug ein.
   - Eingänge ab Juni 2026 prüfen (Kontoauszüge in Drive nur bis 31.05.2026).
 
-## Gesamtmappe und Fachunternehmererklärungen (19.10.2026)
+## Zwei Mappen: Villa und Neubau getrennt (19.10.2026)
 
-- **Gesamtmappe:** [[00_Gesamtmappe_Liesborner_Weg_19_Villa_und_Neubau.pdf]] mit 59 Seiten. Sie beginnt mit einem Deckblatt mit anklickbarem Inhaltsverzeichnis (35 Einträge) und hat Lesezeichen. Inhalt: Übersicht; Versandmail; A Villa mit Schlussrechnung 2026-44 (17.000 € brutto), 2 Fachunternehmererklärungen und 7 Original-Belegen; B Neubau mit Schlussrechnung 2026-45 (45.745,31 €), 4 Fachunternehmererklärungen, Auftrag, Angeboten, Nachträgen und 8 Abschlagsrechnungen mit CREST-Prüfblatt. Skript: `erstellung/make_gesamtmappe.py`; es prüft, dass jeder Link auf die richtige Seite zeigt.
-- **Fachunternehmererklärungen** im LEANS-Layout und Wortlaut der bisherigen Erklärungen (Vorlage: Erklärung Heizung für CREST Tegeler See vom 22.11.2025), an CREST Living:
-  - Villa: Heizung (Fußbodenheizung, hydraulischer Abgleich) und Sanitär, in `Villa_0200/4_Fachunternehmererklaerungen/`
-  - Neubau 19 a + b (Auftrag 20250418_#): Heizung inkl. Wärmepumpe und FBH, Sanitär, Lüftung und Klima, in `Neubau_19ab_1150/6_Fachunternehmererklaerungen/`
-  - **Datum und Unterschrift sind frei** und werden von Semir eingesetzt. Bewusst ohne eingescannte Unterschrift. Skript: `erstellung/make_fue.py`.
-- Nicht gefunden in Drive: Datenblätter der verbauten Produkte, Druckprobe-, Spül- und Aufheizprotokolle, VdZ-Bestätigung des hydraulischen Abgleichs und eine „Fachbauleitererklärung“ für beide BV.
+Auf Wunsch von Semir gibt es statt der gemeinsamen Gesamtmappe **zwei getrennte Mappen**. Jede ist ein PDF mit Deckblatt, anklickbarem Inhaltsverzeichnis und Lesezeichen. Erzeugt werden sie mit `erstellung/make_mappen.py`. Am 19.10.2026 geprüft: alle 24 bzw. 45 Einträge und Lesezeichen zeigen auf das richtige Dokument.
+
+| Mappe | Datei (nur lokal, siehe unten) | Umfang |
+|---|---|---|
+| Villa (0200) | `Villa_0200/00_Mappe_Villa_0200_Abrechnung_und_Dokumentation.pdf` | 38 Seiten, 24 Einträge |
+| Neubau 19 a + b (1150) | `Neubau_19ab_1150/00_Mappe_Neubau_19ab_1150_Abrechnung_und_Dokumentation.pdf` | 75 Seiten, 45 Einträge |
+
+Gliederung beider Mappen:
+1. **Abrechnung nach Gewerken**, neu erzeugt.
+   - Villa: Sanitär 17.239,00 € netto und Heizung 14.285,71 € netto ergeben die Gesamtleistung von 31.524,71 € netto bzw. 37.514,41 € brutto. Davon sind 20.514,41 € bezahlt, offen sind 17.000,00 €. Dazu kommen die ersetzten Belege.
+   - Neubau: Leistung je Haus (A = 19 a, Angebot 233; B = 19 b, Angebot 234) und je Gewerk (Klima, Lüftung, Heizung, Sanitär, Diverses). Die Pauschale ist rechnerisch anteilig zugeordnet. Es folgen die Nachträge, die Gesamtleistung von 314.306,89 €, die 8 Abschlagsrechnungen mit Einbehalten und Zahlungen sowie die Schlussrechnung. Eine Bilanz zeigt, wohin die Gesamtleistung gegangen ist: gezahlt, Bauabzug, Skonto, Bauumlage und offen 45.745,31 €.
+2. **Schlussrechnung** 2026-44 bzw. 2026-45.
+3. **Originale**: Villa-Belege bzw. Neubau-Auftrag, Angebote, Nachträge und Abschlagsrechnungen.
+4. **Freistellungsbescheinigung § 48b**, gültig vom 03.07.2025 bis 02.07.2026, also abgelaufen. Das Trennblatt nennt den drohenden Einbehalt von 15 %.
+5. **Fachunternehmererklärungen** je Gewerk: Villa 2, Neubau 4.
+6. **Unternehmererklärung nach § 96 GEG**.
+   - Neu: `Villa_0200/4_Fachunternehmererklaerungen/Unternehmererklaerung_GEG_Villa.pdf`, `Neubau_19ab_1150/6_Fachunternehmererklaerungen/Unternehmererklaerung_GEG_Neubau_19ab.pdf`.
+   - Angekreuzt ist nur, was laut Rechnungen und Angeboten zum Leistungsumfang gehört. Raumweise Regelung und hydraulischer Abgleich beim Neubau sind offen.
+7. **Fachbauleitererklärung TGA**.
+   - Neu: `…/Fachbauleitererklaerung_Villa.pdf`, `…/Fachbauleitererklaerung_Neubau_19ab.pdf`.
+   - Alle Prüfungen sind **offen (☐)**, weil keine Protokolle in Drive liegen. Semir kreuzt an, was gemacht wurde.
+8. **Datenblätter** mit einer Übersicht, was vorliegt und was fehlt.
+   - Neubau: 11 von 21 Produkten. Vorhanden sind Mitsubishi Heavy SRC60ZSX-W3 und FDUM60VH, Samsung Mono HT R290 AE160CXYDGK mit den Konfigurationen Haus A und B, die Danfoss-UP-Kastenseite, Dallmer CeraLine Plan W 900/1200 mit Abdeckungen und Geberit Silent-PP. Sie liegen in `Neubau_19ab_1150/7_Datenblaetter/`.
+   - Villa: 1 von 8 (Duravit ME by Starck Urinal, `Villa_0200/5_Datenblaetter/`).
+   - Die übrigen fehlen in Drive. Der Container hatte keinen Internetzugriff auf Herstellerseiten, deshalb beim Hersteller herunterladen.
+   - Typen abgleichen:
+     - Die Klima-Datenblätter folgen dem S-Klima-Angebot 200118621 (FDUM60VH, SRC60ZSX-W3). Angebot 233/234 und die Bestellmail nennen SCM 60 ZS-W bzw. FDUT56KXE6F-E.
+     - Die Wärmepumpe ist laut Samsung-Konfiguration eine R290 mit 16 kW. Das Angebot nannte 18 kW R32.
+
+**Öffentliches Repository:** `leanstechgmbh-create/leans-collaboration` ist öffentlich. Die Freistellungsbescheinigung (Steuer- und Sicherheitsnummer) und die beiden Mappen, in die sie eingebunden ist, werden deshalb **nicht** committet (`.gitignore` im Projektordner). Zum Neuerzeugen die Bescheinigung aus Drive (Datei-ID `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`) als `00_Freistellungsbescheinigung_48b_gueltig_2025-07-03_bis_2026-07-02.pdf` in den Projektordner legen und `python3 make_mappen.py` ausführen. Achtung: Auch die bereits committeten Rechnungen (Bankverbindung, Kundendaten, Zahlungen) sind öffentlich einsehbar.
+
+Fachunternehmererklärungen: LEANS-Layout und Wortlaut wie die Erklärung Heizung für CREST Tegeler See vom 22.11.2025, an CREST Living. **Datum und Unterschrift sind frei**; bewusst ohne eingescannte Unterschrift. Skripte: `erstellung/make_fue.py`, `erstellung/make_erklaerungen.py`.
+
+Weiterhin nicht in Drive: Druckprobe-, Spül- und Aufheizprotokolle, VdZ-Bestätigung des hydraulischen Abgleichs.
 
 ## Prozesshinweis
 

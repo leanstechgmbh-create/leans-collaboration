@@ -1,0 +1,5 @@
+# Das Repository ist öffentlich: Freistellungsbescheinigung (Steuer- und Sicherheitsnummer) und die Mappen,
+# in die sie eingebunden ist, bleiben lokal. Quelle: Google Drive, Datei-ID 15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF.
+00_Freistellungsbescheinigung_*.pdf
+*/00_Mappe_*.pdf
+__pycache__/
