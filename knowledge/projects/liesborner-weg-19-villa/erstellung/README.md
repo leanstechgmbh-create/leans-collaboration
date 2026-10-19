@@ -27,5 +27,5 @@ python3 make_invoice_neubau.py "../Neubau_19ab_1150/5_Schlussrechnung/Entwuerfe/
 python3 make_uebersicht.py ../00_Uebersicht_Liesborner_Weg_19_Villa_und_Neubau.pdf
 python3 make_fue.py ..
 python3 make_erklaerungen.py ..
-python3 make_mappen.py   # zuletzt
+python3 make_mappen.py [Zielordner]   # zuletzt; mit Zielordner zusätzlich normale Ordner mit Einzel-PDFs
 ```

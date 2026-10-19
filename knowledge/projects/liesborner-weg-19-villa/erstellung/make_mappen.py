@@ -326,7 +326,7 @@ def eintraege_villa():
           (2, "5.2", "Fachunternehmererklärung Sanitär", f"{V}/4_Fachunternehmererklaerungen/FUE_Villa_Sanitaer.pdf"),
           (1, "6", "Unternehmererklärung § 96 GEG", ("#trenn", "Bestätigung an den Eigentümer, dass die Heizungsarbeiten dem Gebäudeenergiegesetz entsprechen")),
           (2, "6.1", "Unternehmererklärung nach § 96 GEG – Heizung Villa", f"{V}/4_Fachunternehmererklaerungen/Unternehmererklaerung_GEG_Villa.pdf"),
-          (1, "7", "Fachbauleitererklärung", ("#trenn", "Fachbauleitung TGA – durchgeführte Prüfungen bitte ankreuzen")),
+          (1, "7", "Fachbauleitererklärung", ("#trenn", "Fachbauleitung TGA – ausgeführte Prüfungen und Arbeiten")),
           (2, "7.1", "Fachbauleitererklärung TGA – Heizung und Sanitär Villa", f"{V}/4_Fachunternehmererklaerungen/Fachbauleitererklaerung_Villa.pdf"),
           (1, "8", "Datenblätter", ("#trenn", "Übersicht der verbauten Produkte und vorhandene Datenblätter")),
           (2, "8.1", "Datenblatt-Übersicht Villa – vorhanden und fehlend", ("#pdf", lambda p: datenblatt_uebersicht(p, "Datenblätter Villa – Liesborner Weg 19", DB_VILLA)))]
@@ -352,7 +352,7 @@ def eintraege_neubau():
         e.append((2, f"5.{i}", f"Fachunternehmererklärung {t}", f"{N}/6_Fachunternehmererklaerungen/FUE_Neubau_19ab_{d}.pdf"))
     e += [(1, "6", "Unternehmererklärung § 96 GEG", ("#trenn", "Bestätigung an den Eigentümer, dass Heizung, Lüftung und Klima dem Gebäudeenergiegesetz entsprechen")),
           (2, "6.1", "Unternehmererklärung nach § 96 GEG – Neubau 19 a + b", f"{N}/6_Fachunternehmererklaerungen/Unternehmererklaerung_GEG_Neubau_19ab.pdf"),
-          (1, "7", "Fachbauleitererklärung", ("#trenn", "Fachbauleitung TGA – durchgeführte Prüfungen bitte ankreuzen")),
+          (1, "7", "Fachbauleitererklärung", ("#trenn", "Fachbauleitung TGA – ausgeführte Prüfungen und Arbeiten")),
           (2, "7.1", "Fachbauleitererklärung TGA – Klima, Lüftung, Heizung, Sanitär", f"{N}/6_Fachunternehmererklaerungen/Fachbauleitererklaerung_Neubau_19ab.pdf"),
           (1, "8", "Datenblätter", ("#trenn", "Übersicht der verbauten Produkte je Gewerk und vorhandene Datenblätter")),
           (2, "8.1", "Datenblatt-Übersicht Neubau – vorhanden und fehlend",
@@ -362,7 +362,7 @@ def eintraege_neubau():
     return e
 
 HINWEIS = ("<b>Inhalt:</b> Abrechnung, Schlussrechnung, Belege, Freistellungsbescheinigung, Erklärungen und Datenblätter. "
-           "Die Erklärungen sind zur Unterschrift vorbereitet (Datum, Unterschrift, Stempel und Ankreuzen der Prüfungen durch Semir Redzic). "
+           "Die Erklärungen sind fertig vorbereitet; es fehlen nur Datum, Unterschrift und Stempel von Semir Redzic. "
            "Einträge im Inhaltsverzeichnis sind anklickbar; die Lesezeichen im PDF-Viewer führen ebenfalls zu jedem Dokument.")
 MAPPEN = [
     (f"{V}/00_Mappe_Villa_0200_Abrechnung_und_Dokumentation.pdf", "Mappe Villa – BV Liesborner Weg 19, 13507 Berlin",
@@ -373,8 +373,35 @@ MAPPEN = [
      f"Gewerke Klima, Lüftung, Heizung, Sanitär · LEANS Tech GmbH · Stand {STAND}", eintraege_neubau),
 ]
 
-def build():
-    return [(out, mappe(os.path.join(ROOT, out), titel, unter, HINWEIS, f())) for out, titel, unter, f in MAPPEN]
+def dateiname(kz, titel):
+    t = re.sub(r"\s+", " ", titel.replace(":", " –").replace("/", "-").replace("→", "-").replace("€", "EUR")).strip()
+    if "." in kz: kz = "{}.{:02d}".format(*map(int, kz.split(".")))   # 3.02 vor 3.10 sortieren
+    return f"{kz} {t}"[:110].rstrip(" .–-")
+
+def ordner(ziel, gesamt, e, name_gesamt):
+    """Dieselben Inhalte als normale Ordner: je Abschnitt ein Unterordner, je Dokument eine nummerierte PDF-Datei."""
+    import shutil
+    if os.path.exists(ziel): shutil.rmtree(ziel)
+    os.makedirs(ziel); shutil.copy(gesamt, os.path.join(ziel, name_gesamt)); sub = ziel; n = 1
+    for lvl, kz, tit, src in e:
+        if lvl == 1:
+            sub = os.path.join(ziel, dateiname(kz, tit)); os.makedirs(sub); continue
+        p = os.path.join(sub, dateiname(kz, tit) + ".pdf")
+        src[1](p) if isinstance(src, tuple) else shutil.copy(os.path.join(ROOT, src), p); n += 1
+    return n
+
+ORDNERNAME = {V: "Villa Liesborner Weg 19 (0200)", N: "Neubau Liesborner Weg 19 a+b (1150)"}
+
+def build(ordner_ziel=None):
+    res = []
+    for out, titel, unter, f in MAPPEN:
+        e = f(); res.append((out, mappe(os.path.join(ROOT, out), titel, unter, HINWEIS, e)))
+        if ordner_ziel:
+            name = ORDNERNAME[out.split("/")[0]]
+            ordner(os.path.join(ordner_ziel, name), os.path.join(ROOT, out), e, f"00 Gesamtmappe {name} – alles in einer Datei.pdf")
+    return res
 
 if __name__ == "__main__":
-    for out, (seiten, eintraege) in build(): print(f"{out}: {seiten} Seiten, {eintraege} Einträge")
+    # optional: Zielordner für die Einzel-PDFs (normale Ordnerstruktur zum Durchsehen)
+    for out, (seiten, eintraege) in build(sys.argv[1] if len(sys.argv) > 1 else None):
+        print(f"{out}: {seiten} Seiten, {eintraege} Einträge")

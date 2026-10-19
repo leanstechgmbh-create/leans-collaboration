@@ -55,10 +55,11 @@ def kopf(c, titel, kopfzeilen, kopf_x=48*mm):
     return y
 
 def unterschrift(c, name="Semir Redzic", zusatz=None):
-    """Ort/Datum (Datum rot als Platzhalter) und leere Unterschriftslinie – bewusst ohne Unterschrift/Stempel."""
-    c.setFillColor(GREY); c.setFont("L", 10.5); c.drawString(20*mm, 60*mm, "Berlin, ")
-    c.setFillColor(colors.HexColor("#B00000")); c.drawString(20*mm + c.stringWidth("Berlin, ", "L", 10.5), 60*mm, "__.__.2026")
-    c.setFillColor(GREY); c.setStrokeColor(GREY); c.setLineWidth(0.5); c.line(W - 85*mm, 64*mm, W - 20*mm, 64*mm)
+    """Ort mit Linie für das Datum und leere Unterschriftslinie – bewusst ohne Datum, Unterschrift und Stempel."""
+    c.setFillColor(GREY); c.setStrokeColor(GREY); c.setLineWidth(0.5); c.setFont("L", 10.5)
+    c.drawString(20*mm, 60*mm, "Berlin, den"); x = 20*mm + c.stringWidth("Berlin, den ", "L", 10.5)
+    c.line(x, 59.2*mm, x + 38*mm, 59.2*mm)
+    c.line(W - 85*mm, 64*mm, W - 20*mm, 64*mm)
     c.setFont("L", 8.5); c.drawCentredString(W - 52.5*mm, 59.5*mm, "Unterschrift / Firmenstempel")
     c.setFont("L", 10.5); c.drawRightString(W - 20*mm, 52*mm, name)
     if zusatz: c.setFont("L", 8.5); c.drawRightString(W - 20*mm, 47.5*mm, zusatz)

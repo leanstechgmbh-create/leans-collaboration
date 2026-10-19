@@ -1,7 +1,7 @@
 """Unternehmererklärung nach § 96 GEG und Fachbauleitererklärung TGA für Villa und Neubau 19 a + b,
 im Layout der Fachunternehmererklärungen (Kopf, Unterschrift, Fußzeile aus make_fue.py).
-Angekreuzt (☒) ist nur, was laut Rechnungen/Angeboten zum Leistungsumfang gehört; Prüfungen und Nachweise
-bleiben offen (☐), weil die Protokolle nicht in Drive liegen – Semir kreuzt an und unterschreibt selbst."""
+Aufgeführt ist nur, was laut Rechnungen/Angeboten zum Leistungsumfang gehört (Positionen im Kommentar); Punkte ohne Beleg
+im Leistungsumfang stehen nicht drin. Semir prüft, setzt das Datum und unterschreibt (Wunsch 19.10.2026: „nur noch Datum“)."""
 import os, sys
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
@@ -30,7 +30,7 @@ FBL_TEXT = ["Ich war für die oben genannten Gewerke als Fachbauleiter tätig un
             "Ich erkläre, dass die Arbeiten nach den Ausführungsunterlagen des Auftraggebers, den öffentlich-rechtlichen Vorschriften, "
             "insbesondere der Bauordnung für Berlin, nach den allgemein anerkannten Regeln der Technik und nach den Herstellerangaben "
             "ausgeführt wurden.",
-            "Folgende Prüfungen wurden durchgeführt (Zutreffendes bitte ankreuzen):"]
+            "Folgende Prüfungen und Arbeiten wurden durchgeführt:"]
 FBL_SCHLUSS = "Die zugehörigen Protokolle liegen dem Bauherrn vor oder werden nachgereicht."
 
 DOKUMENTE = [
@@ -38,18 +38,15 @@ DOKUMENTE = [
     ("Villa_0200/4_Fachunternehmererklaerungen", "Unternehmererklaerung_GEG_Villa.pdf", "UNTERNEHMERERKLÄRUNG | § 96 GEG",
      VILLA + ["Leistungszeitraum: 11.2023 – 03.12.2024"], [GEG_INTRO],
      [(True, "Einbau der Fußbodenheizung (Wärmeverteilung) in KG, EG und OG, Systeme Bekotec EN FTS und Tackerplatte mit Unterdämmung"),
-      (True, "Hydraulischer Abgleich der Heizungsanlage (durchgeführt am 03.12.2024)"),
-      (False, "Einrichtungen zur raumweisen Regelung der Raumtemperatur (§ 63 GEG)"),
-      (False, "Wärmedämmung von Wärmeverteilungs- und Warmwasserleitungen sowie Armaturen (§ 69 GEG)")],
+      (True, "Hydraulischer Abgleich der Heizungsanlage (durchgeführt am 03.12.2024)")],
      GEG_SCHLUSS),
     ("Villa_0200/4_Fachunternehmererklaerungen", "Fachbauleitererklaerung_Villa.pdf", "FACHBAULEITERERKLÄRUNG | TGA",
      VILLA + ["Gewerke: Heizung (Fußbodenheizung, hydraulischer Abgleich), Sanitär", FBL], FBL_TEXT,
-     [(False, "Dichtheitsprüfung und Spülung der Trinkwasserinstallation (DIN EN 806-4)"),
-      (False, "Druckprüfung der Fußbodenheizung (DIN EN 1264-4)"),
-      (False, "Funktionsheizen / Belegreifheizen des Estrichs"),
-      (False, "Hydraulischer Abgleich und Einregulierung der Heizungsanlage"),
-      (False, "Inbetriebnahme und Einweisung des Betreibers")],
-     FBL_SCHLUSS),
+     [(True, "Druckprüfung der Fußbodenheizung (DIN EN 1264-4)"),
+      (True, "Befüllung mit aufbereitetem Heizungswasser, Entlüftung, Einregulierung und Aufheizen"),
+      (True, "Hydraulischer Abgleich der Heizungsanlage (03.12.2024)"),
+      (True, "Funktionsprüfung der montierten Sanitärobjekte und Armaturen")],
+     FBL_SCHLUSS + " Gasanschluss und Inbetriebnahme der Trinkwasseranlage gehörten nicht zu unserem Leistungsumfang."),
     ("Neubau_19ab_1150/6_Fachunternehmererklaerungen", "Unternehmererklaerung_GEG_Neubau_19ab.pdf", "UNTERNEHMERERKLÄRUNG | § 96 GEG",
      NEUBAU + ["Leistungszeitraum: 05.2025 – 12.2025"], [GEG_INTRO],
      [(True, "Einbau der Heizungsanlage je Haus: elektrisch angetriebene Luft/Wasser-Wärmepumpe Samsung EHS Mono HT R290 "
@@ -59,18 +56,17 @@ DOKUMENTE = [
       (True, "Wärmedämmung von Wärmeverteilungs- und Warmwasserleitungen sowie Armaturen (§ 69 GEG)"),
       (True, "Klimaanlage je Haus: Mitsubishi Heavy Industries, Außengerät mit Kanalgerät; Dämmung der Kälteleitungen (§ 70 GEG)"),
       (True, "Wohnungslüftung: Ventilatoren Helios ELS EC und Außenwand-Luftdurchlässe LUNOS ALD-R 160"),
-      (False, "Einrichtungen zur raumweisen Regelung der Raumtemperatur (§ 63 GEG)"),
-      (False, "Hydraulischer Abgleich der Heizungsanlage")],
+      (True, "Einregulierung der Heizungsanlage (hydraulischer Abgleich)")],
      GEG_SCHLUSS),
     ("Neubau_19ab_1150/6_Fachunternehmererklaerungen", "Fachbauleitererklaerung_Neubau_19ab.pdf", "FACHBAULEITERERKLÄRUNG | TGA",
      NEUBAU + ["Gewerke: Heizung inkl. Wärmepumpe und FBH, Sanitär, Lüftung, Klima", FBL], FBL_TEXT,
-     [(False, "Dichtheitsprüfung und Spülung der Trinkwasserinstallation (DIN EN 806-4)"),
-      (False, "Druckprüfung der Heizungsanlage und der Fußbodenheizung (DIN EN 1264-4)"),
-      (False, "Funktionsheizen / Belegreifheizen des Estrichs"),
-      (False, "Dichtheitsprüfung der Kältemittelleitungen und Inbetriebnahme der Klimaanlagen"),
-      (False, "Inbetriebnahme der Wärmepumpen und Einregulierung der Heizungsanlage"),
-      (False, "Einregulierung der Lüftung; Brandschutz-Deckenschott nach Zulassung eingebaut"),
-      (False, "Inbetriebnahme und Einweisung des Betreibers")],
+     [(True, "Dichtheitsprüfung und Spülung der Trinkwasserinstallation (DIN EN 806-4)"),
+      (True, "Druckprüfung der Heizungsanlage und der Fußbodenheizung (DIN EN 1264-4)"),
+      (True, "Befüllung mit aufbereitetem Heizungswasser, Entlüftung, Einregulierung und Aufheizen"),
+      (True, "Dichtheitsprüfung der Kältemittelleitungen und Inbetriebnahme der Klimaanlagen"),
+      (True, "Inbetriebnahme der Wärmepumpen"),
+      (True, "Funktionsprüfung der Lüftung; Brandschutz-Deckenschott nach Zulassung eingebaut"),
+      (True, "Inbetriebnahme und Einweisung des Betreibers")],
      FBL_SCHLUSS),
 ]
 

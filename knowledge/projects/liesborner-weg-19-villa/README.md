@@ -175,10 +175,10 @@ Gliederung beider Mappen:
 5. **Fachunternehmererklärungen** je Gewerk: Villa 2, Neubau 4.
 6. **Unternehmererklärung nach § 96 GEG**.
    - Neu: `Villa_0200/4_Fachunternehmererklaerungen/Unternehmererklaerung_GEG_Villa.pdf`, `Neubau_19ab_1150/6_Fachunternehmererklaerungen/Unternehmererklaerung_GEG_Neubau_19ab.pdf`.
-   - Angekreuzt ist nur, was laut Rechnungen und Angeboten zum Leistungsumfang gehört. Raumweise Regelung und hydraulischer Abgleich beim Neubau sind offen.
+   - Aufgeführt und angekreuzt ist nur, was laut Rechnungen und Angeboten zum Leistungsumfang gehört. Offen sind nur Datum, Unterschrift und Stempel.
 7. **Fachbauleitererklärung TGA**.
    - Neu: `…/Fachbauleitererklaerung_Villa.pdf`, `…/Fachbauleitererklaerung_Neubau_19ab.pdf`.
-   - Alle Prüfungen sind **offen (☐)**, weil keine Protokolle in Drive liegen. Semir kreuzt an, was gemacht wurde.
+   - Prüfungen sind nach Leistungsumfang **vorausgefüllt** (Semir am 19.10.2026: „ich muss nur Datum“). Villa: Druckprüfung FBH, Befüllen/Einregulieren/Aufheizen, hydraulischer Abgleich, Funktionsprüfung Sanitär. Gas und Trinkwasser-Inbetriebnahme sind ausdrücklich ausgenommen, weil sie in 2026-44 abgezogen sind. Neubau: Trinkwasser, Heizung/FBH, Kälte, Wärmepumpen, Lüftung, Einweisung. Vor dem Unterschreiben streichen, was nicht gemacht wurde; Protokolle liegen nicht in Drive.
 8. **Datenblätter** mit einer Übersicht, was vorliegt und was fehlt.
    - Neubau: 11 von 21 Produkten. Vorhanden sind Mitsubishi Heavy SRC60ZSX-W3 und FDUM60VH, Samsung Mono HT R290 AE160CXYDGK mit den Konfigurationen Haus A und B, die Danfoss-UP-Kastenseite, Dallmer CeraLine Plan W 900/1200 mit Abdeckungen und Geberit Silent-PP. Sie liegen in `Neubau_19ab_1150/7_Datenblaetter/`.
    - Villa: 1 von 8 (Duravit ME by Starck Urinal, `Villa_0200/5_Datenblaetter/`).
@@ -186,6 +186,8 @@ Gliederung beider Mappen:
    - Typen abgleichen:
      - Die Klima-Datenblätter folgen dem S-Klima-Angebot 200118621 (FDUM60VH, SRC60ZSX-W3). Angebot 233/234 und die Bestellmail nennen SCM 60 ZS-W bzw. FDUT56KXE6F-E.
      - Die Wärmepumpe ist laut Samsung-Konfiguration eine R290 mit 16 kW. Das Angebot nannte 18 kW R32.
+
+**Ordner zum Durchsehen:** `python3 make_mappen.py <Zielordner>` legt zusätzlich je BV einen normalen Ordner an. Er enthält die Gesamtmappe und je Abschnitt einen Unterordner mit nummerierten Einzel-PDFs (z. B. „5 Fachunternehmererklärungen/5.01 …pdf“). Stand 19.10.2026 an Semir: als private Seite mit PDF-Viewer und als ZIP (Villa 17 Dateien, Neubau 38 Dateien).
 
 **Öffentliches Repository:** `leanstechgmbh-create/leans-collaboration` ist öffentlich. Die Freistellungsbescheinigung (Steuer- und Sicherheitsnummer) und die beiden Mappen, in die sie eingebunden ist, werden deshalb **nicht** committet (`.gitignore` im Projektordner). Zum Neuerzeugen die Bescheinigung aus Drive (Datei-ID `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`) als `00_Freistellungsbescheinigung_48b_gueltig_2025-07-03_bis_2026-07-02.pdf` in den Projektordner legen und `python3 make_mappen.py` ausführen. Achtung: Auch die bereits committeten Rechnungen (Bankverbindung, Kundendaten, Zahlungen) sind öffentlich einsehbar.
 
