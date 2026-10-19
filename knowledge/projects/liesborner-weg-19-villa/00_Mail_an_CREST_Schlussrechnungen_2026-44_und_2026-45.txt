@@ -3,9 +3,11 @@ Versandfertig bis auf die Punkte ganz unten. Nichts wurde versendet.
 An:       info@crest-investment.com
 Betreff:  Schlussrechnungen 2026-44 (Villa) und 2026-45 (Neubau 19 a + b) – BV Liesborner Weg 19
 Anhänge:  Schlussrechnung_2026-44_Villa_kumuliert_17.000_brutto.pdf
-          Schlussrechnung_2026-45_Neubau_19ab_45.745,31.pdf
-          Fachunternehmererklärungen Villa: Heizung, Sanitär (unterschrieben)
-          Fachunternehmererklärungen Neubau 19 a + b: Heizung, Sanitär, Lüftung, Klima (unterschrieben)
+          Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf
+          Villa: Fachunternehmererklärungen Heizung und Sanitär, Unternehmererklärung § 96 GEG,
+                 Fachbauleitererklärung (unterschrieben)
+          Neubau 19 a + b: Fachunternehmererklärungen Heizung, Sanitär, Lüftung, Klima,
+                 Unternehmererklärung § 96 GEG, Fachbauleitererklärung (unterschrieben)
 
 ----------------------------------------------------------------------
 
@@ -33,12 +35,14 @@ BV Liesborner Weg 19.
 
    Die Schlussrechnung führt alle Abschlagsrechnungen mit Ihren Zahlungen
    auf. Ihre Abzüge für Bauumlage, Skonto und Bauabzugsteuer haben wir
-   übernommen.
+   übernommen. Die Inbetriebnahme der Hebeanlage in Haus B und die
+   Reparatur der Platine der Klimaanlage haben wir pauschal mit
+   2.000,00 € brutto abgezogen; damit sind beide Punkte abgegolten.
 
-   Restbetrag dieser Schlussrechnung            4.988,00 €
+   Restbetrag dieser Schlussrechnung            2.988,00 €
    8. Abschlagsrechnung 2025-98 (nicht bezahlt) 11.000,00 €
    Sicherheitseinbehalt 10 % (1. bis 7. AR)     29.757,31 €
-   Zahlbetrag                                   45.745,31 €
+   Zahlbetrag                                   43.745,31 €
 
 Bitte überweisen Sie beide Beträge bis zum 29.10.2026 unter Angabe der
 jeweiligen Rechnungsnummer auf unser Konto:
@@ -46,7 +50,8 @@ jeweiligen Rechnungsnummer auf unser Konto:
    LEANS Tech GmbH · Berliner Volksbank
    IBAN DE21 1009 0000 2911 7280 04 · BIC BEVODEBB
 
-Die Fachunternehmererklärungen für beide Bauvorhaben liegen bei.
+Die Fachunternehmer-, Unternehmer- und Fachbauleitererklärungen für beide
+Bauvorhaben liegen bei.
 
 Für Rückfragen stehe ich Ihnen gern zur Verfügung.
 
@@ -62,32 +67,15 @@ info@leanstech-gmbh.de
 Vor dem Versand (danach diesen Block löschen)
 ----------------------------------------------------------------------
 
-1. Die 6 Fachunternehmererklärungen ausdrucken, Datum eintragen,
-   unterschreiben, stempeln, einscannen und anhängen. Sie liegen in
-   Villa_0200/4_Fachunternehmererklaerungen und
-   Neubau_19ab_1150/6_Fachunternehmererklaerungen.
+1. Die Erklärungen (Villa 4, Neubau 6) ausdrucken, Datum eintragen,
+   unterschreiben, stempeln, einscannen und anhängen.
 
-2. Freistellungsbescheinigung § 48b EStG: Die letzte galt bis 02.07.2026.
-   Ohne neue Bescheinigung behält CREST 15 % ein und führt sie ans
-   Finanzamt ab: 2.550,00 € bei 2026-44 und 6.861,80 € bei 2026-45.
-   Neue Bescheinigung beim FA für Körperschaften III beantragen und
-   nachreichen.
+2. Hebeanlage Haus B: Falls CREST dazu nachfragt, die Fotos schicken. Sie
+   zeigen die eingeworfenen Feuchttücher, die in Hebeanlagen nicht erlaubt
+   sind; darauf hatte Semir hingewiesen.
 
-3. Empfänger: Die Mailadresse von Herrn Stockmaier (Bauleitung Villa) ist
-   nicht bekannt. Falls vorhanden, ihn direkt anschreiben und info@ in CC.
+3. Die Rechnungsnummern 2026-44 und 2026-45 sind vergeben. Die nächste
+   freie Nummer ist 2026-46.
 
-4. Abzug Gas/Trinkwasser: 3.000,00 € brutto ist der Wert „ca. 3.000 €“.
-   Bei einem anderen Betrag die Rechnung 2026-44 neu erzeugen lassen.
-
-5. Kontoauszüge ab Juni 2026 liegen nicht in Drive. Vor dem Versand prüfen,
-   ob CREST inzwischen 2025-98 oder etwas zur Villa gezahlt hat.
-
-6. Sicherheitseinbehalt: Regelt der Bauvertrag einen Einbehalt bis zum Ende
-   der Gewährleistung, kann CREST die 29.757,31 € zurückhalten oder eine
-   Bürgschaft verlangen. Ohne Einbehalt beträgt der Zahlbetrag 15.988,00 €.
-
-7. Rechnungsnummern 2026-44 und 2026-45 sind jetzt vergeben. Die übrigen
-   Entwürfe aus der Drive-Übersicht vom 28.09.2026 bekommen 2026-46 ff.
-
-8. RE 2025-8 (Villa, Sanitär-Nachtrag) separat stornieren. Sie ist durch
-   2025-17 ersetzt, weist aber USt aus.
+4. RE 2025-8 (Villa, Sanitär-Nachtrag) separat stornieren. Sie ist durch
+   2025-17 ersetzt.

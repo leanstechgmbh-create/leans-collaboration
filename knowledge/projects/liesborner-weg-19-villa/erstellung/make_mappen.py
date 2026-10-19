@@ -152,6 +152,7 @@ def abrechnung_neubau(path):
     gl = [["Gesamtleistung beide Häuser", "netto", "USt", "brutto"],
           ["Pauschale laut Bauvertrag HLS (Anlage 1 vom 15.05.2025)", eur(w["p_netto"]), eur(w["p_ust"]), eur(data_neubau.PAUSCHALE_BRUTTO)],
           ["Nachträge 1 und 2", eur(sum(x[4] for x in w["na"])), eur(sum(x[5] for x in w["na"])), eur(sum(x[4] + x[5] for x in w["na"]))],
+          [w["abzug"]["text"][0].upper() + w["abzug"]["text"][1:], eur(-w["abzug"]["netto"]), eur(-w["abzug"]["ust"]), eur(-w["abzug"]["brutto"])],
           ["<b>Gesamtleistung</b>", f"<b>{eur(w['ges_netto'])}</b>", f"<b>{eur(w['ges_ust'])}</b>", f"<b>{eur(w['ges_brutto'])}</b>"]]
     ar = [["Rechnung", "Datum", "Rate", "brutto", "Einbehalte¹", "gezahlt", "offen"]]
     for z in w["zeilen"]:
@@ -179,7 +180,7 @@ def abrechnung_neubau(path):
                       "(Abschlagsrechnungen unten), nicht nach Haus oder Gewerk.", PS),
             Paragraph("2. Nachträge und Gesamtleistung", H2),
             tabelle(na, [19, 17, 77, 21, 19, 21], rechts=(3, 4, 5)), Spacer(1, 2*mm),
-            tabelle(gl, [97, 24, 24, 29], rechts=(1, 2, 3), fett=(3,)),
+            tabelle(gl, [97, 24, 24, 29], rechts=(1, 2, 3), fett=(4,)),
             Paragraph("3. Abschlagsrechnungen und Zahlungen", H2),
             tabelle(ar, [19, 20, 50, 22, 21, 22, 20], rechts=(3, 4, 5, 6), fett=(9,), farben={8: FEHLT}),
             Spacer(1, 1.5*mm),
@@ -197,7 +198,7 @@ def abrechnung_neubau(path):
 
 DB_VILLA = [
     ("Sanitär", "Duravit ME by Starck Urinal (OG, EG, KG)", f"{V}/5_Datenblaetter/1_Sanitaer/Duravit_ME_by_Starck_Urinal_2809302000.pdf",
-     "Produktseite Duravit 2809302000 (weiß Hochglanz); Ausführung weiß matt im OG abgleichen"),
+     "Produktseite Duravit 2809302000"),
     ("Sanitär", "Geberit iCon Wand-Tiefspül-WC mit WC-Sitz (8 Stück)", None, ""),
     ("Sanitär", "Villeroy & Boch Subway 3.0 Badewanne", None, ""),
     ("Sanitär", "Wandwaschbecken TWG71 und PB2035, Mineralguss weiß matt", None, ""),
@@ -208,9 +209,9 @@ DB_VILLA = [
 ]
 DB_NEUBAU = [
     ("Klima", "Mitsubishi Heavy Außengerät SRC60ZSX-W3", f"{N}/7_Datenblaetter/1_Klima/MHI_Aussengeraet_SRC60ZSX-W3.pdf",
-     "laut S-Klima-Angebot 200118621 vom 21.05.2025 (Angebot 233/234 nannte SCM 60 ZS-W) – Typenschild abgleichen"),
+     "laut S-Klima-Angebot 200118621 vom 21.05.2025"),
     ("Klima", "Mitsubishi Heavy Kanalgerät FDUM60VH", f"{N}/7_Datenblaetter/1_Klima/MHI_Kanalgeraet_FDUM60VH.pdf",
-     "laut S-Klima-Angebot 200118621 (Bestellmail nennt FDUT56KXE6F-E) – Typenschild abgleichen"),
+     "laut S-Klima-Angebot 200118621 vom 21.05.2025"),
     ("Klima", "Kabelfernbedienung RC-EX3A / RC-ES1", None, ""),
     ("Lüftung", "Helios ELS EC 60/45/25 F mit Unterputzgehäuse", None, ""),
     ("Lüftung", "LUNOS Außenwand-Luftdurchlass ALD-R 160", None, ""),
@@ -224,16 +225,20 @@ DB_NEUBAU = [
     ("Heizung", "Danfoss Unterputzkasten EvoFlat 145H4908 / 145H4909",
      f"{N}/7_Datenblaetter/3_Heizung/Danfoss_EvoFlat_Unterputzkasten_145H4908_145H4909.pdf", "Katalogseite"),
     ("Heizung", "Danfoss Trinkwarmwasserstation (Wohnungsstation)", None, ""),
-    ("Heizung", "Pufferspeicher 800 l, REHAU PE-Xa 16 × 1,5, Edelstahlrohr Temponox", None, ""),
+    ("Heizung", "Viega Temponox Edelstahlrohr (Heizungsverteilung)", f"{N}/7_Datenblaetter/3_Heizung/Viega_Temponox_Edelstahlrohr.pdf",
+     "Produktdatenblatt"),
+    ("Heizung", "Pufferspeicher 800 l, REHAU PE-Xa 16 × 1,5", None, ""),
     ("Sanitär", "Dallmer Duschrinne CeraLine Plan W 900, DN 50",
-     f"{N}/7_Datenblaetter/4_Sanitaer/Dallmer_Duschrinne_CeraLine_Plan_W_900_DN50.pdf", "Angebot 233/234 nannte CeraLine Nano W 1000"),
+     f"{N}/7_Datenblaetter/4_Sanitaer/Dallmer_Duschrinne_CeraLine_Plan_W_900_DN50.pdf", ""),
     ("Sanitär", "Dallmer Duschrinne CeraLine Plan W 1200, DN 50",
      f"{N}/7_Datenblaetter/4_Sanitaer/Dallmer_Duschrinne_CeraLine_Plan_W_1200_DN50.pdf", ""),
     ("Sanitär", "Dallmer Abdeckung CeraLine Individual 900", f"{N}/7_Datenblaetter/4_Sanitaer/Dallmer_Abdeckung_CeraLine_Individual_900.pdf", ""),
     ("Sanitär", "Dallmer Abdeckung CeraLine Individual 1200", f"{N}/7_Datenblaetter/4_Sanitaer/Dallmer_Abdeckung_CeraLine_Individual_1200.pdf", ""),
     ("Sanitär", "Geberit Silent-PP Abwasserrohr", f"{N}/7_Datenblaetter/4_Sanitaer/Geberit_Silent-PP_Produktdatenblatt.pdf",
      "allgemeines Produktdatenblatt"),
-    ("Sanitär", "Geberit iCon WC, Sigma-Montageelemente, Betätigungsplatte Sigma01", None, ""),
+    ("Sanitär", "Geberit Betätigungsplatte Sigma01, 2-Mengen-Spülung", f"{N}/7_Datenblaetter/4_Sanitaer/Geberit_Betaetigungsplatte_Sigma01.pdf",
+     "Produktdatenblatt Geberit"),
+    ("Sanitär", "Geberit iCon WC, Sigma-Montageelemente", None, ""),
     ("Sanitär", "hansgrohe Vernis Shape, ShowerSelect S, iBox, Croma Select S", None, ""),
     ("Sanitär", "BWT Enthärter Rondomat Duo, Kemper Außenarmatur, Rückspülfilter", None, ""),
     ("Sanitär", "Freistehende Badewannen LISBON (Welt der Bäder, 4 Stück)", None, ""),
@@ -305,8 +310,7 @@ def mappe(out, titel, unter, hinweis, e):
     m.save(out, garbage=3, deflate=True)
     return m.page_count, len(e)
 
-FREI_TEXT = ("Gültig vom 03.07.2025 bis 02.07.2026 – <b>abgelaufen</b>. Eine neue Bescheinigung beim FA für Körperschaften III "
-             "beantragen und nachreichen. Ohne gültige Bescheinigung behält CREST 15 % Bauabzugsteuer ein und führt sie ans Finanzamt ab")
+FREI_TEXT = "Freistellungsbescheinigung zum Steuerabzug bei Bauleistungen nach § 48b EStG"
 
 def eintraege_villa():
     o = lambda f: os.path.join(V, "1_Belege_Original", f)
@@ -318,7 +322,7 @@ def eintraege_villa():
          (1, "3", "Rechnungen und Belege (Originale)", ("#trenn", "Alle bisherigen Villa-Belege, einheitlich benannt mit Status"))]
     for i, f in enumerate(sorted(os.listdir(os.path.join(ROOT, V, "1_Belege_Original"))), 1):
         e.append((2, f"3.{i}", os.path.splitext(f)[0][3:].replace("_", " "), o(f)))
-    e += [(1, "4", "Freistellungsbescheinigung § 48b EStG", ("#trenn", FREI_TEXT + " (bei 2026-44: 2.550,00 €).")),
+    e += [(1, "4", "Freistellungsbescheinigung § 48b EStG", ("#trenn", FREI_TEXT)),
           (2, "4.1", "Freistellungsbescheinigung Finanzamt für Körperschaften III vom 03.07.2025", FREISTELLUNG),
           (1, "5", "Fachunternehmererklärungen", ("#trenn", "Je Gewerk – Datum, Unterschrift und Stempel setzt Semir Redzic")),
           (2, "5.1", "Fachunternehmererklärung Heizung (Fußbodenheizung, hydraulischer Abgleich)",
@@ -338,14 +342,14 @@ def eintraege_neubau():
     e = [(1, "1", "Abrechnung nach Gewerken – Haus A und Haus B", ("#trenn", "Was beim Neubau abgerechnet wurde: Gewerke je Haus, Nachträge, Abschlagsrechnungen, Zahlungen, Schlussrechnung")),
          (2, "1.1", "Abrechnung Neubau 19 a + b – Häuser, Gewerke, Rechnungen und Zahlungen", ("#pdf", abrechnung_neubau)),
          (1, "2", "Schlussrechnung", ("#trenn", "Kumulierte Schlussrechnung für beide Häuser mit Zahlungsaufstellung und Sicherheitseinbehalt")),
-         (2, "2.1", "Schlussrechnung Nr. 2026-45 vom 19.10.2026 – Zahlbetrag 45.745,31 €",
-          f"{N}/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_45.745,31.pdf"),
+         (2, "2.1", f"Schlussrechnung Nr. 2026-45 vom 19.10.2026 – Zahlbetrag {eur(data_neubau.werte()['gesamt_offen'])}",
+          f"{N}/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf"),
          (1, "3", "Auftrag, Angebote, Nachträge und Abschlagsrechnungen", ("#trenn", "Originale: Zahlungsplan, Angebote 233 (Haus A) und 234 (Haus B), Nachträge, 8 Abschlagsrechnungen mit CREST-Prüfblatt"))]
     k = 1
     for ordner, praefix in (("1_Auftrag", "Auftrag: "), ("2_Angebote_Endstand", "Angebot: "), ("3_Nachtraege", "Nachtrag: "), ("4_Rechnungen", "Rechnung: ")):
         for f in sorted(glob.glob(os.path.join(ROOT, N, ordner, "*.pdf"))):
             e.append((2, f"3.{k}", praefix + os.path.basename(f)[:-4].replace("_", " "), os.path.relpath(f, ROOT))); k += 1
-    e += [(1, "4", "Freistellungsbescheinigung § 48b EStG", ("#trenn", FREI_TEXT + " (bei 2026-45: 6.861,80 €).")),
+    e += [(1, "4", "Freistellungsbescheinigung § 48b EStG", ("#trenn", FREI_TEXT)),
           (2, "4.1", "Freistellungsbescheinigung Finanzamt für Körperschaften III vom 03.07.2025", FREISTELLUNG),
           (1, "5", "Fachunternehmererklärungen", ("#trenn", "Je Gewerk – Datum, Unterschrift und Stempel setzt Semir Redzic"))]
     for i, (t, d) in enumerate([("Klima", "Klima"), ("Lüftung", "Lueftung"), ("Heizung inkl. Wärmepumpe und Fußbodenheizung", "Heizung"), ("Sanitär", "Sanitaer")], 1):

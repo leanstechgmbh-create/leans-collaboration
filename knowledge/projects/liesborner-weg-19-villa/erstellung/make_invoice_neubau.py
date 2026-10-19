@@ -47,11 +47,17 @@ def build(path):
           eur(w["p_netto"]), eur(w["p_ust"]), eur(w["p_netto"] + w["p_ust"])]]
     for i, (n, ang, dat, txt, net, ust) in enumerate(w["na"], 2):
         a.append([str(i), Paragraph(f"{'Nachtrag ' + n[3:]} (Angebot {ang} vom {dat}): {txt}", P), eur(net), eur(ust), eur(net + ust)])
+    ab = w["abzug"]
+    a.append(["", Paragraph("Summe Leistungen", P), eur(w["leist_netto"]), eur(w["leist_ust"]), eur(w["leist_brutto"])])
+    a.append(["", Paragraph(ab["text"][0].upper() + ab["text"][1:], P), "-" + eur(ab["netto"]), "-" + eur(ab["ust"]), "-" + eur(ab["brutto"])])
     a.append(["", H("Gesamtleistung"), eur(w["ges_netto"]), eur(w["ges_ust"]), eur(w["ges_brutto"])])
     k = len(a) - 1
     E += [H("A. Gesamtleistung"), Spacer(1, 1.5*mm),
-          tab(a, [10*mm, 100*mm, 21*mm, 18*mm, 21*mm], [("ALIGN", (2, 0), (-1, -1), "RIGHT"), ("LINEABOVE", (0, k), (-1, k), 0.8, GREY),
-                                                        ("FONT", (2, k), (-1, k), "LB", 8)])]
+          tab(a, [10*mm, 100*mm, 21*mm, 18*mm, 21*mm], [("ALIGN", (2, 0), (-1, -1), "RIGHT"), ("LINEABOVE", (0, k - 2), (-1, k - 2), 0.5, GREY),
+                                                        ("LINEABOVE", (0, k), (-1, k), 0.8, GREY), ("FONT", (2, k), (-1, k), "LB", 8)]),
+          Spacer(1, 1.5*mm),
+          Paragraph(f"Der Abzug ist pauschal mit {eur(ab['brutto'])} brutto vereinbart; Netto und Umsatzsteuer sind daraus herausgerechnet. "
+                    "Dadurch kann die Umsatzsteuer der Gesamtleistung um 0,01 € von 19 % abweichen.", PS)]
 
     # B. Abzug der Abschlagsrechnungen
     from data_neubau import AR
@@ -67,7 +73,8 @@ def build(path):
                ("LINEABOVE", (0, k-1), (-1, k-1), 0.8, GREY), ("FONT", (3, k-2), (-1, k-1), "LB", 8)]),
           Spacer(1, 1.5*mm),
           Paragraph("Der Restbetrag besteht aus der Schlussrate „Inbetriebnahme und Abnahme“ (15.000,00 € abzgl. 8. AR 11.000,00 € = 4.000,00 €) "
-                    "und der Differenz zu Nachtrag 1 (freigegeben 6.188,00 €, mit der 6. AR abgerechnet 5.200,00 € = 988,00 €).", PS)]
+                    "und der Differenz zu Nachtrag 1 (freigegeben 6.188,00 €, mit der 6. AR abgerechnet 5.200,00 € = 988,00 €), "
+                    f"abzüglich des pauschalen Abzugs von {eur(w['abzug']['brutto'])} (Teil A).", PS)]
 
     # C. Zahlungsaufstellung
     z = [["Rechnung", "brutto", "Bau-\numlage", "Sicherh.-\neinbehalt", "Skonto", "Bauabzug\n(Finanzamt)", "Zahlung", "Zahlungs-\ndatum", "offen"]]

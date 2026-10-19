@@ -14,7 +14,7 @@ Stand: 19.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 | Nr. | BV | Datei | Zahlbetrag |
 |---|---|---|---:|
 | **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_kumuliert_17.000_brutto.pdf]] | **17.000,00 €** (14.285,71 netto + 2.714,29 USt) |
-| **2026-45** | Neubau 19 a + b (1150), beide Häuser, 2 Seiten | [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_45.745,31.pdf]] | **45.745,31 €** (Rest 4.988,00 + 8. AR 11.000,00 + SE 29.757,31) |
+| **2026-45** | Neubau 19 a + b (1150), beide Häuser, 2 Seiten | [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf]] | **43.745,31 €** (Rest 2.988,00 nach Abzug 2.000,00 + 8. AR 11.000,00 + SE 29.757,31) |
 
 - Rechnungsdatum 19.10.2026, Zahlungsziel 10 Tage, fällig **29.10.2026**, Bankverbindung **Berliner Volksbank** DE21 1009 0000 2911 7280 04. Fußzeile mit Geschäftsführer und Registergericht (§ 35a GmbHG).
 - Erzeugt mit `erstellung/make_final.py` (ohne Wasserzeichen, ohne Platzhalter). RE 2024-47 steht in der Zahlungsaufstellung als „bezahlt“ (Aussage Semir; Datum mangels Kontoauszug 04–07/2024 nicht belegbar).
@@ -114,7 +114,7 @@ Hinweis: Die USt wird auf die Nettosumme gerechnet. Dok. 176 hatte sie je Positi
 4. **Stornorechnung zu RE 2025-8** ausstellen. Sie ist durch 2025-17 ersetzt, weist aber USt aus.
 5. Die Differenz von 847,00 € netto zwischen 2025-8 und 2025-17 klären (siehe oben) und gegebenenfalls in die Schlussrechnung aufnehmen.
 6. RE 2024-47 gilt laut Semir als bezahlt. Zur Sicherheit die Zahlung über die Kontoauszüge Apr.–Jul. 2024 belegen.
-7. **Freistellungsbescheinigung § 48b EStG: abgelaufen.** Die neueste Bescheinigung in Drive gilt vom 03.07.2025 bis 02.07.2026 („Freistellungsbescheinigung 2025 48b.pdf“, Drive `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`). Eine neuere Bescheinigung oder einen neuen Antrag der LEANS Tech GmbH gibt es in Drive nicht. Ohne gültige Bescheinigung muss CREST 15 % einbehalten: 2.550,00 € bei 2026-44 und 6.861,80 € bei 2026-45. Eine neue Bescheinigung beim FA für Körperschaften III beantragen.
+7. ~~Freistellungsbescheinigung § 48b~~ – laut Semir (19.10.2026) erledigt bzw. kein Thema mehr; die Bescheinigung vom 03.07.2025 liegt in den Mappen.
 8. ~~Welt-der-Bäder-Rechnung zuordnen~~ – geklärt 19.10.2026: Eingangsrechnung **30076WDB** vom 16.10.2025 (Welt der Bäder SL / Entorno Baño S.L., Drive `1Qzi2f1GiOfqbdezAy-D6yz2kdAAyHFIh`), 4 freistehende Badewannen **LISBON** matt (2 × 170 cm, 2 × 160 cm), 3.134,41 € netto / 3.729,95 € brutto, bezahlt am 17.10.2025 (Kontoauszug, Vwz. „30076WDB“). Das sind die freistehenden Badewannen aus **Pos. 4.28 der Neubau-Angebote 233 und 234 (je Haus 2 Stück)**. Sie gehören zum Neubau 19 a + b und sind in der Pauschale enthalten. Deshalb gibt es keine eigene Ausgangsrechnung, und für die Villa ist nichts nachzuberechnen. Eine Stunden- oder Regierechnung zur Villa gibt es in Drive nicht. Offen bleibt der Waschtisch TWG71 (Bernstein, 16.10.2025, 528,90 €).
 9. Das LV/Angebot der Villa suchen und ablegen (siehe „Auftrag“).
 10. ~~Bankverbindung festlegen~~ – erledigt 19.10.2026: **Berliner Volksbank** (DE21 1009 0000 2911 7280 04) in beiden Schlussrechnungen.
@@ -140,20 +140,19 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
 - **Einbehalte:**
   - Sicherheitseinbehalt 10 %, rechnerisch 28.500 € auf die Raten und 1.427,11 € auf den Nachtrag.
   - Bauabzugsteuer 19.593,40 € auf die 1.–3. AR. Sie wurde ans Finanzamt abgeführt (so mit CREST vereinbart, bestätigt von Semir am 19.10.2026) und muss dort angerechnet werden; gegenüber CREST ist sie keine offene Forderung. In der Schlussrechnung zählt sie als Zahlung.
-- **Freistellungsbescheinigung § 48b EStG:** Laut CREST-Prüfblatt gültig bis **02.07.2026**, also abgelaufen. Eine neue Bescheinigung beantragen, sonst behält CREST 15 % ein.
+- **Freistellungsbescheinigung § 48b EStG:** liegt in den Mappen (Abschnitt 4); laut Semir kein offener Punkt mehr.
 
 ### Schlussrechnung 2026-45 Neubau 19 a + b, beide Häuser zusammen (19.10.2026)
 
-- Datei: [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_45.745,31.pdf]] im LEANS-Layout an CREST Living, 2 Seiten. Skripte: `erstellung/data_neubau.py` (Daten und Prüfungen) und `erstellung/make_invoice_neubau.py`.
-- **A. Gesamtleistung:** Pauschale 300.000,00 € brutto + NA 1 (216) 5.200,00 € netto, wie im CREST-Prüfblatt freigegeben, + NA 2 (282) 6.822,60 € netto = **264.123,44 € netto / 314.306,89 € brutto**.
-- **B. Abzug** aller 8 Abschlagsrechnungen mit Netto und USt: 309.318,89 € brutto. **Restbetrag 4.988,00 €** = Restrate 4.000,00 € + Differenz NA 1 von 988,00 €.
+- Datei: [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf]] im LEANS-Layout an CREST Living, 2 Seiten. Skripte: `erstellung/data_neubau.py` (Daten und Prüfungen) und `erstellung/make_invoice_neubau.py`.
+- **A. Gesamtleistung:** Pauschale 300.000,00 € brutto + NA 1 (216) 5.200,00 € netto, wie im CREST-Prüfblatt freigegeben, + NA 2 (282) 6.822,60 € netto = **264.123,44 € netto / 314.306,89 € brutto**. **Abzug (Semir, 19.10.2026):** pauschal 2.000,00 € brutto (1.680,67 € netto + 319,33 € USt) für die Inbetriebnahme der Hebeanlage in Haus B und die kleine Reparatur der Platine der Klimaanlage; CREST darf das gegenrechnen. Gesamtleistung danach 262.442,77 € netto / 312.306,89 € brutto. Falls CREST zur Hebeanlage nachfragt: Fotos der eingeworfenen Feuchttücher schicken (in Hebeanlagen nicht erlaubt; Semir hatte darauf hingewiesen).
+- **B. Abzug** aller 8 Abschlagsrechnungen mit Netto und USt: 309.318,89 € brutto. **Restbetrag 2.988,00 €** = Restrate 4.000,00 € + Differenz NA 1 von 988,00 € − Abzug 2.000,00 €.
 - **C. Zahlungsaufstellung** je AR. Rechenweise wie im CREST-Prüfblatt: Bauumlage 0,25 % netto, Sicherheitseinbehalt 10 %, Skonto 3 %, Bauabzug 15 %. Alle 7 Zahlungen stimmen auf den Cent mit dem Kontoauszug überein (`python3 data_neubau.py`). Summen: gezahlt 240.546,62 €, Bauabzug ans Finanzamt 19.593,40 €, Sicherheitseinbehalt 29.757,31 €, Skonto 7.675,75 €, Bauumlage 745,81 €.
-- **D. Offen:** Restbetrag 4.988,00 € + 8. AR 11.000,00 € = 15.988,00 €, dazu der Sicherheitseinbehalt als eigene Zeile (29.757,31 €) mit Anmerkung. **Zahlbetrag gesamt 45.745,31 €** (Wunsch Semir: SE separat drauf, alles zusammen).
+- **D. Offen:** Restbetrag 2.988,00 € + 8. AR 11.000,00 € = 13.988,00 €, dazu der Sicherheitseinbehalt als eigene Zeile (29.757,31 €) mit Anmerkung. **Zahlbetrag gesamt 43.745,31 €** (Wunsch Semir: SE separat drauf, alles zusammen).
 - Prüfen vor dem Versand:
   - Bauvertrag HLS: Ob und wann der SE fällig wird (nach Abnahme oder gegen Bürgschaft), steht im Bauvertrag. Der liegt nicht in Drive. Ein Abnahmeprotokoll ist ebenfalls nicht abgelegt.
   - Skonto: Die von CREST abgezogenen Skonti (7.675,75 €) werden akzeptiert und nicht zurückgefordert, auch wo verspätet gezahlt wurde (z. B. 3. AR). Entscheidung Semir vom 19.10.2026.
   - NA 217 (653,55–808,25 €) und Angebot 230 Wasserzählerschacht (1.231,32 €) sind nicht enthalten. Klären, ob beauftragt.
-  - Die Freistellungsbescheinigung § 48b ist abgelaufen; ohne neue behält CREST 15 % Bauabzug ein.
   - Eingänge ab Juni 2026 prüfen (Kontoauszüge in Drive nur bis 31.05.2026).
 
 ## Zwei Mappen: Villa und Neubau getrennt (19.10.2026)
@@ -163,15 +162,15 @@ Auf Wunsch von Semir gibt es statt der gemeinsamen Gesamtmappe **zwei getrennte 
 | Mappe | Datei (nur lokal, siehe unten) | Umfang |
 |---|---|---|
 | Villa (0200) | `Villa_0200/00_Mappe_Villa_0200_Abrechnung_und_Dokumentation.pdf` | 38 Seiten, 24 Einträge |
-| Neubau 19 a + b (1150) | `Neubau_19ab_1150/00_Mappe_Neubau_19ab_1150_Abrechnung_und_Dokumentation.pdf` | 75 Seiten, 45 Einträge |
+| Neubau 19 a + b (1150) | `Neubau_19ab_1150/00_Mappe_Neubau_19ab_1150_Abrechnung_und_Dokumentation.pdf` | 77 Seiten, 47 Einträge |
 
 Gliederung beider Mappen:
 1. **Abrechnung nach Gewerken**, neu erzeugt.
    - Villa: Sanitär 17.239,00 € netto und Heizung 14.285,71 € netto ergeben die Gesamtleistung von 31.524,71 € netto bzw. 37.514,41 € brutto. Davon sind 20.514,41 € bezahlt, offen sind 17.000,00 €. Dazu kommen die ersetzten Belege.
-   - Neubau: Leistung je Haus (A = 19 a, Angebot 233; B = 19 b, Angebot 234) und je Gewerk (Klima, Lüftung, Heizung, Sanitär, Diverses). Die Pauschale ist rechnerisch anteilig zugeordnet. Es folgen die Nachträge, die Gesamtleistung von 314.306,89 €, die 8 Abschlagsrechnungen mit Einbehalten und Zahlungen sowie die Schlussrechnung. Eine Bilanz zeigt, wohin die Gesamtleistung gegangen ist: gezahlt, Bauabzug, Skonto, Bauumlage und offen 45.745,31 €.
+   - Neubau: Leistung je Haus (A = 19 a, Angebot 233; B = 19 b, Angebot 234) und je Gewerk (Klima, Lüftung, Heizung, Sanitär, Diverses). Die Pauschale ist rechnerisch anteilig zugeordnet. Es folgen die Nachträge, die Leistung von 314.306,89 €, der Abzug von 2.000,00 € (Hebeanlage Haus B, Platine Klima), die 8 Abschlagsrechnungen mit Einbehalten und Zahlungen sowie die Schlussrechnung. Eine Bilanz zeigt, wohin die Gesamtleistung gegangen ist: gezahlt, Bauabzug, Skonto, Bauumlage und offen 43.745,31 €.
 2. **Schlussrechnung** 2026-44 bzw. 2026-45.
 3. **Originale**: Villa-Belege bzw. Neubau-Auftrag, Angebote, Nachträge und Abschlagsrechnungen.
-4. **Freistellungsbescheinigung § 48b**, gültig vom 03.07.2025 bis 02.07.2026, also abgelaufen. Das Trennblatt nennt den drohenden Einbehalt von 15 %.
+4. **Freistellungsbescheinigung § 48b** vom 03.07.2025 (ohne weitere Hinweise, Wunsch Semir).
 5. **Fachunternehmererklärungen** je Gewerk: Villa 2, Neubau 4.
 6. **Unternehmererklärung nach § 96 GEG**.
    - Neu: `Villa_0200/4_Fachunternehmererklaerungen/Unternehmererklaerung_GEG_Villa.pdf`, `Neubau_19ab_1150/6_Fachunternehmererklaerungen/Unternehmererklaerung_GEG_Neubau_19ab.pdf`.
@@ -180,14 +179,11 @@ Gliederung beider Mappen:
    - Neu: `…/Fachbauleitererklaerung_Villa.pdf`, `…/Fachbauleitererklaerung_Neubau_19ab.pdf`.
    - Prüfungen sind nach Leistungsumfang **vorausgefüllt** (Semir am 19.10.2026: „ich muss nur Datum“). Villa: Druckprüfung FBH, Befüllen/Einregulieren/Aufheizen, hydraulischer Abgleich, Funktionsprüfung Sanitär. Gas und Trinkwasser-Inbetriebnahme sind ausdrücklich ausgenommen, weil sie in 2026-44 abgezogen sind. Neubau: Trinkwasser, Heizung/FBH, Kälte, Wärmepumpen, Lüftung, Einweisung. Vor dem Unterschreiben streichen, was nicht gemacht wurde; Protokolle liegen nicht in Drive.
 8. **Datenblätter** mit einer Übersicht, was vorliegt und was fehlt.
-   - Neubau: 11 von 21 Produkten. Vorhanden sind Mitsubishi Heavy SRC60ZSX-W3 und FDUM60VH, Samsung Mono HT R290 AE160CXYDGK mit den Konfigurationen Haus A und B, die Danfoss-UP-Kastenseite, Dallmer CeraLine Plan W 900/1200 mit Abdeckungen und Geberit Silent-PP. Sie liegen in `Neubau_19ab_1150/7_Datenblaetter/`.
+   - Neubau: 13 von 23 Produkten. Vorhanden sind Mitsubishi Heavy SRC60ZSX-W3 und FDUM60VH, Samsung Mono HT R290 AE160CXYDGK mit den Konfigurationen Haus A und B, die Danfoss-UP-Kastenseite, Dallmer CeraLine Plan W 900/1200 mit Abdeckungen Geberit Silent-PP, Geberit Sigma01 und Viega Temponox. Sie liegen in `Neubau_19ab_1150/7_Datenblaetter/`.
    - Villa: 1 von 8 (Duravit ME by Starck Urinal, `Villa_0200/5_Datenblaetter/`).
-   - Die übrigen fehlen in Drive. Der Container hatte keinen Internetzugriff auf Herstellerseiten, deshalb beim Hersteller herunterladen.
-   - Typen abgleichen:
-     - Die Klima-Datenblätter folgen dem S-Klima-Angebot 200118621 (FDUM60VH, SRC60ZSX-W3). Angebot 233/234 und die Bestellmail nennen SCM 60 ZS-W bzw. FDUT56KXE6F-E.
-     - Die Wärmepumpe ist laut Samsung-Konfiguration eine R290 mit 16 kW. Das Angebot nannte 18 kW R32.
+   - Die übrigen fehlen in Drive. Herstellerseiten sind aus dem Cloud-Container gesperrt (Netzwerkrichtlinie). Nach Freigabe der Hersteller-Domains in den Umgebungseinstellungen (Network access → Allowed domains) lassen sie sich direkt laden.
 
-**Ordner zum Durchsehen:** `python3 make_mappen.py <Zielordner>` legt zusätzlich je BV einen normalen Ordner an. Er enthält die Gesamtmappe und je Abschnitt einen Unterordner mit nummerierten Einzel-PDFs (z. B. „5 Fachunternehmererklärungen/5.01 …pdf“). Stand 19.10.2026 an Semir: als private Seite mit PDF-Viewer und als ZIP (Villa 17 Dateien, Neubau 38 Dateien).
+**Ordner zum Durchsehen:** `python3 make_mappen.py <Zielordner>` legt zusätzlich je BV einen normalen Ordner an. Er enthält die Gesamtmappe und je Abschnitt einen Unterordner mit nummerierten Einzel-PDFs (z. B. „5 Fachunternehmererklärungen/5.01 …pdf“). Stand 19.10.2026 an Semir: als private Seite mit PDF-Viewer und als ZIP (Villa 17 Dateien, Neubau 40 Dateien).
 
 **Öffentliches Repository:** `leanstechgmbh-create/leans-collaboration` ist öffentlich. Die Freistellungsbescheinigung (Steuer- und Sicherheitsnummer) und die beiden Mappen, in die sie eingebunden ist, werden deshalb **nicht** committet (`.gitignore` im Projektordner). Zum Neuerzeugen die Bescheinigung aus Drive (Datei-ID `15gH-FIqvn0yPWW-TP-if31uV_OBmZ0tF`) als `00_Freistellungsbescheinigung_48b_gueltig_2025-07-03_bis_2026-07-02.pdf` in den Projektordner legen und `python3 make_mappen.py` ausführen. Achtung: Auch die bereits committeten Rechnungen (Bankverbindung, Kundendaten, Zahlungen) sind öffentlich einsehbar.
 
