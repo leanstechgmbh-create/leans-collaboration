@@ -1,49 +1,65 @@
-# Entscheidung: Gmail-Entwuerfe fuer info@ und sr@ (2026-10-20)
+# Entscheidung: E-Mail-Entwuerfe mit Anhang fuer info@ und sr@ (2026-10-20)
 
 ## Problem
 
-In Chats wirkte es so, als haetten `info@leanstech-gmbh.de` und `sr@leanstech-gmbh.de`
-"keinen Zugang": keine Entwuerfe, keine Anhaenge.
+In claude.ai-Chats hiess es, `info@leanstech-gmbh.de` und `sr@leanstech-gmbh.de` haetten
+"keinen Zugang": keine Entwuerfe, keine Anhaenge. Der Weg war laengst gebaut.
 
-## Befund (geprueft am 2026-10-20 per Gmail-Connector)
+## Befund (geprueft am 2026-10-20)
 
-- Der Gmail-Connector in Claude ist per OAuth an **genau ein** Konto gebunden:
-  `leanstechgmbh@gmail.com`. Es gibt keinen zweiten Connector fuer `info@` oder `sr@`.
-- Post an `info@` und `sr@` landet per Weiterleitung/CC in `leanstechgmbh@gmail.com`
-  und ist dort lesbar (geprueft: Threads mit `info@leanstech-gmbh.de` als Absender/Empfaenger).
-- `create_draft` hat **kein From-/Alias-Feld**. Jeder Entwurf hat als Absender
-  `leanstechgmbh@gmail.com` (alle 20 letzten Entwuerfe im Konto bestaetigen das).
-- Entwuerfe **mit Anhang** funktionieren: Testentwurf mit `test.txt` wurde erfolgreich
-  angelegt und wieder geloescht. Anhaenge werden base64 uebergeben, max. 25 MB,
-  groessere Dateien als Drive-Link.
-- Nichts ist "kaputt gegangen". Es wurde nie ein Zugang fuer `info@`/`sr@` gebaut,
-  der Connector kann das technisch nicht.
+### Der gebaute Weg: Mail-MCP `mail_leanstech` (Mail-Zentrale)
 
-## Entscheidung
+- Lokaler MCP-Server auf Semirs PC: `C:\Python314\python.exe C:\Users\semir\Documents\MailManager\mail_mcp.py`
+  (Handshake "LeansTech Mail 1.27.2"). Kontenschluessel: `ionos_info` = info@leanstech-gmbh.de,
+  `ionos_sr` = sr@leanstech-gmbh.de, dazu `gmail`, `gmx`, `webde`. Passwoerter im Windows-Tresor.
+- Werkzeuge: `list_accounts`, `list_folders`, `count_folders`, `search_mail`, `read_mail`,
+  **`save_draft`** (mit Anhaengen aus freigegebenen Ordnern). `send_mail`/`delete_mail` sind
+  am Server bewusst nicht registriert; Versand nur nach Semirs Freigabe per
+  `python "C:\Users\semir\Documents\MailManager\send_eml.py" ionos_sr "<eml>"`.
+- Zugaenge: Claude Code und Codex auf dem PC per stdio. Fuer claude.ai, Handy und Cloud
+  laeuft der Server ueber den Cloudflare-Tunnel `leans-mcp` unter
+  `https://mcp.leanstech-klima.de/mail/mcp` (Bearer-Token, `/mail/health` = 200).
+- Belege im Live-Board (Drive, `LEANS-Uebergabe.md`): Eintrag 2026-08-04 "Du hast jetzt Zugang
+  zu sr@ und info@", 2026-08-09 Remote-Mail-Fix, 17.09.2026 Versand aus info@ mit 10-Seiten-PDF,
+  29.09.2026 fuenf Angebots-Entwuerfe in info@, 22.09.2026 Mahnwesen (Entwurf + Anhang -> sr@).
 
-1. Entwuerfe fuer `info@` / `sr@` werden **immer im Konto `leanstechgmbh@gmail.com`**
-   angelegt. Im Entwurf wird oben als erste Zeile vermerkt:
-   `[Senden als: info@leanstech-gmbh.de]` bzw. `[Senden als: sr@leanstech-gmbh.de]`.
-2. Vor dem Senden waehlt Semir in Gmail im Feld "Von" die passende Adresse
-   (Voraussetzung: `info@` und `sr@` sind in Gmail unter
-   Einstellungen > Konten und Import > "E-Mail senden als" eingerichtet) und loescht
-   die Vermerkzeile.
-3. Antworten auf Mails, die an `info@`/`sr@` gingen, werden mit `replyToMessageId`
-   als Antwort im selben Thread angelegt; Gmail setzt dann "Von" automatisch auf die
-   Empfaengeradresse, wenn "Antworten von derselben Adresse" aktiviert ist.
-4. Anhaenge: Datei muss Claude vorliegen (im Chat hochgeladen, in Google Drive, oder
-   im Repo/Dateisystem einer Claude-Code-Sitzung). Claude haengt sie direkt an.
-   Ueber 25 MB: Datei in Drive ablegen und Link in den Text.
+### Warum es in den Chats "nicht geht"
 
-## Was NICHT geht
+- In claude.ai ist **kein Mail-Connector** installiert (Stand 2026-10-20, `ListConnectors`):
+  nur Gmail (leanstechgmbh@gmail.com), Drive, Calendar, Notion, Slack, HubSpot, Higgsfield, Sjinn.
+- Der Connector **"AutoCAD MCP"** steht auf `needs_reconnect`. Er ist sehr wahrscheinlich das
+  LEANS-Gateway, das frueher AutoCAD + Mail gemeinsam bereitstellte (Autostart hiess
+  "MCP Remote (AutoCAD + Mail).vbs"). Ebenfalls `needs_reconnect`: `gbrain`, `n8n MCP`.
+- Folge: Cloud-Chats sehen nur den Gmail-Connector. Der ist per OAuth an genau ein Konto
+  gebunden (`leanstechgmbh@gmail.com`), `create_draft` hat kein From-Feld. Daher die Antwort
+  "kein Zugang zu info@/sr@". Anhaenge ueber Gmail funktionieren (getestet), aber eben nur im Gmail-Konto.
+- Der Gateway/Tunnel auf dem PC war zwischendurch aus (Infra-Check 14.10.2026: Gateway :8100,
+  Tunnel `leans-mcp`, Board-Waechter alle aus -> per `autostart.ps1` repariert). Der
+  claude.ai-Connector blieb danach auf `needs_reconnect` stehen.
 
-- Entwurf direkt im Postfach `info@`/`sr@` anlegen (kein Connector dafuer).
-- From-Adresse per Connector setzen.
-- Aus einem normalen Chat heraus Gmail-Einstellungen ("Senden als") aendern.
+## Entscheidung / Regel fuer alle Chats
 
-## Offene Option
+1. **Entwurf fuer info@ oder sr@ = Mail-MCP `mail_leanstech`, Werkzeug `save_draft`**,
+   Konto `ionos_info` bzw. `ionos_sr`, Anhaenge direkt mitgeben, danach mit
+   `search_mail(folder=Entwuerfe)` gegenpruefen und UID + Konto melden. Nie "kein Zugang" sagen.
+2. **Wenn der Mail-MCP im Chat nicht geladen ist:** nicht aufgeben, sondern
+   a) Semir bitten, in claude.ai -> Einstellungen -> Connectors den LEANS-Connector
+      ("AutoCAD MCP" bzw. Mail-MCP `https://mcp.leanstech-klima.de/mail/mcp`) neu zu verbinden
+      und im Chat zu aktivieren, und
+   b) sofort den **Fallback** fahren: Auftragsdokument im Drive-Projektordner anlegen
+      (`00 AUFTRAG - Entwuerfe in <konto> anlegen (<Projekt>)`, Format: Konto, An, Von,
+      Betreff, Anhaenge mit Drive-IDs, Text) plus Board-Eintrag `AN CLAUDE: OFFEN`.
+      Claude Code / Board-Waechter auf dem PC legt den Entwurf dann per `save_draft` an.
+   c) Zusaetzlich darf ein Gmail-Entwurf in leanstechgmbh@gmail.com angelegt werden
+      (erste Zeile `[Senden als: info@leanstech-gmbh.de]`), damit Semir sofort etwas sehen kann.
+3. **Versand** nie automatisch. Nur nach Semirs ausdruecklichem "senden", danach Gegenpruefung
+   in "Gesendete Objekte".
 
-Wenn `info@`/`sr@` eigene Google-Workspace-Postfaecher sind und direkt bedient werden
-sollen: in claude.ai unter Einstellungen > Connectors den Gmail-Connector mit dem
-jeweiligen Konto verbinden. Pro Claude-Konto ist nur eine Gmail-Verbindung moeglich,
-daher ist die Alias-Loesung oben der Standardweg.
+## Einmalige Aktion fuer Semir
+
+claude.ai -> Einstellungen -> Connectors: "AutoCAD MCP" (und gbrain, n8n MCP) auf
+"Erneut verbinden" klicken; pruefen, ob danach Mail-Werkzeuge (`save_draft`, `search_mail`)
+im Chat erscheinen. Falls nicht: "Benutzerdefinierten Connector hinzufuegen" mit URL
+`https://mcp.leanstech-klima.de/mail/mcp` und dem Bearer-Token vom PC (Token-Datei ist nur
+fuer Semir lesbar, steht in `C:\Users\semir\.codex\AGENTS.md`, Abschnitt "Mail-Zugang").
+Den Connector in jedem Projekt/Chat einschalten, in dem E-Mails bearbeitet werden.
