@@ -2,14 +2,11 @@ Mail 1 von 2 (Villa). Als Entwurf in Gmail angelegt, ohne Anhänge. Nichts wurde
 
 An:       info@crest-investment.com
 Betreff:  Schlussrechnung 2026-44 – BV Liesborner Weg 19 (Villa)
-Anhänge (6, alle anhängen – Erklärungen unterschrieben und gestempelt):
+Anhänge (2):
           Schlussrechnung_2026-44_Villa_Liesborner_Weg_19.pdf
-          Datenblatt_Duravit_ME_by_Starck_Urinal_2809302000.pdf
-          Fachunternehmererklaerung_Heizung_Villa.pdf
-          Fachunternehmererklaerung_Sanitaer_Villa.pdf
-          Unternehmererklaerung_GEG_Villa.pdf
-          Fachbauleitererklaerung_Villa.pdf
-
+          Unterlagen_Schlussrechnung_2026-44_Villa.zip (1,7 MB)
+            Erklaerungen/  4 Erklärungen, unterschrieben und gestempelt
+            Datenblaetter/ Datenblatt Duravit ME by Starck Urinal
 ----------------------------------------------------------------------
 
 Sehr geehrte Damen und Herren,
@@ -20,7 +17,7 @@ die Villa im BV Liesborner Weg 19.
 Die Schlussrechnung umfasst alle Leistungen (Sanitär und Heizung). Die
 bereits gestellten Rechnungen 2024-47 und 2025-17 sind darin abgezogen.
 
-Außerdem liegen bei:
+Außerdem liegen in der beigefügten ZIP-Datei bei:
    - Fachunternehmererklärungen Heizung und Sanitär
    - Unternehmererklärung nach § 96 GEG
    - Fachbauleitererklärung
@@ -47,7 +44,7 @@ Geschäftsführer: Semir Redzic
 Vor dem Versand (danach diesen Block löschen)
 ----------------------------------------------------------------------
 
-1. Die 6 Anhänge anhängen. Die 4 Erklärungen sind unterschrieben und
+1. Die 2 Anhänge anhängen (PDF und ZIP). Die 4 Erklärungen sind unterschrieben und
    gestempelt (Unterschrift und Stempel aus dem LEANS-Briefbogen, nur in
    den Versandkopien, nicht im Repo).
 

@@ -2,28 +2,11 @@ Mail 2 von 2 (Neubau 19 a + b). Als Entwurf in Gmail angelegt, ohne Anhänge. Ni
 
 An:       info@crest-investment.com
 Betreff:  Schlussrechnung 2026-45 – BV Liesborner Weg 19 a + b (Neubau Butterfly Houses)
-Anhänge (20, zusammen ca. 7,5 MB, alle anhängen – Erklärungen unterschrieben und gestempelt):
+Anhänge (2):
           Schlussrechnung_2026-45_Neubau_Liesborner_Weg_19ab.pdf
-          Datenblatt_MHI_Aussengeraet_SRC60ZSX-W3.pdf
-          Datenblatt_MHI_Kanalgeraet_FDUM60VH.pdf
-          Datenblatt_Samsung_Waermepumpe_AE160CXYDGK_Mono-HT_R290_Technische_Info.pdf
-          Datenblatt_Samsung_Anlagenkonfiguration_Haus_A_19a.pdf
-          Datenblatt_Samsung_Anlagenkonfiguration_Haus_B_19b.pdf
-          Datenblatt_Danfoss_EvoFlat_Unterputzkasten_145H4908_145H4909.pdf
-          Datenblatt_Viega_Temponox_Edelstahlrohr.pdf
-          Datenblatt_Dallmer_Duschrinne_CeraLine_Plan_W_900_DN50.pdf
-          Datenblatt_Dallmer_Duschrinne_CeraLine_Plan_W_1200_DN50.pdf
-          Datenblatt_Dallmer_Abdeckung_CeraLine_Individual_900.pdf
-          Datenblatt_Dallmer_Abdeckung_CeraLine_Individual_1200.pdf
-          Datenblatt_Geberit_Silent-PP_Produktdatenblatt.pdf
-          Datenblatt_Geberit_Betaetigungsplatte_Sigma01.pdf
-          Fachunternehmererklaerung_Heizung_Neubau_19ab.pdf
-          Fachunternehmererklaerung_Sanitaer_Neubau_19ab.pdf
-          Fachunternehmererklaerung_Lueftung_Neubau_19ab.pdf
-          Fachunternehmererklaerung_Klima_Neubau_19ab.pdf
-          Unternehmererklaerung_GEG_Neubau_19ab.pdf
-          Fachbauleitererklaerung_Neubau_19ab.pdf
-
+          Unterlagen_Schlussrechnung_2026-45_Neubau_19ab.zip (6,2 MB)
+            Erklaerungen/  6 Erklärungen, unterschrieben und gestempelt
+            Datenblaetter/ 13 Datenblätter (Klima, Heizung, Sanitär)
 ----------------------------------------------------------------------
 
 Sehr geehrte Damen und Herren,
@@ -36,7 +19,7 @@ Die Schlussrechnung umfasst alle Leistungen und führt alle
 Abschlagsrechnungen mit Ihren Zahlungen auf. Ihre Abzüge für Bauumlage,
 Skonto und Bauabzugsteuer haben wir übernommen.
 
-Außerdem liegen bei:
+Außerdem liegen in der beigefügten ZIP-Datei bei:
    - Fachunternehmererklärungen Heizung, Sanitär, Lüftung und Klima
    - Unternehmererklärung nach § 96 GEG
    - Fachbauleitererklärung
@@ -70,7 +53,7 @@ Geschäftsführer: Semir Redzic
 Vor dem Versand (danach diesen Block löschen)
 ----------------------------------------------------------------------
 
-1. Die 20 Anhänge anhängen. Die 6 Erklärungen sind unterschrieben und
+1. Die 2 Anhänge anhängen (PDF und ZIP). Die 6 Erklärungen sind unterschrieben und
    gestempelt (Unterschrift und Stempel aus dem LEANS-Briefbogen, nur in
    den Versandkopien, nicht im Repo).
 
