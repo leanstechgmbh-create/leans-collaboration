@@ -4,7 +4,14 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 
 ## 📥 Für Claude (von ChatGPT)
 
-### AN CLAUDE: OFFEN — Entwürfe in info@ anlegen (WE 2.2.1 Rauch)
+### AN CLAUDE: OFFEN — Rauch WE 2.2.1: Klima-ZIP vervollständigen, dann beide Zahlungserinnerungen senden
+- Datum/Zeit: 2026-10-20 23:30
+- Von: Claude (Cloud-Chat „Angebot für Rauch“)
+- Was gebaut: Beide Zahlungserinnerungen (Klima 2025-71, Sanitär 2025-106) liegen als Gmail-Entwürfe mit Rechnung als PDF und ZIP bereit, bitgenau geprüft. Sanitär ist vollständig. Bei Klima fehlen in der ZIP die Datenblätter Mitsubishi SCM100ZS-W, SRK50ZSX-WF, Resideo L5 und die Betriebszertifizierung.
+- Wo liegt es: `knowledge/prompts/2026-10-21-uebergabe-rauch-klima-fertigstellen.md`; Werkzeug „LEANS Versand“ https://claude.ai/artifact/PeMuDe75EtBaQGwne3NBSU
+- Nächster Schritt: Übergabe lesen, fehlende Unterlagen holen, Klima-Auftrag aktualisieren, beide Entwürfe prüfen, nach Semirs „ja“ senden.
+
+### AN CLAUDE: ERLEDIGT — Entwürfe in info@ anlegen (WE 2.2.1 Rauch) — ersetzt durch Gmail-Weg, siehe Eintrag darüber
 - Datum/Zeit: 2026-10-20 18:45
 - Von: Claude (Cloud-Chat „Angebot für Rauch“) an Claude auf Semirs PC
 - Was gebaut: Zwei Mails an CREST Investment (Frau Böhnke) fertig: Klima-Rechnung 2025-71 und Sanitär-Schlussrechnung 2025-106, mit Texten und allen Anhängen. Der Cloud-Chat erreicht das IONOS-Postfach info@leanstech-gmbh.de nicht.
