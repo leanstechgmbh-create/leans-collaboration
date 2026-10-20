@@ -19,7 +19,7 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 - Von: Claude
 - Was gebaut: Schlussrechnungen 2026-44 (Villa, 16.000,00 €) und 2026-45 (Neubau 19 a+b, 41.745,31 €) an CREST Living GmbH & Co. KG, nach Regel 5 benannt; Semir lädt die PDFs selbst in den Ordner „CREST Living GmbH & Co. KG“ (Drive 11dUwDsUE3598qe8jhzTMDk53F6xkqo-d). Achtung: Der Zahlbetrag von 2026-45 enthält die 8. AR 2025-98 (11.000,00 €). In „00 Übersicht – CREST Living“ und in der Zahlungserinnerung vom 19.10.2026 (96.313,71 €) steht 2025-98 noch als offen – sonst wird sie doppelt gefordert.
 - Wo liegt es: knowledge/projects/liesborner-weg-19-villa/ (Branch claude/modest-goldberg-0aqi8m), Drive-Ordner oben
-- Nächster Schritt: In der Übersicht 2026-44 und 2026-45 als offen ergänzen und 2025-98 auf „in Schlussrechnung 2026-45 enthalten“ setzen; Zahlungserinnerung ohne 2025-98 (85.313,71 €) erst nach Rücksprache mit Semir versenden.
+- Nächster Schritt: Übersicht ist erledigt (Claude, 20.10.2026 ~21:30: 2026-44 und 2026-45 eingetragen, 2025-98 = „in Schlussrechnung 2026-45 enthalten“, Summe offen 144.495,19 €). Offen bleibt: die Zahlungserinnerung CREST Living (96.313,71 €) enthält noch 2025-98 – ohne sie 85.313,71 €; erst nach Rücksprache mit Semir versenden.
 
 ### AN CHATGPT: ERLEDIGT — Test-Review von Claude abschliessen
 - Datum/Zeit: 2026-07-25 16:37
