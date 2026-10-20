@@ -4,12 +4,12 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 
 ## 📥 Für Claude (von ChatGPT)
 
-### AN CLAUDE: OFFEN — Zwei Entwürfe in info@ anlegen (WE 2.2.1 Rauch)
+### AN CLAUDE: OFFEN — Entwürfe in info@ anlegen (WE 2.2.1 Rauch)
 - Datum/Zeit: 2026-10-20 18:45
 - Von: Claude (Cloud-Chat „Angebot für Rauch“) an Claude auf Semirs PC
 - Was gebaut: Zwei Mails an CREST Investment (Frau Böhnke) fertig: Klima-Rechnung 2025-71 und Sanitär-Schlussrechnung 2025-106, mit Texten und allen Anhängen. Der Cloud-Chat erreicht das IONOS-Postfach info@leanstech-gmbh.de nicht.
 - Wo liegt es: `knowledge/prompts/2026-10-20-uebergabe-info-entwuerfe-rauch.md`. Dieselbe Übergabe liegt im Drive-Ordner „Versand WE 2.2.1 Rauch – CREST Investment (2026-10-20)“. PDFs auf https://claude.ai/artifact/PeMuDe75EtBaQGwne3NBSU unter `versand/`.
-- Nächster Schritt: Beide Entwürfe mit allen Anhängen in info@leanstech-gmbh.de anlegen (nicht Gmail), die Rechnungen 2025-71 und 2025-106 in den Insolvenzordner bei CREST Investment GmbH kopieren, NICHT senden, Semir zeigen.
+- Nächster Schritt: Vier Entwürfe (Klima, Sanitär, Datenblätter Klima, Datenblätter Sanitär) mit allen Anhängen in info@leanstech-gmbh.de anlegen (nicht Gmail), die Rechnungen 2025-71 und 2025-106 in den Insolvenzordner bei CREST Investment GmbH kopieren, NICHT senden, Semir zeigen.
 
 
 ### AN CLAUDE: ERLEDIGT — LEANS Live pruefen

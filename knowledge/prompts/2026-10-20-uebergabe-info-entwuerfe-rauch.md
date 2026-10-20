@@ -6,7 +6,7 @@
 
 ## Auftrag
 
-1. Im Postfach **info@leanstech-gmbh.de** (IONOS) zwei getrennte E-Mail-**Entwürfe** anlegen, jeweils mit allen Anhängen. Nicht über Gmail, Semir will alles von info@.
+1. Im Postfach **info@leanstech-gmbh.de** (IONOS) vier getrennte E-Mail-**Entwürfe** anlegen, jeweils mit allen Anhängen: Mail 1 Klima, Mail 2 Sanitär, Mail 3 Datenblätter Klima, Mail 4 Datenblätter Sanitär. Nicht über Gmail, Semir will alles von info@. Die alten Gmail-Entwürfe sind gelöscht.
 2. Die zwei Rechnungen (2025-71 und 2025-106) als Kopie in den Insolvenzordner legen:
    - Ordner: Google Drive „Insolvenzordner – LEANS Tech GmbH“ → „CREST Investment GmbH“ (Ordner-ID `1m147RAbQwJszPJ0HBgezFwWzCj-gT20i`)
    - Name 1: `2025-10-12 Rechnung 2025-71 – CREST Investment GmbH – 13.709,26 EUR – SBS WE 2.2.1 Klima.pdf`
@@ -115,6 +115,78 @@ Tel. +49 170 8280836
 www.leanstech-gmbh.de
 ```
 
+## Mail 3 – Datenblätter Klima
+
+- Von: info@leanstech-gmbh.de
+- An: sb@crest-investment.com, info@crest-investment.com
+- Betreff: SBS – WE 2.2.1 (Herr Rauch) – Datenblätter Klimatisierung zu Rechnung 2025-71
+- Anhänge (aus dem Internet herunterladen, dann prüfen, dass es das richtige Gerät ist):
+
+| Gerät | Datenblatt |
+|---|---|
+| Mitsubishi Heavy SCM100ZS-W | https://mhiae.com/units/scm100zs-w/?pdf=4283 |
+| Mitsubishi Heavy SRK50ZSX-WF | https://mhiae.com/units/srk50zsx-wf/?pdf=5187 |
+| Resideo L5, DN20 | https://tbs-online.de/doc/de/en/did.146347/93_254_45--DBL-01-de.pdf |
+
+Falls ein Link nicht geht: auf mhiae.com bzw. resideo.com nach dem Modell suchen.
+
+```text
+Hallo Frau Böhnke,
+
+wie angekündigt erhalten Sie anbei die Herstellerdatenblätter zu den Komponenten der Klimatisierung in der Wohnung WE 2.2.1 (Herr Rauch), Rechnung 2025-71:
+
+- Mitsubishi Heavy Industries Außengerät SCM100ZS-W (Multi-Split, 10 kW)
+- Mitsubishi Heavy Industries Wandinnengerät SRK50ZSX-WF (2 Stück)
+- Resideo L5 WiFi-Wasserleckage-Absperrventil DN20 (2 Stück)
+
+Bei Fragen melden Sie sich gerne.
+
+Mit freundlichen Grüßen
+
+Semir Redzic
+Geschäftsführer
+
+LEANS Tech GmbH
+Klima ▪ Lüftung ▪ Sanitär ▪ Heizung
+Berlepschstr. 165, 14165 Berlin
+Tel. +49 170 8280836
+www.leanstech-gmbh.de
+```
+
+## Mail 4 – Datenblätter Sanitär
+
+- Von: info@leanstech-gmbh.de
+- An: sb@crest-investment.com, info@crest-investment.com
+- Betreff: SBS – WE 2.2.1 (Herr Rauch) – Datenblätter Sanitär zu Schlussrechnung 2025-106
+- Anhänge:
+
+| Produkt | Datenblatt |
+|---|---|
+| Geberit Urinalsteuerung | Artifact-Seite, Pfad `versand/Datenblatt_Geberit_Urinalsteuerung_Typ10_116.035.16.1.pdf` |
+| Tellkamp Space XS (1700 × 850 × 600, weiß matt) | Kein Hersteller-PDF online gefunden. Auf tellkamp.de suchen. Sonst Semir fragen, ob das Datenblatt vom Lieferanten kommt, oder die Mail ohne Tellkamp anlegen und Semir Bescheid geben. |
+
+```text
+Hallo Frau Böhnke,
+
+wie angekündigt erhalten Sie anbei die Herstellerdatenblätter zu den Zusatzleistungen Sanitär in der Wohnung WE 2.2.1 (Herr Rauch), Schlussrechnung 2025-106:
+
+- Tellkamp Space freistehende Oval-Badewanne, weiß matt, 1700 x 850 x 600 mm
+- Geberit Urinalsteuerung mit elektronischer Spülauslösung, Batteriebetrieb, verdeckt
+
+Bei Fragen melden Sie sich gerne.
+
+Mit freundlichen Grüßen
+
+Semir Redzic
+Geschäftsführer
+
+LEANS Tech GmbH
+Klima ▪ Lüftung ▪ Sanitär ▪ Heizung
+Berlepschstr. 165, 14165 Berlin
+Tel. +49 170 8280836
+www.leanstech-gmbh.de
+```
+
 ## Feste Vorgaben von Semir
 
 - Nichts senden.
@@ -125,6 +197,5 @@ www.leanstech-gmbh.de
 
 ## Danach
 
-1. Semir beide Entwürfe zeigen: Betreff, Empfänger, Anhänge mit Größe.
-2. In leanstechgmbh@gmail.com liegen dieselben Mails als Gmail-Entwürfe (IDs `r-4226898355528294478`, `r-8778654692974440984`). Semir fragen, ob sie gelöscht werden sollen, damit nichts doppelt rausgeht.
-3. Im Board `LEANS-Uebergabe.md` den Eintrag „AN CLAUDE: OFFEN — Zwei Entwürfe in info@ anlegen (WE 2.2.1 Rauch)“ auf ERLEDIGT setzen.
+1. Semir alle vier Entwürfe zeigen: Betreff, Empfänger, Anhänge mit Größe.
+2. Im Board `LEANS-Uebergabe.md` den Eintrag „AN CLAUDE: OFFEN — Entwürfe in info@ anlegen (WE 2.2.1 Rauch)“ auf ERLEDIGT setzen.
