@@ -46,7 +46,7 @@ def build(path):
                          "Heizungsraum/Klima/Wärmepumpe, Komplettierung Armaturen (GESSI 316, Edelstahl), Inbetriebnahme und Abnahme", P),
           eur(w["p_netto"]), eur(w["p_ust"]), eur(w["p_netto"] + w["p_ust"])]]
     for i, (n, ang, dat, txt, net, ust) in enumerate(w["na"], 2):
-        a.append([str(i), Paragraph(f"{'Nachtrag ' + n[3:]} (Angebot {ang} vom {dat}): {txt}", P), eur(net), eur(ust), eur(net + ust)])
+        a.append([str(i), Paragraph(f"Nachtrag {n[3:]}: {txt.split(' (freigegeben')[0]}", P), eur(net), eur(ust), eur(net + ust)])
     ab = w["abzug"]
     a.append(["", Paragraph("Summe Leistungen", P), eur(w["leist_netto"]), eur(w["leist_ust"]), eur(w["leist_brutto"])])
     a.append(["", Paragraph(ab["text"][0].upper() + ab["text"][1:], P), "-" + eur(ab["netto"]), "-" + eur(ab["ust"]), "-" + eur(ab["brutto"])])

@@ -82,14 +82,14 @@ def build(path):
     data = [["Pos.", "Beschreibung", "Menge", "Einheit", "Einzelpreis", "Gesamt netto"]]
     st = [("ALIGN", (2, 0), (-1, -1), "RIGHT"), ("ALIGN", (3, 0), (3, -1), "CENTER")]
     for ti, (titel, herkunft, beleg, rows) in enumerate(g, 1):
-        data.append([str(ti), Paragraph(f"<b>{titel}</b> <font size='7' color='#777777'>({herkunft})</font>", P), "", "", "", ""])
+        data.append([str(ti), Paragraph(f"<b>{titel}</b>", P), "", "", "", ""])
         st += [("BACKGROUND", (0, len(data)-1), (-1, len(data)-1), SHADE), ("SPAN", (1, len(data)-1), (-1, len(data)-1))]
         etage_alt, n = object(), 0
         for etage, op, txt, q, u, ep in rows:
             if etage and etage != etage_alt:
                 data.append(["", Paragraph(f"<i>{etage}</i>", P), "", "", "", ""]); etage_alt = etage
             n += 1
-            data.append([f"{ti}.{n}", Paragraph(f"{txt} <font size='7' color='#777777'>({beleg} Pos. {op})</font>", P),
+            data.append([f"{ti}.{n}", Paragraph(txt, P),
                          num(q), u, eur(ep), eur(line_total(q, ep))])
         data.append(["", Paragraph(f"<b>Summe Titel {ti}</b>", P), "", "", "", eur(w["titel"][ti-1])])
         r = len(data) - 1
@@ -140,9 +140,7 @@ def build(path):
     for nr, dat, emp, gew, n, u, b in VORRECHNUNGEN:
         datum = ZAHLUNGSDATUM.get(nr) or (rot(ZAHLUNGSDATUM_OFFEN) if "_" in ZAHLUNGSDATUM_OFFEN else ZAHLUNGSDATUM_OFFEN)
         zr.append([f"RE {nr}", dat, Paragraph(gew, PT), eur(b), eur(b), datum, eur(0)])
-    zr += [["Dok. 159", "03.12.2024", Paragraph("Hydraulischer Abgleich – ersetzt durch diese Schlussrechnung", PT), "321,30 €", eur(0), "–", eur(0)],
-           ["Dok. 176", "05.01.2025", Paragraph("Fußbodenheizung – ersetzt durch diese Schlussrechnung", PT), "22.541,30 €", eur(0), "–", eur(0)],
-           ["neu", "", Paragraph("<b>Diese Schlussrechnung</b> – Heizung (Titel 3 + 4)", PT), eur(w["rest_brutto"]), eur(0), "–",
+    zr += [["2026-44", "19.10.2026", Paragraph("<b>Diese Schlussrechnung</b> – Heizung (Titel 3 + 4)", PT), eur(w["rest_brutto"]), eur(0), "–",
             eur(w["rest_brutto"])],
            [Paragraph("<b>Summe offen</b>", PT), "", "", "", "", "", eur(w["rest_brutto"])]]
     k = len(zr) - 1
@@ -151,8 +149,7 @@ def build(path):
                 [("ALIGN", (3, 0), (4, -1), "RIGHT"), ("ALIGN", (6, 0), (6, -1), "RIGHT"), ("LINEABOVE", (0, k), (-1, k), 0.8, GREY),
                  ("FONT", (6, k), (6, k), "LB", 8.5)]),
             Spacer(1, 4*mm),
-            Paragraph("Diese Schlussrechnung ersetzt die Dokumente Nr. 176 vom 05.01.2025 (Fußbodenheizung) und Nr. 159 vom 03.12.2024 "
-                      "(hydraulischer Abgleich). Die Rechnungen 2024-47 und 2025-17 bleiben unverändert gültig.", P),
+            Paragraph("Die Rechnungen 2024-47 und 2025-17 sind bezahlt und in dieser Schlussrechnung abgezogen.", P),
             Spacer(1, 2*mm),
             Paragraph(f"Bitte überweisen Sie den Betrag von <b>{eur(w['rest_brutto'])}</b> bis zum Fälligkeitsdatum ohne Abzug unter Angabe der "
                       "Rechnungsnummer auf das unten genannte Konto.", P)]
