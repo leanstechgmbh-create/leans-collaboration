@@ -55,6 +55,16 @@ In claude.ai-Chats hiess es, `info@leanstech-gmbh.de` und `sr@leanstech-gmbh.de`
 3. **Versand** nie automatisch. Nur nach Semirs ausdruecklichem "senden", danach Gegenpruefung
    in "Gesendete Objekte".
 
+## Nachtrag 2026-10-20 abends: ngrok
+
+Beim "Erneut verbinden" von "AutoCAD MCP" erscheint laut Semir ngrok. Der Connector zeigt
+also vermutlich noch auf die alte ngrok-Adresse; ngrok ist seit 09.08.2026 aus dem Mail-Weg
+entfernt (Cloudflare-Tunnel `leans-mcp`). Der Gateway :8100 liefert nur fs/git/github/obsidian,
+keine Mail-Werkzeuge. Loesung: neuer claude.ai-Connector fuer den Mail-MCP ueber Cloudflare
+(OAuth oder Geheimpfad "Sicherheit Stufe 2"), Umsetzung nur vom PC aus moeglich. Uebergabe an
+Claude (PC)/Board-Waechter liegt in Drive, Ordner "Uebergaben":
+`UEBERGABE von Claude-Cloud 2026-10-20 - OFFEN - Mail-MCP fuer claude.ai-Chats wieder anbinden (ohne ngrok).md`.
+
 ## Monitor (gebaut 2026-10-20)
 
 Geplante Aufgabe "LEANS Mail-Connector Monitor" (claude.ai, taeglich 07:34 Europe/Berlin,
