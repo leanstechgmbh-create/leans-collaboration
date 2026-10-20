@@ -7,3 +7,4 @@ Thumbs.db
 outputs/
 work/
 .leans-live/
+__pycache__/
