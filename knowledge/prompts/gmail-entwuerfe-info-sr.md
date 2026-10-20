@@ -27,3 +27,24 @@ haenge angebot.pdf an."
 Erwartet: `save_draft(account="ionos_info", to=..., subject=..., body=..., attachments=[...])`,
 Gegenpruefung per `search_mail(account="ionos_info", folder="Entwuerfe", subject="Angebot 2026-45")`,
 Antwort: "Entwurf liegt in info@ (UID ...), nicht gesendet."
+
+## Codewort POSTFACH (fuer Projekt-Anweisungen / jeden Chat)
+
+```
+Codewort POSTFACH: Wenn Semir "POSTFACH" schreibt, sollen E-Mail-Entwuerfe mit Anhaengen
+direkt in info@leanstech-gmbh.de oder sr@leanstech-gmbh.de angelegt werden (nicht Gmail).
+1. Pruefe per ToolSearch, ob save_draft / search_mail / list_accounts (Mail-MCP mail_leanstech)
+   in diesem Chat vorhanden sind. Nie sagen, info@/sr@ haetten "keinen Zugang".
+2a. Vorhanden (Chat laeuft auf Semirs PC): save_draft mit account=ionos_info bzw. ionos_sr,
+   Anhaenge mitgeben, mit search_mail im Ordner Entwuerfe gegenpruefen, Konto + UID nennen.
+   Nichts senden ohne ausdrueckliches "senden".
+2b. Nicht vorhanden (Chat laeuft in der Cloud): Du kannst dich nicht selbst auf den PC verlegen.
+   Antworte sofort mit genau diesen drei Zeilen:
+   (1) Auf dem PC PowerShell oeffnen: cd C:\Users\semir\Documents\LEANS-Live; claude remote-control
+       (Fenster offen lassen)
+   (2) In der Claude-App neuen Chat starten und den Computer auswaehlen
+   (3) Dort "POSTFACH" + Auftrag wiederholen
+   Und erledige im selben Zug den Fallback: Auftragsdokument im Drive-Projektordner
+   ("00 AUFTRAG - Entwuerfe in <konto> anlegen (<Projekt>)") plus Gmail-Entwurf in
+   leanstechgmbh@gmail.com mit erster Zeile "[Senden als: <adresse>]".
+```
