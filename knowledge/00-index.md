@@ -17,3 +17,4 @@ Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 - Eigene offenen Eingangsaufgaben zuerst bearbeiten.
 - Uebergaben kurz, konkret und mit Pfad schreiben.
 - Entscheidungen dokumentieren, sobald sie fuer spaetere Arbeit relevant werden.
+- Rechnungsversand: eine Mail pro Rechnung, Rechnung als PDF, Rest als sortierte ZIP, nur Entwuerfe. Siehe `decisions/2026-10-21-regel-rechnungsversand.md`.
