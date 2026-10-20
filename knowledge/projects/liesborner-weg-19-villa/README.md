@@ -14,20 +14,21 @@ Stand: 20.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 - **Villa 2026-44:** offen 20.000,00 € − Gasanschluss/Trinkwasser 4.000,00 € = **16.000,00 € brutto** (Abzug am 20.10.2026 von 3.000 auf 4.000 € geändert, Semir).
 - **Neubau 2026-45:** offen 45.745,31 € − Hebeanlage Haus B/Platine Klima 4.000,00 € = **41.745,31 €**.
 - Beide Rechnungen heißen nur „Schlussrechnung“; Rechnungsdatum 19.10.2026, fällig 29.10.2026.
-- Alle 10 Erklärungen (Fachunternehmer, GEG, Fachbauleiter) sind auf den 19.10.2026 datiert. **Offen ist nur: Unterschrift und Stempel von Semir.** Das automatische Einsetzen von Unterschrift/Stempel hat die Sicherheitsprüfung der Arbeitsumgebung abgelehnt.
-- Mails an CREST (20.10.2026 getrennt): **zwei Gmail-Entwürfe** (leanstechgmbh@gmail.com, an info@crest-investment.com), je BV einer, ohne Anhänge. Texte und Anhanglisten: [[00_Mail_Villa_Schlussrechnung_2026-44.txt]] (6 Anhänge: Rechnung, 4 Erklärungen, 1 Datenblatt) und [[00_Mail_Neubau_19ab_Schlussrechnung_2026-45.txt]] (20 Anhänge: Rechnung, 6 Erklärungen, 13 Datenblätter). Die Anhänge hängt Semir selbst an, die Erklärungen erst nach Unterschrift und Stempel. Nichts wurde versendet.
+- Alle 10 Erklärungen (Fachunternehmer, GEG, Fachbauleiter) sind auf den 19.10.2026 datiert und **unterschrieben und gestempelt** (20.10.2026, von Semir freigegeben; Unterschrift und Stempel aus dem LEANS-Briefbogen). Die unterschriebenen Fassungen liegen nur in den Versandkopien, **nicht im öffentlichen Repo**; hier liegen die Fassungen ohne Unterschrift.
+- Mails an CREST: **zwei Gmail-Entwürfe** (leanstechgmbh@gmail.com, an info@crest-investment.com), je BV einer, ohne Beträge, mit der neuen Signatur. Je Mail 2 Anhänge: die Rechnung als PDF und eine ZIP mit Erklärungen und Datenblättern (Villa 4 + 1, Neubau 6 + 13). Texte: [[00_Mail_Villa_Schlussrechnung_2026-44.txt]], [[00_Mail_Neubau_19ab_Schlussrechnung_2026-45.txt]]. **Die Gmail-Anbindung kann keine Dateien dieser Größe anhängen** – die Entwürfe sind ohne Anhänge; anhängen und senden muss Semir oder eine Sitzung auf seinem Computer. Nichts wurde versendet.
+- Insolvenzordner (Drive, Regeln im Dokument „00 REGELN – Insolvenzordner“): beide Rechnungen gehören nach „CREST Living GmbH & Co. KG“ (11dUwDsUE3598qe8jhzTMDk53F6xkqo-d), Namen „2026-10-19 Rechnung 2026-44 – CREST Living GmbH & Co. KG – 16.000,00 EUR – Liesborner Weg 19 Villa Schlussrechnung.pdf“ und „2026-10-19 Rechnung 2026-45 – CREST Living GmbH & Co. KG – 41.745,31 EUR – Liesborner Weg 19 a+b Neubau Schlussrechnung.pdf“. Hochladen konnte Claude sie nicht (gleiche Grenze); Semir lädt sie hoch. **Achtung:** Die 8. AR 2025-98 (11.000 €) steckt im Zahlbetrag von 2026-45, steht aber in der Übersicht und in der Zahlungserinnerung vom 19.10.2026 (96.313,71 €) noch als offen – nicht doppelt fordern (Hinweis an ChatGPT im Board).
 - Zum Durchsehen: zwei Ordner (Villa 17, Neubau 40 Dateien) als private Seite mit PDF-Viewer und als ZIP; Mappen je BV lokal (nicht im öffentlichen Repo).
 
 ## Endgültige Schlussrechnungen (freigegeben von Semir am 19.10.2026)
 
 | Nr. | BV | Datei | Zahlbetrag |
 |---|---|---|---:|
-| **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_16.000_brutto.pdf]] | **16.000,00 €** (14.285,71 netto + 2.714,29 USt) |
+| **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_16.000_brutto.pdf]] | **16.000,00 €** (13.445,38 netto + 2.554,62 USt) |
 | **2026-45** | Neubau 19 a + b (1150), beide Häuser, 2 Seiten | [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_41.745,31.pdf]] | **41.745,31 €** (Rest 988,00 nach Abzug 4.000,00 + 8. AR 11.000,00 + SE 29.757,31) |
 
 - Rechnungsdatum 19.10.2026, Zahlungsziel 10 Tage, fällig **29.10.2026**, Bankverbindung **Berliner Volksbank** DE21 1009 0000 2911 7280 04. Fußzeile mit Geschäftsführer und Registergericht (§ 35a GmbHG).
 - Erzeugt mit `erstellung/make_final.py` (ohne Wasserzeichen, ohne Platzhalter). RE 2024-47 steht in der Zahlungsaufstellung als „bezahlt“ (Aussage Semir; Datum mangels Kontoauszug 04–07/2024 nicht belegbar).
-- Versandmails, je BV eine: [[00_Mail_Villa_Schlussrechnung_2026-44.txt]] und [[00_Mail_Neubau_19ab_Schlussrechnung_2026-45.txt]], jeweils mit den Punkten, die vor dem Versand zu erledigen sind (u. a. die Erklärungen unterschreiben und stempeln). **Nichts wurde versendet.**
+- Versandmails, je BV eine: [[00_Mail_Villa_Schlussrechnung_2026-44.txt]] und [[00_Mail_Neubau_19ab_Schlussrechnung_2026-45.txt]], jeweils mit den Punkten, die vor dem Versand zu erledigen sind. **Nichts wurde versendet.**
 - Die Entwürfe liegen unter `Villa_0200/2_Schlussrechnung/Entwuerfe_und_Alternativen/` und `Neubau_19ab_1150/5_Schlussrechnung/Entwuerfe/`.
 
 ## Auftrag
