@@ -134,6 +134,11 @@ Rechnungsbeträgen wären es 93.076,42.
 
 ## Fundstellen
 
+- **Übergabeordner für den Nutzer (privat, nicht geteilt):** Drive „LEANS Uebergabe" →
+  „apoprojekt – Geld holen (Stand 20.10.2026)" (1nZbKMZs6kMjG-3XqPJDNL4wFeDGci771).
+  Darin „00 ANLEITUNG" (1X-C1yYp4C90nFc7S4HYaYifuYieq5IeWIthdWxdXye4) und die Ordner 1–7
+  mit Kopien je Posten. Neue Bescheide dort in den passenden Ordner legen.
+
 - Drive-Ordner Unterlagen (Kopien 01–37 + „00 Übersicht"):
   1t_sQ_knjGsvfDb8HPf-LwM9hsZq9f72v (liegt im Insolvenzordner/apoprojekt GmbH
   1m64SYYe_gPn-SuVsBXTIhegiOuWy1vHI; Insolvenzordner 1TTiMBN6SS71T_VGdjYIBWq74JXOwxosm,
