@@ -11,6 +11,14 @@
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 
+## Entscheidungen
+
+- [[decisions/2026-10-20-gmail-entwuerfe-info-sr]] - Entwuerfe fuer info@/sr@ laufen ueber leanstechgmbh@gmail.com.
+
+## Prompts
+
+- [[prompts/gmail-entwuerfe-info-sr]] - Regel fuer alle Chats zu E-Mail-Entwuerfen.
+
 ## Wichtige Regeln
 
 - Board zuerst lesen.
