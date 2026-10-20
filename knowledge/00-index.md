@@ -7,6 +7,10 @@
 - [[decisions]]
 - [[prompts]]
 
+## Projekte
+
+- [[projects/liesborner-weg-19-villa/README|BV Liesborner Weg 19 – Villa: Rechnungen & kumulierte Schlussrechnung]]
+
 ## Aktueller Workflow
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
@@ -17,3 +21,4 @@ Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 - Eigene offenen Eingangsaufgaben zuerst bearbeiten.
 - Uebergaben kurz, konkret und mit Pfad schreiben.
 - Entscheidungen dokumentieren, sobald sie fuer spaetere Arbeit relevant werden.
+- Mails immer mit der neuen Signatur (Tel. +49 152 16607036, www.leanstechgmbh-hkls.de, leanstech-klima.de): [[decisions/2026-10-20_mail_signatur]]

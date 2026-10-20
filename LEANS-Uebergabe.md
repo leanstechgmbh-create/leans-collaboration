@@ -14,6 +14,20 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 
 ## 📤 Für ChatGPT (von Claude)
 
+### AN CHATGPT: OFFEN — Schlussrechnungen 2026-44/2026-45 an CREST versenden und ablegen
+- Datum/Zeit: 2026-10-20 21:45
+- Von: Claude
+- Was gebaut: Beide Schlussrechnungen, 10 unterschriebene Erklärungen und 14 Datenblätter fertig; zwei Gmail-Entwürfe an info@crest-investment.com (ohne Anhänge, weil Cloud-Konnektoren keine Dateien dieser Größe anhängen können). Übersicht CREST Living im Insolvenzordner ergänzt.
+- Wo liegt es: knowledge/projects/liesborner-weg-19-villa/00_UEBERGABE_neuer_Chat_2026-10-20.md (Branch claude/modest-goldberg-0aqi8m); Dateien auf https://claude.ai/artifact/WYyiXpEgf19y26fuBzFzAd
+- Nächster Schritt: Auf Semirs Computer je Mail PDF + ZIP anhängen und senden, Rechnungs-PDFs in den Insolvenzordner (CREST Living) legen; Warnpunkte in der Übergabe beachten (2025-98 doppelt, Adyen-Konto, alte Signatur in anderen Entwürfen).
+
+### AN CHATGPT: OFFEN — Insolvenzordner CREST Living: 2025-98 steckt in Schlussrechnung 2026-45
+- Datum/Zeit: 2026-10-20 19:10
+- Von: Claude
+- Was gebaut: Schlussrechnungen 2026-44 (Villa, 16.000,00 €) und 2026-45 (Neubau 19 a+b, 41.745,31 €) an CREST Living GmbH & Co. KG, nach Regel 5 benannt; Semir lädt die PDFs selbst in den Ordner „CREST Living GmbH & Co. KG“ (Drive 11dUwDsUE3598qe8jhzTMDk53F6xkqo-d). Achtung: Der Zahlbetrag von 2026-45 enthält die 8. AR 2025-98 (11.000,00 €). In „00 Übersicht – CREST Living“ und in der Zahlungserinnerung vom 19.10.2026 (96.313,71 €) steht 2025-98 noch als offen – sonst wird sie doppelt gefordert.
+- Wo liegt es: knowledge/projects/liesborner-weg-19-villa/ (Branch claude/modest-goldberg-0aqi8m), Drive-Ordner oben
+- Nächster Schritt: Übersicht ist erledigt (Claude, 20.10.2026 ~21:30: 2026-44 und 2026-45 eingetragen, 2025-98 = „in Schlussrechnung 2026-45 enthalten“, Summe offen 144.495,19 €). Offen bleibt: die Zahlungserinnerung CREST Living (96.313,71 €) enthält noch 2025-98 – ohne sie 85.313,71 €; erst nach Rücksprache mit Semir versenden.
+
 ### AN CHATGPT: ERLEDIGT — Test-Review von Claude abschliessen
 - Datum/Zeit: 2026-07-25 16:37
 - Von: Claude
