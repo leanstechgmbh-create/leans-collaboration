@@ -18,9 +18,21 @@ Semir hat dort Gmail und Google Drive einmal erlaubt. Die Seite legt die Anhäng
   Mit freundlichen Grüßen
 
   Semir Redzic
-  LEANS Tech GmbH
-  Tel. +49 170 8280836
+
+  Klima ▪ Lüftung ▪ Sanitär ▪ Heizung
+  Wir verstehen unser Handwerk
+
+  Tel: +49 152 16607036
+  info@leanstech-gmbh.de
+  www.leanstechgmbh-hkls.de
+  leanstech-klima.de
+
+  Firmensitz: Berlepschstr. 165, 14165 Berlin
+  Geschäftsführer: Semir Redzic
   ```
+
+- Das ist die aktuelle Signatur. In Gmail ist keine hinterlegt, deshalb gehört sie immer direkt in den Text.
+- Bei Zahlungserinnerungen (Rechnung schon gestellt, nicht bezahlt): Betreff „Zahlungserinnerung – Rechnung <Nr> – …“, Rechnungsdatum und Betrag nennen, **keine Frist setzen**. Zum Beispiel: „unsere Rechnung <Nr> vom <Datum> über <Betrag> für <Leistung> ist noch nicht bezahlt. Bitte überweisen Sie den offenen Betrag.“
 
 - Alle Unterlagen müssen dabei sein. Fehlt etwas, nicht senden, sondern Semir sagen, was fehlt.
 
