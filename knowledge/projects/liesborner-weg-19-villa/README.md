@@ -1,6 +1,6 @@
 # BV Liesborner Weg 19 – Villa (Projekt 0200): Rechnungen, offener Betrag, kumulierte Schlussrechnung
 
-Stand: 19.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstechgmbh@gmail.com (nur gelesen, nichts geändert)
+Stand: 20.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstechgmbh@gmail.com (nur gelesen, nichts geändert)
 
 ## Kurzfazit
 
@@ -8,6 +8,15 @@ Stand: 19.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 - **Bauherr/Auftraggeber der Villa ist die CREST Living GmbH & Co. KG.** Sie hat die Baustellenprotokolle „BV Liesborner Weg 19 Villa“ geführt und die Villa-Rechnungen 2024-47 und 2025-17 erhalten. Achtung: Alle CREST-Firmen haben ihren Sitz am Liesborner Weg 19. Deshalb steht diese Adresse auf fast jeder CREST-Rechnung, auch bei ganz anderen Baustellen.
 - **Die offenen „ca. 20.000 €“ sind die „Schlussrechnung 176“ Fußbodenheizung über 22.541,30 € brutto vom 05.01.2025.** Sie wurde nie bezahlt. Wahrscheinlicher Grund: Das Dokument wurde mit der Angebotsvorlage erstellt. Es hat nur eine „Angebotsnummer 176“ und „Gültig bis“, aber keine Rechnungsnummer, kein Fälligkeitsdatum und keine Bankverbindung. Außerdem ging es an die CREST Investment GmbH statt an CREST Living. Dasselbe gilt für „Rechnung 159“ (hydraulischer Abgleich, 321,30 €), die ebenfalls unbezahlt ist.
 - **Ergebnis (Semir, 19.10.2026):** Bei der Villa sind **20.000,00 € brutto** offen. Davon ziehen wir selbst 3.000,00 € brutto für Gasanschluss und Inbetriebnahme Trinkwasser ab → **Zahlbetrag 17.000,00 € brutto** (14.285,71 € netto + 2.714,29 € USt) an CREST Living. Versendet wird die **kumulierte Schlussrechnung Nr. 2026-44** über alle Villa-Leistungen (Sanitär + Heizung, mit Abzug von 2024-47 und 2025-17). Sie ersetzt Dok. 159 und Dok. 176. Die Fassung nur über die Fußbodenheizung und die älteren Fassungen mit 12 % Rabatt (22.862,59 €) liegen unter `Entwuerfe_und_Alternativen/` und werden nicht versendet.
+
+## Stand 20.10.2026: fertig zum Versand
+
+- **Villa 2026-44:** offen 20.000,00 € − Gasanschluss/Trinkwasser 3.000,00 € = **17.000,00 € brutto**.
+- **Neubau 2026-45:** offen 45.745,31 € − Hebeanlage Haus B/Platine Klima 2.000,00 € = **43.745,31 €**.
+- Beide Rechnungen heißen nur „Schlussrechnung“; Rechnungsdatum 19.10.2026, fällig 29.10.2026.
+- Alle 10 Erklärungen (Fachunternehmer, GEG, Fachbauleiter) sind auf den 19.10.2026 datiert. **Offen ist nur: Unterschrift und Stempel von Semir.** Das automatische Einsetzen von Unterschrift/Stempel hat die Sicherheitsprüfung der Arbeitsumgebung abgelehnt.
+- Mail an CREST: als **Gmail-Entwurf** (leanstechgmbh@gmail.com, an info@crest-investment.com) angelegt, ohne Anhänge; Text auch in [[00_Mail_an_CREST_Schlussrechnungen_2026-44_und_2026-45.txt]]. Vor dem Versand die beiden Schlussrechnungen und die unterschriebenen Erklärungen anhängen. Nichts wurde versendet.
+- Zum Durchsehen: zwei Ordner (Villa 17, Neubau 40 Dateien) als private Seite mit PDF-Viewer und als ZIP; Mappen je BV lokal (nicht im öffentlichen Repo).
 
 ## Endgültige Schlussrechnungen (freigegeben von Semir am 19.10.2026)
 

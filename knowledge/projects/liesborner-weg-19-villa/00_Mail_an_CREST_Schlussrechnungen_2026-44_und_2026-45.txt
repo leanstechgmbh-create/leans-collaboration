@@ -1,4 +1,5 @@
 Versandfertig bis auf die Punkte ganz unten. Nichts wurde versendet.
+Als Entwurf in Gmail angelegt (ohne Anhänge) – Rechnungen und unterschriebene Erklärungen dort anhängen.
 
 An:       info@crest-investment.com
 Betreff:  Schlussrechnungen 2026-44 (Villa) und 2026-45 (Neubau 19 a + b) – BV Liesborner Weg 19
@@ -18,12 +19,12 @@ BV Liesborner Weg 19.
 
 1. Villa – Schlussrechnung Nr. 2026-44
 
-   Schlussrechnung über alle Leistungen (Sanitär und Heizung).
-   Die bereits gestellten Rechnungen 2024-47 und 2025-17 sind darin
-   abgezogen. Gasanschluss und Inbetriebnahme Trinkwasser haben wir
-   pauschal mit 3.000,00 € brutto abgezogen.
+   Schlussrechnung über alle Leistungen (Sanitär und Heizung). Die
+   bereits gestellten Rechnungen 2024-47 und 2025-17 sind darin abgezogen.
 
-   Zahlbetrag: 17.000,00 € brutto
+   Offener Betrag Villa                                   20.000,00 €
+   abzgl. Gasanschluss und Inbetriebnahme Trinkwasser     -3.000,00 €
+   Zahlbetrag (brutto)                                    17.000,00 €
    (14.285,71 € netto zzgl. 19 % USt 2.714,29 €)
 
    Die Schlussrechnung ersetzt unsere Dokumente Nr. 176 vom 05.01.2025
@@ -35,14 +36,18 @@ BV Liesborner Weg 19.
 
    Die Schlussrechnung führt alle Abschlagsrechnungen mit Ihren Zahlungen
    auf. Ihre Abzüge für Bauumlage, Skonto und Bauabzugsteuer haben wir
-   übernommen. Die Inbetriebnahme der Hebeanlage in Haus B und die
-   Reparatur der Platine der Klimaanlage haben wir pauschal mit
-   2.000,00 € brutto abgezogen; damit sind beide Punkte abgegolten.
+   übernommen.
 
-   Restbetrag dieser Schlussrechnung            2.988,00 €
-   8. Abschlagsrechnung 2025-98 (nicht bezahlt) 11.000,00 €
-   Sicherheitseinbehalt 10 % (1. bis 7. AR)     29.757,31 €
-   Zahlbetrag                                   43.745,31 €
+   Restbetrag Schlussrate und Nachtrag 1                   4.988,00 €
+   8. Abschlagsrechnung 2025-98 (nicht bezahlt)           11.000,00 €
+   Sicherheitseinbehalt 10 % (1. bis 7. AR)               29.757,31 €
+   Offen                                                  45.745,31 €
+   abzgl. Inbetriebnahme Hebeanlage Haus B und
+   Reparatur Platine Klimaanlage (pauschal)               -2.000,00 €
+   Zahlbetrag                                             43.745,31 €
+
+   Mit dem Abzug sind die Hebeanlage in Haus B und die Platine der
+   Klimaanlage abgegolten.
 
 Bitte überweisen Sie beide Beträge bis zum 29.10.2026 unter Angabe der
 jeweiligen Rechnungsnummer auf unser Konto:
