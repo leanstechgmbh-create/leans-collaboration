@@ -5,7 +5,7 @@ import make_invoice_leans as inv
 
 FINAL = dict(datum="19.10.2026", ziel="10 Tage", faellig="29.10.2026")
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-VILLA = os.path.join(ROOT, "Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_17.000_brutto.pdf")
+VILLA = os.path.join(ROOT, "Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_16.000_brutto.pdf")
 NEUBAU = os.path.join(ROOT, "Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf")
 
 def build():

@@ -7,11 +7,11 @@ Stand: 20.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 - **Villa = Projekt 0200 „Liesborner Weg (ALT)“.** Der Neubau „Butterfly Houses 19 a+b“ ist Projekt 1150 (NEU) und wird hier nur zur Abgrenzung erwähnt.
 - **Bauherr/Auftraggeber der Villa ist die CREST Living GmbH & Co. KG.** Sie hat die Baustellenprotokolle „BV Liesborner Weg 19 Villa“ geführt und die Villa-Rechnungen 2024-47 und 2025-17 erhalten. Achtung: Alle CREST-Firmen haben ihren Sitz am Liesborner Weg 19. Deshalb steht diese Adresse auf fast jeder CREST-Rechnung, auch bei ganz anderen Baustellen.
 - **Die offenen „ca. 20.000 €“ sind die „Schlussrechnung 176“ Fußbodenheizung über 22.541,30 € brutto vom 05.01.2025.** Sie wurde nie bezahlt. Wahrscheinlicher Grund: Das Dokument wurde mit der Angebotsvorlage erstellt. Es hat nur eine „Angebotsnummer 176“ und „Gültig bis“, aber keine Rechnungsnummer, kein Fälligkeitsdatum und keine Bankverbindung. Außerdem ging es an die CREST Investment GmbH statt an CREST Living. Dasselbe gilt für „Rechnung 159“ (hydraulischer Abgleich, 321,30 €), die ebenfalls unbezahlt ist.
-- **Ergebnis (Semir, 19.10.2026):** Bei der Villa sind **20.000,00 € brutto** offen. Davon ziehen wir selbst 3.000,00 € brutto für Gasanschluss und Inbetriebnahme Trinkwasser ab → **Zahlbetrag 17.000,00 € brutto** (14.285,71 € netto + 2.714,29 € USt) an CREST Living. Versendet wird die **kumulierte Schlussrechnung Nr. 2026-44** über alle Villa-Leistungen (Sanitär + Heizung, mit Abzug von 2024-47 und 2025-17). Sie ersetzt Dok. 159 und Dok. 176. Die Fassung nur über die Fußbodenheizung und die älteren Fassungen mit 12 % Rabatt (22.862,59 €) liegen unter `Entwuerfe_und_Alternativen/` und werden nicht versendet.
+- **Ergebnis (Semir, 19.10.2026):** Bei der Villa sind **20.000,00 € brutto** offen. Davon ziehen wir selbst 4.000,00 € brutto (am 20.10.2026 von 3.000 € geändert) für Gasanschluss und Inbetriebnahme Trinkwasser ab → **Zahlbetrag 16.000,00 € brutto** (13.445,38 € netto + 2.554,62 € USt) an CREST Living. Versendet wird die **kumulierte Schlussrechnung Nr. 2026-44** über alle Villa-Leistungen (Sanitär + Heizung, mit Abzug von 2024-47 und 2025-17). Sie ersetzt Dok. 159 und Dok. 176. Die Fassung nur über die Fußbodenheizung und die älteren Fassungen mit 12 % Rabatt (22.862,59 €) liegen unter `Entwuerfe_und_Alternativen/` und werden nicht versendet.
 
 ## Stand 20.10.2026: fertig zum Versand
 
-- **Villa 2026-44:** offen 20.000,00 € − Gasanschluss/Trinkwasser 3.000,00 € = **17.000,00 € brutto**.
+- **Villa 2026-44:** offen 20.000,00 € − Gasanschluss/Trinkwasser 4.000,00 € = **16.000,00 € brutto** (Abzug am 20.10.2026 von 3.000 auf 4.000 € geändert, Semir).
 - **Neubau 2026-45:** offen 45.745,31 € − Hebeanlage Haus B/Platine Klima 2.000,00 € = **43.745,31 €**.
 - Beide Rechnungen heißen nur „Schlussrechnung“; Rechnungsdatum 19.10.2026, fällig 29.10.2026.
 - Alle 10 Erklärungen (Fachunternehmer, GEG, Fachbauleiter) sind auf den 19.10.2026 datiert. **Offen ist nur: Unterschrift und Stempel von Semir.** Das automatische Einsetzen von Unterschrift/Stempel hat die Sicherheitsprüfung der Arbeitsumgebung abgelehnt.
@@ -22,7 +22,7 @@ Stand: 20.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 
 | Nr. | BV | Datei | Zahlbetrag |
 |---|---|---|---:|
-| **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_17.000_brutto.pdf]] | **17.000,00 €** (14.285,71 netto + 2.714,29 USt) |
+| **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_16.000_brutto.pdf]] | **16.000,00 €** (14.285,71 netto + 2.714,29 USt) |
 | **2026-45** | Neubau 19 a + b (1150), beide Häuser, 2 Seiten | [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf]] | **43.745,31 €** (Rest 2.988,00 nach Abzug 2.000,00 + 8. AR 11.000,00 + SE 29.757,31) |
 
 - Rechnungsdatum 19.10.2026, Zahlungsziel 10 Tage, fällig **29.10.2026**, Bankverbindung **Berliner Volksbank** DE21 1009 0000 2911 7280 04. Fußzeile mit Geschäftsführer und Registergericht (§ 35a GmbHG).
@@ -64,7 +64,7 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 
 ## Schlussrechnung 2026-44: kumuliert über alle Villa-Leistungen, Heizung pauschal 20.000 € brutto
 
-- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_17.000_brutto.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
+- Datei: [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_16.000_brutto.pdf]] im LEANS-Layout, an CREST Living, 3 Seiten. Skript: `erstellung/make_invoice_leans_kumuliert.py`.
 - Aufbau: A. alle 43 Positionen, gegliedert nach den bisherigen Einzelabrechnungen (Titel 1 = RE 2024-47, Titel 2 = RE 2025-17, Titel 3 = Dok. 159, Titel 4 = Dok. 176), jede Position mit Verweis auf Beleg und Original-Pos.; B. Zusammenstellung; C. Abrechnung mit Abzug der gestellten Rechnungen (netto und USt, § 14 Abs. 5 UStG).
 
 | | netto | USt 19 % | brutto |
@@ -74,14 +74,14 @@ RE 2025-8 und RE 2025-17 haben sieben Positionen gemeinsam (4.100,00 € netto).
 | Titel 3 hydraulischer Abgleich (Dok. 159) | 270,00 | | |
 | Titel 4 Fußbodenheizung (Dok. 176) | 21.525,30 | | |
 | Nachlass Heizung (Titel 3 + 4 pauschal auf 20.000,00 brutto = 16.806,72 netto) | −4.988,58 | | |
-| abzgl. Gasanschluss und Inbetriebnahme Trinkwasser (3.000,00 brutto, lt. Semir ca.) | −2.521,01 | | |
-| **Gesamtleistung** | **31.524,71** | 5.989,70 | **37.514,41** |
+| abzgl. Gasanschluss und Inbetriebnahme Trinkwasser (4.000,00 brutto, lt. Semir) | −3.361,34 | | |
+| **Gesamtleistung** | **30.684,38** | 5.830,03 | **36.514,41** |
 | abzgl. RE 2024-47 | −12.481,00 | −2.371,39 | −14.852,39 |
 | abzgl. RE 2025-17 | −4.758,00 | −904,02 | −5.662,02 |
-| **Zahlbetrag** | **14.285,71** | **2.714,29** | **17.000,00** |
+| **Zahlbetrag** | **13.445,38** | **2.554,62** | **16.000,00** |
 
 - Prüfung: Die 43 Positionsbeträge wurden aus dem erzeugten PDF zurückgelesen und je Titel summiert; die Summen stimmen mit den Originalrechnungen überein (12.481,00 / 4.758,00 / 270,00 / 21.525,30).
-- **D. Zahlungsaufstellung** (ergänzt 19.10.2026): jede Villa-Rechnung mit Betrag, gezahlt, Zahlungsdatum und offen. RE 2025-17 wurde am 19.09.2025 mit 5.662,02 € bezahlt (Kontoauszug, Vwz. „R. 2025-17 v. 14.04.25, BV. Liesborner Weg 19“). RE 2024-47 gilt laut Semir als bezahlt („genau 20.000 € offen“). In 2026-44 steht als Zahlungsdatum „bezahlt“, weil die Kontoauszüge 04–07/2024 weiter fehlen; in Drive liegen aus 2024 nur 02, 08 und 09. Dok. 159 und 176 sind mit 0,00 € gezahlt aufgeführt und werden durch diese Schlussrechnung ersetzt. Summe offen 17.000,00 €.
+- **D. Zahlungsaufstellung** (ergänzt 19.10.2026): jede Villa-Rechnung mit Betrag, gezahlt, Zahlungsdatum und offen. RE 2025-17 wurde am 19.09.2025 mit 5.662,02 € bezahlt (Kontoauszug, Vwz. „R. 2025-17 v. 14.04.25, BV. Liesborner Weg 19“). RE 2024-47 gilt laut Semir als bezahlt („genau 20.000 € offen“). In 2026-44 steht als Zahlungsdatum „bezahlt“, weil die Kontoauszüge 04–07/2024 weiter fehlen; in Drive liegen aus 2024 nur 02, 08 und 09. Dok. 159 und 176 sind mit 0,00 € gezahlt aufgeführt und werden durch diese Schlussrechnung ersetzt. Summe offen 16.000,00 €.
 - Nicht enthalten: die 847,00 € netto aus RE 2025-8, die in 2025-17 fehlen (siehe oben).
 - Der Zahlbetrag setzt voraus, dass 2024-47 bezahlt ist oder separat bezahlt wird. 2024-47 bleibt als eigene Rechnung gültig.
 
@@ -175,7 +175,7 @@ Auf Wunsch von Semir gibt es statt der gemeinsamen Gesamtmappe **zwei getrennte 
 
 Gliederung beider Mappen:
 1. **Abrechnung nach Gewerken**, neu erzeugt.
-   - Villa: Sanitär 17.239,00 € netto und Heizung 14.285,71 € netto ergeben die Gesamtleistung von 31.524,71 € netto bzw. 37.514,41 € brutto. Davon sind 20.514,41 € bezahlt, offen sind 17.000,00 €. Dazu kommen die ersetzten Belege.
+   - Villa: Sanitär 17.239,00 € netto und Heizung 13.445,38 € netto ergeben die Gesamtleistung von 30.684,38 € netto bzw. 36.514,41 € brutto. Davon sind 20.514,41 € bezahlt, offen sind 16.000,00 €. Dazu kommen die ersetzten Belege.
    - Neubau: Leistung je Haus (A = 19 a, Angebot 233; B = 19 b, Angebot 234) und je Gewerk (Klima, Lüftung, Heizung, Sanitär, Diverses). Die Pauschale ist rechnerisch anteilig zugeordnet. Es folgen die Nachträge, die Leistung von 314.306,89 €, der Abzug von 2.000,00 € (Hebeanlage Haus B, Platine Klima), die 8 Abschlagsrechnungen mit Einbehalten und Zahlungen sowie die Schlussrechnung. Eine Bilanz zeigt, wohin die Gesamtleistung gegangen ist: gezahlt, Bauabzug, Skonto, Bauumlage und offen 43.745,31 €.
 2. **Schlussrechnung** 2026-44 bzw. 2026-45.
 3. **Originale**: Villa-Belege bzw. Neubau-Auftrag, Angebote, Nachträge und Abschlagsrechnungen.

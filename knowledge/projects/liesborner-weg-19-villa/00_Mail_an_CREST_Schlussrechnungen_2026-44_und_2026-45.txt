@@ -3,7 +3,7 @@ Als Entwurf in Gmail angelegt (ohne Anhänge) – Rechnungen und unterschriebene
 
 An:       info@crest-investment.com
 Betreff:  Schlussrechnungen 2026-44 (Villa) und 2026-45 (Neubau 19 a + b) – BV Liesborner Weg 19
-Anhänge:  Schlussrechnung_2026-44_Villa_17.000_brutto.pdf
+Anhänge:  Schlussrechnung_2026-44_Villa_16.000_brutto.pdf
           Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf
           Villa: Fachunternehmererklärungen Heizung und Sanitär, Unternehmererklärung § 96 GEG,
                  Fachbauleitererklärung (unterschrieben)
@@ -23,9 +23,9 @@ BV Liesborner Weg 19.
    bereits gestellten Rechnungen 2024-47 und 2025-17 sind darin abgezogen.
 
    Offener Betrag Villa                                   20.000,00 €
-   abzgl. Gasanschluss und Inbetriebnahme Trinkwasser     -3.000,00 €
-   Zahlbetrag (brutto)                                    17.000,00 €
-   (14.285,71 € netto zzgl. 19 % USt 2.714,29 €)
+   abzgl. Gasanschluss und Inbetriebnahme Trinkwasser     -4.000,00 €
+   Zahlbetrag (brutto)                                    16.000,00 €
+   (13.445,38 € netto zzgl. 19 % USt 2.554,62 €)
 
    Die Schlussrechnung ersetzt unsere Dokumente Nr. 176 vom 05.01.2025
    (Fußbodenheizung) und Nr. 159 vom 03.12.2024 (hydraulischer Abgleich).

@@ -17,16 +17,16 @@ pdfmetrics.registerFont(TTFont("LB", LIB + "LiberationSans-Bold.ttf"))
 GREEN = colors.HexColor("#4CAF50"); HEAD = colors.HexColor("#DCEFDD"); GREY = colors.HexColor("#333333")
 LOGO = "logo_leans.png"
 
-# Laut Semir (19.10.2026): Bei der Villa sind 20.000 € BRUTTO offen. Davon ziehen wir selbst ca. 3.000 € brutto
-# für Gasanschluss und Inbetriebnahme Trinkwasser ab → Zahlbetrag 17.000 € brutto. Netto und USt werden aus den
+# Laut Semir (19.10.2026): Bei der Villa sind 20.000 € BRUTTO offen. Davon ziehen wir selbst 4.000 € brutto (Korrektur
+# 20.10.2026, vorher 3.000 €) für Gasanschluss und Inbetriebnahme Trinkwasser ab → Zahlbetrag 16.000 € brutto. Netto und USt werden aus den
 # Bruttobeträgen herausgerechnet (USt = brutto − netto).
 ZIEL_BRUTTO = D("20000.00")
-ABZUG_BRUTTO = D("3000.00")
+ABZUG_BRUTTO = D("4000.00")
 ZIEL_NETTO = r2(ZIEL_BRUTTO / (1 + VAT))            # 16.806,72
-ABZUG_NETTO = r2(ABZUG_BRUTTO / (1 + VAT))          # 2.521,01
-REST_BRUTTO = ZIEL_BRUTTO - ABZUG_BRUTTO            # 17.000,00
-REST_NETTO = r2(REST_BRUTTO / (1 + VAT))            # 14.285,71
-REST_UST = REST_BRUTTO - REST_NETTO                 # 2.714,29
+ABZUG_NETTO = r2(ABZUG_BRUTTO / (1 + VAT))          # 3.361,34
+REST_BRUTTO = ZIEL_BRUTTO - ABZUG_BRUTTO            # 16.000,00
+REST_NETTO = r2(REST_BRUTTO / (1 + VAT))            # 13.445,38
+REST_UST = REST_BRUTTO - REST_NETTO                 # 2.554,62
 assert ZIEL_NETTO - ABZUG_NETTO == REST_NETTO
 ABZUG_TEXT = "abzgl. Gasanschluss und Inbetriebnahme Trinkwasser (pauschal)"
 META = dict(nr="2026-___", datum="__.__.2026", ziel="10 Tage", faellig="__.__.2026")

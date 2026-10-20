@@ -3,8 +3,8 @@
 - `data.py`: alle Positionen und Vorrechnungen, abgeschrieben aus den Original-PDFs. `python3 data.py` prüft die Summen.
 - `payments.py`: Zahlungsstatus laut Kontoauszug-Abgleich.
 - `check2.py`: zweite Prüfung von `data.py` gegen die Original-PDFs (erwartet sie in `./orig/`).
-- `make_invoice_leans.py`: Schlussrechnung nur Fußbodenheizung (20.000 € brutto abzgl. 3.000 € = 17.000 € brutto) im LEANS-Layout, dazu Kopf und Fußzeile für alle Rechnungen. Nummer, Datum, Wasserzeichen und Leistungszeitraum sind oben im Skript gesetzt (Platzhalter für Entwürfe).
-- `make_invoice_leans_kumuliert.py`: kumulierte Schlussrechnung über alle Villa-Leistungen (Heizung pauschal 20.000 € brutto, abzgl. 3.000 €) mit Zahlungsaufstellung.
+- `make_invoice_leans.py`: Schlussrechnung nur Fußbodenheizung (20.000 € brutto abzgl. 4.000 € = 16.000 € brutto) im LEANS-Layout, dazu Kopf und Fußzeile für alle Rechnungen. Nummer, Datum, Wasserzeichen und Leistungszeitraum sind oben im Skript gesetzt (Platzhalter für Entwürfe).
+- `make_invoice_leans_kumuliert.py`: kumulierte Schlussrechnung über alle Villa-Leistungen (Heizung pauschal 20.000 € brutto, abzgl. 4.000 €) mit Zahlungsaufstellung.
 - `make_final.py`: erzeugt die **endgültigen** Schlussrechnungen 2026-44 (Villa) und 2026-45 (Neubau) vom 19.10.2026, fällig 29.10.2026, ohne Wasserzeichen.
 - `data_neubau.py` / `make_invoice_neubau.py`: kumulierte Schlussrechnung Neubau 19 a + b (beide Häuser zusammen) mit Zahlungsaufstellung. `python3 data_neubau.py` gleicht jede Zahlung mit dem Kontoauszug ab.
 - `make_fue.py`: Fachunternehmererklärungen Villa (2) und Neubau (4), Datum/Unterschrift frei.

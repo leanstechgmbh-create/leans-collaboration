@@ -45,7 +45,7 @@ def werte():
     nachlass = heizung_liste - ZIEL_NETTO
     netto = liste - nachlass - ABZUG_NETTO
     vr_n = sum(v[4] for v in VORRECHNUNGEN); vr_u = sum(v[5] for v in VORRECHNUNGEN)
-    # USt der Gesamtleistung = USt der gestellten Rechnungen + USt aus der Bruttopauschale (Rest exakt 17.000,00 € brutto)
+    # USt der Gesamtleistung = USt der gestellten Rechnungen + USt aus der Bruttopauschale (Rest exakt 16.000,00 € brutto)
     ust = vr_u + REST_UST
     return dict(titel=titel, liste=liste, heizung_liste=heizung_liste, nachlass=nachlass, netto=netto, ust=ust,
                 brutto=netto + ust, rest_netto=netto - vr_n, rest_ust=ust - vr_u, rest_brutto=netto + ust - vr_n - vr_u)

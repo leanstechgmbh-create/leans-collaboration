@@ -39,7 +39,7 @@ def build(out):
                "Bauvertrag HLS, Anlage 1 Zahlungsplan vom 15.05.2025: Pauschal 300.000,00 € brutto (unterschriebener Vertrag nicht in Drive)"],
               ["Gewerke", "Sanitärobjekte/Armaturen, Heizung (Fußbodenheizung, hydraulischer Abgleich)", "Klima, Lüftung, Heizung inkl. Wärmepumpe + FBH, Sanitär – je Haus"],
               ["Abgerechnet (brutto)", "gültig: 20.514,41 € (RE 2024-47, 2025-17); ungültig/ohne Nr.: 22.862,60 € (Dok. 159, 176)", "309.318,89 € (8 Rechnungen inkl. Nachtrag)"],
-              ["Offen", "Schlussrechnung 2026-44 vom 19.10.2026: 17.000,00 € brutto (20.000 brutto abzgl. 3.000 Gas/Trinkwasser), ersetzt Dok. 159 + 176", "Schlussrechnung 2026-45 vom 19.10.2026: Zahlbetrag 43.745,31 € (Rest 2.988,00 nach Abzug 2.000 Hebeanlage/Platine + 8. AR 11.000,00 + Sicherheitseinbehalt 29.757,31)"]],
+              ["Offen", "Schlussrechnung 2026-44 vom 19.10.2026: 16.000,00 € brutto (20.000 brutto abzgl. 4.000 Gas/Trinkwasser), ersetzt Dok. 159 + 176", "Schlussrechnung 2026-45 vom 19.10.2026: Zahlbetrag 43.745,31 € (Rest 2.988,00 nach Abzug 2.000 Hebeanlage/Platine + 8. AR 11.000,00 + Sicherheitseinbehalt 29.757,31)"]],
              [30, 118, 125]),
          Paragraph("1. Villa – Liesborner Weg 19 (Projekt 0200)", H2),
          tab([["Beleg", "Datum", "Adressiert an", "Gewerk", "Netto", "Brutto", "Zahlung", "Status / To-do"],
@@ -50,13 +50,13 @@ def build(out):
               ["Dok. 175", "05.01.2025", "CREST Investment", "Sanitär-Nachtrag", "5.605,00", "6.669,95", "–", "Vorversion von RE 2025-8"],
               ["RE 2025-8", "28.03.2025", "CREST Investment", "Sanitär-Nachtrag", "5.605,00", "6.669,95", "keine", "durch 2025-17 ersetzt → Stornorechnung schreiben"],
               ["RE 2025-17", "14.04.2025", "CREST Living", "Sanitär-Nachtrag (korrigiert)", "4.758,00", "5.662,02", "19.09.2025: 5.662,02", "bezahlt"],
-              ["Schlussrechnung 2026-44", "19.10.2026", "CREST Living", "alle Villa-Leistungen, abzgl. Gas/TW", "14.285,71", "17.000,00", "–", "fällig 29.10.2026; ersetzt Dok. 159 + 176"]],
+              ["Schlussrechnung 2026-44", "19.10.2026", "CREST Living", "alle Villa-Leistungen, abzgl. Gas/TW", "13.445,38", "16.000,00", "–", "fällig 29.10.2026; ersetzt Dok. 159 + 176"]],
              [22, 21, 26, 53, 19, 19, 30, 83], colour={1: AMB, 6: AMB, 7: GRN, 8: AMB}, right=(4, 5)),
          Spacer(1, 2*mm),
          Paragraph("<b>Schlussrechnung 2026-44 (3 Seiten):</b> Heizung zu Listenpreisen 21.795,30 € netto (FBH 21.525,30 + hydr. Abgleich 270,00), "
-                   "pauschaliert auf 20.000,00 € brutto, abzgl. Gasanschluss und Inbetriebnahme Trinkwasser 3.000,00 € brutto → <b>17.000,00 € brutto (14.285,71 € netto + 2.714,29 € USt)</b>. Hinweis: Dok. 176 hatte 12 % Rabatt "
-                   "(= 19.212,26 € netto). Gesamtleistung aller Villa-Leistungen 31.524,71 € netto / 37.514,41 € brutto, "
-                   "abzgl. RE 2024-47 und RE 2025-17 → Zahlbetrag 17.000,00 €. "
+                   "pauschaliert auf 20.000,00 € brutto, abzgl. Gasanschluss und Inbetriebnahme Trinkwasser 4.000,00 € brutto → <b>17.000,00 € brutto (14.285,71 € netto + 2.714,29 € USt)</b>. Hinweis: Dok. 176 hatte 12 % Rabatt "
+                   "(= 19.212,26 € netto). Gesamtleistung aller Villa-Leistungen 30.684,38 € netto / 36.514,41 € brutto, "
+                   "abzgl. RE 2024-47 und RE 2025-17 → Zahlbetrag 16.000,00 €. "
                    "Leistungszeitraum laut CREST-Protokollen 11.2023 – 03.12.2024.", P),
          PageBreak(),
          Paragraph("2. Neubau Butterfly Houses – Liesborner Weg 19 a + b (Projekt 1150)", H2),

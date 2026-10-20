@@ -82,7 +82,7 @@ def abrechnung_villa(path):
         ["Heizung", "Fußbodenheizung KG, EG, OG (Bekotec EN FTS, Tackerplatte), Befüllung, Einregulierung, Aufheizen",
          "Dok. 176 → 2026-44", str(anzahl[3]), eur(w["titel"][3])],
         ["Heizung", "Nachlass: Heizung pauschal 20.000,00 € brutto (= 16.806,72 € netto)", "2026-44", "", eur(-w["nachlass"])],
-        ["Heizung", "abzgl. Gasanschluss und Inbetriebnahme Trinkwasser (3.000,00 € brutto)", "2026-44", "", eur(-inv.ABZUG_NETTO)],
+        ["Heizung", f"abzgl. Gasanschluss und Inbetriebnahme Trinkwasser ({eur(inv.ABZUG_BRUTTO)} brutto)", "2026-44", "", eur(-inv.ABZUG_NETTO)],
         ["", "<b>Summe Heizung</b>", "", "", f"<b>{eur(hz_netto)}</b>"],
         ["", "<b>Gesamtleistung Villa</b>", "", str(sum(anzahl)), f"<b>{eur(w['netto'])}</b>"],
         ["", "zzgl. Umsatzsteuer", "", "", eur(w["ust"])],
@@ -317,8 +317,8 @@ def eintraege_villa():
     e = [(1, "1", "Abrechnung nach Gewerken", ("#trenn", "Was bei der Villa abgerechnet wurde: Sanitär und Heizung, Rechnungen, Zahlungen, ersetzte Belege")),
          (2, "1.1", "Abrechnung Villa – Gewerke, Rechnungen und Zahlungen", ("#pdf", abrechnung_villa)),
          (1, "2", "Schlussrechnung", ("#trenn", "Schlussrechnung über alle Villa-Leistungen")),
-         (2, "2.1", "Schlussrechnung Nr. 2026-44 vom 19.10.2026 – Zahlbetrag 17.000,00 € brutto",
-          f"{V}/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_17.000_brutto.pdf"),
+         (2, "2.1", f"Schlussrechnung Nr. 2026-44 vom 19.10.2026 – Zahlbetrag {eur(inv.REST_BRUTTO)} brutto",
+          f"{V}/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_16.000_brutto.pdf"),
          (1, "3", "Rechnungen und Belege (Originale)", ("#trenn", "Alle bisherigen Villa-Belege, einheitlich benannt mit Status"))]
     for i, f in enumerate(sorted(os.listdir(os.path.join(ROOT, V, "1_Belege_Original"))), 1):
         e.append((2, f"3.{i}", os.path.splitext(f)[0][3:].replace("_", " "), o(f)))
