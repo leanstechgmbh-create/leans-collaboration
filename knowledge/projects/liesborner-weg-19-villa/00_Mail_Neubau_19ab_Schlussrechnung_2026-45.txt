@@ -2,8 +2,7 @@ Mail 2 von 2 (Neubau 19 a + b). Als Entwurf in Gmail angelegt, ohne Anhänge. Ni
 
 An:       info@crest-investment.com
 Betreff:  Schlussrechnung 2026-45 – BV Liesborner Weg 19 a + b (Neubau Butterfly Houses)
-Anhänge (20, zusammen ca. 6,1 MB):
-  Direkt anhängen:
+Anhänge (20, zusammen ca. 7,5 MB, alle anhängen – Erklärungen unterschrieben und gestempelt):
           Schlussrechnung_2026-45_Neubau_Liesborner_Weg_19ab.pdf
           Datenblatt_MHI_Aussengeraet_SRC60ZSX-W3.pdf
           Datenblatt_MHI_Kanalgeraet_FDUM60VH.pdf
@@ -18,7 +17,6 @@ Anhänge (20, zusammen ca. 6,1 MB):
           Datenblatt_Dallmer_Abdeckung_CeraLine_Individual_1200.pdf
           Datenblatt_Geberit_Silent-PP_Produktdatenblatt.pdf
           Datenblatt_Geberit_Betaetigungsplatte_Sigma01.pdf
-  Erst unterschreiben und stempeln, dann anhängen:
           Fachunternehmererklaerung_Heizung_Neubau_19ab.pdf
           Fachunternehmererklaerung_Sanitaer_Neubau_19ab.pdf
           Fachunternehmererklaerung_Lueftung_Neubau_19ab.pdf
@@ -82,9 +80,9 @@ info@leanstech-gmbh.de
 Vor dem Versand (danach diesen Block löschen)
 ----------------------------------------------------------------------
 
-1. Die 6 Erklärungen (datiert 19.10.2026) unterschreiben, stempeln,
-   einscannen und anhängen. Alle 6 in einer Datei zum Ausdrucken:
-   Erklaerungen_Neubau_19ab_zum_Ausdrucken.pdf
+1. Die 20 Anhänge anhängen. Die 6 Erklärungen sind unterschrieben und
+   gestempelt (Unterschrift und Stempel aus dem LEANS-Briefbogen, nur in
+   den Versandkopien, nicht im Repo).
 
 2. Hebeanlage Haus B: Falls CREST dazu nachfragt, die Fotos schicken. Sie
    zeigen die eingeworfenen Feuchttücher, die in Hebeanlagen nicht erlaubt
