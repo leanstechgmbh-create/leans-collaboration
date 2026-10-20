@@ -12,6 +12,6 @@ Diese Regeln gelten fuer ChatGPT/Codex und Claude, wenn sie in diesem Projekt ar
 8. Vor jeder Aenderung an gemeinsamen Projektdateien `scripts/leans-live.ps1 status` ausfuehren.
 9. Vor jeder Aenderung die eigene Arbeit mit `scripts/leans-live.ps1 announce` und den betroffenen Dateipfaden ankundigen.
 10. Insolvenzordner: Sagt der Nutzer „in den Insolvenzordner“ / „in den Ordner“, gehoert die Sache in den Google-Drive-Ordner „Insolvenzordner – LEANS Tech GmbH“ (ID `1TTiMBN6SS71T_VGdjYIBWq74JXOwxosm`), dort in den Unterordner der jeweiligen Firma (Rechnungsempfaenger). Jede juristische Person separat, z. B. CREST Investment GmbH und CREST Living GmbH & Co. KG getrennt. Immer als Kopie ablegen. Details: `knowledge/decisions/2026-10-20-insolvenzordner.md` und das Dokument „00 REGELN – Insolvenzordner“ im Ordner.
-11. Mails: Geschaeftsmails immer als Entwurf im IONOS-Postfach info@leanstech-gmbh.de anlegen, nicht in Gmail, nie selbst senden. Werkzeug: `scripts/info-entwuerfe/entwuerfe_anlegen.py` (Anleitung im README daneben). Details: `knowledge/decisions/2026-10-20-mails-nur-von-info.md`.
+11. Mails: Geschaeftsmails immer als Entwurf im IONOS-Postfach info@leanstech-gmbh.de anlegen, nicht in Gmail (ausser Semir verlangt ausdruecklich Gmail-Entwuerfe), nie selbst senden. Werkzeug: `scripts/info-entwuerfe/entwuerfe_anlegen.py` (Anleitung im README daneben). Details: `knowledge/decisions/2026-10-20-mails-nur-von-info.md`.
 
 Die detaillierte Board-Syntax steht in `LEANS-Uebergabe-ANLEITUNG.md`.

@@ -7,7 +7,7 @@
 ## Regel
 
 - Mails an Kunden, Hausverwaltungen und Insolvenzverwalter werden als **Entwurf im IONOS-Postfach info@leanstech-gmbh.de** angelegt.
-- Nicht in Gmail (leanstechgmbh@gmail.com).
+- Nicht in Gmail (leanstechgmbh@gmail.com). Ausnahme: Semir verlangt ausdrücklich Gmail-Entwürfe, wie am 2026-10-20 für WE 2.2.1 Rauch.
 - **Nie selbst senden.** Semir prüft und sendet.
 
 ## Wie
