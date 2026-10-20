@@ -1,27 +1,17 @@
-# Entscheidung: Geschäftsmails nur von info@leanstech-gmbh.de
+# Entscheidung: Geschäftsmails mit Anhängen
 
-- Datum: 2026-10-20
+- Datum: 2026-10-20, ersetzt die Fassung „nur von info@“ vom selben Tag
 - Entschieden von: Semir Redzic
 - Gilt für: ChatGPT/Codex, Claude und jeden weiteren Assistenten
 
 ## Regel
 
-- Mails an Kunden, Hausverwaltungen und Insolvenzverwalter werden als **Entwurf im IONOS-Postfach info@leanstech-gmbh.de** angelegt.
-- Nicht in Gmail (leanstechgmbh@gmail.com). Ausnahme: Semir verlangt ausdrücklich Gmail-Entwürfe, wie am 2026-10-20 für WE 2.2.1 Rauch.
-- **Nie selbst senden.** Semir prüft und sendet.
+- **Form:** Rechnung als PDF, alle übrigen Unterlagen als **eine ZIP-Datei**. Dazu ein kurzer Text ohne viele Infos.
+- **Vollständig:** Alle Unterlagen müssen dabei sein. Fehlt etwas, wird nicht gesendet.
+- **Weg:** Gmail-Entwurf (leanstechgmbh@gmail.com). Die Anhänge legt das Werkzeug „LEANS Versand“ hinein, https://claude.ai/artifact/PeMuDe75EtBaQGwne3NBSU. Das funktioniert aus jedem Chat, auch in der Cloud.
+- **Senden:** nur nach ausdrücklichem OK von Semir, vorher die Anhänge bitgenau prüfen.
+- **info@ (IONOS):** nur vom PC aus mit `scripts/info-entwuerfe/entwuerfe_anlegen.py`. Die Cloud erreicht IONOS nicht.
 
 ## Wie
 
-- Werkzeug: `scripts/info-entwuerfe/entwuerfe_anlegen.py`. Anleitung in `scripts/info-entwuerfe/README.md`.
-- Pro Versand eine JSON-Datei mit Empfängern, Betreff, Text und Anhängen. Vorlage: `rauch_we221.json`.
-- Erst mit `--probe` prüfen, dann anlegen.
-
-## Wo das läuft
-
-- **Auf Semirs PC:** direkt, sobald `IONOS_INFO_PASSWORD` gesetzt ist.
-- **In der Claude-Cloud:** nur wenn in der Umgebung `imap.ionos.de` freigegeben und `IONOS_INFO_PASSWORD` als Secret hinterlegt ist. Ohne das ist die Verbindung gesperrt. Dann die Übergabe an einen Chat auf dem PC geben (Board `LEANS-Uebergabe.md`).
-
-## Stand 2026-10-20
-
-- Mailaufbau getestet.
-- IONOS-Anmeldung noch nicht getestet, weil Passwort und Freigabe fehlen.
+Schritt für Schritt: `knowledge/prompts/versand-mit-anhaengen.md`.
