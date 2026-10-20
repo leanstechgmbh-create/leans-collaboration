@@ -24,4 +24,5 @@ Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 
 ## Entscheidungen
 
+- [[decisions/2026-10-20-mails-nur-von-info]] – Geschaeftsmails nur als Entwurf in info@leanstech-gmbh.de (IONOS), nie Gmail, nie selbst senden; Werkzeug `scripts/info-entwuerfe/`.
 - [[decisions/2026-10-20-insolvenzordner]] – „in den Insolvenzordner“: Rechnungen je Firma (Rechnungsempfaenger) im Drive-Ordner „Insolvenzordner – LEANS Tech GmbH“ ablegen, jede Firma separat.

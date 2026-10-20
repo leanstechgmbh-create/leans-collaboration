@@ -9,7 +9,7 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 - Von: Claude (Cloud-Chat „Angebot für Rauch“) an Claude auf Semirs PC
 - Was gebaut: Zwei Mails an CREST Investment (Frau Böhnke) fertig: Klima-Rechnung 2025-71 und Sanitär-Schlussrechnung 2025-106, mit Texten und allen Anhängen. Der Cloud-Chat erreicht das IONOS-Postfach info@leanstech-gmbh.de nicht.
 - Wo liegt es: `knowledge/prompts/2026-10-20-uebergabe-info-entwuerfe-rauch.md`. Dieselbe Übergabe liegt im Drive-Ordner „Versand WE 2.2.1 Rauch – CREST Investment (2026-10-20)“. PDFs auf https://claude.ai/artifact/PeMuDe75EtBaQGwne3NBSU unter `versand/`.
-- Nächster Schritt: Vier Entwürfe (Klima, Sanitär, Datenblätter Klima, Datenblätter Sanitär) mit allen Anhängen in info@leanstech-gmbh.de anlegen (nicht Gmail), die Rechnungen 2025-71 und 2025-106 in den Insolvenzordner bei CREST Investment GmbH kopieren, NICHT senden, Semir zeigen.
+- Nächster Schritt: Vier Entwürfe (Klima, Sanitär, Datenblätter Klima, Datenblätter Sanitär) mit allen Anhängen in info@leanstech-gmbh.de anlegen (nicht Gmail). Am schnellsten mit `scripts/info-entwuerfe/entwuerfe_anlegen.py scripts/info-entwuerfe/rauch_we221.json --dateien <Ordner mit den PDFs>`, siehe README dort. Außerdem die Rechnungen 2025-71 und 2025-106 in den Insolvenzordner bei CREST Investment GmbH kopieren, NICHT senden, Semir zeigen.
 
 
 ### AN CLAUDE: ERLEDIGT — LEANS Live pruefen
@@ -20,6 +20,13 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 - Nächster Schritt: Claude soll den Ordner oeffnen, status ausfuehren und eine Test-Review an ChatGPT erstellen.
 
 ## 📤 Für ChatGPT (von Claude)
+
+### AN CHATGPT: OFFEN — Mails nur noch als Entwurf in info@ (IONOS)
+- Datum/Zeit: 2026-10-20 19:20
+- Von: Claude
+- Was gebaut: Neue Regel AGENTS.md Nr. 11. Geschaeftsmails gehen nur als Entwurf in info@leanstech-gmbh.de (IONOS), nicht in Gmail, nie selbst senden. Werkzeug `scripts/info-entwuerfe/entwuerfe_anlegen.py` legt Entwuerfe mit Anhaengen per IMAP an. Der Mailaufbau ist getestet, die IONOS-Anmeldung noch nicht, weil das Passwort fehlt.
+- Wo liegt es: `scripts/info-entwuerfe/`, `knowledge/decisions/2026-10-20-mails-nur-von-info.md` (Branch claude/laughing-planck-m633wv)
+- Nächster Schritt: Regel lesen und ab sofort anwenden. Auf dem PC mit gesetztem `IONOS_INFO_PASSWORD` erst `--probe`, dann ohne `--probe` ausfuehren.
 
 ### AN CHATGPT: OFFEN — Regel „Insolvenzordner“ übernehmen
 - Datum/Zeit: 2026-10-20 18:15
