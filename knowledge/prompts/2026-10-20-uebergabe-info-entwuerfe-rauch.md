@@ -6,7 +6,13 @@
 
 ## Auftrag
 
-Im Postfach **info@leanstech-gmbh.de** (IONOS) zwei getrennte E-Mail-**Entwürfe** anlegen, jeweils mit allen Anhängen.
+1. Im Postfach **info@leanstech-gmbh.de** (IONOS) zwei getrennte E-Mail-**Entwürfe** anlegen, jeweils mit allen Anhängen. Nicht über Gmail, Semir will alles von info@.
+2. Die zwei Rechnungen (2025-71 und 2025-106) als Kopie in den Insolvenzordner legen:
+   - Ordner: Google Drive „Insolvenzordner – LEANS Tech GmbH“ → „CREST Investment GmbH“ (Ordner-ID `1m147RAbQwJszPJ0HBgezFwWzCj-gT20i`)
+   - Name 1: `2025-10-12 Rechnung 2025-71 – CREST Investment GmbH – 13.709,26 EUR – SBS WE 2.2.1 Klima.pdf`
+   - Name 2: `2026-10-20 Rechnung 2025-106 – CREST Investment GmbH – 1.979,73 EUR – SBS WE 2.2.1 Sanitär Schlussrechnung.pdf`
+   - Vorher prüfen, dass sie dort nicht schon liegen. Nur die Rechnungen, keine Erklärungen.
+
 **NICHT SENDEN.** Semir prüft und sendet selbst.
 
 ## Anhänge holen
@@ -19,7 +25,9 @@ Im Postfach **info@leanstech-gmbh.de** (IONOS) zwei getrennte E-Mail-**Entwürfe
 - `versand/Mail2_01_Schlussrechnung_2025-106_Sanitaer_WE_2.2.1.pdf`
 - `versand/Mail2_02_Fachunternehmererklaerung_Sanitaer_WE_2.2.1.pdf`
 
-**Quelle B:** Google-Drive-Ordner „Versand WE 2.2.1 Rauch – CREST Investment (2026-10-20)“ (ID `1cP9rPQplEHTb8DR33eIsRVyzdae-46Za`). Die 5 PDFs liegen dort, sobald auf der Seite oben der Knopf „Alle Anhänge in Entwürfe und Drive legen“ gedrückt wurde.
+**Quelle B:** Auf derselben Seite unter „PDF öffnen“ herunterladen (Browser).
+
+Der Drive-Ordner „Versand WE 2.2.1 Rauch – CREST Investment (2026-10-20)“ (ID `1cP9rPQplEHTb8DR33eIsRVyzdae-46Za`) enthält nur das Dokument „00 AUFTRAG“ mit denselben Texten, keine PDFs.
 
 **Betriebszertifizierung (nur Mail 1):** Drive-Datei „Betriebszertifizierung LEANS TECH GMBH.pdf“, ID `1QYjbexbZcxhAFHZnk0F8P3w9yW36PO5o`, 13 MB. Das Drive-Download-Tool schafft nur 10 MB, also über Google Drive für Desktop oder den Browser-Download holen.
 
