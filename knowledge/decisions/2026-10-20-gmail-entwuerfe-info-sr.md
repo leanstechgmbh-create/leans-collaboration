@@ -65,6 +65,17 @@ keine Mail-Werkzeuge. Loesung: neuer claude.ai-Connector fuer den Mail-MCP ueber
 Claude (PC)/Board-Waechter liegt in Drive, Ordner "Uebergaben":
 `UEBERGABE von Claude-Cloud 2026-10-20 - OFFEN - Mail-MCP fuer claude.ai-Chats wieder anbinden (ohne ngrok).md`.
 
+## Wichtigster Befund (2026-10-20, spaet): Remote Control auf dem PC ist weg
+
+Die App-Chats, die info@/sr@ bedienen konnten, liefen per **Remote Control auf Semirs PC**
+(Sitzungstyp "bridge", z. B. "DCO", "Luftmengenmessung Schicklerstrasse"). Seit 20.10.2026
+ca. 03:10 meldet der PC `computer_unreachable`. Alle neuen App-Chats laufen seitdem in der
+Cloud (`anthropic_cloud`) und sehen nur die claude.ai-Connectors, also nur Gmail.
+
+Fix (nur auf dem PC): PowerShell oeffnen und `claude remote-control` im Arbeitsordner
+starten (z. B. `C:\Users\semir\Documents\LEANS-Live`); dann in der App neue Chats auf
+diesem Computer starten. Dauerhaft: `claude remote-control` in `autostart.ps1` aufnehmen.
+
 ## Monitor (gebaut 2026-10-20)
 
 Geplante Aufgabe "LEANS Mail-Connector Monitor" (claude.ai, taeglich 07:34 Europe/Berlin,
