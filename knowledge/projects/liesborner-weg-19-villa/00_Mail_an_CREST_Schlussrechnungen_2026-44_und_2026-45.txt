@@ -4,7 +4,7 @@ Als Entwurf in Gmail angelegt (ohne Anhänge) – Rechnungen und unterschriebene
 An:       info@crest-investment.com
 Betreff:  Schlussrechnungen 2026-44 (Villa) und 2026-45 (Neubau 19 a + b) – BV Liesborner Weg 19
 Anhänge:  Schlussrechnung_2026-44_Villa_16.000_brutto.pdf
-          Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf
+          Schlussrechnung_2026-45_Neubau_19ab_41.745,31.pdf
           Villa: Fachunternehmererklärungen Heizung und Sanitär, Unternehmererklärung § 96 GEG,
                  Fachbauleitererklärung (unterschrieben)
           Neubau 19 a + b: Fachunternehmererklärungen Heizung, Sanitär, Lüftung, Klima,
@@ -43,8 +43,8 @@ BV Liesborner Weg 19.
    Sicherheitseinbehalt 10 % (1. bis 7. AR)               29.757,31 €
    Offen                                                  45.745,31 €
    abzgl. Inbetriebnahme Hebeanlage Haus B und
-   Reparatur Platine Klimaanlage (pauschal)               -2.000,00 €
-   Zahlbetrag                                             43.745,31 €
+   Reparatur Platine Klimaanlage (pauschal)               -4.000,00 €
+   Zahlbetrag                                             41.745,31 €
 
    Mit dem Abzug sind die Hebeanlage in Haus B und die Platine der
    Klimaanlage abgegolten.

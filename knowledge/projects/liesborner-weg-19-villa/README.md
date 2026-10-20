@@ -12,7 +12,7 @@ Stand: 20.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 ## Stand 20.10.2026: fertig zum Versand
 
 - **Villa 2026-44:** offen 20.000,00 € − Gasanschluss/Trinkwasser 4.000,00 € = **16.000,00 € brutto** (Abzug am 20.10.2026 von 3.000 auf 4.000 € geändert, Semir).
-- **Neubau 2026-45:** offen 45.745,31 € − Hebeanlage Haus B/Platine Klima 2.000,00 € = **43.745,31 €**.
+- **Neubau 2026-45:** offen 45.745,31 € − Hebeanlage Haus B/Platine Klima 4.000,00 € = **41.745,31 €**.
 - Beide Rechnungen heißen nur „Schlussrechnung“; Rechnungsdatum 19.10.2026, fällig 29.10.2026.
 - Alle 10 Erklärungen (Fachunternehmer, GEG, Fachbauleiter) sind auf den 19.10.2026 datiert. **Offen ist nur: Unterschrift und Stempel von Semir.** Das automatische Einsetzen von Unterschrift/Stempel hat die Sicherheitsprüfung der Arbeitsumgebung abgelehnt.
 - Mail an CREST: als **Gmail-Entwurf** (leanstechgmbh@gmail.com, an info@crest-investment.com) angelegt, ohne Anhänge; Text auch in [[00_Mail_an_CREST_Schlussrechnungen_2026-44_und_2026-45.txt]]. Vor dem Versand die beiden Schlussrechnungen und die unterschriebenen Erklärungen anhängen. Nichts wurde versendet.
@@ -23,7 +23,7 @@ Stand: 20.10.2026 · Bearbeitet von: Claude · Quelle: Google Drive von leanstec
 | Nr. | BV | Datei | Zahlbetrag |
 |---|---|---|---:|
 | **2026-44** | Villa (0200), kumuliert, 3 Seiten | [[Villa_0200/2_Schlussrechnung/Schlussrechnung_2026-44_Villa_16.000_brutto.pdf]] | **16.000,00 €** (14.285,71 netto + 2.714,29 USt) |
-| **2026-45** | Neubau 19 a + b (1150), beide Häuser, 2 Seiten | [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf]] | **43.745,31 €** (Rest 2.988,00 nach Abzug 2.000,00 + 8. AR 11.000,00 + SE 29.757,31) |
+| **2026-45** | Neubau 19 a + b (1150), beide Häuser, 2 Seiten | [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_41.745,31.pdf]] | **41.745,31 €** (Rest 988,00 nach Abzug 4.000,00 + 8. AR 11.000,00 + SE 29.757,31) |
 
 - Rechnungsdatum 19.10.2026, Zahlungsziel 10 Tage, fällig **29.10.2026**, Bankverbindung **Berliner Volksbank** DE21 1009 0000 2911 7280 04. Fußzeile mit Geschäftsführer und Registergericht (§ 35a GmbHG).
 - Erzeugt mit `erstellung/make_final.py` (ohne Wasserzeichen, ohne Platzhalter). RE 2024-47 steht in der Zahlungsaufstellung als „bezahlt“ (Aussage Semir; Datum mangels Kontoauszug 04–07/2024 nicht belegbar).
@@ -153,11 +153,11 @@ Originale einsortiert in `Neubau_19ab_1150/` (1_Auftrag, 2_Angebote_Endstand, 3_
 
 ### Schlussrechnung 2026-45 Neubau 19 a + b, beide Häuser zusammen (19.10.2026)
 
-- Datei: [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf]] im LEANS-Layout an CREST Living, 2 Seiten. Skripte: `erstellung/data_neubau.py` (Daten und Prüfungen) und `erstellung/make_invoice_neubau.py`.
-- **A. Gesamtleistung:** Pauschale 300.000,00 € brutto + NA 1 (216) 5.200,00 € netto, wie im CREST-Prüfblatt freigegeben, + NA 2 (282) 6.822,60 € netto = **264.123,44 € netto / 314.306,89 € brutto**. **Abzug (Semir, 19.10.2026):** pauschal 2.000,00 € brutto (1.680,67 € netto + 319,33 € USt) für die Inbetriebnahme der Hebeanlage in Haus B und die kleine Reparatur der Platine der Klimaanlage; CREST darf das gegenrechnen. Gesamtleistung danach 262.442,77 € netto / 312.306,89 € brutto. Falls CREST zur Hebeanlage nachfragt: Fotos der eingeworfenen Feuchttücher schicken (in Hebeanlagen nicht erlaubt; Semir hatte darauf hingewiesen).
-- **B. Abzug** aller 8 Abschlagsrechnungen mit Netto und USt: 309.318,89 € brutto. **Restbetrag 2.988,00 €** = Restrate 4.000,00 € + Differenz NA 1 von 988,00 € − Abzug 2.000,00 €.
+- Datei: [[Neubau_19ab_1150/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_41.745,31.pdf]] im LEANS-Layout an CREST Living, 2 Seiten. Skripte: `erstellung/data_neubau.py` (Daten und Prüfungen) und `erstellung/make_invoice_neubau.py`.
+- **A. Gesamtleistung:** Pauschale 300.000,00 € brutto + NA 1 (216) 5.200,00 € netto, wie im CREST-Prüfblatt freigegeben, + NA 2 (282) 6.822,60 € netto = **264.123,44 € netto / 314.306,89 € brutto**. **Abzug (Semir, 19.10.2026, am 20.10.2026 von 2.000 auf 4.000 € erhöht):** pauschal 4.000,00 € brutto (3.361,34 € netto + 638,66 € USt) für die Inbetriebnahme der Hebeanlage in Haus B und die kleine Reparatur der Platine der Klimaanlage; CREST darf das gegenrechnen. Gesamtleistung danach 260.762,10 € netto / 310.306,89 € brutto. Falls CREST zur Hebeanlage nachfragt: Fotos der eingeworfenen Feuchttücher schicken (in Hebeanlagen nicht erlaubt; Semir hatte darauf hingewiesen).
+- **B. Abzug** aller 8 Abschlagsrechnungen mit Netto und USt: 309.318,89 € brutto. **Restbetrag 988,00 €** = Restrate 4.000,00 € + Differenz NA 1 von 988,00 € − Abzug 4.000,00 €.
 - **C. Zahlungsaufstellung** je AR. Rechenweise wie im CREST-Prüfblatt: Bauumlage 0,25 % netto, Sicherheitseinbehalt 10 %, Skonto 3 %, Bauabzug 15 %. Alle 7 Zahlungen stimmen auf den Cent mit dem Kontoauszug überein (`python3 data_neubau.py`). Summen: gezahlt 240.546,62 €, Bauabzug ans Finanzamt 19.593,40 €, Sicherheitseinbehalt 29.757,31 €, Skonto 7.675,75 €, Bauumlage 745,81 €.
-- **D. Offen:** Restbetrag 2.988,00 € + 8. AR 11.000,00 € = 13.988,00 €, dazu der Sicherheitseinbehalt als eigene Zeile (29.757,31 €) mit Anmerkung. **Zahlbetrag gesamt 43.745,31 €** (Wunsch Semir: SE separat drauf, alles zusammen).
+- **D. Offen:** Restbetrag 988,00 € + 8. AR 11.000,00 € = 11.988,00 €, dazu der Sicherheitseinbehalt als eigene Zeile (29.757,31 €) mit Anmerkung. **Zahlbetrag gesamt 41.745,31 €** (Wunsch Semir: SE separat drauf, alles zusammen).
 - Prüfen vor dem Versand:
   - Bauvertrag HLS: Ob und wann der SE fällig wird (nach Abnahme oder gegen Bürgschaft), steht im Bauvertrag. Der liegt nicht in Drive. Ein Abnahmeprotokoll ist ebenfalls nicht abgelegt.
   - Skonto: Die von CREST abgezogenen Skonti (7.675,75 €) werden akzeptiert und nicht zurückgefordert, auch wo verspätet gezahlt wurde (z. B. 3. AR). Entscheidung Semir vom 19.10.2026.
@@ -176,7 +176,7 @@ Auf Wunsch von Semir gibt es statt der gemeinsamen Gesamtmappe **zwei getrennte 
 Gliederung beider Mappen:
 1. **Abrechnung nach Gewerken**, neu erzeugt.
    - Villa: Sanitär 17.239,00 € netto und Heizung 13.445,38 € netto ergeben die Gesamtleistung von 30.684,38 € netto bzw. 36.514,41 € brutto. Davon sind 20.514,41 € bezahlt, offen sind 16.000,00 €. Dazu kommen die ersetzten Belege.
-   - Neubau: Leistung je Haus (A = 19 a, Angebot 233; B = 19 b, Angebot 234) und je Gewerk (Klima, Lüftung, Heizung, Sanitär, Diverses). Die Pauschale ist rechnerisch anteilig zugeordnet. Es folgen die Nachträge, die Leistung von 314.306,89 €, der Abzug von 2.000,00 € (Hebeanlage Haus B, Platine Klima), die 8 Abschlagsrechnungen mit Einbehalten und Zahlungen sowie die Schlussrechnung. Eine Bilanz zeigt, wohin die Gesamtleistung gegangen ist: gezahlt, Bauabzug, Skonto, Bauumlage und offen 43.745,31 €.
+   - Neubau: Leistung je Haus (A = 19 a, Angebot 233; B = 19 b, Angebot 234) und je Gewerk (Klima, Lüftung, Heizung, Sanitär, Diverses). Die Pauschale ist rechnerisch anteilig zugeordnet. Es folgen die Nachträge, die Leistung von 314.306,89 €, der Abzug von 4.000,00 € (Hebeanlage Haus B, Platine Klima), die 8 Abschlagsrechnungen mit Einbehalten und Zahlungen sowie die Schlussrechnung. Eine Bilanz zeigt, wohin die Gesamtleistung gegangen ist: gezahlt, Bauabzug, Skonto, Bauumlage und offen 41.745,31 €.
 2. **Schlussrechnung** 2026-44 bzw. 2026-45.
 3. **Originale**: Villa-Belege bzw. Neubau-Auftrag, Angebote, Nachträge und Abschlagsrechnungen.
 4. **Freistellungsbescheinigung § 48b** vom 03.07.2025 (ohne weitere Hinweise, Wunsch Semir).

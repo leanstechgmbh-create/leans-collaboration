@@ -39,7 +39,7 @@ def build(out):
                "Bauvertrag HLS, Anlage 1 Zahlungsplan vom 15.05.2025: Pauschal 300.000,00 € brutto (unterschriebener Vertrag nicht in Drive)"],
               ["Gewerke", "Sanitärobjekte/Armaturen, Heizung (Fußbodenheizung, hydraulischer Abgleich)", "Klima, Lüftung, Heizung inkl. Wärmepumpe + FBH, Sanitär – je Haus"],
               ["Abgerechnet (brutto)", "gültig: 20.514,41 € (RE 2024-47, 2025-17); ungültig/ohne Nr.: 22.862,60 € (Dok. 159, 176)", "309.318,89 € (8 Rechnungen inkl. Nachtrag)"],
-              ["Offen", "Schlussrechnung 2026-44 vom 19.10.2026: 16.000,00 € brutto (20.000 brutto abzgl. 4.000 Gas/Trinkwasser), ersetzt Dok. 159 + 176", "Schlussrechnung 2026-45 vom 19.10.2026: Zahlbetrag 43.745,31 € (Rest 2.988,00 nach Abzug 2.000 Hebeanlage/Platine + 8. AR 11.000,00 + Sicherheitseinbehalt 29.757,31)"]],
+              ["Offen", "Schlussrechnung 2026-44 vom 19.10.2026: 16.000,00 € brutto (20.000 brutto abzgl. 4.000 Gas/Trinkwasser), ersetzt Dok. 159 + 176", "Schlussrechnung 2026-45 vom 19.10.2026: Zahlbetrag 41.745,31 € (Rest 988,00 nach Abzug 4.000 Hebeanlage/Platine + 8. AR 11.000,00 + Sicherheitseinbehalt 29.757,31)"]],
              [30, 118, 125]),
          Paragraph("1. Villa – Liesborner Weg 19 (Projekt 0200)", H2),
          tab([["Beleg", "Datum", "Adressiert an", "Gewerk", "Netto", "Brutto", "Zahlung", "Status / To-do"],
@@ -96,8 +96,8 @@ def build(out):
                    "• Sicherheitseinbehalt 10 %: rechnerisch 28.500 € auf die Raten + 1.427,11 € auf den Nachtrag → nach Abnahme/Bürgschaft zurückfordern. "
                    "• Bauabzugsteuer 19.593,40 € (1.–3. AR) hat CREST ans Finanzamt abgeführt → beim Finanzamt anrechnen lassen, keine Forderung an CREST. "
                    "• Nachtrag 1: 830,25 € netto zu wenig abgerechnet (siehe oben). • Unterschriebenen Bauvertrag HLS suchen. "
-                   "<b>• Schlussrechnung 2026-45 vom 19.10.2026 (beide Häuser, fällig 29.10.2026):</b> Leistung 314.306,89 € − Abzug Hebeanlage Haus B/Platine Klima 2.000,00 € − 8 AR 309.318,89 € = Rest 2.988,00 € "
-                   "+ offene 8. AR 11.000,00 € + Sicherheitseinbehalt 29.757,31 € = <b>Zahlbetrag 43.745,31 €</b>.", P)]),
+                   "<b>• Schlussrechnung 2026-45 vom 19.10.2026 (beide Häuser, fällig 29.10.2026):</b> Leistung 314.306,89 € − Abzug Hebeanlage Haus B/Platine Klima 4.000,00 € − 8 AR 309.318,89 € = Rest 988,00 € "
+                   "+ offene 8. AR 11.000,00 € + Sicherheitseinbehalt 29.757,31 € = <b>Zahlbetrag 41.745,31 €</b>.", P)]),
          Spacer(1, 3*mm),
          Paragraph("<b>Bankverbindung:</b> Beide Schlussrechnungen nennen die Berliner Volksbank, DE21 1009 0000 2911 7280 04 (festgelegt am 19.10.2026).", P)]
     doc.build(E)

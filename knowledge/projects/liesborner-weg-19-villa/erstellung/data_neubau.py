@@ -18,8 +18,9 @@ NACHTRAEGE = [
 ]
 
 # Abzug laut Semir (19.10.2026): CREST darf die Inbetriebnahme der Hebeanlage in Haus B und die kleine Reparatur der
-# Platine der Klimaanlage gegenrechnen, pauschal ca. 2.000 € (brutto, wie der Villa-Abzug). Netto/USt aus dem Bruttobetrag.
-ABZUG_BRUTTO = D("2000.00")
+# Platine der Klimaanlage gegenrechnen, pauschal brutto (Korrektur 20.10.2026: 4.000 €, vorher 2.000 €; wie der
+# Villa-Abzug). Netto/USt aus dem Bruttobetrag.
+ABZUG_BRUTTO = D("4000.00")
 ABZUG_NETTO = r2(ABZUG_BRUTTO / (1 + VAT))
 ABZUG_UST = ABZUG_BRUTTO - ABZUG_NETTO
 ABZUG_TEXT = "abzgl. Inbetriebnahme der Hebeanlage Haus B und Reparatur der Platine der Klimaanlage (pauschal)"
@@ -59,7 +60,7 @@ def werte():
     p_netto = r2(PAUSCHALE_BRUTTO / (1 + VAT)); p_ust = PAUSCHALE_BRUTTO - p_netto
     na = [(n, a, d, t, net, r2(net * VAT)) for n, a, d, t, net in NACHTRAEGE]
     leist_netto = p_netto + sum(x[4] for x in na); leist_ust = r2(leist_netto * VAT)
-    # Abzug vom Bruttobetrag: USt = USt der Leistung − USt-Anteil des Abzugs (Gesamtleistung genau 2.000,00 € brutto weniger)
+    # Abzug vom Bruttobetrag: USt = USt der Leistung − USt-Anteil des Abzugs (Gesamtleistung genau um den Abzug brutto weniger)
     ges_netto = leist_netto - ABZUG_NETTO
     ges_ust = leist_ust - ABZUG_UST
     ar_netto = sum(a[3] for a in AR); ar_ust = sum(a[4] for a in AR); ar_brutto = sum(a[5] for a in AR)
@@ -88,10 +89,10 @@ if __name__ == "__main__":
         print(f"{z['nr']}  brutto {z['brutto']:>10}  BU {z['bu']:>7}  SE {z['se']:>9}  Skonto {z['skonto']:>8}  "
               f"Bauabzug {z['bauabzug']:>8}  gezahlt {z['gezahlt']:>10}  offen {z['offen']:>9}")
     assert w["ar_brutto"] == D("309318.89") and w["summen"]["gezahlt"] == D("240546.62")
-    assert w["leist_brutto"] - w["ges_brutto"] == ABZUG_BRUTTO and w["rest"]["brutto"] == D("2988.00")
-    assert w["gesamt_offen"] == D("43745.31"), w["gesamt_offen"]
+    assert w["leist_brutto"] - w["ges_brutto"] == ABZUG_BRUTTO and w["rest"]["brutto"] == D("988.00")
+    assert w["gesamt_offen"] == D("41745.31"), w["gesamt_offen"]
     assert w["summen"]["bauabzug"] == D("19593.40")
-    assert w["leist_brutto"] == D("314306.89") and w["ges_brutto"] == D("312306.89")
+    assert w["leist_brutto"] == D("314306.89") and w["ges_brutto"] == D("310306.89")
     for k in ("p_netto", "ges_netto", "ges_ust", "ges_brutto", "ar_netto", "ar_ust", "ar_brutto"): print(f"{k:11} {w[k]}")
     print("rest", w["rest"]); print("summen", w["summen"])
     print("offen 8. AR", w["offen_ar"], "| sofort fällig", w["sofort"], "| inkl. SE", w["gesamt_offen"])

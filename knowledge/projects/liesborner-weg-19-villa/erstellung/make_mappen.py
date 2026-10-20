@@ -343,7 +343,7 @@ def eintraege_neubau():
          (2, "1.1", "Abrechnung Neubau 19 a + b – Häuser, Gewerke, Rechnungen und Zahlungen", ("#pdf", abrechnung_neubau)),
          (1, "2", "Schlussrechnung", ("#trenn", "Schlussrechnung für beide Häuser mit Zahlungsaufstellung und Sicherheitseinbehalt")),
          (2, "2.1", f"Schlussrechnung Nr. 2026-45 vom 19.10.2026 – Zahlbetrag {eur(data_neubau.werte()['gesamt_offen'])}",
-          f"{N}/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_43.745,31.pdf"),
+          f"{N}/5_Schlussrechnung/Schlussrechnung_2026-45_Neubau_19ab_41.745,31.pdf"),
          (1, "3", "Auftrag, Angebote, Nachträge und Abschlagsrechnungen", ("#trenn", "Originale: Zahlungsplan, Angebote 233 (Haus A) und 234 (Haus B), Nachträge, 8 Abschlagsrechnungen mit CREST-Prüfblatt"))]
     k = 1
     for ordner, praefix in (("1_Auftrag", "Auftrag: "), ("2_Angebote_Endstand", "Angebot: "), ("3_Nachtraege", "Nachtrag: "), ("4_Rechnungen", "Rechnung: ")):
