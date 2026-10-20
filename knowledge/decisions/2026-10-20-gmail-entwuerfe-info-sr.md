@@ -55,6 +55,15 @@ In claude.ai-Chats hiess es, `info@leanstech-gmbh.de` und `sr@leanstech-gmbh.de`
 3. **Versand** nie automatisch. Nur nach Semirs ausdruecklichem "senden", danach Gegenpruefung
    in "Gesendete Objekte".
 
+## Monitor (gebaut 2026-10-20)
+
+Geplante Aufgabe "LEANS Mail-Connector Monitor" (claude.ai, taeglich 07:34 Europe/Berlin,
+Trigger `trig_01N2MvuSvY6efEPXJx9SsG1N`): prueft per `ListConnectors`, ob der LEANS-Connector
+("AutoCAD MCP" bzw. Mail-MCP) in claude.ai auf `connected` steht, meldet Semir per Push/E-Mail
+den Status und die Handlungsanweisung, und deaktiviert sich selbst, sobald der Connector
+verbunden ist. Legt keine Entwuerfe an, sendet nichts. Hinweis: die Aufgabe laeuft ohne
+Connector-Tools (Notion/Drive), schreibt also nicht selbst ins Board.
+
 ## Einmalige Aktion fuer Semir
 
 claude.ai -> Einstellungen -> Connectors: "AutoCAD MCP" (und gbrain, n8n MCP) auf
