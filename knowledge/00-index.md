@@ -17,3 +17,15 @@ Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 - Eigene offenen Eingangsaufgaben zuerst bearbeiten.
 - Uebergaben kurz, konkret und mit Pfad schreiben.
 - Entscheidungen dokumentieren, sobald sie fuer spaetere Arbeit relevant werden.
+
+## Übergaben / Prompts
+
+- [[prompts/2026-10-21-uebergabe-rauch-klima-fertigstellen]] – OFFEN: Rauch Klima-ZIP vervollständigen (Mitsubishi, Resideo, Betriebszertifizierung), dann beide Zahlungserinnerungen senden.
+- [[prompts/versand-mit-anhaengen]] – Ablauf für jeden Chat: Rechnung als PDF, Rest als ZIP, über „LEANS Versand“ in den Gmail-Entwurf, prüfen, nach OK senden.
+
+- [[prompts/2026-10-20-uebergabe-info-entwuerfe-rauch]] – Zwei Entwürfe für WE 2.2.1 Rauch (Klima 2025-71, Sanitär 2025-106) in info@leanstech-gmbh.de anlegen.
+
+## Entscheidungen
+
+- [[decisions/2026-10-20-mails-nur-von-info]] – Geschaeftsmails mit Anhaengen: Rechnung PDF + Rest ZIP, ueber „LEANS Versand“ als Gmail-Entwurf, Senden nur nach OK; info@ nur vom PC.
+- [[decisions/2026-10-20-insolvenzordner]] – „in den Insolvenzordner“: Rechnungen je Firma (Rechnungsempfaenger) im Drive-Ordner „Insolvenzordner – LEANS Tech GmbH“ ablegen, jede Firma separat.
