@@ -18,6 +18,10 @@ Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 - Uebergaben kurz, konkret und mit Pfad schreiben.
 - Entscheidungen dokumentieren, sobald sie fuer spaetere Arbeit relevant werden.
 
+## Übergaben / Prompts
+
+- [[prompts/2026-10-20-uebergabe-info-entwuerfe-rauch]] – Zwei Entwürfe für WE 2.2.1 Rauch (Klima 2025-71, Sanitär 2025-106) in info@leanstech-gmbh.de anlegen.
+
 ## Entscheidungen
 
 - [[decisions/2026-10-20-insolvenzordner]] – „in den Insolvenzordner“: Rechnungen je Firma (Rechnungsempfaenger) im Drive-Ordner „Insolvenzordner – LEANS Tech GmbH“ ablegen, jede Firma separat.
