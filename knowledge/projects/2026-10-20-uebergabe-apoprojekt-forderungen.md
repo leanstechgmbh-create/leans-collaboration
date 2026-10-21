@@ -138,6 +138,10 @@ Rechnungsbeträgen wären es 93.076,42.
   „apoprojekt – Geld holen (Stand 20.10.2026)" (1nZbKMZs6kMjG-3XqPJDNL4wFeDGci771).
   Darin „00 ANLEITUNG" (1X-C1yYp4C90nFc7S4HYaYifuYieq5IeWIthdWxdXye4) und die Ordner 1–7
   mit Kopien je Posten. Neue Bescheide dort in den passenden Ordner legen.
+- **Gleiche Ablage im Insolvenzordner (maßgeblich):** Insolvenzordner → apoprojekt GmbH →
+  „2026-10-21 Forderungen apoprojekt GmbH – Unterlagen je Bauvorhaben (108.240,60 EUR netto)"
+  (1S8xGHFVLiEW5fNKluFw67OChpZ6dJ1st) mit „00 Begleitschreiben" und „00 ANLEITUNG";
+  dazu „00 Übersicht – apoprojekt GmbH" (1EO_cPRrb97XIGc4_KXjYEpHLs8iscEvBGq285caqxOY) im Firmenordner.
 
 - Drive-Ordner Unterlagen (Kopien 01–37 + „00 Übersicht"):
   1t_sQ_knjGsvfDb8HPf-LwM9hsZq9f72v (liegt im Insolvenzordner/apoprojekt GmbH
