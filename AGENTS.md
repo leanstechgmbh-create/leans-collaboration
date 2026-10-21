@@ -13,3 +13,4 @@ Diese Regeln gelten fuer ChatGPT/Codex und Claude, wenn sie in diesem Projekt ar
 9. Vor jeder Aenderung die eigene Arbeit mit `scripts/leans-live.ps1 announce` und den betroffenen Dateipfaden ankundigen.
 
 Die detaillierte Board-Syntax steht in `LEANS-Uebergabe-ANLEITUNG.md`.
+10. Niemals selbststaendig E-Mails versenden, Dateien oder Ordner freigeben/teilen oder sonst etwas nach aussen geben. Immer nur Entwuerfe anlegen und dem Nutzer zeigen. Versenden oder Freigeben nur nach ausdruecklichem "ja, abschicken" bzw. "ja, freigeben" fuer genau diesen Vorgang. Keine eigenen Ideen wie Drive-Freigaben, Cloud-Links oder zusaetzliche Empfaenger in Kopie. Siehe `knowledge/decisions/2026-10-20-keine-aussenkommunikation-ohne-freigabe.md`.
