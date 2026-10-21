@@ -68,10 +68,10 @@ aus den PDFs neu packen.
   96.313,71 €) enthält die 8. AR 2025-98 über 11.000 €. Die steckt schon in 2026-45. Ohne sie: **85.313,71 €**. Vor einem Versand mit
   Semir klären; noch nicht versendet.
 - **Andere Entwürfe in Gmail (aus einem anderen Chat) prüfen, bevor sie rausgehen:**
-  - „Zahlungserinnerung – offene Rechnungen LEANS Tech GmbH – 15.005,11 EUR“ an CREST Investment (`r-8665195606461245451`) nennt
-    das **Adyen-Konto** DE24 1001 9000 1000 0012 17. Laut Übersicht gilt für alles Neue die Berliner Volksbank, Adyen ist veraltet.
-  - „SBS – WE 2.2.1 … Rechnung 2025-71“ (`r-2533723722972915561`) und „… Schlussrechnung 2025-106“ (`r-248092081824836305`) an
-    sb@/info@crest-investment.com haben die **alte Signatur** (+49 170 8280836, www.leanstech-gmbh.de) und keine Anhänge.
+  - Stand 21.10.2026, 00:20: In keinem Gmail-Entwurf steht mehr ein Adyen-Konto. Die SBS-Erinnerungen 2025-71, 2025-106 und
+    2025-72 (an sb@/info@crest-investment.com) haben die neue Signatur, aber keine Anhänge.
+- **Regel Semir: Bankverbindung nur Berliner Volksbank, das Adyen-Konto nie mehr verwenden oder erwähnen**
+  (`knowledge/decisions/2026-10-21_bankverbindung_nur_volksbank.md`, auch Abschnitt 7 im Drive-Dokument „00 REGELN – Insolvenzordner“).
 - **Nicht ins öffentliche Repo:** Unterschrift, Stempel, unterschriebene Erklärungen, Freistellungsbescheinigung, Mappen.
   Das Repo `leanstechgmbh-create/leans-collaboration` ist öffentlich.
 

@@ -22,3 +22,4 @@ Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
 - Uebergaben kurz, konkret und mit Pfad schreiben.
 - Entscheidungen dokumentieren, sobald sie fuer spaetere Arbeit relevant werden.
 - Mails immer mit der neuen Signatur (Tel. +49 152 16607036, www.leanstechgmbh-hkls.de, leanstech-klima.de): [[decisions/2026-10-20_mail_signatur]]
+- Bankverbindung nur Berliner Volksbank, nie Adyen: [[decisions/2026-10-21_bankverbindung_nur_volksbank]]
