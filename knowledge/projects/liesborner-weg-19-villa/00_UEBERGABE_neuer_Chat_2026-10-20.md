@@ -1,5 +1,14 @@
 # Übergabe: Schlussrechnungen Liesborner Weg 19 versenden (Stand 20.10.2026, abends)
 
+> **Stand 21.10.2026, 05:30 (nach Meldung der Sitzung „Übergabeordner und Rechnungsverwaltung“, von Claude geprüft):**
+> - Insolvenzordner **erledigt**: beide Rechnungen liegen in „CREST Living GmbH & Co. KG“ (Drive `1bXK5eqSYMLqUeD8K4YLLwf4CQ9phmKzp`,
+>   `1B6xeMEH2cey1WF66ktTrU8omWyjzkC_Z`), byte-gleich mit den endgültigen PDFs.
+> - Gmail-Entwürfe: laut der anderen Sitzung hängt die Rechnungs-PDF jetzt jeweils dran (geändert 20.10.2026 23:57 UTC). Das
+>   Gmail-Lesewerkzeug zeigt bei Entwürfen keine Anhänge – Semir prüft es beim Öffnen.
+> - **Die Entwürfe nicht mehr per Gmail-Werkzeug ändern** (`update_draft` ersetzt die Anhänge und entfernt die PDF).
+> - ZIPs passen nicht durch das Gmail-Werkzeug (Grenze ca. 0,7 MB je Aufruf; Villa 1,7 MB, Neubau 6,2 MB). **Semir zieht die ZIP
+>   selbst in den jeweiligen Entwurf** und sendet. Danach Status in „00 Übersicht – CREST Living“ auf „versendet am …“ setzen.
+
 Für den nächsten Chat (Claude oder ChatGPT). Alles Inhaltliche ist fertig und von Semir freigegeben. Offen sind nur
 Versand, Ablage und zwei Warnpunkte.
 
