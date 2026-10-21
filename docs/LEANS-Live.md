@@ -59,3 +59,22 @@ Der Watcher endet mit `Ctrl+C`. Er ignoriert `.git`, `.leans-live` und Obsidian-
 ## Grenze der Automatisierung
 
 Der Live-Status speichert Anderungen und Prufauftrage sofort. Ein geschlossener oder untatiger Chat kann dadurch nicht selbststandig antworten. Sobald ChatGPT/Codex oder Claude die nachste Aufgabe beginnt, liest der Assistent den aktuellen Status und arbeitet offene Ubergaben oder Reviews ab.
+
+## Bildschirm-Bruecke (Claude sieht den Bildschirm)
+
+Damit eine Claude-Cloud-Sitzung bei Bedarf den PC-Bildschirm sehen kann, ohne
+jedes Mal Fernsteuerung einzuschalten. Die Bruecke ist **nur lesend** - sie
+macht Screenshots, klickt und tippt aber nie.
+
+Einmalig einrichten (im Ordner `scripts`):
+
+```text
+Bildschirm-Freigabe-starten.cmd   (doppelklicken)
+```
+
+Danach startet die Bruecke bei jeder Windows-Anmeldung im Hintergrund und legt
+Screenshots auf Anfrage in den Google-Drive-Ordner
+`Leans Tech GmbH/Claude-Bildschirm`. Beenden mit
+`Bildschirm-Freigabe-beenden.cmd`.
+
+Details: `knowledge/decisions/2026-10-08-bildschirm-bruecke.md`.
