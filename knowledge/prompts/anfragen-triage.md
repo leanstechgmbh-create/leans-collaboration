@@ -8,7 +8,7 @@ links in der Sitzungsliste mit der Kurztabelle.
 
 Board: https://docs.google.com/document/d/109-KELlgdjo3qD4WiGZsSViIoBG93cGqaRMWH6ALJxg/edit
 Gmail-Labels: „Klima/Anfrage offen“ (Label_19) markiert jede Anfrage auf dem Board,
-„Klima/Erledigt“ (Label_20) nimmt sie beim naechsten Lauf herunter. Semir kann „Klima/Erledigt“
+„Klima/Erledigt“ (Label_20) nimmt sie beim naechsten Lauf herunter. Erstbefuellung am 24.10.2026 mit 37 offenen Anfragen aus 60 Tagen. Semir kann „Klima/Erledigt“
 jederzeit von Hand setzen; automatisch passiert es bei Absage, Auftrag oder 21 Tage nach Angebot ohne Antwort.
 Angelegt am 2026-10-24 von Claude im Auftrag von Semir Redzic (ID trig_01KK4sifcb7jLmzztZea4rUw).
 
@@ -33,7 +33,9 @@ alle offenen Kundenanfragen aus unseren drei Postfaechern stehen drin, erledigte
 Fuer jede neue Anfrage einen Antwort-ENTWURF in Gmail anlegen. Nichts senden.
 
 POSTFAECHER (alle landen im Gmail-Konto leanstechgmbh@gmail.com)
-1. leanstechgmbh@gmail.com (auch Website-Formulare "Anfrage über die Website")
+1. leanstechgmbh@gmail.com. Dazu die Website-Formulare von leanstech-klima.de: sie kommen von
+   submissions@formsubmit.co mit Betreff "Anfrage über leans-klima — <Name>". Kunden-E-Mail und Telefon stehen im Text.
+   WICHTIG: Antwort nie als Reply auf die Formular-Mail (ginge an formsubmit), sondern create_draft mit "to" = Kunden-E-Mail.
 2. info@leanstech-gmbh.de (Weiterleitung)
 3. sr@leanstech-gmbh.de (Weiterleitung)
 
@@ -50,7 +52,7 @@ SCHRITTE
 1. Kandidaten sammeln (search_threads, pageSize 50, alle Seiten):
    a) label:"Klima/Anfrage offen"
    b) in:inbox newer_than:3d -from:leanstechgmbh@gmail.com -label:"Klima/Erledigt"
-      (anfrage OR angebot OR klimaanlage OR klima OR wärmepumpe OR heizung OR sanitär OR lüftung OR wartung OR "über die Website" OR to:info@leanstech-gmbh.de OR to:sr@leanstech-gmbh.de OR cc:info@leanstech-gmbh.de OR cc:sr@leanstech-gmbh.de)
+      (from:submissions@formsubmit.co OR anfrage OR angebot OR klimaanlage OR klima OR wärmepumpe OR heizung OR sanitär OR lüftung OR wartung OR "über die Website" OR to:info@leanstech-gmbh.de OR to:sr@leanstech-gmbh.de OR cc:info@leanstech-gmbh.de OR cc:sr@leanstech-gmbh.de)
    Zusammenfuehren, Dubletten ueber Thread-ID entfernen.
    Keine Kundenanfragen und darum ignorieren: Newsletter, Werbung, Lieferanten-Rechnungen, Banken, Behoerden, Anwaelte
    (whitecase.com), Insolvenz (apoprojekt.de), CREST (crest-investment.com), Santander/Openbank, Krankenkasse, mailer-daemon.
@@ -60,9 +62,10 @@ SCHRITTE
      hat und wir bestaetigt haben; oder wir ein Angebot (unsere Mail mit PDF-Anhang) gesendet haben und der Kunde seit 21 Tagen
      nicht geantwortet hat.
    - ANGEBOT GESENDET, wenn wir eine Mail mit PDF-Anhang geschickt haben und der Kunde noch nicht geantwortet hat (unter 21 Tagen).
-   - WARTET AUF KUNDE, wenn die letzte Nachricht von uns ist (ohne Angebot) und wir um Fotos/Angaben gebeten haben.
-   - OFFEN, wenn die letzte Nachricht vom Kunden ist.
-4. Labels setzen: Jeder Thread mit Status OFFEN, WARTET AUF KUNDE oder ANGEBOT GESENDET bekommt Label_19.
+   - WARTET AUF UNS, wenn die letzte Nachricht von uns ist, wir aber ein Angebot oder einen Termin zugesagt haben.
+   - WARTET AUF KUNDE, wenn die letzte Nachricht von uns ist und wir nur um Fotos/Angaben gebeten haben.
+   - OFFEN, wenn die letzte Nachricht vom Kunden ist (oder noch nie geantwortet wurde).
+4. Labels setzen: Jeder Thread mit Status OFFEN, WARTET AUF UNS, WARTET AUF KUNDE oder ANGEBOT GESENDET bekommt Label_19.
    Jeder Thread mit Status ERLEDIGT bekommt Label_20 und verliert Label_19 (unlabel_thread).
 5. Entwurf fuer jeden Thread mit Status OFFEN, dessen letzte Kundennachricht noch keine Antwort von uns hat:
    erst list_drafts mit Query to:<absenderadresse>; gibt es schon einen Entwurf, keinen zweiten anlegen.
@@ -85,10 +88,10 @@ SCHRITTE
    Bei leerem Dokument nur insertText.
    Textaufbau:
    LEANS Klima – Anfragen (offen)
-   Stand: <TT.MM.JJJJ HH:MM Berlin> · <n> offen · <m> warten auf Kunde · <k> Angebot gesendet
+   Stand: <TT.MM.JJJJ HH:MM Berlin> · <n> offen (Kunde wartet) · <m> warten auf uns · <j> warten auf Kunde · <k> Angebot gesendet
    Erledigt = Label "Klima/Erledigt" in Gmail setzen, dann verschwindet die Zeile beim naechsten Lauf.
 
-   Dann je Anfrage ein Block, sortiert: OFFEN zuerst (aelteste zuerst), dann WARTET AUF KUNDE, dann ANGEBOT GESENDET:
+   Dann je Anfrage ein Block, sortiert: OFFEN zuerst (aelteste zuerst), dann WARTET AUF UNS, dann WARTET AUF KUNDE, dann ANGEBOT GESENDET:
    <Nr>. <Name> · <Status> · seit <TT.MM.JJJJ>
    Adresse: <Strasse, PLZ Ort oder "fehlt">
    Telefon: <Nummer oder "fehlt"> · E-Mail: <Adresse>
@@ -104,5 +107,5 @@ REGELN
 - Nichts senden, nichts loeschen, keine anderen Labels aendern. Nur Entwuerfe anlegen und Label_19/Label_20 setzen.
 - Was nicht in der Mail steht, als "fehlt" markieren, nicht raten.
 - Bankverbindung falls noetig: LEANS Tech GmbH, Berliner Volksbank, IBAN DE21 1009 0000 2911 7280 04, BIC BEVODEBB. Kein Adyen.
-- Bestandsprojekte (CREST, apoprojekt, Kratzmann/Dirks Nogatstr., Vuic Teltow) gehoeren nicht auf dieses Board.
+- Forderungs- und Insolvenzthemen (CREST, apoprojekt) gehoeren nicht auf dieses Board. Beauftragte Kunden bleiben drauf, bis Semir Label_20 setzt.
 ```

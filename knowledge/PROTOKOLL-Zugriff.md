@@ -109,7 +109,9 @@ Force-Push. Das bleibt so.
 
 Alle drei landen im Gmail-Konto `leanstechgmbh@gmail.com`; eine Suche deckt alle ab:
 
-1. `leanstechgmbh@gmail.com` (auch Website-Formulare „Anfrage über die Website“)
+1. `leanstechgmbh@gmail.com`. Dazu die Formulare der Website leanstech-klima.de: Absender `submissions@formsubmit.co`,
+   Betreff „Anfrage über leans-klima — <Name>“. Kunden-E-Mail und Telefon stehen im Text. Nie per Reply antworten
+   (ginge an formsubmit), sondern neuen Entwurf mit `to` = Kunden-E-Mail anlegen.
 2. `info@leanstech-gmbh.de` (Weiterleitung)
 3. `sr@leanstech-gmbh.de` (Weiterleitung; bisher nur als CC gesehen, Weiterleitung fuer direkte Mails pruefen)
 
@@ -123,6 +125,8 @@ Adresse, Telefon, Anliegen und naechstem Schritt. Erledigte Anfragen fliegen aut
 (Absage, Auftrag, 21 Tage nach Angebot ohne Antwort) oder sobald Semir in Gmail das Label
 „Klima/Erledigt“ setzt. Pro neuer Anfrage entsteht ein Antwort-Entwurf in Gmail.
 Prompt und Aktivierung: `knowledge/prompts/anfragen-triage.md`.
+Zusaetzlich liegt eine Kopie dieses Protokolls als Google Doc „00 REGELN – Zugriff“ im Ordner „LEANS Klima“
+(ID `163kTE8_i_np-oofaPXhDg6P8pkA9Q6MH0ZTy-0DDeac`), damit Chats ohne Repo sie lesen koennen.
 
 | Objekt | ID |
 |---|---|
