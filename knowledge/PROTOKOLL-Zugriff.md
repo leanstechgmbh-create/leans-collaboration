@@ -117,9 +117,19 @@ Suche nach Postfach: `to:info@leanstech-gmbh.de OR cc:info@leanstech-gmbh.de` us
 
 ## 7. Automatik: Anfragen zweimal taeglich
 
-Geplante Aufgabe „LEANS Klima – Anfragen“ (07:23 und 15:23 Uhr Berlin) legt pro neuer Kundenanfrage
-einen Antwort-Entwurf in Gmail an und liefert eine Tabelle mit Name, Adresse, Telefon, Anliegen.
-Jede Ausfuehrung erscheint links als eigene Session. Prompt und Aktivierung: `knowledge/prompts/anfragen-triage.md`.
+Geplante Aufgabe „LEANS Klima – Anfragen“ (07:23 und 15:23 Uhr Berlin) pflegt das Board
+„LEANS Klima – Anfragen (offen)“ im Drive-Ordner „LEANS Klima“: alle offenen Kundenanfragen mit Name,
+Adresse, Telefon, Anliegen und naechstem Schritt. Erledigte Anfragen fliegen automatisch raus
+(Absage, Auftrag, 21 Tage nach Angebot ohne Antwort) oder sobald Semir in Gmail das Label
+„Klima/Erledigt“ setzt. Pro neuer Anfrage entsteht ein Antwort-Entwurf in Gmail.
+Prompt und Aktivierung: `knowledge/prompts/anfragen-triage.md`.
+
+| Objekt | ID |
+|---|---|
+| Drive-Ordner „LEANS Klima“ | `1yrVbxZnRy7p4_yzYUt4EKZXXjJZU1VAB` |
+| Board „LEANS Klima – Anfragen (offen)“ | `109-KELlgdjo3qD4WiGZsSViIoBG93cGqaRMWH6ALJxg` |
+| Gmail-Label „Klima/Anfrage offen“ | `Label_19` |
+| Gmail-Label „Klima/Erledigt“ | `Label_20` |
 
 ## 8. Sprache
 
