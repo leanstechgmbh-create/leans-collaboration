@@ -4,6 +4,7 @@ Dieses Projekt ist die gemeinsame Arbeitsbasis fuer ChatGPT und Claude.
 
 ## Schnellstart
 
+0. `knowledge/PROTOKOLL-Zugriff.md` lesen: wie Mail, Drive, Anhaenge und Berechtigungen funktionieren.
 1. Zu Beginn jeder Aufgabe das Board `LEANS-Uebergabe.md` lesen.
 2. Offene Aufgaben im eigenen Eingangsbereich zuerst bearbeiten.
 3. Dateien immer am echten Projektort aendern.
@@ -19,6 +20,9 @@ git commit -m "chore: initialize leans collaboration workspace"
 ```
 
 ## Wichtige Dateien
+
+- `knowledge/PROTOKOLL-Zugriff.md` - das einzige Protokoll fuer Mail-, Drive- und Berechtigungsfragen.
+- `docs/claude-settings.vorlage.json` - Freigabeliste, einmal nach `.claude/settings.json` kopieren.
 
 - `LEANS-Uebergabe.md` - gemeinsames Uebergabeboard.
 - `LEANS-Uebergabe-ANLEITUNG.md` - verbindliches Board-Format.
