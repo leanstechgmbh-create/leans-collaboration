@@ -124,7 +124,11 @@ Geplante Aufgabe „LEANS Klima – Anfragen“ (07:23 und 15:23 Uhr Berlin) pfl
 Adresse, Telefon, Anliegen und naechstem Schritt. Erledigte Anfragen fliegen automatisch raus
 (Absage, Auftrag, 21 Tage nach Angebot ohne Antwort) oder sobald Semir in Gmail das Label
 „Klima/Erledigt“ setzt. Pro neuer Anfrage entsteht ein Antwort-Entwurf in Gmail.
-Prompt und Aktivierung: `knowledge/prompts/anfragen-triage.md`.
+Prompt und Aktivierung: `knowledge/prompts/anfragen-triage.md`. Der Monitor laeuft in der Claude-Session
+„Zugriffsprotokoll“ (session_01TwHggJnFch2fNTfmpckUAK), die alle Connectoren hat; kein Zutun noetig.
+
+Skills fuer jeden Repo-Chat (Ordner `.claude/skills/`): `/anfragen-board` (Board und Entwuerfe aktualisieren),
+`/mail-entwurf` (Mail im LEANS-Ton als Entwurf, mit Anhaengen/ZIP), `/anhang` (Anhang ueber Drive lesen).
 Zusaetzlich liegt eine Kopie dieses Protokolls als Google Doc „00 REGELN – Zugriff“ im Ordner „LEANS Klima“
 (ID `163kTE8_i_np-oofaPXhDg6P8pkA9Q6MH0ZTy-0DDeac`), damit Chats ohne Repo sie lesen koennen.
 

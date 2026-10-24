@@ -23,6 +23,7 @@ git commit -m "chore: initialize leans collaboration workspace"
 
 - `knowledge/PROTOKOLL-Zugriff.md` - das einzige Protokoll fuer Mail-, Drive- und Berechtigungsfragen.
 - `docs/claude-settings.vorlage.json` - Freigabeliste, einmal nach `.claude/settings.json` kopieren.
+- `.claude/skills/` - Befehle `/anfragen-board`, `/mail-entwurf`, `/anhang` fuer jeden Chat in diesem Repo.
 
 - `LEANS-Uebergabe.md` - gemeinsames Uebergabeboard.
 - `LEANS-Uebergabe-ANLEITUNG.md` - verbindliches Board-Format.

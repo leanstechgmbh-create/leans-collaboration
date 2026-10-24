@@ -12,10 +12,13 @@ Gmail-Labels: „Klima/Anfrage offen“ (Label_19) markiert jede Anfrage auf dem
 jederzeit von Hand setzen; automatisch passiert es bei Absage, Auftrag oder 21 Tage nach Angebot ohne Antwort.
 Angelegt am 2026-10-24 von Claude im Auftrag von Semir Redzic (ID trig_01KK4sifcb7jLmzztZea4rUw).
 
-AKTIVIERUNG (einmalig, nur Semir kann das): Die Aufgabe ist angelegt, aber AUSGESCHALTET, weil
-Claude ihr aus einer Session heraus keine Gmail- und Drive-Verbindung mitgeben darf. Semir oeffnet
-in claude.ai die geplanten Aufgaben, waehlt „LEANS Klima – Anfragen“, haengt die Connectoren
-Gmail und Google Drive an und schaltet sie ein. Ohne Connectoren wuerde jede Ausfuehrung leer laufen.
+AKTIV seit 24.10.2026: Geplante Aufgabe „LEANS Klima – Anfragen-Monitor“ (ID trig_0132PUCLxy6uoMGPodvkTY4B)
+feuert in die Claude-Session session_01TwHggJnFch2fNTfmpckUAK, die Gmail, Drive und Docs bereits verbunden hat.
+Kein Zutun von Semir noetig. Ergebnis erscheint in dieser Session (links „Zugriffsprotokoll …“) und im Board.
+Reserve: Aufgabe „LEANS Klima – Anfragen (Reserve …)“ (ID trig_01KK4sifcb7jLmzztZea4rUw) startet je Lauf eine
+eigene Session, ist AUS und braucht Connectoren aus der claude.ai-Oberflaeche. Nur einschalten, wenn die
+Monitor-Session nicht mehr existiert.
+Auf Zuruf in jedem Repo-Chat: `/anfragen-board` (Skill in `.claude/skills/anfragen-board/`).
 
 Aenderungen am Ablauf: zuerst hier aendern, dann die geplante Aufgabe mit `update_trigger`
 (Feld `prompt`) auf den neuen Text setzen. Die Aufgabe laeuft sonst mit dem alten Text weiter.
