@@ -21,7 +21,7 @@ Google Drive „Insolvenzordner – LEANS Tech GmbH“ (ID `1TTiMBN6SS71T_VGdjYI
 
 Zahlungserinnerung über die alten Rechnungen (15.005,11 €) am 20.10.2026 per Mail an info@crest-investment.com versendet.
 
-## CREST Living GmbH & Co. KG (Liesborner Weg 19, 13507 Berlin) – 97.749,88 €
+## CREST Living GmbH & Co. KG (Liesborner Weg 19, 13507 Berlin) – 144.495,19 €
 
 | Rechnung | Leistung | Brutto |
 |---|---|---|
@@ -30,11 +30,13 @@ Zahlungserinnerung über die alten Rechnungen (15.005,11 €) am 20.10.2026 per 
 | 2024-122 | Heerstr. 71 Wartung Viessmann 2024 | 793,61 € |
 | 2025-18 | Stahnsdorf Heizung Garagen, WC | 23.500,00 € |
 | 2025-22 | Stahnsdorf Heizung/Sanitär | 29.817,27 € |
-| 2025-98 | Liesborner Weg 19, 8. AR | 11.000,00 € |
+| 2025-98 | Liesborner Weg 19, 8. AR | in 2026-45 enthalten (11.000,00 €) |
 | 2025-104 | Heerstr. 71 Wartung Viessmann 2025 (neu) | 793,61 € |
 | 2025-105 | Heerstr. 71 Wartung Grünbeck 2025 (neu) | 642,56 € |
+| 2026-44 | Schlussrechnung Villa, Liesborner Weg 19 (andere Sitzung) | 16.000,00 € |
+| 2026-45 | Schlussrechnung Neubau, Liesborner Weg 19 a+b, enthält 2025-98 (andere Sitzung) | 41.745,31 € |
 
-Zahlungserinnerung (96.313,71 €) liegt bereit, nicht versendet.
+Zahlungserinnerung über die alten Rechnungen: 85.313,71 €. Sie liegt bereit und ist nicht versendet. Am 24.10.2026 wurde sie von 96.313,71 € korrigiert, weil 2025-98 sonst doppelt gefordert würde.
 
 ## Entscheidungen von Semir
 
