@@ -58,7 +58,12 @@ SCHRITTE
       (from:submissions@formsubmit.co OR anfrage OR angebot OR klimaanlage OR klima OR wärmepumpe OR heizung OR sanitär OR lüftung OR wartung OR "über die Website" OR to:info@leanstech-gmbh.de OR to:sr@leanstech-gmbh.de OR cc:info@leanstech-gmbh.de OR cc:sr@leanstech-gmbh.de)
    Zusammenfuehren, Dubletten ueber Thread-ID entfernen.
    Keine Kundenanfragen und darum ignorieren: Newsletter, Werbung, Lieferanten-Rechnungen, Banken, Behoerden, Anwaelte
-   (whitecase.com), Insolvenz (apoprojekt.de), CREST (crest-investment.com), Santander/Openbank, Krankenkasse, mailer-daemon.
+   (whitecase.com), Insolvenz (apoprojekt.de), CREST (crest-investment.com), Santander/Openbank, Krankenkasse, mailer-daemon,
+   Automails von info@leanstech-gmbh.de mit Betreff "LEANS Wächter" oder "Web-Bericht", Mails von no-reply-claude@mail.anthropic.com
+   ("Mail-Connector Monitor", "routine completed").
+   Dublette: Zu jedem Website-Formular kommt zusaetzlich eine Mail von info@leanstech-gmbh.de mit Betreff
+   "📨 Neue Anfrage über leanstech-klima.de — <Name>". Gleicher Kunde wie die formsubmit-Mail: mit Label_19 markieren,
+   aber nur EINEN Eintrag auf dem Board und nur EINEN Entwurf.
 2. Jeden Kandidaten komplett lesen: get_thread mit messageFormat PLAIN_TEXT.
 3. Status je Thread:
    - ERLEDIGT, wenn: Label Klima/Erledigt gesetzt; oder der Kunde absagt / woanders beauftragt hat; oder der Kunde beauftragt
