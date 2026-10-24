@@ -2,6 +2,8 @@
 
 ## Startpunkte
 
+- [[PROTOKOLL-Zugriff]] - Mail, Drive, Anhaenge, Berechtigungen (zuerst lesen)
+
 - [[README]]
 - [[projects]]
 - [[decisions]]
@@ -10,6 +12,10 @@
 ## Aktueller Workflow
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
+
+## Automatik
+
+- Geplante Aufgabe „LEANS Klima – Anfragen“, zweimal taeglich (07:23 und 15:23 Berlin). Prompt in [[prompts/anfragen-triage]].
 
 ## Wichtige Regeln
 

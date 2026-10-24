@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "Bash(git *)",
+      "Bash(cat *)",
+      "Bash(ls *)",
+      "Bash(sed *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(jq *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(wc *)",
+      "Bash(mkdir *)",
+      "Bash(python3 *)",
+      "Bash(base64 *)",
+      "Bash(pwsh *)",
+      "Bash(powershell *)",
+      "WebFetch",
+      "WebSearch",
+      "mcp__Gmail",
+      "mcp__Google_Drive",
+      "mcp__Google_Calendar",
+      "mcp__Google_Docs",
+      "mcp__Claude_Docs",
+      "mcp__github",
+      "mcp__claude-code-remote",
+      "mcp__plugin_small-business_gmail",
+      "mcp__plugin_small-business_google-drive",
+      "mcp__plugin_small-business_google-calendar"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)"
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}
