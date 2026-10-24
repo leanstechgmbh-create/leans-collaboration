@@ -15,6 +15,9 @@ nicht mehr. Wenn etwas hier nicht steht, wird es hier ergaenzt, nicht an anderer
 | Mails schreiben, antworten, weiterleiten | Ja | `Gmail` create_draft, reply, send_message, forward |
 | Anhang-Namen und -Typen sehen | Ja | get_message mit `PLAIN_TEXT` liefert `attachments` |
 | Anhang-INHALT direkt aus Gmail lesen | Nein | Gmail-Werkzeug bietet keinen Download. Umweg ueber Drive, siehe Abschnitt 3 |
+| Anhaenge versenden (PDF, Bilder, ZIP) | Ja | create_draft / send_message / reply mit `attachments` (base64, zusammen max. 25 MB) |
+| ZIP-Dateien bauen | Ja | Im Container mit `zip` oder Python; Quelldateien aus Drive, Upload oder Repo |
+| Absender waehlen (sr@, info@) | Nein | Das Gmail-Werkzeug hat kein Absender-Feld; alles geht als leanstechgmbh@gmail.com raus. Siehe Abschnitt 3a |
 | Dateien in Google Drive lesen (PDF, Docs, Sheets, Bilder) | Ja | `Google_Drive` search_files, read_file_content |
 | Dateien in Drive anlegen, kopieren, ablegen | Ja | `Google_Drive` create_file, copy_file |
 | Kalender lesen und Termine anlegen | Ja | `Google_Calendar` |
@@ -48,6 +51,22 @@ und wird mit den normalen Datei-Werkzeugen gelesen.
 
 Anhaenge VERSENDEN geht: `create_draft` nimmt `attachments` mit base64-Inhalt. Dateien ueber 25 MB
 in Drive ablegen und den Link in die Mail setzen.
+
+## 3a. Versenden: Absender und Anhaenge
+
+- Absender: Das Werkzeug sendet immer als `leanstechgmbh@gmail.com`. Ein Versand „von sr@“ oder
+  „von info@“ ist aus dem Chat nicht moeglich. Weg, der geht: Der Chat legt den ENTWURF an, Semir
+  oeffnet ihn in Gmail, stellt oben im Feld „Von“ die Adresse um (geht nur, wenn sr@ und info@ in
+  Gmail unter „Senden als“ eingerichtet sind) und sendet. Wenn Semir „von sr@ schicken“ sagt,
+  heisst das fuer den Chat: Entwurf anlegen und im Chat sagen, dass das Von-Feld umgestellt werden muss.
+- Anhaenge: Dateien zuerst in den Container holen (aus Drive mit `download_file_content`, aus dem
+  Repo, oder per Upload in den Chat), dann base64-kodieren und in `attachments` mitgeben
+  (`filename`, `mimeType`, `content`). Mehrere Dateien als ZIP: `zip -j paket.zip datei1 datei2`
+  oder Python `zipfile`, dann die ZIP als `application/zip` anhaengen.
+- Groesse: zusammen max. 25 MB. Darueber: Datei in Drive ablegen und den Link in die Mail setzen.
+- Gmail-Anhaenge anderer Mails koennen nicht direkt weiterverpackt werden (siehe Abschnitt 3);
+  erst „In Drive speichern“, dann von Drive holen. `forward` leitet eine Mail samt Anhaengen weiter,
+  ohne dass der Chat den Inhalt sieht.
 
 ## 4. Drive: feste Orte
 
