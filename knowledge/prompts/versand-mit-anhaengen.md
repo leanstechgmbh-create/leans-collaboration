@@ -79,7 +79,12 @@ Semir hat dort Gmail und Google Drive einmal erlaubt. Die Seite legt die Anhäng
 ## Grenzen
 
 - **Anhänge pro Mail:** Höchstens etwa 750 KB, wegen der Grenze von 1 MiB pro Aufruf. Datei-Argumente gibt es in Semirs Claude-App nicht (`dateiArg: false` im Protokoll). Darüber scheitert der Aufruf mit „tool input is too large“. Ab Version 30 packt die Seite die ZIP verlustfrei (deflate), das spart bei Erklärungen 20–35 %. Passt es trotzdem nicht: zweite Mail „Unterlagen zur Rechnung …“ mit eigener ZIP.
-- **Datenblätter aus dem Internet:** In `zip.dateien` statt `url` den Eintrag `higgsfield: {datei, quelle, sha256, groesse}` setzen. Die Seite lädt die Datei in der Higgsfield-Sandbox, holt sie in Stücken, prüft den sha256 und speichert sie als Asset (danach steht `url` im Auftrag). Beim ersten Mal muss Semir „Offene Aufträge ausführen“ drücken und Higgsfield erlauben.
+- **Datenblätter aus dem Internet:** In `zip.dateien` statt `url` den Eintrag `higgsfield: {datei, quelle, pdfsettings?}` setzen.
+  - Die Seite lädt die Datei in der Higgsfield-Sandbox und verkleinert sie mit `pdfsettings` (`ebook`) per Ghostscript.
+  - Dann holt sie die Datei in Stücken, prüft die Übertragung gegen den sha256 in der Sandbox und speichert sie als Asset. Danach steht `url` im Auftrag.
+  - Herstellerseiten wie mhiae.com erzeugen die PDF bei jedem Abruf neu, die Prüfsumme ändert sich also.
+  - Die Seite fragt beim Öffnen selbst nach den fehlenden Rechten, auch nach Higgsfield.
+- **Große Scans** (z. B. Betriebszertifizierung, 13,4 MB): Das Original ist über 10 MB und lässt sich aus Drive nicht laden. Die Betriebszertifizierung steckt auch in „Daikin Unterlagen.pdf“ (3 MB, Seiten 2–7). Daraus entsteht ein Schwarz-Weiß-Scan mit 1400 px Breite (239 KB, gut lesbar). Er liegt als Asset `/_blob/5814404e327d24e0c9357df308499030` auf der Seite.
 - **Absender info@:** Geht aus der Cloud nicht. IONOS-IMAP/SMTP ist gesperrt, und das Gmail-Werkzeug hat kein Von-Feld. Semir stellt im Gmail-Entwurf oben „Von“ auf info@ um und sendet selbst. Das geht nur, wenn info@ in Gmail unter „Konten → Senden als“ eingerichtet ist. Stand 2026-10-27 gibt es keine gesendete Mail von info@ aus Gmail.
 - **Google Drive:** Herunterladen nur bis 10 MB. Größere Dateien, etwa die Betriebszertifizierung mit 13 MB, muss Semir in Gmail selbst anhängen oder verkleinert ins Drive legen.
 - **Herstellerseiten** für Datenblätter sind in der Cloud gesperrt, bis sie unter „Allowed domains“ der Umgebung freigegeben sind.
