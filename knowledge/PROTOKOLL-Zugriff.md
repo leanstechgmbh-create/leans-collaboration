@@ -6,6 +6,16 @@ fuer die LEANS Tech GmbH arbeitet. Stand: 2026-10-24. Inhaber: Semir Redzic.
 Dieses Dokument ist die einzige Anleitung fuer den Zugriff. Aeltere Hinweise dazu gibt es
 nicht mehr. Wenn etwas hier nicht steht, wird es hier ergaenzt, nicht an anderer Stelle.
 
+## 0. Die eine Regel, die alles abkuerzt
+
+Alle Mail-Aufgaben (lesen, Entwurf, senden, Anhang, Board) gehoeren in die Claude-Session
+**„LEANS Mail-Zentrale“** (claude.ai/code, Session session_01TwHggJnFch2fNTfmpckUAK, links in der Liste).
+Nur sie hat Gmail, Drive und Docs dauerhaft verbunden und traegt den Anfragen-Monitor.
+Andere Chats verlieren die Connectoren, weil Connectoren beim Start eines Chats eingelesen werden:
+Chats, die vor dem Verbinden gestartet wurden, sehen sie nicht, und Web-Chats brauchen den Connector
+je Chat im Werkzeug-Menue. Darum: nicht neu verbinden, sondern in die Mail-Zentrale wechseln und dort
+schreiben „sende …“, „Entwurf an …“, „lies den Anhang von …“, „Board aktualisieren“.
+
 ## 1. Was funktioniert, was nicht
 
 | Aufgabe | Funktioniert | Wie |
@@ -156,5 +166,8 @@ Einstellung `voice` (siehe `/config`).
 ### Bekannte Grenzen
 
 - Gmail-Anhaenge sind nur ueber Drive oder Upload lesbar (Stand 2026-10-24).
+- Test 27.10.2026: Versand mit ZIP-Anhang aus dem Chat funktioniert (Kontrollmail an sich selbst kam mit
+  Anhang an). Mails an info@ und sr@ kommen nicht als Kopie zurueck, weil Gmail eigene weitergeleitete
+  Mails unterdrueckt; info@ ist durch echte Kundenmails bewiesen, sr@ noch nicht (Test von fremder Adresse offen).
 - Die PowerShell-Skripte unter `scripts/` laufen nur lokal unter Windows. In Cloud-Sessions
   gibt es kein `pwsh`; dort entfallen die Schritte `leans-live.ps1 status` und `announce`.
