@@ -41,7 +41,8 @@ Entwurf anlegen und im Chat in einem Satz sagen, dass er in Gmail oben im Feld �
 
 - Quelle: Drive (`mcp__Google_Drive__download_file_content`), Repo oder Upload in den Chat.
   Gmail-Anhänge anderer Mails sind nicht lesbar; erst „In Drive speichern“.
-- Mehrere Dateien: `zip -j paket.zip datei1 datei2` im Arbeitsverzeichnis.
+- Rechnungen: Rechnung als eigene PDF, alle Zusatzdateien in EINE ZIP „Anlagen <Betreff>.zip“
+  (`zip -j "Anlagen <Betreff>.zip" datei1 datei2`). Regel in `knowledge/decisions/2026-10-27-rechnungsversand-anhaenge.md`.
 - base64 kodieren (`base64 -w0 datei`) und in `attachments` mitgeben: `filename`, `mimeType`, `content`.
 - Zusammen max. 25 MB, sonst Datei in Drive ablegen und Link in den Text.
 
