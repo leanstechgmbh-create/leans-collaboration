@@ -23,8 +23,8 @@ git commit -m "chore: initialize leans collaboration workspace"
 
 - `knowledge/PROTOKOLL-Zugriff.md` - das einzige Protokoll fuer Mail-, Drive- und Berechtigungsfragen.
 - `docs/claude-settings.vorlage.json` - Freigabeliste, einmal nach `.claude/settings.json` kopieren.
-- `.claude/skills/` - Befehle `/anfragen-board`, `/mail-entwurf`, `/anhang`, `/senden` fuer jeden Chat in diesem Repo.
-- `scripts/leans-mail.py` - Versand als info@ oder sr@ ueber IONOS mit Anhaengen (siehe Protokoll 3b).
+- `.claude/skills/` - Befehle `/anfragen-board`, `/mail-entwurf`, `/anhang`, `/senden`, `/postfach` fuer jeden Chat in diesem Repo.
+- `scripts/leans-mail.py` - Versand als info@ oder sr@ ueber IONOS mit Anhaengen und Lesen der IONOS-Postfaecher (siehe Protokoll 3b).
 
 - `LEANS-Uebergabe.md` - gemeinsames Uebergabeboard.
 - `LEANS-Uebergabe-ANLEITUNG.md` - verbindliches Board-Format.
