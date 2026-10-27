@@ -36,7 +36,7 @@ Zahlungserinnerung über die alten Rechnungen (15.005,11 €) am 20.10.2026 per 
 | 2026-44 | Schlussrechnung Villa, Liesborner Weg 19 (andere Sitzung) | 16.000,00 € |
 | 2026-45 | Schlussrechnung Neubau, Liesborner Weg 19 a+b, enthält 2025-98 (andere Sitzung) | 41.745,31 € |
 
-Zahlungserinnerung über die alten Rechnungen: 85.313,71 €. Sie ist am 27.10.2026 als Gmail-Entwurf an info@crest-investment.com angelegt (ohne Anhang, nicht versendet). Semir stellt vor dem Senden in Gmail das Feld „Von“ auf info@leanstech-gmbh.de um. Am 24.10.2026 wurde sie von 96.313,71 € korrigiert, weil 2025-98 sonst doppelt gefordert würde.
+Zahlungserinnerung über die alten Rechnungen: 85.313,71 €. Sie liegt bereit und ist nicht versendet. Am 24.10.2026 wurde sie von 96.313,71 € korrigiert, weil 2025-98 sonst doppelt gefordert würde.
 
 ## Entscheidungen von Semir
 
