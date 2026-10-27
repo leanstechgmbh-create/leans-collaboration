@@ -1,7 +1,7 @@
 # PROTOKOLL: Zugriff auf Mail, Drive, Kalender und Berechtigungen
 
 Gilt fuer jeden Chat und jeden Assistenten (Claude, ChatGPT/Codex), der in diesem Projekt
-fuer die LEANS Tech GmbH arbeitet. Stand: 2026-10-24. Inhaber: Semir Redzic.
+fuer die LEANS Tech GmbH arbeitet. Stand: 2026-10-27. Inhaber: Semir Redzic.
 
 Dieses Dokument ist die einzige Anleitung fuer den Zugriff. Aeltere Hinweise dazu gibt es
 nicht mehr. Wenn etwas hier nicht steht, wird es hier ergaenzt, nicht an anderer Stelle.
@@ -15,6 +15,12 @@ Andere Chats verlieren die Connectoren, weil Connectoren beim Start eines Chats 
 Chats, die vor dem Verbinden gestartet wurden, sehen sie nicht, und Web-Chats brauchen den Connector
 je Chat im Werkzeug-Menue. Darum: nicht neu verbinden, sondern in die Mail-Zentrale wechseln und dort
 schreiben „sende …“, „Entwurf an …“, „lies den Anhang von …“, „Board aktualisieren“.
+
+**Anweisung = Auftrag (Regel 11, Semir 27.10.2026).** Was Semir sagt, wird gemacht, ohne Rueckfrage und ohne
+„soll ich wirklich?“. Erst ausfuehren, dann in einem Satz melden. Eine Frage ist nur erlaubt, wenn ohne die Antwort
+das Ergebnis falsch waere (Empfaenger fehlt, zwei gleiche Namen). Fehlt eine Voraussetzung (Secret, Freigabe),
+den genauen Fehlertext und die Stelle nennen, nicht fragen, ob er sie setzen moechte.
+Details: `knowledge/decisions/2026-10-27-ausfuehren-statt-nachfragen.md`.
 
 ## 1. Was funktioniert, was nicht
 
@@ -40,7 +46,8 @@ schreiben „sende …“, „Entwurf an …“, „lies den Anhang von …“, 
 2. Thread komplett lesen mit `get_thread` und `messageFormat: PLAIN_TEXT`. Nie nur die Vorschau nutzen,
    sie zeigt nur die 5 aeltesten Nachrichten.
 3. Antwort als Entwurf anlegen mit `create_draft` und `replyToMessageId`, damit die Antwort im Thread bleibt.
-4. Senden nur, wenn Semir es ausdruecklich sagt. Standard ist Entwurf.
+4. Ohne Anweisung ist das Ergebnis ein Entwurf. Sagt Semir „senden“, wird gesendet, sofort und ohne Rueckfrage
+   (Regel 11). Danach kurz melden: an wen, mit welchen Anhaengen.
 
 Es gibt zwei Gmail-Anbindungen. Immer die Werkzeuge mit Praefix `mcp__Gmail__` nehmen.
 Die Variante `mcp__plugin_small-business_gmail__` kann nicht senden und nicht antworten.
@@ -134,8 +141,11 @@ Fuer Cloud-Sessions (claude.ai/code) zusaetzlich: beim Start der Session den Ber
 „Auto“ oder „Alle Bearbeitungen akzeptieren“ stellen. Das ist eine Einstellung der Session,
 nicht des Repos, und kann nur Semir setzen.
 
-Was trotzdem immer nachfragt, mit Absicht: Senden von Mails an Dritte, Loeschen von Dateien,
-Force-Push. Das bleibt so.
+Was der Chat nie fragt: ob er eine klare Anweisung ausfuehren soll (Regel 11). Was trotzdem stoppen kann,
+ist die Plattform selbst, nicht der Chat: Selbstaenderung von `.claude/settings.json`, Force-Push,
+Direktverbindungen am Proxy vorbei. Dann nennt der Chat den genauen Hinweis und den Weg aussenrum.
+Fragt eine Session trotzdem bei jedem Werkzeug nach, steht der Berechtigungsmodus nicht auf „Auto“
+oder die Vorlage ist noch nicht nach `.claude/settings.json` kopiert.
 
 ## 6. Unsere drei Postfaecher
 

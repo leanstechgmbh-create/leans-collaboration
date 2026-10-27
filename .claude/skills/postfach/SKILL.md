@@ -5,6 +5,8 @@ description: Direkt in die IONOS-Postfächer info@ und sr@leanstech-gmbh.de scha
 
 # Postfach info@ / sr@ lesen
 
+Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, ohne Rückfrage. Erst machen, dann in einem Satz melden.
+
 Gmail zeigt nur, was IONOS weiterleitet, und nie den Gesendet-Ordner von info@ oder sr@.
 Dafür gibt es `scripts/leans-mail.py lesen` (IMAP direkt bei IONOS). Voraussetzung wie beim Senden:
 `imap.ionos.de` und `smtp.ionos.de` unter Allowed domains, Secrets `IONOS_INFO_PASSWORD` / `IONOS_SR_PASSWORD`.

@@ -5,6 +5,8 @@ description: Antwort- oder neue Mail als Gmail-Entwurf im LEANS-Ton anlegen, opt
 
 # Mail-Entwurf anlegen
 
+Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, ohne Rückfrage. Erst machen, dann in einem Satz melden.
+
 Vorher `knowledge/PROTOKOLL-Zugriff.md` Abschnitte 2, 3 und 3a lesen.
 
 ## Ablauf
@@ -48,4 +50,5 @@ Entwurf anlegen und im Chat in einem Satz sagen, dass er in Gmail oben im Feld �
 
 ## Senden
 
-Nur wenn Semir ausdrücklich „senden“ sagt: `mcp__Gmail__send_message` mit `draftId`. Sonst bleibt es ein Entwurf.
+Ohne Anweisung bleibt es ein Entwurf. Sagt Semir „senden“: sofort `mcp__Gmail__send_message` mit `draftId`,
+ohne Rückfrage, dann melden, was rausging (Regel 11). Für Absender info@/sr@ den Skill `/senden` nehmen.

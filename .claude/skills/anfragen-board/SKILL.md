@@ -5,6 +5,8 @@ description: Kundenanfragen aus Gmail (gmail, info@, sr@, Website-Formulare) sam
 
 # Anfragen-Board aktualisieren
 
+Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, ohne Rückfrage. Erst machen, dann in einem Satz melden.
+
 Führe den vollständigen Prompt aus `knowledge/prompts/anfragen-triage.md` aus (Abschnitt „Prompt“).
 Er ist die einzige Quelle für den Ablauf. Kurzfassung zur Orientierung:
 

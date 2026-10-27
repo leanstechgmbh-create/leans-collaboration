@@ -5,6 +5,8 @@ description: Mail wirklich verschicken, auf Wunsch als info@ oder sr@leanstech-g
 
 # Mail senden
 
+Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, ohne Rückfrage. Erst machen, dann in einem Satz melden.
+
 Zwei Wege. Immer zuerst Weg A prüfen, dann Weg B.
 
 ## Weg A: als info@ oder sr@ (IONOS-Mailserver, Skript im Repo)
@@ -36,6 +38,9 @@ Rechnungsregel gilt auch hier: Rechnung als PDF, Zusatzdateien vorher mit
 
 ## Regeln
 
-- Senden nur nach ausdrücklichem „senden“ / „verschick es“ von Semir. Vorher Entwurf oder dry-run zeigen.
+- Ohne Anweisung bleibt es beim Entwurf oder dry-run. Sagt Semir „senden“ / „verschick es“, wird sofort gesendet:
+  keine Rückfrage, kein „bist du sicher“, keine Optionen. Danach melden: an wen, Absender, Anhänge (Regel 11).
+- Einzige erlaubte Frage: Empfängeradresse oder Anhang fehlt und ist nirgends zu finden. Dann genau eine Frage.
+- Fehlt Secret oder Netzfreigabe: Fehlertext und Stelle nennen (Protokoll 3b), nicht fragen, ob Semir sie setzen möchte.
 - Website-Formular-Mails (formsubmit) nie per Reply beantworten, sondern an die Kunden-E-Mail aus dem Text.
 - Bankverbindung in Mails: LEANS Tech GmbH, Berliner Volksbank, IBAN DE21 1009 0000 2911 7280 04, BIC BEVODEBB.

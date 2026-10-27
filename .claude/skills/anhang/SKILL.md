@@ -5,6 +5,8 @@ description: Einen Mail-Anhang lesen oder weiterverarbeiten (PDF, Bild, Rechnung
 
 # Anhang lesen
 
+Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, ohne Rückfrage. Erst machen, dann in einem Satz melden.
+
 Das Gmail-Werkzeug liefert nur Dateiname, Typ und ID eines Anhangs, nie den Inhalt. Der Weg, der geht:
 
 1. Mail finden und Anhangsnamen zeigen: `mcp__Gmail__get_message` mit `PLAIN_TEXT`, Feld `attachments`.
