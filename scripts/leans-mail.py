@@ -47,13 +47,14 @@ from email.message import EmailMessage
 from email.utils import formataddr, formatdate, make_msgid
 from pathlib import Path
 
-SMTP_HOST = "smtp.ionos.de"
 SMTP_PORT = 587
-IMAP_HOST = "imap.ionos.de"
 IMAP_PORT = 993
+# Konto -> (Adresse, Secret, SMTP-Host, IMAP-Host). Gmail braucht ein App-Passwort
+# (Google-Konto -> Sicherheit -> Bestaetigung in zwei Schritten -> App-Passwoerter).
 ABSENDER = {
-    "info": ("info@leanstech-gmbh.de", "IONOS_INFO_PASSWORD"),
-    "sr": ("sr@leanstech-gmbh.de", "IONOS_SR_PASSWORD"),
+    "info": ("info@leanstech-gmbh.de", "IONOS_INFO_PASSWORD", "smtp.ionos.de", "imap.ionos.de"),
+    "sr": ("sr@leanstech-gmbh.de", "IONOS_SR_PASSWORD", "smtp.ionos.de", "imap.ionos.de"),
+    "gmail": ("leanstechgmbh@gmail.com", "GMAIL_APP_PASSWORD", "smtp.gmail.com", "imap.gmail.com"),
 }
 ANZEIGENAME = "LEANS Tech GmbH"
 SIGNATUR = (
@@ -146,18 +147,18 @@ def _textkoerper(nachricht) -> str:
 
 
 def lesen(args: argparse.Namespace) -> None:
-    konto, secret_name = ABSENDER[args.konto]
+    konto, secret_name, _, imap_host = ABSENDER[args.konto]
     passwort = os.environ.get(secret_name, "")
     if not passwort:
         fehler(2, f"Secret {secret_name} fehlt. In der Cloud-Umgebung unter Environment variables setzen.")
     try:
-        imap = imaplib.IMAP4_SSL(IMAP_HOST, IMAP_PORT, ssl_context=ssl.create_default_context(), timeout=30)
+        imap = imaplib.IMAP4_SSL(imap_host, IMAP_PORT, ssl_context=ssl.create_default_context(), timeout=30)
     except (socket.gaierror, OSError) as e:
-        fehler(3, f"{IMAP_HOST}:{IMAP_PORT} nicht erreichbar ({e}). In der Cloud-Umgebung imap.ionos.de unter Allowed domains eintragen.")
+        fehler(3, f"{imap_host}:{IMAP_PORT} nicht erreichbar ({e}). In der Cloud-Umgebung {imap_host} unter Allowed domains eintragen.")
     try:
         imap.login(konto, passwort)
     except imaplib.IMAP4.error as e:
-        fehler(4, f"IONOS lehnt die Anmeldung fuer {konto} ab ({e}). Passwort im Secret {secret_name} pruefen.")
+        fehler(4, f"{imap_host} lehnt die Anmeldung fuer {konto} ab ({e}). Passwort im Secret {secret_name} pruefen.")
 
     if args.ordner_liste:
         status, ordner = imap.list()
@@ -244,7 +245,7 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    absender, secret_name = ABSENDER[args.von]
+    absender, secret_name, smtp_host, _ = ABSENDER[args.von]
     passwort = os.environ.get(secret_name, "")
     if not passwort and not args.dry_run:
         fehler(2, f"Secret {secret_name} fehlt. In der Cloud-Umgebung unter Environment variables setzen.")
@@ -258,17 +259,17 @@ def main() -> None:
         return
 
     try:
-        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30) as smtp:
+        with smtplib.SMTP(smtp_host, SMTP_PORT, timeout=30) as smtp:
             smtp.ehlo()
             smtp.starttls(context=ssl.create_default_context())
             smtp.ehlo()
             try:
                 smtp.login(absender, passwort)
             except smtplib.SMTPAuthenticationError as e:
-                fehler(4, f"IONOS lehnt die Anmeldung fuer {absender} ab ({e.smtp_code}). Passwort im Secret {secret_name} pruefen.")
+                fehler(4, f"{smtp_host} lehnt die Anmeldung fuer {absender} ab ({e.smtp_code}). Passwort im Secret {secret_name} pruefen.")
             smtp.send_message(msg)
     except (socket.gaierror, OSError, smtplib.SMTPConnectError) as e:
-        fehler(3, f"{SMTP_HOST}:{SMTP_PORT} nicht erreichbar ({e}). In der Cloud-Umgebung smtp.ionos.de unter Allowed domains eintragen.")
+        fehler(3, f"{smtp_host}:{SMTP_PORT} nicht erreichbar ({e}). In der Cloud-Umgebung {smtp_host} unter Allowed domains eintragen.")
     print(f"GESENDET als {absender}, Message-ID {msg['Message-ID']}")
 
 

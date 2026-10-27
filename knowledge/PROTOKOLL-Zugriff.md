@@ -97,10 +97,14 @@ Signatur an. Befehl `/senden` in jedem Repo-Chat nutzt es.
 Dasselbe Skript LIEST die Postfaecher info@ und sr@ direkt bei IONOS, auch den Gesendet-Ordner, den Gmail
 nie sieht: `python3 scripts/leans-mail.py lesen --konto info --ordner Sent --tage 30`. Befehl `/postfach`.
 
+Dasselbe Skript sendet auch als `leanstechgmbh@gmail.com` (`--von gmail`, smtp.gmail.com) mit einem Google-App-Passwort
+im Secret `GMAIL_APP_PASSWORD`; das ist der schnellste Weg, Anhaenge aus jedem Chat zu verschicken.
+
 Einmalig von Semir in der Cloud-Umgebung (Titelzeile der Session, Umgebungsmenue, „Edit“):
-1. Network access: `smtp.ionos.de` und `imap.ionos.de` unter Allowed domains eintragen (Allow package managers angehakt lassen).
-2. Environment variables / Network secrets: `IONOS_INFO_PASSWORD` (Passwort von info@leanstech-gmbh.de)
-   und `IONOS_SR_PASSWORD` (Passwort von sr@leanstech-gmbh.de). Nie Passwoerter in den Chat schreiben.
+1. Network access: `smtp.gmail.com`, `smtp.ionos.de` und `imap.ionos.de` unter Allowed domains eintragen (Allow package managers angehakt lassen).
+2. Environment variables / Network secrets: `GMAIL_APP_PASSWORD` (App-Passwort des Google-Kontos: myaccount.google.com →
+   Sicherheit → Bestaetigung in zwei Schritten → App-Passwoerter → neu erzeugen, 16 Zeichen), dazu `IONOS_INFO_PASSWORD`
+   (Passwort von info@leanstech-gmbh.de) und `IONOS_SR_PASSWORD` (Passwort von sr@leanstech-gmbh.de). Nie Passwoerter in den Chat schreiben.
 3. Neue Session starten, dann gilt es fuer jeden Chat in dieser Umgebung.
 
 Stand 27.10.2026: smtp.ionos.de ist aus dem Container erreichbar, der Versandtest wurde aber von der
