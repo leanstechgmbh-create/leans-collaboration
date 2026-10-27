@@ -27,7 +27,7 @@ schreiben „sende …“, „Entwurf an …“, „lies den Anhang von …“, 
 | Anhang-INHALT direkt aus Gmail lesen | Nein | Gmail-Werkzeug bietet keinen Download. Umweg ueber Drive, siehe Abschnitt 3 |
 | Anhaenge versenden (PDF, Bilder, ZIP) | Ja | create_draft / send_message / reply mit `attachments` (base64, zusammen max. 25 MB) |
 | ZIP-Dateien bauen | Ja | Im Container mit `zip` oder Python; Quelldateien aus Drive, Upload oder Repo |
-| Absender waehlen (sr@, info@) | Nein | Das Gmail-Werkzeug hat kein Absender-Feld; alles geht als leanstechgmbh@gmail.com raus. Siehe Abschnitt 3a |
+| Absender waehlen (sr@, info@) | Ja, ueber IONOS | `scripts/leans-mail.py --von info|sr`, braucht einmalig Netzfreigabe smtp.ionos.de und Secrets. Siehe Abschnitt 3b. Mit dem Gmail-Werkzeug nicht moeglich |
 | Dateien in Google Drive lesen (PDF, Docs, Sheets, Bilder) | Ja | `Google_Drive` search_files, read_file_content |
 | Dateien in Drive anlegen, kopieren, ablegen | Ja | `Google_Drive` create_file, copy_file |
 | Kalender lesen und Termine anlegen | Ja | `Google_Calendar` |
@@ -77,6 +77,22 @@ in Drive ablegen und den Link in die Mail setzen.
 - Gmail-Anhaenge anderer Mails koennen nicht direkt weiterverpackt werden (siehe Abschnitt 3);
   erst „In Drive speichern“, dann von Drive holen. `forward` leitet eine Mail samt Anhaengen weiter,
   ohne dass der Chat den Inhalt sieht.
+
+## 3b. Versand als info@ oder sr@ ueber IONOS (der Weg, der wirklich geht)
+
+Die Domain leanstech-gmbh.de liegt bei IONOS. Das Skript `scripts/leans-mail.py` sendet direkt ueber
+`smtp.ionos.de:587` als info@ oder sr@, mit beliebigen Anhaengen (zusammen max. 25 MB), und haengt die
+Signatur an. Befehl `/senden` in jedem Repo-Chat nutzt es.
+
+Einmalig von Semir in der Cloud-Umgebung (Titelzeile der Session, Umgebungsmenue, „Edit“):
+1. Network access: `smtp.ionos.de` unter Allowed domains eintragen (Allow package managers angehakt lassen).
+2. Environment variables / Network secrets: `IONOS_INFO_PASSWORD` (Passwort von info@leanstech-gmbh.de)
+   und `IONOS_SR_PASSWORD` (Passwort von sr@leanstech-gmbh.de). Nie Passwoerter in den Chat schreiben.
+3. Neue Session starten, dann gilt es fuer jeden Chat in dieser Umgebung.
+
+Stand 27.10.2026: smtp.ionos.de ist aus dem Container erreichbar, der Versandtest wurde aber von der
+Sicherheitsschranke des Chats gestoppt, bis die Freigabe in der Umgebung gesetzt ist. Danach einmal
+`python3 scripts/leans-mail.py --von info --an leanstechgmbh@gmail.com --betreff Test --text Test` ausfuehren.
 
 ## 4. Drive: feste Orte
 
