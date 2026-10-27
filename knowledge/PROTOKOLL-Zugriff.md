@@ -21,6 +21,7 @@ schreiben „sende …“, „Entwurf an …“, „lies den Anhang von …“, 
 | Aufgabe | Funktioniert | Wie |
 |---|---|---|
 | Mails lesen (Inbox, Gesendet, Threads) | Ja | Werkzeuge `Gmail` (search_threads, get_thread, get_message) |
+| Postfaecher info@ und sr@ direkt lesen, auch Gesendet | Ja, ueber IONOS | `scripts/leans-mail.py lesen`, Befehl `/postfach`, braucht Freigabe imap.ionos.de und Secrets. Siehe 3b |
 | Entwuerfe lesen und aendern | Ja | `Gmail` list_drafts, get_draft, update_draft |
 | Mails schreiben, antworten, weiterleiten | Ja | `Gmail` create_draft, reply, send_message, forward |
 | Anhang-Namen und -Typen sehen | Ja | get_message mit `PLAIN_TEXT` liefert `attachments` |
@@ -84,8 +85,11 @@ Die Domain leanstech-gmbh.de liegt bei IONOS. Das Skript `scripts/leans-mail.py`
 `smtp.ionos.de:587` als info@ oder sr@, mit beliebigen Anhaengen (zusammen max. 25 MB), und haengt die
 Signatur an. Befehl `/senden` in jedem Repo-Chat nutzt es.
 
+Dasselbe Skript LIEST die Postfaecher info@ und sr@ direkt bei IONOS, auch den Gesendet-Ordner, den Gmail
+nie sieht: `python3 scripts/leans-mail.py lesen --konto info --ordner Sent --tage 30`. Befehl `/postfach`.
+
 Einmalig von Semir in der Cloud-Umgebung (Titelzeile der Session, Umgebungsmenue, „Edit“):
-1. Network access: `smtp.ionos.de` unter Allowed domains eintragen (Allow package managers angehakt lassen).
+1. Network access: `smtp.ionos.de` und `imap.ionos.de` unter Allowed domains eintragen (Allow package managers angehakt lassen).
 2. Environment variables / Network secrets: `IONOS_INFO_PASSWORD` (Passwort von info@leanstech-gmbh.de)
    und `IONOS_SR_PASSWORD` (Passwort von sr@leanstech-gmbh.de). Nie Passwoerter in den Chat schreiben.
 3. Neue Session starten, dann gilt es fuer jeden Chat in dieser Umgebung.
