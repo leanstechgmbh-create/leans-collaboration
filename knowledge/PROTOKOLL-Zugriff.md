@@ -198,6 +198,13 @@ Einstellung `voice` (siehe `/config`).
 ### Bekannte Grenzen
 
 - Gmail-Anhaenge sind nur ueber Drive oder Upload lesbar (Stand 2026-10-24).
+- Anhaenge SENDEN ueber das Gmail-Werkzeug geht praktisch nur fuer sehr kleine Dateien (bis ca. 20 KB): der Inhalt
+  muss als Base64-Text durch den Chat laufen, und 100 KB Base64 kosten rund 450.000 Tokens. Ein 1-MB-PDF ist so nicht
+  versendbar, auch nicht ueber einen Hilfsagenten (Test 27.10.2026, munio/Gieseke). Drive-Dateien ueber 10 MB kann das
+  Drive-Werkzeug gar nicht herunterladen, und Freigaben an Externe werden von der Sicherheitsschranke gestoppt.
+  Folge: Mails mit echten Anhaengen gehen nur ueber `scripts/leans-mail.py` (IONOS, Abschnitt 3b), das die Dateien direkt
+  aus dem Container anhaengt. Bis die IONOS-Secrets gesetzt sind: Entwurf anlegen, Semir haengt die Dateien in Gmail
+  ueber „Aus Drive einfuegen“ an und sendet.
 - Test 27.10.2026: Versand mit ZIP-Anhang aus dem Chat funktioniert (Kontrollmail an sich selbst kam mit
   Anhang an). Mails an info@ und sr@ kommen nicht als Kopie zurueck, weil Gmail eigene weitergeleitete
   Mails unterdrueckt; info@ ist durch echte Kundenmails bewiesen, sr@ noch nicht (Test von fremder Adresse offen).
