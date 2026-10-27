@@ -9,10 +9,13 @@ Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, 
 
 Zwei Wege. Immer zuerst Weg A prüfen, dann Weg B.
 
-## Weg A: als info@ oder sr@ (IONOS-Mailserver, Skript im Repo)
+## Weg A: Skript im Repo, als info@, sr@ oder gmail (einziger Weg für echte Anhänge)
 
-Voraussetzung, einmalig von Semir in der Cloud-Umgebung gesetzt: `smtp.ionos.de` unter Allowed domains
-und die Secrets `IONOS_INFO_PASSWORD` / `IONOS_SR_PASSWORD`. Fehlt etwas, sagt das Skript genau was.
+Voraussetzung, einmalig von Semir in der Cloud-Umgebung gesetzt (Umgebung → Edit):
+- `--von gmail`: Allowed domain `smtp.gmail.com`, Secret `GMAIL_APP_PASSWORD` (Google-Konto → Sicherheit → App-Passwörter).
+- `--von info` / `--von sr`: Allowed domain `smtp.ionos.de`, Secrets `IONOS_INFO_PASSWORD` / `IONOS_SR_PASSWORD`.
+Fehlt etwas, sagt das Skript genau was (Exit 2). Anhänge über ca. 20 KB gehen NUR über diesen Weg,
+das Gmail-Werkzeug (Weg B) kann sie nicht tragen (Protokoll, Bekannte Grenzen).
 
 1. Mailtext in eine Datei schreiben (Arbeitsverzeichnis), ohne Signatur, die hängt das Skript an.
 2. Anhänge in den Container holen: aus Drive mit `mcp__Google_Drive__download_file_content`, aus dem Repo,
