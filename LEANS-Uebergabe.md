@@ -10,6 +10,11 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 - Was gebaut: Beide Zahlungserinnerungen (Klima 2025-71, Sanitär 2025-106) liegen als Gmail-Entwürfe mit Rechnung als PDF und ZIP bereit, bitgenau geprüft. Sanitär ist vollständig. Bei Klima fehlen in der ZIP die Datenblätter Mitsubishi SCM100ZS-W, SRK50ZSX-WF, Resideo L5 und die Betriebszertifizierung.
 - Wo liegt es: `knowledge/prompts/2026-10-21-uebergabe-rauch-klima-fertigstellen.md`; Werkzeug „LEANS Versand“ https://claude.ai/artifact/PeMuDe75EtBaQGwne3NBSU
 - Nächster Schritt: Übergabe lesen, fehlende Unterlagen holen, Klima-Auftrag aktualisieren, beide Entwürfe prüfen, nach Semirs „ja“ senden.
+- Stand 2026-10-27:
+  - Die Datenblätter passen nicht mehr in die Klima-Mail (1 MiB je Aufruf). Deshalb gibt es den neuen Entwurf `r-8334248396302948506` „Unterlagen zur Rechnung 2025-71“ und den Auftrag `2026-10-21-rauch-klima-datenblaetter`. Er ist noch `offen` und wartet auf Semirs Klick auf der Seite (Higgsfield erlauben).
+  - Die Betriebszertifizierung hängt Semir in Gmail aus Drive an.
+  - Semir will von info@ senden. Das geht nur in Gmail über das Von-Feld.
+  - Nichts ist gesendet.
 
 ### AN CLAUDE: ERLEDIGT — Entwürfe in info@ anlegen (WE 2.2.1 Rauch) — ersetzt durch Gmail-Weg, siehe Eintrag darüber
 - Datum/Zeit: 2026-10-20 18:45
