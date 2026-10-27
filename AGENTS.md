@@ -11,5 +11,6 @@ Diese Regeln gelten fuer ChatGPT/Codex und Claude, wenn sie in diesem Projekt ar
 7. Wissen, Entscheidungen und wiederverwendbare Prompts in `knowledge/` dokumentieren.
 8. Nur lokal unter Windows: vor jeder Aenderung an gemeinsamen Projektdateien `scripts/leans-live.ps1 status` ausfuehren und die eigene Arbeit mit `scripts/leans-live.ps1 announce` ankuendigen. In Cloud-Sessions gibt es kein PowerShell; dort entfaellt dieser Schritt.
 9. Zugriffsprobleme (Mail, Anhang, Drive, Berechtigung) nur in `knowledge/PROTOKOLL-Zugriff.md` dokumentieren, keine neuen Dateien dafuer anlegen.
+10. Fehlt in einem Chat der Gmail- oder Drive-Zugriff: nicht neu verbinden, sondern Semir auf die Session „LEANS Mail-Zentrale“ verweisen (Protokoll Abschnitt 0).
 
 Die detaillierte Board-Syntax steht in `LEANS-Uebergabe-ANLEITUNG.md`.
