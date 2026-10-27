@@ -22,7 +22,12 @@ Optionen:
   --cc ADRESSE             Kopie, mehrfach moeglich
   --betreff TEXT           Betreff
   --text TEXT              Mailtext (Klartext) ODER --text-datei DATEI
-  --anhang DATEI           Anhang, mehrfach moeglich (zusammen max. 25 MB)
+  --anhang DATEI           Anhang einzeln (z. B. die Rechnung als PDF), mehrfach moeglich
+  --zusatz DATEI           Zusatzdatei (Aufmass, Fotos, Nachweise), mehrfach; alle werden in EINE ZIP gepackt
+  --zip-name NAME          Name der ZIP (Standard: "Anlagen <Betreff>.zip")
+
+REGEL RECHNUNGSVERSAND (Semir, 27.10.2026): Rechnung immer als eigene PDF per --anhang,
+alle weiteren Dateien per --zusatz, die landen zusammen in einer ZIP. Zusammen max. 25 MB.
   --antwort-auf MSGID      Message-ID der Kundenmail fuer die Thread-Zuordnung (optional)
   --dry-run                Nur anzeigen, nichts senden
 
@@ -82,7 +87,24 @@ def baue_nachricht(args: argparse.Namespace, absender: str) -> EmailMessage:
     msg.set_content(text)
 
     gesamt = 0
-    for pfad in args.anhang or []:
+    anhaenge = list(args.anhang or [])
+    if args.zusatz:
+        import re
+        import tempfile
+        import zipfile
+        zip_name = args.zip_name or ("Anlagen " + re.sub(r'[\\/:*?"<>|]+', "-", args.betreff).strip() + ".zip")
+        if not zip_name.lower().endswith(".zip"):
+            zip_name += ".zip"
+        zip_pfad = Path(tempfile.mkdtemp()) / zip_name
+        with zipfile.ZipFile(zip_pfad, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+            for pfad in args.zusatz:
+                p = Path(pfad)
+                if not p.is_file():
+                    fehler(2, f"Zusatzdatei nicht gefunden: {p}")
+                z.write(p, arcname=p.name)
+        anhaenge.append(str(zip_pfad))
+        print(f"ZIP gebaut: {zip_name} ({zip_pfad.stat().st_size // 1024} KB, {len(args.zusatz)} Dateien)")
+    for pfad in anhaenge:
         p = Path(pfad)
         if not p.is_file():
             fehler(2, f"Anhang nicht gefunden: {p}")
@@ -216,6 +238,8 @@ def main() -> None:
     gruppe.add_argument("--text")
     gruppe.add_argument("--text-datei")
     ap.add_argument("--anhang", action="append")
+    ap.add_argument("--zusatz", action="append")
+    ap.add_argument("--zip-name")
     ap.add_argument("--antwort-auf")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
@@ -227,7 +251,8 @@ def main() -> None:
 
     msg = baue_nachricht(args, absender)
     print(f"Von: {absender}\nAn: {msg['To']}\nCc: {msg.get('Cc', '')}\nBetreff: {msg['Subject']}")
-    print("Anhaenge:", ", ".join(Path(a).name for a in (args.anhang or [])) or "keine")
+    print("Anhaenge:", ", ".join(Path(a).name for a in (args.anhang or [])) or "keine",
+          "| Zusatz in ZIP:", ", ".join(Path(a).name for a in (args.zusatz or [])) or "keine")
     if args.dry_run:
         print("--- dry-run, nichts gesendet ---")
         return

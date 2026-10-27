@@ -75,6 +75,8 @@ in Drive ablegen und den Link in die Mail setzen.
   (`filename`, `mimeType`, `content`). Mehrere Dateien als ZIP: `zip -j paket.zip datei1 datei2`
   oder Python `zipfile`, dann die ZIP als `application/zip` anhaengen.
 - Groesse: zusammen max. 25 MB. Darueber: Datei in Drive ablegen und den Link in die Mail setzen.
+- Rechnungen (Regel Semir 27.10.2026): Rechnung als eigene PDF, alle Zusatzdateien zusammen in EINE ZIP
+  „Anlagen <Betreff>.zip“. `leans-mail.py --anhang rechnung.pdf --zusatz datei …` macht das automatisch.
 - Gmail-Anhaenge anderer Mails koennen nicht direkt weiterverpackt werden (siehe Abschnitt 3);
   erst „In Drive speichern“, dann von Drive holen. `forward` leitet eine Mail samt Anhaengen weiter,
   ohne dass der Chat den Inhalt sieht.

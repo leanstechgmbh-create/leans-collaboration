@@ -14,8 +14,11 @@ und die Secrets `IONOS_INFO_PASSWORD` / `IONOS_SR_PASSWORD`. Fehlt etwas, sagt d
 
 1. Mailtext in eine Datei schreiben (Arbeitsverzeichnis), ohne Signatur, die hängt das Skript an.
 2. Anhänge in den Container holen: aus Drive mit `mcp__Google_Drive__download_file_content`, aus dem Repo,
-   oder Upload im Chat. Mehrere Dateien bei Bedarf als ZIP (`zip -j paket.zip a.pdf b.pdf`).
-3. Probelauf: `python3 scripts/leans-mail.py --von info --an <kunde> --betreff "<Betreff>" --text-datei mail.txt --anhang <datei> --dry-run`
+   oder Upload im Chat.
+   REGEL RECHNUNGEN (Semir, 27.10.2026, `knowledge/decisions/2026-10-27-rechnungsversand-anhaenge.md`):
+   Rechnung als eigene PDF per `--anhang`, alle Zusatzdateien (Aufmaß, Fotos, Nachweise) per `--zusatz`,
+   das Skript packt sie in EINE ZIP „Anlagen <Betreff>.zip“. Gilt auch für Angebote mit vielen Beilagen.
+3. Probelauf: `python3 scripts/leans-mail.py --von info --an <kunde> --betreff "<Betreff>" --text-datei mail.txt --anhang rechnung.pdf --zusatz aufmass.pdf --zusatz foto.jpg --dry-run`
 4. Wenn Semir „senden“ gesagt hat: gleicher Befehl ohne `--dry-run`. Ausgabe „GESENDET als …“ im Chat nennen.
 5. Danach in Gmail den Kunden-Thread labeln (Label_19 „Klima/Anfrage offen“ bleibt, bis erledigt) und das Board
    aktualisieren (`/anfragen-board`), falls es eine Kundenanfrage ist.
@@ -28,6 +31,8 @@ wörtlich an Semir geben, nichts umgehen.
 Wenn Weg A nicht geht oder Semir ausdrücklich Gmail will:
 `mcp__Gmail__send_message` mit `to`, `subject`, `body`, `attachments` (base64, `filename`, `mimeType`),
 oder mit `draftId`, wenn der Entwurf schon in Gmail liegt. Absender ist dann immer das Gmail-Konto.
+Rechnungsregel gilt auch hier: Rechnung als PDF, Zusatzdateien vorher mit
+`zip -j "Anlagen <Betreff>.zip" datei1 datei2` bündeln, beide anhängen.
 
 ## Regeln
 
