@@ -5,7 +5,7 @@ description: Einen Mail-Anhang lesen oder weiterverarbeiten (PDF, Bild, Rechnung
 
 # Anhang lesen
 
-Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, ohne Rückfrage. Erst machen, dann in einem Satz melden.
+Regel 11 (`AGENTS.md`): Arbeitsschritte (lesen, Entwurf, Labels, Drive, Board) ohne Erlaubnisfragen erledigen, danach kurz melden. Versand nur nach ausdrücklichem „senden“.
 
 Das Gmail-Werkzeug liefert nur Dateiname, Typ und ID eines Anhangs, nie den Inhalt. Der Weg, der geht:
 

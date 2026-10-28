@@ -5,7 +5,7 @@ description: Mail wirklich verschicken, auf Wunsch als info@ oder sr@leanstech-g
 
 # Mail senden
 
-Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, ohne Rückfrage. Erst machen, dann in einem Satz melden.
+Regel 11 (`AGENTS.md`): Arbeitsschritte (lesen, Entwurf, Labels, Drive, Board) ohne Erlaubnisfragen erledigen, danach kurz melden. Versand nur nach ausdrücklichem „senden“.
 
 Zwei Wege. Immer zuerst Weg A prüfen, dann Weg B.
 
@@ -41,8 +41,8 @@ Rechnungsregel gilt auch hier: Rechnung als PDF, Zusatzdateien vorher mit
 
 ## Regeln
 
-- Ohne Anweisung bleibt es beim Entwurf oder dry-run. Sagt Semir „senden“ / „verschick es“, wird sofort gesendet:
-  keine Rückfrage, kein „bist du sicher“, keine Optionen. Danach melden: an wen, Absender, Anhänge (Regel 11).
+- Senden nur nach ausdrücklichem „senden“ / „verschick es“ von Semir. Vorher Entwurf oder dry-run zeigen.
+  Danach melden: an wen, Absender, Anhänge.
 - Einzige erlaubte Frage: Empfängeradresse oder Anhang fehlt und ist nirgends zu finden. Dann genau eine Frage.
 - Fehlt Secret oder Netzfreigabe: Fehlertext und Stelle nennen (Protokoll 3b), nicht fragen, ob Semir sie setzen möchte.
 - Website-Formular-Mails (formsubmit) nie per Reply beantworten, sondern an die Kunden-E-Mail aus dem Text.

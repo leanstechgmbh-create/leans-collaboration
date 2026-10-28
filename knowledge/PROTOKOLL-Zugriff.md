@@ -16,10 +16,10 @@ Chats, die vor dem Verbinden gestartet wurden, sehen sie nicht, und Web-Chats br
 je Chat im Werkzeug-Menue. Darum: nicht neu verbinden, sondern in die Mail-Zentrale wechseln und dort
 schreiben „sende …“, „Entwurf an …“, „lies den Anhang von …“, „Board aktualisieren“.
 
-**Anweisung = Auftrag (Regel 11, Semir 27.10.2026).** Was Semir sagt, wird gemacht, ohne Rueckfrage und ohne
-„soll ich wirklich?“. Erst ausfuehren, dann in einem Satz melden. Eine Frage ist nur erlaubt, wenn ohne die Antwort
-das Ergebnis falsch waere (Empfaenger fehlt, zwei gleiche Namen). Fehlt eine Voraussetzung (Secret, Freigabe),
-den genauen Fehlertext und die Stelle nennen, nicht fragen, ob er sie setzen moechte.
+**Keine Erlaubnisfragen bei Arbeitsschritten (Regel 11, Semir 27.10.2026).** Lesen, Entwuerfe, Labels, Drive, Board,
+Code: einfach machen, dann kurz melden. Keine „darf ich“-Fragen, keine Optionslisten. Eine Frage ist nur erlaubt,
+wenn ohne die Antwort das Ergebnis falsch waere. Fehlt eine Voraussetzung (Secret, Freigabe), den genauen Fehlertext
+und die Stelle nennen. VERSAND ist davon ausgenommen: Mails an Dritte gehen nur nach ausdruecklichem „senden“ raus.
 Details: `knowledge/decisions/2026-10-27-ausfuehren-statt-nachfragen.md`.
 
 ## 1. Was funktioniert, was nicht
@@ -46,8 +46,8 @@ Details: `knowledge/decisions/2026-10-27-ausfuehren-statt-nachfragen.md`.
 2. Thread komplett lesen mit `get_thread` und `messageFormat: PLAIN_TEXT`. Nie nur die Vorschau nutzen,
    sie zeigt nur die 5 aeltesten Nachrichten.
 3. Antwort als Entwurf anlegen mit `create_draft` und `replyToMessageId`, damit die Antwort im Thread bleibt.
-4. Ohne Anweisung ist das Ergebnis ein Entwurf. Sagt Semir „senden“, wird gesendet, sofort und ohne Rueckfrage
-   (Regel 11). Danach kurz melden: an wen, mit welchen Anhaengen.
+4. Standard ist Entwurf. Gesendet wird nur, wenn Semir ausdruecklich „senden“ sagt. Danach kurz melden: an wen,
+   mit welchen Anhaengen.
 
 Es gibt zwei Gmail-Anbindungen. Immer die Werkzeuge mit Praefix `mcp__Gmail__` nehmen.
 Die Variante `mcp__plugin_small-business_gmail__` kann nicht senden und nicht antworten.
@@ -145,7 +145,7 @@ Fuer Cloud-Sessions (claude.ai/code) zusaetzlich: beim Start der Session den Ber
 „Auto“ oder „Alle Bearbeitungen akzeptieren“ stellen. Das ist eine Einstellung der Session,
 nicht des Repos, und kann nur Semir setzen.
 
-Was der Chat nie fragt: ob er eine klare Anweisung ausfuehren soll (Regel 11). Was trotzdem stoppen kann,
+Was der Chat nie fragt: ob er einen Arbeitsschritt (lesen, Entwurf, Label, Drive, Board) machen darf (Regel 11). Was trotzdem stoppen kann,
 ist die Plattform selbst, nicht der Chat: Selbstaenderung von `.claude/settings.json`, Force-Push,
 Direktverbindungen am Proxy vorbei. Dann nennt der Chat den genauen Hinweis und den Weg aussenrum.
 Fragt eine Session trotzdem bei jedem Werkzeug nach, steht der Berechtigungsmodus nicht auf „Auto“
