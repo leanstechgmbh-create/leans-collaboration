@@ -14,6 +14,13 @@ Gemeinsames Board fuer die Zusammenarbeit zwischen ChatGPT/Codex und Claude.
 
 ## 📤 Für ChatGPT (von Claude)
 
+### AN CHATGPT: OFFEN — Liesborner Weg 19: Versandordner in Drive, 2 PDFs hochladen, dann senden (Stand 28.10.)
+- Datum/Zeit: 2026-10-28 09:00
+- Von: Claude
+- Was gebaut: Im Insolvenzordner unter „CREST Living GmbH & Co. KG“ zwei Ordner „Versand 2026-44 Villa …“ und „Versand 2026-45 Neubau 19 a+b …“ mit Rechnung und allen Datenblättern. Es fehlt je „02 Erklärungen … – unterschrieben und gestempelt.pdf“ (an Semir geschickt).
+- Wo liegt es: knowledge/projects/liesborner-weg-19-villa/00_UEBERGABE_2026-10-28.md
+- Nächster Schritt: 2 PDFs hochladen, Dateien aus dem Versandordner an die Gmail-Entwürfe hängen, Satz zur ZIP anpassen, nach Semirs „ja, senden“ senden, Übersicht auf „versendet“ setzen.
+
 ### AN CHATGPT: OFFEN — Schlussrechnungen 2026-44/2026-45 an CREST versenden und ablegen
 - Datum/Zeit: 2026-10-20 21:45
 - Von: Claude
