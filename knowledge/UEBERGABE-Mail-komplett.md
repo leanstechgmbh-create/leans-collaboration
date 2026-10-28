@@ -32,6 +32,11 @@ In JEDEM Chat, ohne Einstellungen, ohne Nachfragen bei Arbeitsschritten:
 Semir hat die Claude-Desktop-App unter Windows. Ein Chat dort läuft auf seinem PC, mit seinem Netz und seinen Dateien.
 Dort fallen alle Cloud-Grenzen weg.
 
+**Stand 28.10.2026:** Weg 1 ist eingerichtet. Repo liegt unter `C:\Users\semir\Documents\leans-collaboration`,
+`mail-einrichten.ps1` lief durch, `leans-mail.py test` meldet alle drei Konten OK. Gilt nur fuer LOKALE Sessions
+auf dem Laptop. Cloud-Sessions koennen SMTP/IMAP grundsaetzlich nicht erreichen (Protokoll 3b); Passwoerter in der
+Cloud-Umgebung nutzen nichts. Offen: erster Echtversand (nach „Senden?“).
+
 ### Weg 1 (empfohlen): Claude Code lokal am PC
 1. Claude-Desktop-App → Bereich „Code“ → neue Session → statt Cloud „Lokal“ wählen, Ordner:
    der lokale Klon von `leans-collaboration` (sonst einmal `git clone https://github.com/leanstechgmbh-create/leans-collaboration`).

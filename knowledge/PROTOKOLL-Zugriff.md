@@ -113,9 +113,12 @@ Einmalig von Semir in der Cloud-Umgebung (Titelzeile der Session, Umgebungsmenue
    (Passwort von info@leanstech-gmbh.de) und `IONOS_SR_PASSWORD` (Passwort von sr@leanstech-gmbh.de). Nie Passwoerter in den Chat schreiben.
 3. Neue Session starten, dann gilt es fuer jeden Chat in dieser Umgebung.
 
-Stand 27.10.2026: smtp.ionos.de ist aus dem Container erreichbar, der Versandtest wurde aber von der
-Sicherheitsschranke des Chats gestoppt, bis die Freigabe in der Umgebung gesetzt ist. Danach einmal
-`python3 scripts/leans-mail.py --von info --an leanstechgmbh@gmail.com --betreff Test --text Test` ausfuehren.
+**Stand 28.10.2026, gemessen: In Cloud-Sessions geht `leans-mail.py` NICHT, auch nicht mit eingetragenen Domains und
+Secrets.** Der Cloud-Proxy laesst nur HTTPS ueber Port 443 durch; SMTP (587/465) und IMAP (993) werden abgebrochen
+(`Connection reset by peer`, ohne Proxy keine Namensaufloesung). Siehe `/root/.ccr/README.md`, „Not supported through
+the proxy: non-443 HTTPS ports, raw-TCP“. Die Schritte oben fuer die Cloud-Umgebung bringen darum nichts.
+`leans-mail.py` laeuft nur lokal am PC (Weg 1). Dort am 28.10.2026 verifiziert: `leans-mail.py test` OK fuer
+info@, sr@ und Gmail (Lesen Posteingang und Gesendet, SMTP-Anmeldung). Ein Echtversand steht noch aus.
 
 ## 4. Drive: feste Orte
 
@@ -218,5 +221,9 @@ Einstellung `voice` (siehe `/config`).
 - Test 27.10.2026: Versand mit ZIP-Anhang aus dem Chat funktioniert (Kontrollmail an sich selbst kam mit
   Anhang an). Mails an info@ und sr@ kommen nicht als Kopie zurueck, weil Gmail eigene weitergeleitete
   Mails unterdrueckt; info@ ist durch echte Kundenmails bewiesen, sr@ noch nicht (Test von fremder Adresse offen).
+- Cloud-Sessions erreichen keine Mailserver (SMTP/IMAP), nur HTTPS-Port 443 (Test 28.10.2026). Darum in der Cloud:
+  Gmail ueber den Gmail-Connector, info@/sr@ nur ueber die Weiterleitung nach Gmail lesen, Versand als info@/sr@
+  nur als Gmail-Entwurf mit umgestelltem Von-Feld (Abschnitt 3a), grosse Anhaenge gar nicht. Alles davon voll:
+  lokale Session am PC (`knowledge/UEBERGABE-Mail-komplett.md`, Weg 1).
 - Die PowerShell-Skripte unter `scripts/` laufen nur lokal unter Windows. In Cloud-Sessions
   gibt es kein `pwsh`; dort entfallen die Schritte `leans-live.ps1 status` und `announce`.
