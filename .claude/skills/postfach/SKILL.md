@@ -5,7 +5,7 @@ description: Direkt in die IONOS-Postfächer info@ und sr@leanstech-gmbh.de scha
 
 # Postfach info@ / sr@ lesen
 
-Regel 11 (`AGENTS.md`): Eine klare Anweisung von Semir wird sofort ausgeführt, ohne Rückfrage. Erst machen, dann in einem Satz melden.
+Regel 11 (`AGENTS.md`): Arbeitsschritte (lesen, Entwurf, Labels, Drive, Board) ohne Erlaubnisfragen erledigen, danach kurz melden. VERSAND: vor jedem Senden fragen, erst nach Semirs ausdrücklichem Ja senden, immer, ohne Ausnahme (Regel 12).
 
 Gmail zeigt nur, was IONOS weiterleitet, und nie den Gesendet-Ordner von info@ oder sr@.
 Dafür gibt es `scripts/leans-mail.py lesen` (IMAP direkt bei IONOS). Voraussetzung wie beim Senden:
