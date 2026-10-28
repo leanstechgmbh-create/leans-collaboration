@@ -1,4 +1,4 @@
-# CREST-Forderungen (Stand 20.10.2026)
+# CREST-Forderungen (Stand 27.10.2026)
 
 Bearbeitet von Claude mit Semir Redzic. Zahlungseingänge abgeglichen nur bis 31.05.2026.
 
@@ -21,7 +21,7 @@ Google Drive „Insolvenzordner – LEANS Tech GmbH“ (ID `1TTiMBN6SS71T_VGdjYI
 
 Zahlungserinnerung über die alten Rechnungen (15.005,11 €) am 20.10.2026 per Mail an info@crest-investment.com versendet.
 
-## CREST Living GmbH & Co. KG (Liesborner Weg 19, 13507 Berlin) – 144.495,19 €
+## CREST Living GmbH & Co. KG (Liesborner Weg 19, 13507 Berlin) – 86.749,88 €
 
 | Rechnung | Leistung | Brutto |
 |---|---|---|
@@ -30,23 +30,30 @@ Zahlungserinnerung über die alten Rechnungen (15.005,11 €) am 20.10.2026 per 
 | 2024-122 | Heerstr. 71 Wartung Viessmann 2024 | 793,61 € |
 | 2025-18 | Stahnsdorf Heizung Garagen, WC | 23.500,00 € |
 | 2025-22 | Stahnsdorf Heizung/Sanitär | 29.817,27 € |
-| 2025-98 | Liesborner Weg 19, 8. AR | in 2026-45 enthalten (11.000,00 €) |
 | 2025-104 | Heerstr. 71 Wartung Viessmann 2025 (neu) | 793,61 € |
 | 2025-105 | Heerstr. 71 Wartung Grünbeck 2025 (neu) | 642,56 € |
-| 2026-44 | Schlussrechnung Villa, Liesborner Weg 19 (andere Sitzung) | 16.000,00 € |
-| 2026-45 | Schlussrechnung Neubau, Liesborner Weg 19 a+b, enthält 2025-98 (andere Sitzung) | 41.745,31 € |
 
-Zahlungserinnerung über die alten Rechnungen: 85.313,71 €. Sie liegt bereit und ist nicht versendet. Am 24.10.2026 wurde sie von 96.313,71 € korrigiert, weil 2025-98 sonst doppelt gefordert würde.
+Zahlungserinnerung über die alten Rechnungen: 85.313,71 € (ohne 2025-98). Sie liegt bereit und ist nicht versendet.
+
+**Zusammen offen (beide Firmen): 110.324,99 €**
+
+## Separat (macht Semir selbst, nicht im Insolvenzordner)
+
+Ordner „CREST separat – Villa, Neubau, Kesting, Rauch“ (ID `14KVrfevsOZ_HKZK7y51p_X3-zcplOsSH`), neben dem Insolvenzordner:
+
+- Villa Liesborner Weg 19: Schlussrechnung 2026-44 (16.000,00 €)
+- Neubau Liesborner Weg 19 a+b: Schlussrechnung 2026-45 (41.745,31 €), enthält die 8. AR 2025-98 (11.000,00 €)
+- Kesting: 2025-72 (12.330,81 €)
+- Rauch: 2025-71 (13.709,26 €), 2025-106 (1.979,73 €), 2025-81
 
 ## Entscheidungen von Semir
 
 - Bankkonto auf allen neuen Rechnungen/Erinnerungen: **Berliner Volksbank, IBAN DE21 1009 0000 2911 7280 04, BIC BEVODEBB, Kontoinhaber LEANS Tech GmbH** (nicht Adyen, nicht Postbank). Achtung: weicht von „00 ANLEITUNG für KI – LEANS-Rechnungen“ (Adyen) ab.
 - Rechnungsnummern der Wartungen 2025 aus der 2025er-Reihe (nach 2025-101); Rechnungsdatum 19./20.10.2026, Leistungsjahr 2025.
-- Ausgeschlossen: 2025-71 (Klima WE 2.2.1), 2025-72 (Bad Kesting), 2025-81 (Rauch), 2024-148 (Gebläse, an Amarjeet Singh adressiert).
+- Ausgeschlossen: Villa (2026-44), Neubau (2026-45 inkl. 2025-98), Kesting (2025-72), Rauch (2025-71, 2025-106, 2025-81), 2024-148 (Gebläse, an Amarjeet Singh adressiert).
 - CREST Wohnen am Tegeler See (2024-98, 2024-105, zusammen 576.639,27 €) wird separat bearbeitet.
 - Nichts weiter versenden ohne Anweisung.
 
 ## Offen
 
-- 2025-106 (SBS WE 2.2.1 Sanitär, 1.979,73 €) und 2025-71 liegen von dritter Seite im CREST-Investment-Ordner, nicht in der Summe.
 - Zahlungseingänge ab Juni 2026 prüfen.
