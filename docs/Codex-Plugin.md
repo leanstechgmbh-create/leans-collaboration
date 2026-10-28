@@ -73,9 +73,20 @@ Erfolgreich eingerichtet ist es, wenn die `/codex:`-Befehle erscheinen und `/age
 /codex:result
 ```
 
-Codex laeuft laut OpenAI nativ unter Windows (PowerShell mit Windows-Sandbox). Die Plugin-Anleitung
-nennt Windows nicht ausdruecklich. Bei Problemen zuerst `/codex:setup` ausfuehren und die
-[Codex-Windows-Doku](https://developers.openai.com/codex/windows) pruefen.
+**Windows-Test am LEANS-PC (2026-10-28):** Laeuft. Node v24.16.0, npm 11.13.0, Codex CLI 0.147.0
+waren schon installiert, Codex war bereits mit dem ChatGPT-Konto angemeldet. Plugin 1.0.6 per
+PowerShell installiert (`claude plugin marketplace add …` und `claude plugin install …`, beides ohne
+Fehler, Scope user). `/codex:setup` meldet `Status: ready` (advanced runtime, Review Gate aus).
+Erster Test-Review (`/codex:review --background`) brach ab mit `400 model_not_found`: In
+`~/.codex/config.toml` stand `model = "gpt-6-luna"`, das mit ChatGPT-Anmeldung nicht erlaubt ist
+(betraf auch `codex exec`, also Codex insgesamt). Behoben durch `model = "gpt-5.6-sol"` (Sicherung:
+`config.toml.sicherung-2026-10-28`); erlaubte Modelle stehen in `~/.codex/models_cache.json`.
+Zweiter Test-Review lief vollstaendig durch (ca. 15 Min.), `/codex:status` und `/codex:result`
+zeigten Ergebnis und Codex-Session-ID. Die Verbindung ist damit fertig.
+Hinweise: Node 24 gibt beim Start eine harmlose `DEP0190`-Warnung aus; Codex meldet ausserdem
+`failed to load skill …\ugc-factory\styles\01-cinematic\SKILL.md` (fehlender YAML-Kopf), ohne Folgen.
+Bei Problemen zuerst `/codex:setup` ausfuehren
+und die [Codex-Windows-Doku](https://developers.openai.com/codex/windows) pruefen.
 
 ## Befehle
 
