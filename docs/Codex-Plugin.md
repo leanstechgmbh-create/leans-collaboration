@@ -26,7 +26,10 @@ angemeldete Codex CLI vorhanden ist.
 
 ## Einmalig einrichten
 
-Claude Code im LEANS-Ordner starten und dort eingeben:
+Am einfachsten: einen neuen lokalen Claude-Code-Chat im LEANS-Ordner starten und den Block aus
+`knowledge/prompts/codex-plugin-einrichten.md` einfuegen. Der Chat erledigt die Schritte unten selbst.
+
+Von Hand: Claude Code im LEANS-Ordner starten und dort eingeben:
 
 ```text
 /plugin marketplace add openai/codex-plugin-cc
