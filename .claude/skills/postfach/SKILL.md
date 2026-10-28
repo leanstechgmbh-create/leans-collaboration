@@ -8,8 +8,12 @@ description: Direkt in die IONOS-Postfächer info@ und sr@leanstech-gmbh.de scha
 Regel 11 (`AGENTS.md`): Arbeitsschritte (lesen, Entwurf, Labels, Drive, Board) ohne Erlaubnisfragen erledigen, danach kurz melden. VERSAND: vor jedem Senden fragen, erst nach Semirs ausdrücklichem Ja senden, immer, ohne Ausnahme (Regel 12).
 
 Gmail zeigt nur, was IONOS weiterleitet, und nie den Gesendet-Ordner von info@ oder sr@.
-Dafür gibt es `scripts/leans-mail.py lesen` (IMAP direkt bei IONOS). Voraussetzung wie beim Senden:
-`imap.ionos.de` und `smtp.ionos.de` unter Allowed domains, Secrets `IONOS_INFO_PASSWORD` / `IONOS_SR_PASSWORD`.
+Dafür gibt es `scripts/leans-mail.py lesen` (IMAP direkt bei IONOS; `--konto gmail` liest das Gmail-Konto per IMAP).
+Voraussetzung: Passwörter `IONOS_INFO_PASSWORD` / `IONOS_SR_PASSWORD` / `GMAIL_APP_PASSWORD`.
+Lokal am PC (Weg 1) setzt sie `scripts/mail-einrichten.ps1`; in der Cloud zusätzlich `imap.ionos.de`, `smtp.ionos.de`
+unter Allowed domains. Unter Windows `python` statt `python3`. Schnellcheck aller drei Konten:
+`python3 scripts/leans-mail.py test` (sendet nichts).
+`--ordner Sent` findet den Gesendet-Ordner automatisch (IONOS „Gesendete Objekte“, Gmail „[Gmail]/Gesendet“).
 
 ## Befehle
 

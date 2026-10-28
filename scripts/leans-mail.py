@@ -16,6 +16,12 @@ Aufruf (lesen, Postfach info@ oder sr@ direkt bei IONOS, auch Gesendet):
   python3 scripts/leans-mail.py lesen --konto info --ordner INBOX --uid 1234 --volltext
   python3 scripts/leans-mail.py lesen --konto info --ordner-liste
 
+Aufruf (Test aller drei Konten: IMAP-Anmeldung, Posteingang, Gesendet, SMTP-Anmeldung; sendet NICHTS):
+  python3 scripts/leans-mail.py test
+  python3 scripts/leans-mail.py test --konto sr
+
+Unter Windows "python" statt "python3". Einrichtung am PC: scripts/mail-einrichten.ps1.
+
 Optionen:
   --von info|sr            Absenderadresse (info@ oder sr@leanstech-gmbh.de)
   --an ADRESSE             Empfaenger, mehrfach moeglich
@@ -39,10 +45,12 @@ import email.header
 import imaplib
 import mimetypes
 import os
+import re
 import smtplib
 import socket
 import ssl
 import sys
+import time
 from email.message import EmailMessage
 from email.utils import formataddr, formatdate, make_msgid
 from pathlib import Path
@@ -63,6 +71,15 @@ SIGNATUR = (
     "info@leanstech-gmbh.de\nwww.leanstechgmbh-hkls.de\n"
 )
 MAX_BYTES = 25 * 1024 * 1024
+# Namen des Gesendet-Ordners, falls der Server ihn nicht per SPECIAL-USE (\\Sent) kennzeichnet.
+GESENDET_KANDIDATEN = ("Gesendete Objekte", "Sent", "Sent Items", "Gesendet", "INBOX.Sent",
+                       "[Gmail]/Gesendet", "[Gmail]/Sent Mail")
+
+
+class KontoFehler(Exception):
+    def __init__(self, code: int, text: str):
+        super().__init__(text)
+        self.code = code
 
 
 def fehler(code: int, text: str) -> None:
@@ -90,7 +107,6 @@ def baue_nachricht(args: argparse.Namespace, absender: str) -> EmailMessage:
     gesamt = 0
     anhaenge = list(args.anhang or [])
     if args.zusatz:
-        import re
         import tempfile
         import zipfile
         zip_name = args.zip_name or ("Anlagen " + re.sub(r'[\\/:*?"<>|]+', "-", args.betreff).strip() + ".zip")
@@ -139,26 +155,74 @@ def _textkoerper(nachricht) -> str:
                 return teil.get_payload(decode=True).decode(teil.get_content_charset() or "utf-8", errors="replace")
         for teil in nachricht.walk():
             if teil.get_content_type() == "text/html" and not teil.get_filename():
-                import re
                 html = teil.get_payload(decode=True).decode(teil.get_content_charset() or "utf-8", errors="replace")
                 return re.sub(r"<[^>]+>", " ", html)
         return ""
     return nachricht.get_payload(decode=True).decode(nachricht.get_content_charset() or "utf-8", errors="replace")
 
 
-def lesen(args: argparse.Namespace) -> None:
-    konto, secret_name, _, imap_host = ABSENDER[args.konto]
+def _passwort(schluessel: str) -> str:
+    _, secret_name, _, _ = ABSENDER[schluessel]
     passwort = os.environ.get(secret_name, "")
+    if schluessel == "gmail":
+        passwort = passwort.replace(" ", "")  # Google zeigt App-Passwoerter in Vierergruppen an
+    return passwort
+
+
+def _imap_verbinden(schluessel: str) -> imaplib.IMAP4_SSL:
+    konto, secret_name, _, imap_host = ABSENDER[schluessel]
+    passwort = _passwort(schluessel)
     if not passwort:
-        fehler(2, f"Secret {secret_name} fehlt. In der Cloud-Umgebung unter Environment variables setzen.")
+        raise KontoFehler(2, f"Secret {secret_name} fehlt. Am PC: scripts/mail-einrichten.ps1, in der Cloud: Environment variables.")
     try:
         imap = imaplib.IMAP4_SSL(imap_host, IMAP_PORT, ssl_context=ssl.create_default_context(), timeout=30)
     except (socket.gaierror, OSError) as e:
-        fehler(3, f"{imap_host}:{IMAP_PORT} nicht erreichbar ({e}). In der Cloud-Umgebung {imap_host} unter Allowed domains eintragen.")
+        raise KontoFehler(3, f"{imap_host}:{IMAP_PORT} nicht erreichbar ({e}). In der Cloud-Umgebung {imap_host} unter Allowed domains eintragen.")
     try:
         imap.login(konto, passwort)
     except imaplib.IMAP4.error as e:
-        fehler(4, f"{imap_host} lehnt die Anmeldung fuer {konto} ab ({e}). Passwort im Secret {secret_name} pruefen.")
+        raise KontoFehler(4, f"{imap_host} lehnt die Anmeldung fuer {konto} ab ({e}). Passwort im Secret {secret_name} pruefen.")
+    return imap
+
+
+def _finde_gesendet(imap: imaplib.IMAP4_SSL):
+    """Gesendet-Ordner ermitteln: zuerst per SPECIAL-USE-Kennzeichen \\Sent, dann ueber bekannte Namen."""
+    status, zeilen = imap.list()
+    namen = []
+    for zeile in zeilen or []:
+        if not isinstance(zeile, bytes):
+            continue
+        m = re.match(r'\((?P<flags>[^)]*)\) (?:"[^"]*"|NIL) (?P<name>.+)$', zeile.decode(errors="replace"))
+        if not m:
+            continue
+        name = m.group("name").strip()
+        if name.startswith('"') and name.endswith('"'):
+            name = name[1:-1]
+        if "\\sent" in m.group("flags").lower():
+            return name
+        namen.append(name)
+    for kandidat in GESENDET_KANDIDATEN:
+        if kandidat in namen:
+            return kandidat
+    return None
+
+
+def _waehle_ordner(imap: imaplib.IMAP4_SSL, wunsch: str):
+    if wunsch.lower() in ("sent", "gesendet"):
+        gesendet = _finde_gesendet(imap)
+        if gesendet and imap.select(f'"{gesendet}"', readonly=True)[0] == "OK":
+            return gesendet
+    if imap.select(f'"{wunsch}"', readonly=True)[0] == "OK":
+        return wunsch
+    return None
+
+
+def lesen(args: argparse.Namespace) -> None:
+    konto = ABSENDER[args.konto][0]
+    try:
+        imap = _imap_verbinden(args.konto)
+    except KontoFehler as e:
+        fehler(e.code, str(e))
 
     if args.ordner_liste:
         status, ordner = imap.list()
@@ -167,15 +231,9 @@ def lesen(args: argparse.Namespace) -> None:
         imap.logout()
         return
 
-    ordner = args.ordner
-    status, _ = imap.select(f'"{ordner}"', readonly=True)
-    if status != "OK":
-        for kandidat in ("Gesendete Objekte", "Sent Items", "Gesendet", "INBOX.Sent"):
-            if imap.select(f'"{kandidat}"', readonly=True)[0] == "OK":
-                ordner = kandidat
-                break
-        else:
-            fehler(2, f"Ordner {args.ordner} nicht gefunden. Mit --ordner-liste nachsehen.")
+    ordner = _waehle_ordner(imap, args.ordner)
+    if ordner is None:
+        fehler(2, f"Ordner {args.ordner} nicht gefunden. Mit --ordner-liste nachsehen.")
 
     if args.uid:
         status, daten = imap.uid("fetch", args.uid, "(RFC822)")
@@ -215,7 +273,87 @@ def lesen(args: argparse.Namespace) -> None:
     imap.logout()
 
 
+def _smtp_anmelden(schluessel: str) -> None:
+    absender, secret_name, smtp_host, _ = ABSENDER[schluessel]
+    try:
+        with smtplib.SMTP(smtp_host, SMTP_PORT, timeout=30) as smtp:
+            smtp.ehlo()
+            smtp.starttls(context=ssl.create_default_context())
+            smtp.ehlo()
+            try:
+                smtp.login(absender, _passwort(schluessel))
+            except smtplib.SMTPAuthenticationError as e:
+                raise KontoFehler(4, f"{smtp_host} lehnt die Anmeldung fuer {absender} ab ({e.smtp_code}). Passwort im Secret {secret_name} pruefen.")
+    except (socket.gaierror, OSError, smtplib.SMTPConnectError) as e:
+        raise KontoFehler(3, f"{smtp_host}:{SMTP_PORT} nicht erreichbar ({e}). In der Cloud-Umgebung {smtp_host} unter Allowed domains eintragen.")
+
+
+def test(args: argparse.Namespace) -> None:
+    """Prueft je Konto Lesen (IMAP: Posteingang und Gesendet) und Senden (SMTP-Anmeldung). Sendet keine Mail."""
+    import datetime
+    seit = (datetime.date.today() - datetime.timedelta(days=args.tage)).strftime("%d-%b-%Y")
+    alle_ok = True
+    for schluessel in args.konto or list(ABSENDER):
+        adresse = ABSENDER[schluessel][0]
+        print(f"\n== {adresse} ==")
+        try:
+            imap = _imap_verbinden(schluessel)
+        except KontoFehler as e:
+            print(f"  Lesen:  FEHLER  {e}")
+            alle_ok = False
+        else:
+            for wunsch in ("INBOX", "Sent"):
+                ordner = _waehle_ordner(imap, wunsch)
+                if ordner is None:
+                    print(f"  Lesen:  FEHLER  Ordner {wunsch} nicht gefunden")
+                    alle_ok = False
+                    continue
+                status, treffer = imap.uid("search", None, "SINCE", seit)
+                anzahl = len((treffer[0] or b"").split()) if status == "OK" else "?"
+                print(f"  Lesen:  OK      {ordner}: {anzahl} Mails in den letzten {args.tage} Tagen")
+            imap.logout()
+        if not _passwort(schluessel):
+            print("  Senden: FEHLER  kein Passwort gesetzt")
+            alle_ok = False
+            continue
+        try:
+            _smtp_anmelden(schluessel)
+        except KontoFehler as e:
+            print(f"  Senden: FEHLER  {e}")
+            alle_ok = False
+        else:
+            print(f"  Senden: OK      Anmeldung bei {ABSENDER[schluessel][2]} angenommen (keine Mail gesendet)")
+    print("\nERGEBNIS: alles bereit" if alle_ok else "\nERGEBNIS: nicht alles bereit, siehe FEHLER oben")
+    sys.exit(0 if alle_ok else 1)
+
+
+def _kopie_in_gesendet(schluessel: str, msg: EmailMessage) -> None:
+    """IONOS legt per SMTP gesendete Mails nicht selbst in Gesendet ab; Gmail schon. Best effort."""
+    if schluessel == "gmail":
+        return
+    try:
+        imap = _imap_verbinden(schluessel)
+        gesendet = _finde_gesendet(imap)
+        if not gesendet:
+            raise KontoFehler(2, "Gesendet-Ordner nicht gefunden")
+        imap.append(f'"{gesendet}"', "\\Seen", imaplib.Time2Internaldate(time.time()), msg.as_bytes())
+        imap.logout()
+        print(f"Kopie in {gesendet} abgelegt")
+    except (KontoFehler, imaplib.IMAP4.error, OSError) as e:
+        print(f"HINWEIS: Mail ist gesendet, aber keine Kopie in Gesendet abgelegt ({e})", file=sys.stderr)
+
+
 def main() -> None:
+    # Windows-Konsole: Umlaute und Signatur-Zeichen nicht mit UnicodeEncodeError abbrechen lassen
+    for strom in (sys.stdout, sys.stderr):
+        if hasattr(strom, "reconfigure"):
+            strom.reconfigure(encoding="utf-8", errors="replace")
+    if len(sys.argv) > 1 and sys.argv[1] == "test":
+        tp = argparse.ArgumentParser(prog="leans-mail.py test")
+        tp.add_argument("--konto", choices=ABSENDER.keys(), action="append")
+        tp.add_argument("--tage", type=int, default=3)
+        test(tp.parse_args(sys.argv[2:]))
+        return
     if len(sys.argv) > 1 and sys.argv[1] == "lesen":
         lp = argparse.ArgumentParser(prog="leans-mail.py lesen")
         lp.add_argument("--konto", choices=ABSENDER.keys(), required=True)
@@ -246,9 +384,9 @@ def main() -> None:
     args = ap.parse_args()
 
     absender, secret_name, smtp_host, _ = ABSENDER[args.von]
-    passwort = os.environ.get(secret_name, "")
+    passwort = _passwort(args.von)
     if not passwort and not args.dry_run:
-        fehler(2, f"Secret {secret_name} fehlt. In der Cloud-Umgebung unter Environment variables setzen.")
+        fehler(2, f"Secret {secret_name} fehlt. Am PC: scripts/mail-einrichten.ps1, in der Cloud: Environment variables.")
 
     msg = baue_nachricht(args, absender)
     print(f"Von: {absender}\nAn: {msg['To']}\nCc: {msg.get('Cc', '')}\nBetreff: {msg['Subject']}")
@@ -271,6 +409,7 @@ def main() -> None:
     except (socket.gaierror, OSError, smtplib.SMTPConnectError) as e:
         fehler(3, f"{smtp_host}:{SMTP_PORT} nicht erreichbar ({e}). In der Cloud-Umgebung {smtp_host} unter Allowed domains eintragen.")
     print(f"GESENDET als {absender}, Message-ID {msg['Message-ID']}")
+    _kopie_in_gesendet(args.von, msg)
 
 
 if __name__ == "__main__":
