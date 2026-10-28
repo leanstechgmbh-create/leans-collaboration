@@ -5,7 +5,7 @@ description: Mail wirklich verschicken, auf Wunsch als info@ oder sr@leanstech-g
 
 # Mail senden
 
-Regel 11 (`AGENTS.md`): Arbeitsschritte (lesen, Entwurf, Labels, Drive, Board) ohne Erlaubnisfragen erledigen, danach kurz melden. Versand nur nach ausdrücklichem „senden“.
+Regel 11 (`AGENTS.md`): Arbeitsschritte (lesen, Entwurf, Labels, Drive, Board) ohne Erlaubnisfragen erledigen, danach kurz melden. VERSAND: vor jedem Senden fragen, erst nach Semirs ausdrücklichem Ja senden, immer, ohne Ausnahme (Regel 12).
 
 Zwei Wege. Immer zuerst Weg A prüfen, dann Weg B.
 
@@ -24,7 +24,7 @@ das Gmail-Werkzeug (Weg B) kann sie nicht tragen (Protokoll, Bekannte Grenzen).
    Rechnung als eigene PDF per `--anhang`, alle Zusatzdateien (Aufmaß, Fotos, Nachweise) per `--zusatz`,
    das Skript packt sie in EINE ZIP „Anlagen <Betreff>.zip“. Gilt auch für Angebote mit vielen Beilagen.
 3. Probelauf: `python3 scripts/leans-mail.py --von info --an <kunde> --betreff "<Betreff>" --text-datei mail.txt --anhang rechnung.pdf --zusatz aufmass.pdf --zusatz foto.jpg --dry-run`
-4. Wenn Semir „senden“ gesagt hat: gleicher Befehl ohne `--dry-run`. Ausgabe „GESENDET als …“ im Chat nennen.
+4. Fragen „Senden?“. Erst nach Semirs Ja: gleicher Befehl ohne `--dry-run`. Ausgabe „GESENDET als …“ im Chat nennen.
 5. Danach in Gmail den Kunden-Thread labeln (Label_19 „Klima/Anfrage offen“ bleibt, bis erledigt) und das Board
    aktualisieren (`/anfragen-board`), falls es eine Kundenanfrage ist.
 
@@ -41,7 +41,8 @@ Rechnungsregel gilt auch hier: Rechnung als PDF, Zusatzdateien vorher mit
 
 ## Regeln
 
-- Senden nur nach ausdrücklichem „senden“ / „verschick es“ von Semir. Vorher Entwurf oder dry-run zeigen.
+- Vor JEDEM Versand: Entwurf oder dry-run zeigen (Empfänger, Absender, Betreff, Anhänge), fragen „Senden?“ und erst
+  nach Semirs ausdrücklichem Ja senden. Unumstößlich, keine Ausnahme (AGENTS.md Regel 12).
   Danach melden: an wen, Absender, Anhänge.
 - Einzige erlaubte Frage: Empfängeradresse oder Anhang fehlt und ist nirgends zu finden. Dann genau eine Frage.
 - Fehlt Secret oder Netzfreigabe: Fehlertext und Stelle nennen (Protokoll 3b), nicht fragen, ob Semir sie setzen möchte.

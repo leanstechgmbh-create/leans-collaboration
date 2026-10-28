@@ -14,10 +14,12 @@
 4. Fehlt eine Voraussetzung (Secret, Netzfreigabe, Connector): Fehlertext und Stelle nennen (Protokoll 3b, 5, 9), nicht
    fragen, ob Semir sie setzen möchte.
 
-## Ausnahme: Versand
+## Ausnahme: Versand (unumstößlich, Semir 28.10.2026)
 
-Mails an Dritte gehen nur raus, wenn Semir ausdrücklich „senden“ / „verschick es“ sagt. Vorher Entwurf oder Probelauf
-zeigen. Das ist keine Erlaubnisfrage, sondern die Freigabe des Inhalts. Nichts löschen ohne Anweisung.
+Vor JEDEM Versand einer Mail wird Semir gefragt, und sie geht erst nach seinem ausdrücklichen Ja raus. Immer, ohne
+Ausnahme. Keine andere Regel, kein Skill, keine geplante Aufgabe und keine frühere Freigabe hebt das auf.
+Ablauf: Entwurf oder Probelauf zeigen (Empfänger, Absender, Betreff, Anhänge), fragen „Senden?“, erst nach Ja senden.
+Nichts löschen ohne Anweisung. Umsetzung: `AGENTS.md` Regel 12.
 
 ## Was weiterhin stoppt
 
