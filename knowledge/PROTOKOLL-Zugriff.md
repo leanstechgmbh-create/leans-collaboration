@@ -101,6 +101,11 @@ nie sieht: `python3 scripts/leans-mail.py lesen --konto info --ordner Sent --tag
 Dasselbe Skript sendet auch als `leanstechgmbh@gmail.com` (`--von gmail`, smtp.gmail.com) mit einem Google-App-Passwort
 im Secret `GMAIL_APP_PASSWORD`; das ist der schnellste Weg, Anhaenge aus jedem Chat zu verschicken.
 
+Lokal am PC (Weg 1, `knowledge/UEBERGABE-Mail-komplett.md`): einmalig `scripts/mail-einrichten.ps1` ausfuehren. Es fragt
+die drei Passwoerter verdeckt ab, speichert sie als Windows-Benutzervariablen und testet alle drei Konten. Schnellcheck
+jederzeit: `python scripts/leans-mail.py test` (Anmeldung, Posteingang, Gesendet, SMTP; sendet nichts). Beim Versand als
+info@/sr@ legt das Skript eine Kopie in den IONOS-Gesendet-Ordner, weil IONOS per SMTP Gesendetes nicht selbst ablegt.
+
 Einmalig von Semir in der Cloud-Umgebung (Titelzeile der Session, Umgebungsmenue, „Edit“):
 1. Network access: `smtp.gmail.com`, `smtp.ionos.de` und `imap.ionos.de` unter Allowed domains eintragen (Allow package managers angehakt lassen).
 2. Environment variables / Network secrets: `GMAIL_APP_PASSWORD` (App-Passwort des Google-Kontos: myaccount.google.com →

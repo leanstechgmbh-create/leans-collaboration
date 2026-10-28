@@ -11,7 +11,10 @@ Zwei Wege. Immer zuerst Weg A prüfen, dann Weg B.
 
 ## Weg A: Skript im Repo, als info@, sr@ oder gmail (einziger Weg für echte Anhänge)
 
-Voraussetzung, einmalig von Semir in der Cloud-Umgebung gesetzt (Umgebung → Edit):
+Voraussetzung lokal am PC (Weg 1, empfohlen): einmalig `scripts/mail-einrichten.ps1`, danach Claude-App neu starten.
+Unter Windows `python` statt `python3`. Große Dateien direkt vom Laufwerk G: (Google Drive für Desktop) anhängen.
+Beim Versand als info@/sr@ legt das Skript eine Kopie in deren Gesendet-Ordner bei IONOS ab.
+Voraussetzung in der Cloud, einmalig von Semir in der Umgebung gesetzt (Umgebung → Edit):
 - `--von gmail`: Allowed domain `smtp.gmail.com`, Secret `GMAIL_APP_PASSWORD` (Google-Konto → Sicherheit → App-Passwörter).
 - `--von info` / `--von sr`: Allowed domain `smtp.ionos.de`, Secrets `IONOS_INFO_PASSWORD` / `IONOS_SR_PASSWORD`.
 Fehlt etwas, sagt das Skript genau was (Exit 2). Anhänge über ca. 20 KB gehen NUR über diesen Weg,

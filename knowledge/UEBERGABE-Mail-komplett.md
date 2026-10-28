@@ -35,21 +35,22 @@ Dort fallen alle Cloud-Grenzen weg.
 ### Weg 1 (empfohlen): Claude Code lokal am PC
 1. Claude-Desktop-App → Bereich „Code“ → neue Session → statt Cloud „Lokal“ wählen, Ordner:
    der lokale Klon von `leans-collaboration` (sonst einmal `git clone https://github.com/leanstechgmbh-create/leans-collaboration`).
-2. Passwörter als Windows-Benutzervariablen setzen (einmalig, PowerShell, NICHT in den Chat):
+2. Passwörter einmalig mit dem Einrichtungs-Skript setzen (PowerShell im Repo-Ordner, NICHT im Chat):
    ```powershell
-   [Environment]::SetEnvironmentVariable("GMAIL_APP_PASSWORD","<App-Passwort>","User")
-   [Environment]::SetEnvironmentVariable("IONOS_INFO_PASSWORD","<Passwort info@>","User")
-   [Environment]::SetEnvironmentVariable("IONOS_SR_PASSWORD","<Passwort sr@>","User")
+   git pull
+   powershell -ExecutionPolicy Bypass -File scripts\mail-einrichten.ps1
    ```
+   Das Skript fragt die drei Passwörter verdeckt ab (`GMAIL_APP_PASSWORD`, `IONOS_INFO_PASSWORD`, `IONOS_SR_PASSWORD`),
+   speichert sie als Windows-Benutzervariablen und testet sofort alle drei Konten (sendet nichts).
    App-Passwort: https://myaccount.google.com/apppasswords (das am 28.10. im Chat genannte ist verbrannt: löschen!).
-   Danach Claude-App neu starten.
-3. Test im lokalen Chat:
+   Fehlt Python: `winget install Python.Python.3.12`. Danach Claude-App komplett beenden und neu starten.
+3. Test im lokalen Chat (ohne Versand):
    ```
-   python scripts/leans-mail.py lesen --konto info --ordner INBOX --tage 3
+   python scripts/leans-mail.py test
    python scripts/leans-mail.py lesen --konto sr --ordner Sent --tage 7
    python scripts/leans-mail.py --von gmail --an leanstechgmbh@gmail.com --betreff Test --text Test --anhang <pdf> --dry-run
    ```
-   Ohne `--dry-run` erst nach Semirs „Ja“.
+   `test` prüft je Konto: Anmeldung, Posteingang, Gesendet, SMTP-Anmeldung. Ohne `--dry-run` erst nach Semirs „Ja“.
 4. Große Drive-Dateien: Google Drive für Desktop ist installiert (Laufwerk G:), Dateien direkt von dort anhängen.
 
 ### Weg 2: Computer use (Claude bedient Gmail/Outlook im Browser)
