@@ -10,6 +10,10 @@
 - [[decisions]]
 - [[prompts]]
 
+## Projekte
+
+- [[projects/kunde-koehler-grabbeallee-48]] – Multi-Split-Wärmepumpe, Termin 01.10.2026
+
 ## Aktueller Workflow
 
 Das Uebergabeboard liegt in `../LEANS-Uebergabe.md`.
