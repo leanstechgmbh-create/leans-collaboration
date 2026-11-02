@@ -5,6 +5,29 @@ Stand: 20.10.2026 · Insolvenz LEANS Tech GmbH, AG Charlottenburg 3615 IN 3061/2
 Team: Kjell-Hendrik Arndt Schwarz, Anke Michaelis, insoberlin@whitecase.com).
 Alle Beträge netto, Bauleistungen § 13b UStG.
 
+## 🔄 STAND 02.11.2026 – HIER WEITERMACHEN
+
+- Seit 21.10. keine Bewegung: keine Zahlung, keine Mail von apoprojekt, nichts im W&C-Datenraum.
+- Laut Nutzer sind **alle Bescheide da** (2026-41, 2026-42, 2026-36) – aber nur im Postfach
+  **info@leanstech-gmbh.de**. Nicht in Drive/Gmail (geprüft 02.11.).
+- Zugriffswege auf info@ (Stand 02.11.): Microsoft-365-Connector „connect_incomplete";
+  Remote-Control-Ordner „leans-collaboration" auf Rechner „Leans_Tech_GMBH" für Cloud-Sessions gesperrt.
+  → Erster Schritt im neuen Chat: `ListConnectors` prüfen. Ist Microsoft 365 verbunden, in Outlook
+  info@ nach „Abw.bescheid" suchen. Sonst Nutzer bitten, die 3 PDFs in den Chat zu ziehen oder
+  an leanstechgmbh@gmail.com weiterzuleiten.
+- Mit den 3 Bescheiden: Schätzungen ersetzen, Endsumme neu rechnen, Bescheide als Kopie in die
+  Ordner 2/3/4 im Insolvenzordner legen (IDs unten), „00 Übersicht – apoprojekt GmbH",
+  „00 Begleitschreiben" und „00 ANLEITUNG" aktualisieren.
+- Neu im Drive (28.10.): „Fachunternehmererklärung M-LüAR 4.1 16053.pdf"
+  (1eyiNsT4Y8ZntzJLoxIuOwUZAIboku_s4) – gehört zu den Schicklerstraße-Unterlagen (Ordner 5).
+- Dringend außerhalb apoprojekt: Insolvenzgeld-Frist der 4 Arbeitnehmer **09.11.2026**;
+  siehe Drive-Doc „00 STAND – Insolvenz GmbH …" (1McFbHT0_NeDtZ0O_PF2L844OzOwW5nBsZt61VygajDk).
+- Insolvenzordner-Ordner-IDs: Hauptordner 1S8xGHFVLiEW5fNKluFw67OChpZ6dJ1st ·
+  1 Klima 1nPWq6tZBt8DbSIOhcCil0Fk5VOaIkIlF · 2 Lüftung 18f5LfctaEkddEjGsF0KV7N1-GP9Ld-XI ·
+  3 The Visit 1P04TEwE81lWLSQAS-jmQs_zdnrVyIQI5 · 4 Fahrschule 1Gm15KT8tjpIPaWjazwvmUO7tb3SFTmZn ·
+  5 Schicklerstr. 1ogTnhyDejgaLjgu-mu3EtR2SJC-Q1Jue · 6 Johannisstr. 1xhhtmJsfEZ2cSDsAlVF7OzN-JCqpWbSa ·
+  7 Info 17t9XcXmvy9nNpO8U9pyZebV4j5aoo9Wp.
+
 ## ⛔ Feste Regeln (zuerst lesen)
 
 1. **Nichts verschicken, nichts freigeben/teilen, keine CC-Empfänger** ohne
