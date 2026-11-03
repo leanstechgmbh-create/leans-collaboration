@@ -1,0 +1,201 @@
+# Übergabe: Zwei Entwürfe in info@leanstech-gmbh.de anlegen (WE 2.2.1 Rauch → CREST Investment)
+
+- Für: Claude-Chat auf dem PC von Semir (lokal, mit Zugriff auf das IONOS-Postfach info@leanstech-gmbh.de)
+- Von: Claude (Cloud-Chat „Angebot für Rauch“), 2026-10-20
+- Warum: Der Cloud-Chat erreicht das IONOS-Postfach nicht. Alles andere ist fertig.
+
+## Auftrag
+
+1. Im Postfach **info@leanstech-gmbh.de** (IONOS) vier getrennte E-Mail-**Entwürfe** anlegen, jeweils mit allen Anhängen: Mail 1 Klima, Mail 2 Sanitär, Mail 3 Datenblätter Klima, Mail 4 Datenblätter Sanitär. Nicht über Gmail, Semir will alles von info@. Die alten Gmail-Entwürfe sind gelöscht.
+2. Die zwei Rechnungen (2025-71 und 2025-106) als Kopie in den Insolvenzordner legen:
+   - Ordner: Google Drive „Insolvenzordner – LEANS Tech GmbH“ → „CREST Investment GmbH“ (Ordner-ID `1m147RAbQwJszPJ0HBgezFwWzCj-gT20i`)
+   - Name 1: `2025-10-12 Rechnung 2025-71 – CREST Investment GmbH – 13.709,26 EUR – SBS WE 2.2.1 Klima.pdf`
+   - Name 2: `2026-10-20 Rechnung 2025-106 – CREST Investment GmbH – 1.979,73 EUR – SBS WE 2.2.1 Sanitär Schlussrechnung.pdf`
+   - Vorher prüfen, dass sie dort nicht schon liegen. Nur die Rechnungen, keine Erklärungen.
+
+**NICHT SENDEN.** Semir prüft und sendet selbst.
+
+## Anhänge holen
+
+**Quelle A (zuerst probieren):** Artifact-Seite `https://claude.ai/artifact/PeMuDe75EtBaQGwne3NBSU`, mit dem Artifact-Tool `action: "read"`, `url` = diese Seite, `paths`:
+
+- `versand/Mail1_01_Rechnung_2025-71_Klima_WE_2.2.1.pdf`
+- `versand/Mail1_02_Fachunternehmererklaerung_Klimatisierung_WE_2.2.1.pdf`
+- `versand/Mail1_03_Sachkundebescheinigung_Kat_I_Semir_Redzic.pdf`
+- `versand/Mail2_01_Schlussrechnung_2025-106_Sanitaer_WE_2.2.1.pdf`
+- `versand/Mail2_02_Fachunternehmererklaerung_Sanitaer_WE_2.2.1.pdf`
+
+**Quelle B:** Auf derselben Seite unter „PDF öffnen“ herunterladen (Browser).
+
+Der Drive-Ordner „Versand WE 2.2.1 Rauch – CREST Investment (2026-10-20)“ (ID `1cP9rPQplEHTb8DR33eIsRVyzdae-46Za`) enthält nur das Dokument „00 AUFTRAG“ mit denselben Texten, keine PDFs.
+
+**Betriebszertifizierung (nur Mail 1):** Drive-Datei „Betriebszertifizierung LEANS TECH GMBH.pdf“, ID `1QYjbexbZcxhAFHZnk0F8P3w9yW36PO5o`, 13 MB. Das Drive-Download-Tool schafft nur 10 MB, also über Google Drive für Desktop oder den Browser-Download holen.
+
+**Vor dem Anhängen prüfen:**
+- 2025-71: 13.709,26 € brutto, Datum 12.10.2025, Geräte SCM100ZS-W und 2× SRK50ZSX-WF, Bank Berliner Volksbank
+- 2025-106: Schlussrechnung an CREST Investment GmbH, 1.979,73 € brutto, ohne Anzahlung, ohne Anmerkungen
+- Fachunternehmererklärungen unterschrieben und gestempelt, „Berlin, 12.10.2025“ (Klima) bzw. „Berlin, 24.10.2025“ (Sanitär)
+
+**Dateinamen im Anhang:**
+
+| Mail | Dateiname |
+|---|---|
+| 1 | Rechnung 2025-71 - Klima WE 2.2.1.pdf |
+| 1 | Fachunternehmererklaerung Klimatisierung WE 2.2.1.pdf |
+| 1 | Sachkundebescheinigung Kat. I - Semir Redzic.pdf |
+| 1 | Betriebszertifizierung LEANS Tech GmbH (LAGetSi Berlin).pdf |
+| 2 | Schlussrechnung 2025-106 - Sanitaer WE 2.2.1.pdf |
+| 2 | Fachunternehmererklaerung Sanitaer WE 2.2.1.pdf |
+
+## Mail 1 – Klima
+
+- Von: info@leanstech-gmbh.de
+- An: sb@crest-investment.com, info@crest-investment.com
+- Betreff: SBS – WE 2.2.1 (Herr Rauch) – Rechnung 2025-71 Klimatisierung und Anlagenunterlagen
+- Anhänge: 4 (siehe Tabelle)
+
+```text
+Hallo Frau Böhnke,
+
+anbei erhalten Sie nochmals unsere Rechnung 2025-71 vom 12.10.2025 über die Klimatisierung der Wohnung WE 2.2.1 (Herr Rauch) über 13.709,26 € brutto (inkl. 15 % Rabatt).
+
+Zusätzlich übersende ich Ihnen unsere Fachunternehmererklärung für das Gewerk Klimatisierung sowie unsere Nachweise nach der Chemikalien-Klimaschutzverordnung: meine Sachkundebescheinigung der Kategorie I (DVO (EU) 2015/2067, § 5 ChemKlimaschutzV) und die Betriebszertifizierung der LEANS Tech GmbH durch das LAGetSi Berlin (§ 6 ChemKlimaschutzV). Die Herstellerdatenblätter reichen wir separat nach.
+
+Anlagen:
+- Rechnung 2025-71 – Klima WE 2.2.1
+- Fachunternehmererklärung Klimatisierung WE 2.2.1
+- Sachkundebescheinigung Kat. I – Semir Redzic
+- Betriebszertifizierung LEANS Tech GmbH (LAGetSi Berlin)
+
+Bei Fragen melden Sie sich gerne.
+
+Mit freundlichen Grüßen
+
+Semir Redzic
+Geschäftsführer
+
+LEANS Tech GmbH
+Klima ▪ Lüftung ▪ Sanitär ▪ Heizung
+Berlepschstr. 165, 14165 Berlin
+Tel. +49 170 8280836
+www.leanstech-gmbh.de
+```
+
+## Mail 2 – Sanitär
+
+- Von: info@leanstech-gmbh.de
+- An: sb@crest-investment.com, info@crest-investment.com
+- Betreff: SBS – WE 2.2.1 (Herr Rauch) – Schlussrechnung 2025-106 Zusatzleistungen Sanitär
+- Anhänge: 2 (siehe Tabelle)
+
+```text
+Hallo Frau Böhnke,
+
+anbei erhalten Sie unsere Schlussrechnung 2025-106 über die Zusatzleistungen Sanitär der Wohnung WE 2.2.1 (Herr Rauch), Bauvorhaben Scharfenberger Str. 26, über 1.979,73 € brutto.
+
+Die Geberit-Betätigungsplatte wurde nicht eingebaut und ist in der Rechnung abgezogen. Für die Montage der Badewanne, bei der der Abfluss falsch gelegt wurde, haben wir eine Kompensation von 500,00 € netto berücksichtigt.
+
+Beigefügt ist außerdem unsere Fachunternehmererklärung für das Gewerk Sanitär. Die Datenblätter reichen wir separat nach.
+
+Anlagen:
+- Schlussrechnung 2025-106 – Sanitär WE 2.2.1
+- Fachunternehmererklärung Sanitär WE 2.2.1
+
+Bei Fragen melden Sie sich gerne.
+
+Mit freundlichen Grüßen
+
+Semir Redzic
+Geschäftsführer
+
+LEANS Tech GmbH
+Klima ▪ Lüftung ▪ Sanitär ▪ Heizung
+Berlepschstr. 165, 14165 Berlin
+Tel. +49 170 8280836
+www.leanstech-gmbh.de
+```
+
+## Mail 3 – Datenblätter Klima
+
+- Von: info@leanstech-gmbh.de
+- An: sb@crest-investment.com, info@crest-investment.com
+- Betreff: SBS – WE 2.2.1 (Herr Rauch) – Datenblätter Klimatisierung zu Rechnung 2025-71
+- Anhänge (aus dem Internet herunterladen, dann prüfen, dass es das richtige Gerät ist):
+
+| Gerät | Datenblatt |
+|---|---|
+| Mitsubishi Heavy SCM100ZS-W | https://mhiae.com/units/scm100zs-w/?pdf=4283 |
+| Mitsubishi Heavy SRK50ZSX-WF | https://mhiae.com/units/srk50zsx-wf/?pdf=5187 |
+| Resideo L5, DN20 | https://tbs-online.de/doc/de/en/did.146347/93_254_45--DBL-01-de.pdf |
+
+Falls ein Link nicht geht: auf mhiae.com bzw. resideo.com nach dem Modell suchen.
+
+```text
+Hallo Frau Böhnke,
+
+wie angekündigt erhalten Sie anbei die Herstellerdatenblätter zu den Komponenten der Klimatisierung in der Wohnung WE 2.2.1 (Herr Rauch), Rechnung 2025-71:
+
+- Mitsubishi Heavy Industries Außengerät SCM100ZS-W (Multi-Split, 10 kW)
+- Mitsubishi Heavy Industries Wandinnengerät SRK50ZSX-WF (2 Stück)
+- Resideo L5 WiFi-Wasserleckage-Absperrventil DN20 (2 Stück)
+
+Bei Fragen melden Sie sich gerne.
+
+Mit freundlichen Grüßen
+
+Semir Redzic
+Geschäftsführer
+
+LEANS Tech GmbH
+Klima ▪ Lüftung ▪ Sanitär ▪ Heizung
+Berlepschstr. 165, 14165 Berlin
+Tel. +49 170 8280836
+www.leanstech-gmbh.de
+```
+
+## Mail 4 – Datenblätter Sanitär
+
+- Von: info@leanstech-gmbh.de
+- An: sb@crest-investment.com, info@crest-investment.com
+- Betreff: SBS – WE 2.2.1 (Herr Rauch) – Datenblätter Sanitär zu Schlussrechnung 2025-106
+- Anhänge:
+
+| Produkt | Datenblatt |
+|---|---|
+| Geberit Urinalsteuerung | Artifact-Seite, Pfad `versand/Datenblatt_Geberit_Urinalsteuerung_Typ10_116.035.16.1.pdf` |
+| Tellkamp Space XS (1700 × 850 × 600, weiß matt) | Kein Hersteller-PDF online gefunden. Auf tellkamp.de suchen. Sonst Semir fragen, ob das Datenblatt vom Lieferanten kommt, oder die Mail ohne Tellkamp anlegen und Semir Bescheid geben. |
+
+```text
+Hallo Frau Böhnke,
+
+wie angekündigt erhalten Sie anbei die Herstellerdatenblätter zu den Zusatzleistungen Sanitär in der Wohnung WE 2.2.1 (Herr Rauch), Schlussrechnung 2025-106:
+
+- Tellkamp Space freistehende Oval-Badewanne, weiß matt, 1700 x 850 x 600 mm
+- Geberit Urinalsteuerung mit elektronischer Spülauslösung, Batteriebetrieb, verdeckt
+
+Bei Fragen melden Sie sich gerne.
+
+Mit freundlichen Grüßen
+
+Semir Redzic
+Geschäftsführer
+
+LEANS Tech GmbH
+Klima ▪ Lüftung ▪ Sanitär ▪ Heizung
+Berlepschstr. 165, 14165 Berlin
+Tel. +49 170 8280836
+www.leanstech-gmbh.de
+```
+
+## Feste Vorgaben von Semir
+
+- Nichts senden.
+- Texte nicht ändern.
+- Keine Anmerkungen oder „Korrektur“ in Rechnungen.
+- Alles geht an CREST Investment GmbH, nicht an CREST Living.
+- Bank bleibt Berliner Volksbank.
+
+## Danach
+
+1. Semir alle vier Entwürfe zeigen: Betreff, Empfänger, Anhänge mit Größe.
+2. Im Board `LEANS-Uebergabe.md` den Eintrag „AN CLAUDE: OFFEN — Entwürfe in info@ anlegen (WE 2.2.1 Rauch)“ auf ERLEDIGT setzen.
